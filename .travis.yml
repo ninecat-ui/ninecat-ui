@@ -1,0 +1,28 @@
+# Designated language. https://docs.travis-ci.com/user/languages/javascript-with-nodejs/
+language: node_js
+
+install:
+  - npm install -g codecov
+
+# Cache the node_modules folder and don't need to download and install all npm packages every time.
+cache:
+  directories:
+    - node_modules
+# Specify the node version.
+node_js:
+  - "8.10.0"
+# Perform builds only on the specified branch.  https://docs.travis-ci.com/user/customizing-the-build/#building-specific-branches
+branches:
+  only:
+    - master
+# The script to execute.
+script:
+  - npm test
+  - codecov
+# Configure to send notifications when the build fails. https://docs.travis-ci.com/user/notifications
+notifications:
+  webhooks:
+    urls:
+      - https://www.travisbuddy.com/
+    on_success: never # Successful build does not send mail.
+    on_failure: always # Build failure always sends a message.
