@@ -1,6 +1,7 @@
 # Designated language. https://docs.travis-ci.com/user/languages/javascript-with-nodejs/
 language: node_js
 
+# Install dependence
 install:
   - npm install
   - npm install -g codecov
