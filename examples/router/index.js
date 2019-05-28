@@ -3,6 +3,7 @@ import Vue from 'vue'
 import About from '../pages/about/index.vue'
 import nButton from '../pages/nButton/index.vue'
 import nLoader from '../pages/nLoader/index.vue'
+import nIcon from '../pages/nIcon/index.vue'
 
 Vue.use(VueRouter)
 
@@ -24,6 +25,11 @@ export const componentRoutes = [
     path: '/nLoader',
     name: 'nLoader',
     component: nLoader
+  },
+  {
+    path: '/nIcon',
+    name: 'nIcon',
+    component: nIcon
   }
 ]
 
