@@ -4,7 +4,30 @@
     class="loadding"
   >
     <div :style="sizeStyleObject" />
-    <span class="loadding-text">{{ loaddingText }}</span>
+    <span
+      v-if="size === 'xs'"
+      class="loadding-text xs-text"
+    >
+      {{ loaddingText }}
+    </span>
+    <span
+      v-else-if="size === 'sm'"
+      class="loadding-text sm-text"
+    >
+      {{ loaddingText }}
+    </span>
+    <span
+      v-else-if="size === 'md'"
+      class="loadding-text md-text"
+    >
+      {{ loaddingText }}
+    </span>
+    <span
+      v-else-if="size === 'lg'"
+      class="loadding-text lg-text"
+    >
+      {{ loaddingText }}
+    </span>
   </div>
 </template>
 
@@ -18,7 +41,7 @@ export default {
     },
     loaddingText: {
       type: String,
-      default: '加载中...'
+      default: 'Loading...'
     },
     size: {
       type: String,
@@ -32,9 +55,8 @@ export default {
   },
   methods: {
     getSize (size) {
-      debugger
       switch (size) {
-        case 'XS':
+        case 'xs':
           return {
             height: '16px',
             width: '16px'
@@ -77,12 +99,31 @@ export default {
     }
     @keyframes spinner2 {to {transform: rotate(360deg);}}
     .loadding-text{
-      position: absolute;
-      margin-top:12px;
       font-family: PingFangSC-Regular;
-      font-size: 14px;
       color: #575757;
       line-height: 20px;
+    }
+    .xs-text{
+      position: absolute;
+      left: 26px;
+      top: 2px;
+      font-size: 12px;
+    }
+    .sm-text{
+      position: absolute;
+      left: 30px;
+      top: 2px;
+      font-size: 14px;
+    }
+    .md-text{
+      position: absolute;
+      margin-top:12px;
+      font-size: 14px;
+    }
+    .lg-text{
+      position: absolute;
+      margin-top:12px;
+      font-size: 16px;
     }
   }
 

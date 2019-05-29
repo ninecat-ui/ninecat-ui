@@ -4,7 +4,7 @@ module.exports = {
   rootDir: path.resolve(__dirname, '..'),
   collectCoverage: true,
   collectCoverageFrom: [
-    'src/**/*.{js,vue}'
+    'packages/**/*.{js,vue}'
   ],
   coverageDirectory: '<rootDir>/test/coverage',
   moduleFileExtensions: [
