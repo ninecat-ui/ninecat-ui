@@ -3,6 +3,7 @@
 ![](https://img.shields.io/badge/language-JavaScript-orange.svg)
 ![](https://img.shields.io/badge/license-MIT-000000.svg)
 ![](https://img.shields.io/badge/webpack-4-blue.svg)
+![](https://img.shields.io/badge/vue-2.6.10-blue.svg)
 
 ![](https://avatars3.githubusercontent.com/u/51054939?s=400&u=8d6342ba8bf5106086c26318ee290452501c6dff&v=4)
 
