@@ -28,6 +28,12 @@
     >
       {{ loaddingText }}
     </span>
+    <span
+      v-else
+      class="loadding-text md-text"
+    >
+      {{ loaddingText }}
+    </span>
   </div>
 </template>
 

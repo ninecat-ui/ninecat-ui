@@ -5,7 +5,9 @@
       :key="route.name"
       :to="route.path"
     >
-      {{ route.name }}
+      <h2>
+        {{ route.name }}
+      </h2>
     </router-link>
   </div>
 </template>

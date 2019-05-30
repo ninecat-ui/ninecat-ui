@@ -17,7 +17,7 @@ describe('nLoader', () => {
   it('render Loading... text default', () => {
     let nLoaderVm = getRenderedVm(nLoader, {
       show: true,
-      size: 'md'
+      size: ''
     })
     expect(nLoaderVm.loaddingText).toEqual('Loading...')
   })
@@ -56,5 +56,12 @@ describe('nLoader', () => {
       size: 'lg'
     })
     expect(nLoaderVm.$el.querySelector('.loadding-text.lg-text')).toBeTruthy()
+  })
+  it('render md size default', () => {
+    let nLoaderVm = getRenderedVm(nLoader, {
+      show: true,
+      size: ''
+    })
+    expect(nLoaderVm.$el.querySelector('.loadding-text.md-text')).toBeTruthy()
   })
 })
