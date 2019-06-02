@@ -13,5 +13,5 @@ const components = {
 }
 
 Object.values(components).forEach(component => {
-  component.install(Vue)
+  Vue.use(component)
 })
