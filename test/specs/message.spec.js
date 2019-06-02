@@ -1,5 +1,4 @@
 import { getRenderedVm } from '../utils/util'
-import { mount } from '@vue/test-utils'
 import nMessage from '../../packages/nMessage'
 
 describe('nMessage', () => {
