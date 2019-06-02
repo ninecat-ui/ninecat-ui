@@ -1,3 +1,7 @@
+<!--
+  loader component
+  author:Terence
+-->
 <template>
   <div
     v-show="show"

@@ -1,17 +1,5 @@
-import Vue from 'vue'
+import { getRenderedVm } from '../utils/util'
 import nLoader from '../../packages/nLoader'
-/**
- * Get the generated vm
- *
- * @param {Object} Component component
- * @param {Object} propsData props data
- * @return {Object} Vue instance
- */
-function getRenderedVm (Component, propsData) {
-  const Ctor = Vue.extend(Component)
-  const vm = new Ctor({ propsData }).$mount()
-  return vm
-}
 
 describe('nLoader', () => {
   it('render Loading... text default', () => {
