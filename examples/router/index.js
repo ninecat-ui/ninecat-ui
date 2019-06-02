@@ -5,6 +5,7 @@ import nButton from '../pages/nButton/index.vue'
 import nLoader from '../pages/nLoader/index.vue'
 import nIcon from '../pages/nIcon/index.vue'
 import nMessage from '../pages/nMessage/index.vue'
+import nButtonGroup from '../pages/nButtonGroup/index.vue'
 
 Vue.use(VueRouter)
 
@@ -36,12 +37,17 @@ export const componentRoutes = [
     path: '/nMessage',
     name: 'nMessage',
     component: nMessage
+  },
+  {
+    path: '/nButtonGroup',
+    name: 'nButtonGroup',
+    component: nButtonGroup
   }
 ]
 
 const routes = componentRoutes.concat(commonRoutes)
 
 export default new VueRouter({
-  mode: 'hash',
+  mode: 'history',
   routes: routes
 })

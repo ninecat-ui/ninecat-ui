@@ -50,9 +50,6 @@ export default {
     disabled: {
       type: Boolean
     }
-  },
-  mounted () {
-    console.log(this.$props)
   }
 }
 </script>
@@ -69,6 +66,9 @@ export default {
   &:focus,&:hover{
     background-color: #E5E5EA;
     outline: none;
+  }
+  &:active{
+    background-color: #D9D9D9;
   }
   .nbutton-icon{
     display: inline-block;
