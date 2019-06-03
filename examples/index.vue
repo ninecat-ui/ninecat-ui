@@ -1,11 +1,24 @@
 <template>
-  <div>
-    <router-view />
+  <div class="app">
+    <common-header />
+    <common-main>
+      <router-view />
+    </common-main>
   </div>
 </template>
 
 <script>
+import CommonHeader from './layout/CommonHeader'
+import CommonMain from './layout/CommonMain'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: { CommonHeader, CommonMain }
 }
 </script>
+
+<style lang="scss" scoped>
+.app {
+  background-color: #f5f5f9
+}
+</style>

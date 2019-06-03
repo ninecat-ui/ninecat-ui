@@ -13,6 +13,9 @@ export const commonRoutes = [
   {
     path: '/',
     name: 'about',
+    meta: {
+      name: '首页'
+    },
     component: About
   }
 ]
@@ -21,26 +24,41 @@ export const componentRoutes = [
   {
     path: '/nButton',
     name: 'nButton',
+    meta: {
+      name: 'nButton'
+    },
     component: nButton
   },
   {
     path: '/nLoader',
     name: 'nLoader',
+    meta: {
+      name: 'nLoader'
+    },
     component: nLoader
   },
   {
     path: '/nIcon',
     name: 'nIcon',
+    meta: {
+      name: 'nIcon'
+    },
     component: nIcon
   },
   {
     path: '/nMessage',
     name: 'nMessage',
+    meta: {
+      name: 'nMessage'
+    },
     component: nMessage
   },
   {
     path: '/nButtonGroup',
     name: 'nButtonGroup',
+    meta: {
+      name: 'nButtonGroup'
+    },
     component: nButtonGroup
   }
 ]
