@@ -11,14 +11,13 @@
       test
     </n-button>
     <n-button
-
       @click="handleClick"
     >
       click
     </n-button>
     <n-button
-      disable
-      type="xxx"
+      disabled
+      @click="handleClick"
     >
       disable
     </n-button>

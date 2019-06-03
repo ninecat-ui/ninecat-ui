@@ -4,7 +4,8 @@
   "description": "A Vuejs template using Webpack 4",
   "main": "package/ninecatui.js",
   "scripts": {
-    "dev": "webpack-dev-server --progress --config build/webpack.config.dev.js",
+    "dev": "webpack-dev-server --progress --history-api-fallback --config build/webpack.config.dev.js",
+    "start": "npm run dev",
     "prod": "webpack --config build/webpack.config.prod.js",
     "lint": "eslint --ext .js,.vue src",
     "lint:fix": "eslint --ext .js,.vue src --fix",
