@@ -19,6 +19,6 @@ export default {
 
 <style lang="scss" scoped>
 .app {
-  background-color: #f5f5f9
+  background-color: #e9e9f1
 }
 </style>
