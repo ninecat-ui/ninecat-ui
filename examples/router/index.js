@@ -11,7 +11,7 @@ Vue.use(VueRouter)
 
 export const commonRoutes = [
   {
-    path: '/about',
+    path: '/',
     name: 'about',
     component: About
   }
