@@ -2,7 +2,7 @@
   "name": "ninecat",
   "version": "1.1.0",
   "description": "A Vuejs template using Webpack 4",
-  "main": "index.js",
+  "main": "package/ninecatui.js",
   "scripts": {
     "dev": "webpack-dev-server --progress --config build/webpack.config.dev.js",
     "prod": "webpack --config build/webpack.config.prod.js",
