@@ -7,12 +7,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = merge(baseConfig, {
   mode: 'production',
   entry: {
-    'ninecatui': './src/index.js'
+    'ninecat-ui': './src/index.js'
   },
   output: {
     path: path.resolve(__dirname, '../package'),
     publicPath: '/package/',
-    library: 'ninecatui',
+    library: 'ninecat-ui',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
