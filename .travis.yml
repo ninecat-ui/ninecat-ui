@@ -12,7 +12,7 @@ cache:
     - node_modules
 # Specify the node version.
 node_js:
-  - "8.10.0"
+  - "11.1.0"
 # Perform builds only on the specified branch.  https://docs.travis-ci.com/user/customizing-the-build/#building-specific-branches
 branches:
   only:
