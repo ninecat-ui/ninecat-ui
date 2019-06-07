@@ -5,3 +5,5 @@ NButtonGroup.install = function (Vue) {
 }
 
 export default NButtonGroup
+
+let a
