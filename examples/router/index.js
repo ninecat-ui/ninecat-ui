@@ -6,6 +6,7 @@ import nLoader from '../pages/nLoader/index.vue'
 import nIcon from '../pages/nIcon/index.vue'
 import nMessage from '../pages/nMessage/index.vue'
 import nButtonGroup from '../pages/nButtonGroup/index.vue'
+import nInput from '../pages/nInput/index.vue'
 
 Vue.use(VueRouter)
 
@@ -60,6 +61,14 @@ export const componentRoutes = [
       name: 'nButtonGroup'
     },
     component: nButtonGroup
+  },
+  {
+    path: '/nInput',
+    name: 'nInput',
+    meta: {
+      name: 'nInput'
+    },
+    component: nInput
   }
 ]
 

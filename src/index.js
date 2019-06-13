@@ -5,13 +5,15 @@ import nLoader from '../packages/nLoader'
 import NIcon from '../packages/nIcon'
 import nMessage from '../packages/nMessage'
 import nButtonGroup from '../packages/nButtonGroup'
+import nInput from '../packages/nInput'
 
 const components = {
   nButton: nButton,
   nLoader: nLoader,
   NIcon: NIcon,
   nMessage: nMessage,
-  nButtonGroup: nButtonGroup
+  nButtonGroup: nButtonGroup,
+  nInput: nInput
 }
 
 Object.values(components).forEach(component => {
