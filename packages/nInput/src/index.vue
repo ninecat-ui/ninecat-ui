@@ -4,6 +4,9 @@
       type="text"
       :value="value"
       @input="handleInput"
+      @change="$emit('change', $event)"
+      @blur="$emit('blur', $event)"
+      @focus="$emit('focus', $event)"
     >
   </div>
 </template>
