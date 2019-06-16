@@ -6,6 +6,8 @@ import NIcon from '../packages/nIcon'
 import nMessage from '../packages/nMessage'
 import nButtonGroup from '../packages/nButtonGroup'
 import nInput from '../packages/nInput'
+import nCol from '../packages/nCol'
+import nRow from '../packages/nRow'
 
 const components = {
   nButton: nButton,
@@ -13,7 +15,9 @@ const components = {
   NIcon: NIcon,
   nMessage: nMessage,
   nButtonGroup: nButtonGroup,
-  nInput: nInput
+  nInput: nInput,
+  nCol: nCol,
+  nRow: nRow
 }
 
 Object.values(components).forEach(component => {
