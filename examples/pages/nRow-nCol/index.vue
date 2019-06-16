@@ -2,6 +2,7 @@
   <div>
     <!-- 支持24个栅格 -->
     <!-- 支持offset -->
+    <div>支持offset</div>
     <n-row class="marginTop">
       <n-col span="1">
         <div class="blue">
@@ -18,6 +19,7 @@
       </n-col>
     </n-row>
     <!-- 默认均分 -->
+    <div>均分</div>
     <n-row class="marginTop">
       <n-col>
         <div class="blue">
@@ -41,6 +43,7 @@
       </n-col>
     </n-row>
     <!-- 支持gutter -->
+    <div>支持gutter</div>
     <n-row
       gutter="12"
       class="marginTop"
