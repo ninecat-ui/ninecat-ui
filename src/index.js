@@ -8,7 +8,7 @@ import nButtonGroup from '../packages/nButtonGroup'
 import nInput from '../packages/nInput'
 import nCol from '../packages/nCol'
 import nRow from '../packages/nRow'
-
+import nToast from '../packages/nToast'
 const components = {
   nButton: nButton,
   nLoader: nLoader,
@@ -17,7 +17,8 @@ const components = {
   nButtonGroup: nButtonGroup,
   nInput: nInput,
   nCol: nCol,
-  nRow: nRow
+  nRow: nRow,
+  nToast: nToast
 }
 
 Object.values(components).forEach(component => {
