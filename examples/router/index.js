@@ -1,6 +1,7 @@
 import VueRouter from 'vue-router'
 import Vue from 'vue'
 import About from '../pages/about/index.vue'
+import nAlert from '../pages/nAlert/index.vue'
 import nButton from '../pages/nButton/index.vue'
 import nLoader from '../pages/nLoader/index.vue'
 import nIcon from '../pages/nIcon/index.vue'
@@ -21,6 +22,14 @@ export const commonRoutes = [
 ]
 
 export const componentRoutes = [
+  {
+    path: '/nAlert',
+    name: 'nAlert',
+    meta: {
+      name: 'nAlert'
+    },
+    component: nAlert
+  },
   {
     path: '/nButton',
     name: 'nButton',
