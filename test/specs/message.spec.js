@@ -8,12 +8,6 @@ describe('nMessage', () => {
     })
     expect(nMessageVm.message).toEqual('')
   })
-  it('render nMessage text default', () => {
-    let nMessageVm = getRenderedVm(nMessage, {
-      show: true
-    })
-    expect(nMessageVm.message).toEqual('')
-  })
   it('render something text when message is something', () => {
     let nMessageVm = getRenderedVm(nMessage, {
       show: true,
