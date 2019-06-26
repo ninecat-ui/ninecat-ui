@@ -1,26 +1,34 @@
 <template>
   <div>
-    <n-message
-      :show="show"
-      :type="infoType"
-      :message="infoMessage"
-    />
-    <n-message
-      :show="show"
-      :type="successType"
-      :message="successMessage"
-    />
-    <n-message
-      :show="show"
-      :type="warningType"
-      :message-title="warningMessageTitle"
-      :message="warningMessage"
-    />
-    <n-message
-      :show="show"
-      :type="errorType"
-      :message="errorMessage"
-    />
+    <section class="message-demo">
+      <n-message
+        :show="show"
+        :type="infoType"
+        :message="infoMessage"
+      />
+    </section>
+    <section class="message-demo">
+      <n-message
+        :show="show"
+        :type="successType"
+        :message="successMessage"
+      />
+    </section>
+    <section class="message-demo">
+      <n-message
+        :show="show"
+        :type="warningType"
+        :message-title="warningMessageTitle"
+        :message="warningMessage"
+      />
+    </section>
+    <section class="message-demo">
+      <n-message
+        :show="show"
+        :type="errorType"
+        :message="errorMessage"
+      />
+    </section>
   </div>
 </template>
 <script>
@@ -41,3 +49,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .message-demo{
+    margin-bottom: 10px;
+  }
+</style>

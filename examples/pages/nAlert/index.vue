@@ -1,6 +1,33 @@
 <template>
   <div>
-    <n-alert show="show" />
+    <section class="alert-demo">
+      <n-alert
+        :show="show"
+        message="Message"
+        type="common"
+      />
+    </section>
+    <section class="alert-demo">
+      <n-alert
+        :show="show"
+        message="Message"
+        type="success"
+      />
+    </section>
+    <section class="alert-demo">
+      <n-alert
+        :show="show"
+        message="Message"
+        type="warning"
+      />
+    </section>
+    <section class="alert-demo">
+      <n-alert
+        :show="show"
+        message="Message"
+        type="error"
+      />
+    </section>
   </div>
 </template>
 
@@ -13,3 +40,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .alert-demo{
+    margin-bottom: 10px;
+  }
+</style>

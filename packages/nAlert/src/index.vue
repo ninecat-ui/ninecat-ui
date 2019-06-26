@@ -8,7 +8,9 @@
       class="base-alert"
       :class="type"
     >
-      {{ message }}
+      <div class="alert-content">
+        <span class="message-text">{{ message }}</span>
+      </div>
     </div>
   </div>
 </template>
@@ -40,11 +42,24 @@ export default {
 
 <style lang="scss" scoped>
   .base-alert{
-    position: absolute;
+    position: relative;
     min-width: 188px;
     height: 88px;
     box-shadow: 0 2px 14px 0 rgba(0,0,0,0.06), 0 4px 8px 0 rgba(0,0,0,0.06);
     border-radius: 6px;
+    display: inline-block;
+    .alert-content{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+        .message-text{
+          font-family: PingFangSC-Regular;
+          font-size: 14px;
+          color: #575757;
+          line-height: 20px;
+        }
+    }
   }
   .common{
     background: #E9F5FE;
