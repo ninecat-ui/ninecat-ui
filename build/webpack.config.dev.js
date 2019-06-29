@@ -54,7 +54,13 @@ module.exports = merge(baseConfig, {
     new webpack.HotModuleReplacementPlugin(),
     new FriendlyErrorsWebpackPlugin({
       compilationSuccessInfo: {
-        messages: [`You application is running here http://${HOST}:${PORT}`],
+        messages: [
+          `
+          You application is running here http://${HOST}:${PORT}
+          Build：npm run prod
+          Publish npm:npm publish
+          `
+        ],
         notes: ['Some additionnal notes to be displayed unpon successful compilation']
       },
       onErrors: function (severity, errors) {

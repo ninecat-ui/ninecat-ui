@@ -1,7 +1,9 @@
 {
   "name": "ninecat-ui",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A Vue.js 2.0 Web UI Toolkit.",
+  "author": "ninecat-ui",
+  "private": false,
   "main": "package/ninecat-ui.js",
   "scripts": {
     "dev": "webpack-dev-server --progress --history-api-fallback --config build/webpack.config.dev.js",
@@ -79,7 +81,14 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit" : "npm run lint"
-    } 
+      "pre-commit": "npm run lint"
+    }
+  },
+  "files": [
+    "package"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ninecat-ui/ninecat-ui"
   }
 }
