@@ -9,15 +9,28 @@
       :class="type"
     >
       <div class="alert-content">
+        <n-icon
+          :name="iconClass"
+        />
         <span class="message-text">{{ message }}</span>
+        <n-icon
+          id="alertCloseIcon"
+          name="icon-times"
+          :class="iconClass"
+          @click.native="closeAlert"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import nIcon from '../../nIcon'
 export default {
   name: 'NAlert',
+  components: {
+    nIcon
+  },
   props: {
     show: {
       type: Boolean,
@@ -25,7 +38,7 @@ export default {
     },
     type: {
       type: String,
-      default: 'common'
+      default: 'info'
     },
     message: {
       type: String,
@@ -34,7 +47,13 @@ export default {
   },
   data: function () {
     return {
-      showAlert: this.show
+      showAlert: this.show,
+      iconClass: `icon-${this.type}`
+    }
+  },
+  methods: {
+    closeAlert () {
+      this.showAlert = false
     }
   }
 }
@@ -43,25 +62,41 @@ export default {
 <style lang="scss" scoped>
   .base-alert{
     position: relative;
-    min-width: 188px;
+    min-width: 172px;
     height: 88px;
     box-shadow: 0 2px 14px 0 rgba(0,0,0,0.06), 0 4px 8px 0 rgba(0,0,0,0.06);
     border-radius: 6px;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .alert-content{
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
+        position:absolute;
+        .iconfont{
+          font-size: 12px;
+        }
         .message-text{
           font-family: PingFangSC-Regular;
           font-size: 14px;
           color: #575757;
           line-height: 20px;
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+        .icon-info{
+          color: #2196f3;
+        }
+        .icon-success{
+          color: #4caf50;
+        }
+        .icon-warning{
+          color: #ffb321;
+        }
+        .icon-error{
+          color: #f44336;
         }
     }
   }
-  .common{
+  .info{
     background: #E9F5FE;
   }
   .success{

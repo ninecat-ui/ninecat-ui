@@ -1,4 +1,5 @@
 import { getRenderedVm } from '../utils/util'
+import { mount } from '@vue/test-utils'
 import nMessage from '../../packages/nMessage'
 
 describe('nMessage', () => {
@@ -14,6 +15,18 @@ describe('nMessage', () => {
       message: 'something'
     })
     expect(nMessageVm.message).toEqual('something')
+  })
+  it('when click the close icon,this component close', () => {
+    const wrapper = mount(nMessage)
+    wrapper.setProps({
+      show: true,
+      type: 'success'
+    })
+    const closeIcon = wrapper.find('#messageCloseIcon')
+    if (closeIcon) {
+      closeIcon.trigger('click')
+    }
+    expect(wrapper.text()).toEqual('')
   })
   it('render info style defalut', () => {
     let nMessageVm = getRenderedVm(nMessage, {

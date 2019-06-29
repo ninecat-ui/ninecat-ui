@@ -4,7 +4,7 @@
       <n-alert
         :show="show"
         message="Message"
-        type="common"
+        type="info"
       />
     </section>
     <section class="alert-demo">

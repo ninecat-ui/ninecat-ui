@@ -27,6 +27,7 @@
           </p>
           <n-icon
             v-if="type !== 'info'"
+            id="messageCloseIcon"
             name="icon-times"
             :class="iconClass"
             @click.native="closeMessage"
