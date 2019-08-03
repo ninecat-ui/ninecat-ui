@@ -65,10 +65,10 @@ export default {
     }
   },
   data () {
-    const { headerConfig } = this.config
+    const headerConfig = this.config
     return {
       headerConfig,
-      searchPlaceholder: headerConfig.lang === 'zh-CN' ? '请输入' : 'Please input'
+      searchPlaceholder: headerConfig.lang === 'zh-CN' ? '搜索文档' : 'Please input'
     }
   }
 }

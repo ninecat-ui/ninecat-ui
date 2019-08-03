@@ -4,8 +4,8 @@
     :style="style"
   >
     <div
-      v-for="(item, index) in navConfig"
-      :key="index"
+      v-for="(item, navIndex) in navConfig"
+      :key="navIndex"
       class="item"
     >
       <n-nav-link
@@ -14,8 +14,8 @@
       />
       <div v-if="item.children">
         <div
-          v-for="(navItem, index) in item.children"
-          :key="index"
+          v-for="(navItem, itemIndex) in item.children"
+          :key="itemIndex"
         >
           <n-nav-link
             :item="navItem"
@@ -24,17 +24,17 @@
         </div>
       </div>
       <div
-        v-for="(group, index) in item.groups"
+        v-for="(group, groupindex) in item.groups"
         v-else-if="item.groups"
-        :key="index"
+        :key="groupindex"
       >
         <div class="group-title">
           {{ group.groupName }}
         </div>
         <div>
           <div
-            v-for="(navItem, index) in group.list"
-            :key="index"
+            v-for="(navItem, navItemIndex) in group.list"
+            :key="navItemIndex"
             class="subitem"
           >
             <n-nav-link
@@ -49,40 +49,15 @@
 </template>
 
 <script>
+import nNavLink from '../nNavLink'
 export default {
   name: 'NNav',
+  components: { nNavLink },
   props: {
-    navConfig: {
+    config: {
       type: Array,
       default: () => {
-        return [{
-          name: 'Development guide',
-          groups: [
-            {
-              list: [
-                {
-                  path: '/introduction',
-                  title: 'Introduction'
-                }
-              ]
-            }
-          ]
-        }, {
-          name: 'Component',
-          groups: [{
-            groupName: 'Basic component',
-            list: [
-              {
-                path: '/button',
-                title: 'Button'
-              },
-              {
-                path: '/loading',
-                title: 'Loading'
-              }
-            ] }
-          ]
-        }]
+        return []
       }
     },
     base: {
@@ -93,7 +68,8 @@ export default {
   data () {
     return {
       top: 60,
-      bottom: 0
+      bottom: 0,
+      navConfig: this.config
     }
   },
   computed: {
