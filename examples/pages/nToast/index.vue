@@ -10,7 +10,7 @@
 export default {
   methods: {
     showToast () {
-      this.$toast('1111')
+      this.$toast('我是Toast')
     }
   }
 }
