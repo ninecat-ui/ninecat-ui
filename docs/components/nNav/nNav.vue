@@ -1,0 +1,194 @@
+<template>
+  <div
+    class="ndoc-nav"
+    :style="style"
+  >
+    <div
+      v-for="(item, index) in navConfig"
+      :key="index"
+      class="item"
+    >
+      <n-nav-link
+        :item="item"
+        :base="base"
+      />
+      <div v-if="item.children">
+        <div
+          v-for="(navItem, index) in item.children"
+          :key="index"
+        >
+          <n-nav-link
+            :item="navItem"
+            :base="base"
+          />
+        </div>
+      </div>
+      <div
+        v-for="(group, index) in item.groups"
+        v-else-if="item.groups"
+        :key="index"
+      >
+        <div class="group-title">
+          {{ group.groupName }}
+        </div>
+        <div>
+          <div
+            v-for="(navItem, index) in group.list"
+            :key="index"
+            class="subitem"
+          >
+            <n-nav-link
+              :item="navItem"
+              :base="base"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'NNav',
+  props: {
+    navConfig: {
+      type: Array,
+      default: () => {
+        return [{
+          name: 'Development guide',
+          groups: [
+            {
+              list: [
+                {
+                  path: '/introduction',
+                  title: 'Introduction'
+                }
+              ]
+            }
+          ]
+        }, {
+          name: 'Component',
+          groups: [{
+            groupName: 'Basic component',
+            list: [
+              {
+                path: '/button',
+                title: 'Button'
+              },
+              {
+                path: '/loading',
+                title: 'Loading'
+              }
+            ] }
+          ]
+        }]
+      }
+    },
+    base: {
+      type: String,
+      default: ''
+    }
+  },
+  data () {
+    return {
+      top: 60,
+      bottom: 0
+    }
+  },
+  computed: {
+    style () {
+      return {
+        top: this.top + 'px',
+        bottom: this.bottom + 'px'
+      }
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+.ndoc-nav {
+  left: 0;
+  top: 60px;
+  bottom: 0;
+  z-index: 1;
+  position: fixed;
+  overflow-y: scroll;
+  padding: 25px 0 75px;
+  background-color: #fff;
+  min-width: 220px;
+  max-width: 220px;
+  box-shadow: 0 8px 12px #ebedf0;
+  border-right: 1px solid #f1f4f8;
+
+  &::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background-color: transparent;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(69, 90, 100, .2)
+  }
+
+  .item,.subitem {
+    a {
+      margin: 0;
+      display: block;
+      color: #455a64;
+      font-size: 16px;
+      padding: 10px 10px 10px 30px;
+      line-height: 24px;
+      transition: all .3s;
+      text-decoration:none;
+      &.active {
+        color: #1989fa;
+      }
+    }
+  }
+
+  .subitem {
+    a {
+      font-size: 13px;
+      &:hover {
+        color: #1989fa;
+      }
+    }
+
+    span {
+      font-size: 13px;
+    }
+  }
+
+  .group-title {
+    font-size: 12px;
+    line-height: 40px;
+    padding-left: 30px;
+    color: rgba(69, 90, 100, .6);
+  }
+
+  @media (max-width: 1300px) {
+    min-width: 220px;
+    max-width: 220px;
+
+    .item,
+    .subitem {
+      a {
+        line-height: 22px;
+      }
+    }
+
+    .subitem {
+      a {
+        font-size: 13px;
+      }
+    }
+  }
+}
+</style>
