@@ -1,4 +1,3 @@
-'use strict'
 const path = require('path')
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.config.base')
@@ -14,14 +13,6 @@ module.exports = merge(baseConfig, {
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
-  externals: {
-    vue: {
-      root: 'Vue',
-      commonjs: 'vue',
-      commonjs2: 'vue',
-      amd: 'vue'
-    }
-  },
   optimization: {
     splitChunks: {
       cacheGroups: {
@@ -36,15 +27,15 @@ module.exports = merge(baseConfig, {
   module: {
     rules: [
       {
-        test: /\.css?$/,
+        test: /\.css$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          'vue-style-loader',
           'css-loader'
         ]
       }, {
         test: /\.styl(us)?$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          'vue-style-loader',
           'css-loader',
           'stylus-loader'
         ]
