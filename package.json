@@ -16,7 +16,7 @@
     "test": "npm run lint && npm run test:unit",
     "test:debug": "node --inspect node_modules/.bin/jest --runInBand --config test/jest.config.js",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "webpack --config build/webpack.config.doc.js"
   },
   "keywords": [
     "Vue",

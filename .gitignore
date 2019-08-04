@@ -59,4 +59,5 @@ typings/
 
 # built files
 dist
+doc
 package
