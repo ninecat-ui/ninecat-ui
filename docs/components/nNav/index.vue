@@ -79,6 +79,16 @@ export default {
         bottom: this.bottom + 'px'
       }
     }
+  },
+  created () {
+    window.addEventListener('scroll', this.onScroll)
+    this.onScroll()
+  },
+  methods: {
+    onScroll () {
+      const { pageYOffset: offset } = window
+      this.top = Math.max(0, 60 - offset)
+    }
   }
 }
 </script>
@@ -118,7 +128,7 @@ export default {
       margin: 0;
       display: block;
       color: #455a64;
-      font-size: 16px;
+      font-size: 18px;
       padding: 10px 10px 10px 30px;
       line-height: 24px;
       transition: all .3s;
@@ -131,19 +141,19 @@ export default {
 
   .subitem {
     a {
-      font-size: 13px;
+      font-size: 14px;
       &:hover {
         color: #1989fa;
       }
     }
 
     span {
-      font-size: 13px;
+      font-size: 14px;
     }
   }
 
   .group-title {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 40px;
     padding-left: 30px;
     color: rgba(69, 90, 100, .6);

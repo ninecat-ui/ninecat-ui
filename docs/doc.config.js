@@ -11,21 +11,21 @@ export default {
     simulators: []
   },
   navConfig: [{
-    name: 'Development guide',
+    name: '开发指南',
     groups: [
       {
         list: [
           {
             path: '/',
-            title: 'About'
+            title: '介绍'
           }
         ]
       }
     ]
   }, {
-    name: 'Component',
+    name: '组件',
     groups: [{
-      groupName: 'Basic component',
+      groupName: '基础组件',
       list: [
         {
           path: '/nButton',

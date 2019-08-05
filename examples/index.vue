@@ -31,6 +31,8 @@ export default {
 
 <style lang="scss" scoped>
 .app {
-  background-color: #ffffff
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  font-family: PingFang SC,Helvetica Neue,Arial,sans-serif;
 }
 </style>

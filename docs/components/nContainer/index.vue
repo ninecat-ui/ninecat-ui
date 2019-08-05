@@ -28,16 +28,15 @@ export default {
 </script>
 
 <style lang="scss">
-
 .ndoc-container {
   overflow: hidden;
   box-sizing: border-box;
+  color: #34495e;
   padding-left: 220px;
     .n-doc-content {
     flex: 1;
     position: relative;
-    padding: 0 0 75px;
-
+    padding: 30px 60px 75px 60px;
     .card {
       padding: 24px;
       margin-bottom: 24px;
@@ -56,30 +55,30 @@ export default {
     h5,
     h6 {
       line-height: 1.5;
-      font-weight: normal;
-      color: #333;
+      font-weight: 400;
+      color:#333;
       cursor: pointer;
     }
 
     h1 {
-      margin: 0 0 30px;
-      font-size: 30px;
+      margin: 0 0 40px;
+      font-size: 40px;
       cursor: default;
     }
 
     h2 {
-      font-size: 22px;
+      font-size: 35px;
       margin: 45px 0 20px;
     }
 
     h3 {
-      font-size: 17px;
+      font-size: 30px;
       font-weight: 500;
       margin-bottom: 12px;
     }
 
     h4 {
-      font-size: 15px;
+      font-size: 20px;
       font-weight: 500;
       margin: 24px 0 12px;
     }
@@ -91,9 +90,26 @@ export default {
     }
 
     p {
-      font-size: 14px;
+      font-size: 16px;
       line-height: 26px;
       color: #34495e;
+    }
+
+    pre{
+      padding: 20px;
+      background: #f2f4f5;
+      font-size: 14px;
+    }
+
+    code{
+      margin: 0;
+      padding: 0;
+      overflow: auto;
+      color: #314659;
+      line-height: 20px;
+      font-size: 14px;
+      background: #f2f4f5;
+      border: none;
     }
 
     table {
@@ -131,7 +147,6 @@ export default {
           padding-right: 0;
         }
       }
-
       code {
         font-size: 13px;
         padding: 0 8px;
@@ -192,12 +207,6 @@ export default {
       background-color: #ecf9ff;
       color: rgba(52, 73, 94, .8);
       border-left: 5px solid #50bfff;
-    }
-
-    img {
-      width: 100%;
-      margin: 15px 0;
-      box-shadow: 0 2px 4px #ebedf0;
     }
 
     &--changelog {
