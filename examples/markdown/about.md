@@ -21,6 +21,7 @@
 ```
 import Vue from 'vue'
 import Ninecat from 'ninecat-ui'
+// 引入样式文件
 import 'ninecat-ui/package/main.css'
 
 Vue.use(Ninecat)

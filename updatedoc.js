@@ -1,5 +1,9 @@
 const cloneUrl = 'https://github.com/ninecat-ui/ninecat-ui.github.io.git'
 const shell = require('shelljs')
+if (shell.exec('npm run docs:build').code !== 0) {
+  shell.echo('Error: npm run docs:build failed')
+  shell.exit(1)
+}
 shell.rm('-rf', 'ninecat-ui.github.io')
 if (shell.exec(`git clone ${cloneUrl}`).code !== 0) {
   shell.echo('Error: Git commit failed')

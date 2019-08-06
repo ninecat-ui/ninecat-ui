@@ -92,6 +92,7 @@ export default {
     p {
       font-size: 16px;
       line-height: 26px;
+      margin:10px;
       color: #34495e;
     }
 
@@ -195,7 +196,6 @@ export default {
     }
 
     section {
-      padding: 30px;
       overflow: hidden;
     }
 
