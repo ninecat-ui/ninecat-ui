@@ -23,4 +23,5 @@ if (shell.exec('git push origin master').code !== 0) {
   shell.echo('Error: Git commit failed')
   shell.exit(1)
 }
+shell.cd('..')
 shell.rm('-rf', 'ninecat-ui.github.io')
