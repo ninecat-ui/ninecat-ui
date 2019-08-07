@@ -29,13 +29,17 @@
         </div>
       </div>
     </section>
+    <vue-markdown>
+      {{ api }}
+    </vue-markdown>
   </div>
 </template>
 
 <script>
 import VueMarkdown from 'vue-markdown'
-import nloaderExample from '../../markdown/nloader/nloaderExample.md'
-import introduction from '../../markdown/nloader/introduction.md'
+import nloaderExample from './md/nloaderExample.md'
+import introduction from './md/introduction.md'
+import api from './md/api.md'
 export default {
   components: {
     VueMarkdown
@@ -44,6 +48,7 @@ export default {
     return {
       introduction: introduction,
       nloaderExample: nloaderExample,
+      api: api,
       show: true,
       metaShow: false,
       xsSize: 'xs',

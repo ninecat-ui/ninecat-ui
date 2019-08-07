@@ -114,7 +114,8 @@ export default {
     }
 
     table {
-      width: 100%;
+      border: 1px solid #fbfbfb;
+      width: 90%;
       margin-top: 12px;
       font-size: 13px;
       line-height: 1.5;
@@ -123,10 +124,12 @@ export default {
       color: #34495e;
 
       th {
+        border: 1px solid #fbfbfb;
         padding: 8px 10px;
         text-align: left;
         font-weight: 500;
-
+        font-size: 16px;
+        background-color: #fbfbfb;
         &:first-child {
           padding-left: 0;
         }
@@ -137,9 +140,10 @@ export default {
       }
 
       td {
+        border: 1px solid #fbfbfb;
         padding: 8px;
         border-top: 1px solid #f1f4f8;
-
+        font-size: 14px;
         &:first-child {
           padding-left: 0;
         }
