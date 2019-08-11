@@ -1,80 +1,35 @@
 <template>
   <div>
-    <vue-markdown>
-      {{ introduction }}
-    </vue-markdown>
-    <section class="grid">
-      <div class="demo-box">
-        <div class="source">
-          <n-loader
-            :show="show"
-            :size="mdSize"
-          />
-        </div>
-        <div
-          v-show="metaShow"
-          class="meta"
-        >
-          <vue-markdown>
-            {{ nloaderExample }}
-          </vue-markdown>
-        </div>
-        <div
-          class="demo-block-control"
-          @click="showMeta"
-        >
-          <n-icon
-            :name="iconName"
-          />
-        </div>
-      </div>
-    </section>
-    <vue-markdown>
-      {{ api }}
-    </vue-markdown>
+    <example
+      :introduction="introduction"
+      :api="api"
+      :example-code="exampleCode"
+    >
+      <slot>
+        <n-loader
+          :show="show"
+        />
+      </slot>
+    </example>
   </div>
 </template>
 
 <script>
-import VueMarkdown from 'vue-markdown'
-import nloaderExample from './md/nloaderExample.md'
+import example from '../components/example'
+import exampleCode from './md/example-code.md'
 import introduction from './md/introduction.md'
 import api from './md/api.md'
 export default {
   components: {
-    VueMarkdown
+    example
   },
   data: () => {
     return {
       introduction: introduction,
-      nloaderExample: nloaderExample,
+      exampleCode: exampleCode,
       api: api,
-      show: true,
-      metaShow: false,
-      xsSize: 'xs',
-      smSize: 'sm',
-      mdSize: 'md',
-      lgSize: 'lg'
-    }
-  },
-  computed: {
-    iconName () {
-      if (this.metaShow) {
-        return 'icon-sort-up'
-      } else {
-        return 'icon-sort-down'
-      }
-    }
-  },
-  methods: {
-    showMeta () {
-      console.log(1222)
-      this.metaShow = !this.metaShow
+      show: true
     }
   }
 }
 </script>
-
-<style lang="scss" scoped>
-  @import '../../style/index.scss'
-</style>

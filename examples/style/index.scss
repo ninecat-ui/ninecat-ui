@@ -45,6 +45,9 @@
       color: #d3dce6;
       cursor: pointer;
       position: relative;
+      &:focus,&:hover{
+        color:#34C3FF;
+      };
     }  
   }
 }

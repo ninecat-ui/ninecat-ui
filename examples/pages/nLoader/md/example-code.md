@@ -6,15 +6,14 @@
 <template>
   <n-loader
     :show="show"
-    :size="xsSize"
   />
 </template>
 <script>
+import {Loader} from 'ninecat-ui'
 export default {
   data: () => {
     return {
       show: true,
-      xsSize: 'xs',
     }
   }
 }
