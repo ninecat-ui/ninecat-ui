@@ -13,10 +13,10 @@
 </template>
 
 <script>
-import nHeader from '../docs/components/nHeader'
-import nNav from '../docs/components/nNav'
-import nContainer from '../docs/components/nContainer'
-import config from '../docs/doc.config'
+import nHeader from '../doc/components/nHeader'
+import nNav from '../doc/components/nNav'
+import nContainer from '../doc/components/nContainer'
+import config from '../doc/doc.config'
 
 export default {
   name: 'App',

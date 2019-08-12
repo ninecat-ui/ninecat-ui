@@ -7,7 +7,7 @@ module.exports = merge(baseConfig, {
   mode: 'production',
   entry: path.resolve(__dirname, '../index.js'),
   output: {
-    path: path.resolve(__dirname, '../doc'),
+    path: path.resolve(__dirname, '../docs'),
     publicPath: './',
     library: 'ninecat-doc',
     libraryTarget: 'umd',
