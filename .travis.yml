@@ -27,9 +27,10 @@ script:
   - npm test
   - codecov
   - npm run docs:build
+  - rm -r ninecat-ui.github.io
   - git clone https://${GitHub_REF}
   - ls -a
-  - mv docs/. ninecat-ui.github.io/
+  - node updatedoc.js
   - cd ninecat-ui.github.io
   - git add -A
   - git commit -m "docs:update docs"
