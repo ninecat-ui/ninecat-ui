@@ -28,6 +28,7 @@ script:
   - codecov
   - npm run docs:build
   - git clone https://${GitHub_REF}
+  - ls -a
   - mv docs/. ninecat-ui.github.io/
   - cd ninecat-ui.github.io
   - git add -A
