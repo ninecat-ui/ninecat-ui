@@ -2,6 +2,10 @@
 # Designated language. https://docs.travis-ci.com/user/languages/javascript-with-nodejs/
 language: node_js
 
+env:
+  global:
+    - GitHub_REF:github.com/ninecat-ui/ninecat-ui.git
+
 # Install dependence
 install:
   - npm install
@@ -25,7 +29,7 @@ script:
   - npm run docs:build
   - git add -A
   - git commit -m "docs:update docs"
-  - git push -f "https://${GitHub_TOKEN}@${GitHub_REF}" master
+  - git push --force --quiet "https://${GitHub_TOKEN}@${GitHub_REF}" master:master
 # Configure to send notifications when the build fails. https://docs.travis-ci.com/user/notifications
 notifications:
   webhooks:
