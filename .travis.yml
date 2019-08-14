@@ -32,7 +32,7 @@ script:
   - rm -rf ninecat-ui.github.io/
   - node updatedoc.js
   - cd ninecat-ui.github.io
-  - git fetch --unshallow origin
+  - ls -a
   - git add -A
   - git commit -m "docs:update docs"
   - git push --force --quiet "https://${GitHub_TOKEN}@${GitHub_REF}" master:master
