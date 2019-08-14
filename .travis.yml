@@ -27,7 +27,6 @@ script:
   - npm test
   - codecov
   - npm run docs:build
-  - rm -r ninecat-ui.github.io
   - git clone https://${GitHub_REF}
   - ls -a
   - node updatedoc.js
