@@ -21,6 +21,14 @@ export const commonRoutes = [
       name: '首页'
     },
     component: About
+  },
+  {
+    path: '/ninecat-ui',
+    name: 'about',
+    meta: {
+      name: '首页'
+    },
+    component: About
   }
 ]
 
