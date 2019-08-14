@@ -1,7 +1,5 @@
 
 
- Loading加载数据时显示动效,可以的对大小进行改变。
-
 ```
 <template>
   <n-message

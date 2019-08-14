@@ -29,6 +29,7 @@ script:
   - npm run docs:build
   - git clone https://${GitHub_REF}
   - ls -a
+  - rm -rf ninecat-ui.github.io/
   - node updatedoc.js
   - cd ninecat-ui.github.io
   - git add -A
