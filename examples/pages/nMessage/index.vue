@@ -1,40 +1,53 @@
 <template>
   <div>
-    <section class="message-demo">
-      <n-message
-        :show="show"
-        :type="infoType"
-        :message="infoMessage"
-      />
-    </section>
-    <section class="message-demo">
-      <n-message
-        :show="show"
-        :type="successType"
-        :message="successMessage"
-      />
-    </section>
-    <section class="message-demo">
-      <n-message
-        :show="show"
-        :type="warningType"
-        :message-title="warningMessageTitle"
-        :message="warningMessage"
-      />
-    </section>
-    <section class="message-demo">
-      <n-message
-        :show="show"
-        :type="errorType"
-        :message="errorMessage"
-      />
-    </section>
+    <example
+      :introduction="introduction"
+      :api="api"
+    >
+      <section class="message-demo">
+        <n-message
+          :show="show"
+          :type="infoType"
+          :message="infoMessage"
+        />
+      </section>
+      <!-- <section class="message-demo">
+        <n-message
+          :show="show"
+          :type="successType"
+          :message="successMessage"
+        />
+      </section>
+      <section class="message-demo">
+        <n-message
+          :show="show"
+          :type="warningType"
+          :message-title="warningMessageTitle"
+          :message="warningMessage"
+        />
+      </section>
+      <section class="message-demo">
+        <n-message
+          :show="show"
+          :type="errorType"
+          :message="errorMessage"
+        />
+      </section> -->
+    </example>
   </div>
 </template>
 <script>
+import example from '../components/example'
+import introduction from './md/introduction.md'
+import api from './md/api.md'
 export default {
+  components: {
+    example
+  },
   data: function () {
     return {
+      introduction: introduction,
+      api: api,
       show: true,
       infoType: 'info',
       infoMessage: '一般的文字信息，默认左对齐，可以带图标。',
