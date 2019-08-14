@@ -32,7 +32,6 @@ script:
   - rm -rf ninecat-ui.github.io/
   - node updatedoc.js
   - cd ninecat-ui.github.io
-  - git remote add origin <path-to-old-remote>
   - git fetch --unshallow origin
   - git add -A
   - git commit -m "docs:update docs"
