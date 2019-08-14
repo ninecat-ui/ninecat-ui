@@ -9,7 +9,7 @@ if (shell.exec(`git clone ${cloneUrl}`).code !== 0) {
   shell.echo('Error: Git commit failed')
   shell.exit(1)
 }
-shell.cp('-R', 'doc/.', 'ninecat-ui.github.io/')
+shell.cp('-R', 'docs/.', 'ninecat-ui.github.io/')
 shell.cd('ninecat-ui.github.io')
 if (shell.exec('git add -A').code !== 0) {
   shell.echo('Error: Git commit failed')

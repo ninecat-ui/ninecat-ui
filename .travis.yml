@@ -4,7 +4,7 @@ language: node_js
 
 env:
   global:
-    - GitHub_REF: github.com/ninecat-ui/ninecat-ui.git
+    - GitHub_REF: github.com/ninecat-ui/ninecat-ui.github.io.git
 
 # Install dependence
 install:
@@ -27,6 +27,9 @@ script:
   - npm test
   - codecov
   - npm run docs:build
+  - git clone https://${GitHub_REF}
+  - mv docs/. ninecat-ui.github.io/
+  - cd ninecat-ui.github.io
   - git add -A
   - git commit -m "docs:update docs"
   - git push --force --quiet "https://${GitHub_TOKEN}@${GitHub_REF}" master:master
