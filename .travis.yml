@@ -4,7 +4,7 @@ language: node_js
 
 env:
   global:
-    - GitHub_REF:github.com/ninecat-ui/ninecat-ui.git
+    - GitHub_REF: github.com/ninecat-ui/ninecat-ui.git
 
 # Install dependence
 install:
