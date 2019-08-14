@@ -33,6 +33,7 @@ script:
   - node updatedoc.js
   - cd ninecat-ui.github.io
   - ls -a
+  - git init
   - git add -A
   - git commit -m "docs:update docs"
   - git push --force --quiet "https://${GitHub_TOKEN}@${GitHub_REF}" master:master
