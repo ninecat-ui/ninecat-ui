@@ -30,7 +30,7 @@ script:
   - git clone https://${GitHub_REF}
   - ls -a
   - rm -rf ninecat-ui.github.io/
-  - node updatedoc.js
+  - cp -r docs/*.* ninecat-ui.github.io
   - cd ninecat-ui.github.io
   - ls -a
   - git init
