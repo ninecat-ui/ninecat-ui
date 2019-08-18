@@ -13,9 +13,9 @@ install:
   - npm install -g codecov
 
 # Cache the node_modules folder and don't need to download and install all npm packages every time.
-cache:
-  directories:
-    - node_modules
+# cache:
+#   directories:
+#     - node_modules
 # Specify the node version.
 node_js:
   - "11.1.0"
