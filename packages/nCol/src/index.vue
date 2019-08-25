@@ -14,7 +14,7 @@
 <script>
 export default {
   name: 'NCol',
-  inject: ['gutter'],
+  // inject: ['gutter'],
   props: {
     span: {
       type: [Number, String],
