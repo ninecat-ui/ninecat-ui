@@ -3,6 +3,7 @@
     <example
       :introduction="introduction"
       :api="api"
+      :example-code="exampleCode"
     >
       <section class="message-demo">
         <n-message
@@ -11,28 +12,6 @@
           :message="infoMessage"
         />
       </section>
-      <!-- <section class="message-demo">
-        <n-message
-          :show="show"
-          :type="successType"
-          :message="successMessage"
-        />
-      </section>
-      <section class="message-demo">
-        <n-message
-          :show="show"
-          :type="warningType"
-          :message-title="warningMessageTitle"
-          :message="warningMessage"
-        />
-      </section>
-      <section class="message-demo">
-        <n-message
-          :show="show"
-          :type="errorType"
-          :message="errorMessage"
-        />
-      </section> -->
     </example>
   </div>
 </template>
@@ -40,6 +19,7 @@
 import example from '../components/example'
 import introduction from './md/introduction.md'
 import api from './md/api.md'
+import exampleCode from './md/example-code.md'
 export default {
   components: {
     example
@@ -48,6 +28,7 @@ export default {
     return {
       introduction: introduction,
       api: api,
+      exampleCode: exampleCode,
       show: true,
       infoType: 'info',
       infoMessage: '一般的文字信息，默认左对齐，可以带图标。',

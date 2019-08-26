@@ -35,10 +35,10 @@ export default {
           path: '/nLoader',
           title: 'Loader'
         },
-        {
-          path: '/nIcon',
-          name: 'Icon'
-        },
+        // {
+        //   path: '/nIcon',
+        //   name: 'Icon'
+        // },
         {
           path: '/nMessage',
           name: 'Message'
@@ -46,23 +46,23 @@ export default {
         {
           path: '/nAlert',
           name: 'Alert'
-        },
-        {
-          path: '/nButtonGroup',
-          name: 'ButtonGroup'
-        },
-        {
-          path: '/nInput',
-          name: 'Input'
-        },
-        {
-          path: '/nRow-nCol',
-          name: 'Row-nCol'
-        },
-        {
-          path: '/nToast',
-          name: 'Toast'
         }
+        // {
+        //   path: '/nButtonGroup',
+        //   name: 'ButtonGroup'
+        // },
+        // {
+        //   path: '/nInput',
+        //   name: 'Input'
+        // },
+        // {
+        //   path: '/nRow-nCol',
+        //   name: 'Row-nCol'
+        // },
+        // {
+        //   path: '/nToast',
+        //   name: 'Toast'
+        // }
       ] }
     ]
   }]
