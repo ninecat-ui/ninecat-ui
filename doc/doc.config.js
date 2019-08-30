@@ -46,15 +46,15 @@ export default {
         {
           path: '/nAlert',
           name: 'Alert'
-        }
+        },
         // {
         //   path: '/nButtonGroup',
         //   name: 'ButtonGroup'
         // },
-        // {
-        //   path: '/nInput',
-        //   name: 'Input'
-        // },
+        {
+          path: '/nInput',
+          name: 'Input'
+        }
         // {
         //   path: '/nRow-nCol',
         //   name: 'Row-nCol'
