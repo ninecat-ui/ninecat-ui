@@ -10,6 +10,8 @@ import nInput from '../packages/nInput'
 import nCol from '../packages/nCol'
 import nRow from '../packages/nRow'
 import nToast from '../packages/nToast'
+import nTable from '../packages/nTable'
+
 const components = {
   nAlert: nAlert,
   nButton: nButton,
@@ -20,7 +22,8 @@ const components = {
   nInput: nInput,
   nCol: nCol,
   nRow: nRow,
-  nToast: nToast
+  nToast: nToast,
+  nTable: nTable
 }
 
 Object.values(components).forEach(component => {
