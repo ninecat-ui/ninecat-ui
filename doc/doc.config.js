@@ -54,7 +54,7 @@ export default {
         {
           path: '/nInput',
           name: 'Input'
-        }
+        },
         // {
         //   path: '/nRow-nCol',
         //   name: 'Row-nCol'
@@ -63,6 +63,10 @@ export default {
         //   path: '/nToast',
         //   name: 'Toast'
         // }
+        {
+          path: '/nTable',
+          name: 'Table'
+        }
       ] }
     ]
   }]

@@ -10,6 +10,7 @@ import nButtonGroup from '../pages/nButtonGroup/index.vue'
 import nInput from '../pages/nInput/index.vue'
 import nRowNCol from '../pages/nRow-nCol/index.vue'
 import nToast from '../pages/nToast/index.vue'
+import nTable from '../pages/nTable/index.vue'
 
 Vue.use(VueRouter)
 
@@ -104,6 +105,14 @@ export const componentRoutes = [
       name: 'nToast'
     },
     component: nToast
+  },
+  {
+    path: '/nTable',
+    name: 'nTable',
+    meta: {
+      name: 'nTable'
+    },
+    component: nTable
   }
 ]
 
