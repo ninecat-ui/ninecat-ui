@@ -14,7 +14,9 @@ export default {
       columns: [
         {
           title: '姓名',
-          dataIndex: 'name'
+          dataIndex: 'name',
+          align: 'center',
+          width: 100
         },
         {
           title: '年龄',

@@ -6,6 +6,8 @@
           <th
             v-for="item in currentColumns"
             :key="item.dataIndex"
+            :width="item.width+'px'"
+            :style="{textAlign:item.align}"
           >
             {{ item.title }}
           </th>
@@ -20,6 +22,7 @@
             v-for="(item,itemIndex) in dealTableData(dataItem,currentColumns)"
             :key="itemIndex"
             class="tabel-td"
+            :style="{textAlign:currentColumns[itemIndex].align}"
           >
             {{ item }}
           </td>
@@ -85,7 +88,7 @@ export default {
       line-height: 20px;
       th{
         height: 20px;
-        padding: 10px;
+        padding: 10px 0;
         border: none;
         background: #ffffff;
 
@@ -97,8 +100,10 @@ export default {
         font-size: 14px;
         color: #575757;
         height: 46px;
+        border-top: 1px solid #F2F2F5;
         td{
           padding: 13px 0;
+          border: none;
         }
       }
     }
