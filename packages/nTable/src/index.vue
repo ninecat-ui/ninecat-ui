@@ -91,7 +91,6 @@ export default {
         padding: 10px 0;
         border: none;
         background: #ffffff;
-
       }
     }
     tbody{
