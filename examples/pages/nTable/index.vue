@@ -1,16 +1,34 @@
 <template>
   <div>
-    <n-table
-      :columns="columns"
-      :data="data"
-    />
+    <example
+      :introduction="introduction"
+      :api="api"
+      :example-code="exampleCode"
+    >
+      <slot>
+        <n-table
+          :columns="columns"
+          :data="data"
+        />
+      </slot>
+    </example>
   </div>
 </template>
 
 <script>
+import introduction from './md/introduction.md'
+import api from './md/api.md'
+import exampleCode from './md/example-code.md'
+import example from '../components/example'
 export default {
+  components: {
+    example
+  },
   data: () => {
     return {
+      introduction,
+      exampleCode,
+      api,
       columns: [
         {
           title: '姓名',
