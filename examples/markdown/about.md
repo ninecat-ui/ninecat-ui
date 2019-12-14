@@ -1,6 +1,6 @@
 
 
-`Ninecat-ui` 是基于[RSUITE](https://rsuitejs.com/design/index.html)设计的VUE UI组件库。
+`Ninecat-ui` 是基于[RSUITE](https://rsuitejs.com/design/default/index.html)设计的VUE UI组件库。
 
 经过一番搜寻，找到了RSUITE的UI元件库，于是开始用VUE来构建一个UI组件库。
 
