@@ -11,6 +11,7 @@ import nInput from '../pages/nInput/index.vue'
 import nRowNCol from '../pages/nRow-nCol/index.vue'
 import nToast from '../pages/nToast/index.vue'
 import nTable from '../pages/nTable/index.vue'
+import nPagination from '../pages/nPagination/index.vue'
 
 Vue.use(VueRouter)
 
@@ -113,6 +114,14 @@ export const componentRoutes = [
       name: 'nTable'
     },
     component: nTable
+  },
+  {
+    path: '/nPagination',
+    name: 'nPagination',
+    meta: {
+      name: 'nPagination'
+    },
+    component: nPagination
   }
 ]
 
