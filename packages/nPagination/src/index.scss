@@ -1,0 +1,11 @@
+ul{
+  display: inline-block;
+  li{
+    .small{
+      height: 24px;
+      width: 24px;
+    }
+    list-style-type:none;
+    display: inline-block;
+  }
+}

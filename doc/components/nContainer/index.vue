@@ -160,29 +160,6 @@ export default {
       }
     }
 
-    ul li,
-    ol li {
-      color: #34495e;
-      font-size: 14px;
-      line-height: 22px;
-      margin: 5px 0 5px 10px;
-      padding-left: 15px;
-      position: relative;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 6px;
-        height: 6px;
-        margin-top: 8px;
-        border-radius: 50%;
-        box-sizing: border-box;
-        border: 1px solid #666;
-      }
-    }
-
     hr {
       border: 0 none;
       margin: 30px 0;
