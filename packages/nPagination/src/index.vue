@@ -4,10 +4,12 @@
       <li><a>&laquo;</a></li>
       <li><a>&lsaquo;</a></li>
       <li
-        v-for="(item,index) in pageKeyMap"
+        v-for="(item,index) in nPageKeyMap"
         :key="index"
+        :class="size"
+        @click="handClickPage(item.value)"
       >
-        <a>{item.value}</a>
+        <a :class="{active: item.value === nCurrent}">{{ item.value }}</a>
       </li>
       <li><a>&rsaquo;</a></li>
       <li><a>&raquo;</a></li>
@@ -30,20 +32,29 @@ export default {
     pageSize: {
       type: Number,
       default: 10
+    },
+    size: {
+      type: String,
+      default: 'sm'
+    },
+    onChangePgae: {
+      type: Function,
+      default: function () {}
     }
   },
-  data: () => {
+  data: function () {
     return {
-      total: this.total,
-      pageSize: this.pageSize,
-      current: this.current,
-      pageKeyMap: []
+      nTotal: this.total,
+      nPageSize: this.pageSize,
+      nCurrent: this.current,
+      nPageKeyMap: [],
+      itemStatus: ''
     }
   },
   mounted () {
-    console.log(this.total, this.pageSize)
-    this.getPageKeyMap(this.total, this.pageSize)
+    this.getPageKeyMap(this.nTotal, this.nPageSize)
   },
+
   methods: {
     getPageKeyMap (total, pageSize) {
       const pageKeyMap = []
@@ -54,13 +65,43 @@ export default {
           value: i
         })
       }
-      this.pageKeyMap = pageKeyMap
+      this.nPageKeyMap = pageKeyMap
       return pageKeyMap
+    },
+    handClickPage (page) {
+      this.nCurrent = page
+      this.onChangePgae(page)
     }
   }
 }
 </script>
 
-<style lang="scss">
-  @import './index.scss'
+<style lang="scss" scoped>
+ ul{
+  display: inline-block;
+  li{
+    text-align: center;
+    list-style-type:none;
+    display: inline-block;
+    a{
+      font-family: Avenir-Book;
+      color: #575757 !important;
+      line-height: 20px;
+      cursor:'pointer';
+    }
+  }
+  :hover{
+    background: #F7F7FA;
+    border-radius: 6px;
+    border-radius: 6px;
+  }
+  .sm{
+    height: 24px;
+    width: 24px;
+    font-size: 12px;
+  }
+  .active{
+    color: #1675E0 !important;
+  }
+}
 </style>
