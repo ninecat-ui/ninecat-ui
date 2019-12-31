@@ -43,7 +43,7 @@ jobs:
       node_js: "11.1.0"
       script: yarn prod
       before_deploy:
-        - cd dist
+        - cd package
       deploy:
         provider: npm
         email: "$NPM_EMAIL"
