@@ -24,18 +24,22 @@ node_js:
 
 
 stages:
+  - test
   - build doc
   - deploy
 
 jobs:
   include:
+    - stage: test
+      script:
+        - npm test
+        - codecov
+
     - stage: build doc
       branches:
         only:
         - master
       script:
-        - npm test
-        - codecov
         - npm run docs:build
         - cd docs
         - git init
@@ -46,11 +50,9 @@ jobs:
 
     - stage: deploy
       script:
-        - echo "NPM Deploying Started ..."
-        - npm version
         - npm run prod
-        - echo "NPM Building Finished."
-
+      before_deploy:
+        - cd package  
       deploy:
         provider: npm
         email: "$NPM_EMAIL"
