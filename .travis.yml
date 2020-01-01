@@ -52,7 +52,7 @@ jobs:
       script:
         - npm run prod
       before_deploy:
-        - cd package  
+        - npm pack
       deploy:
         provider: npm
         email: "$NPM_EMAIL"
