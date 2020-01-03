@@ -36,9 +36,6 @@ jobs:
         - codecov
 
     - stage: build doc
-      branches:
-        only:
-        - master
       script:
         - npm run docs:build
         - cd docs
@@ -46,6 +43,9 @@ jobs:
         - git add -A
         - git commit -m "docs:update docs"
         - git push --force --quiet "https://${GitHub_TOKEN}@${GitHub_REF}" master:master
+      deploy:
+        on:
+          master: master  
 
 
     - stage: deploy
