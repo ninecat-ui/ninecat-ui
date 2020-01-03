@@ -22,6 +22,9 @@ node_js:
   - "10"
   - "9"
 
+branches:
+  only:
+    - master
 
 stages:
   - test
@@ -43,9 +46,6 @@ jobs:
         - git add -A
         - git commit -m "docs:update docs"
         - git push --force --quiet "https://${GitHub_TOKEN}@${GitHub_REF}" master:master
-      deploy:
-        on:
-          branch: master
 
 
     - stage: deploy
