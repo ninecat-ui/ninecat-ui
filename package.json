@@ -71,7 +71,12 @@
     "webpack": "4.39.2",
     "webpack-cli": "3.3.6",
     "webpack-dev-server": "3.8.0",
-    "webpack-merge": "4.2.1"
+    "webpack-merge": "4.2.1",
+    "file-loader": "4.2.0",
+    "markdown-it-anchor": "^5.2.5",
+    "markdown-it-chain": "^1.3.0",
+    "markdown-it-container": "^2.0.0",
+    "transliteration": "^2.1.8"
   },
   "lint-staged": {
     "linters": {
@@ -94,10 +99,7 @@
     "url": "https://github.com/ninecat-ui/ninecat-ui"
   },
   "dependencies": {
-    "file-loader": "4.2.0",
-    "shelljs": "0.8.3",
-    "text-loader": "0.0.1",
-    "vue-markdown": "2.2.4"
+    
   },
   "publishConfig": {
     "access": "public"
