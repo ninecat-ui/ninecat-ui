@@ -39,7 +39,7 @@
 export default {
   methods: {
     handleClick () {
-      alert('111')
+      alert('Ninecat')
     }
   }
 }

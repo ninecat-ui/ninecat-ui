@@ -27,7 +27,6 @@ module.exports = function(source) {
     const html = stripTemplate(commentContent);
     const script = stripScript(commentContent);
     let demoComponentContent = genInlineComponentText(html, script);
-    console.log(demoComponentContent)
     const demoComponentName = `ninecat-demo${id}`;
     output.push(`<template slot="source"><${demoComponentName} /></template>`);
     componenetsString += `${JSON.stringify(demoComponentName)}: ${demoComponentContent},`;
@@ -39,8 +38,6 @@ module.exports = function(source) {
     commentEnd = content.indexOf(endTag, commentStart + startTagLen);
   }
 
-  // 仅允许在 demo 不存在时，才可以在 Markdown 中写 script 标签
-  // todo: 优化这段逻辑
   let pageScript = '';
   if (componenetsString) {
     pageScript = `<script>
@@ -51,7 +48,7 @@ module.exports = function(source) {
         }
       }
     </script>`;
-  } else if (content.indexOf('<script>') === 0) { // 硬编码，有待改善
+  } else if (content.indexOf('<script>') === 0) {
     start = content.indexOf('</script>') + '</script>'.length;
     pageScript = content.slice(0, start);
   }
@@ -59,7 +56,7 @@ module.exports = function(source) {
   output.push(content.slice(start));
   return `
     <template>
-      <section class="content element-doc">
+      <section>
         ${output.join('')}
       </section>
     </template>

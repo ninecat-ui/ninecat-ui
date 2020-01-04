@@ -5,6 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 
 const utils = require('./utils')
+const path = require('path')
 
 module.exports = {
   resolve: {
@@ -60,9 +61,21 @@ module.exports = {
           }
         }
       },{
-        test: /.md$/,
-        use: 'text-loader',        
-      }
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'vue-loader',
+            options: {
+              compilerOptions: {
+                preserveWhitespace: false
+              }
+            }
+          },
+          {
+            loader: path.resolve(__dirname, './md-loader/index.js')
+          }
+        ]
+      },
     ]
   },
 
