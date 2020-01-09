@@ -1,6 +1,6 @@
 <template>
   <div
-    class="n-row"
+    class="row"
     :style="[gutterStyle]"
   >
     <slot />
@@ -19,18 +19,27 @@ export default {
     gutter: {
       type: [Number, String],
       default: ''
+    },
+    justify: {
+      type: [String],
+      default: 'center'
+    },
+    align: {
+      type: [String],
+      default: 'center'
     }
+
   },
   computed: {
     gutterStyle () {
-      return this.gutter ? { marginLeft: -this.gutter + 'px', marginRight: -this.gutter + 'px' } : ''
+      const temp = this.gutter ? { marginLeft: -this.gutter + 'px', marginRight: -this.gutter + 'px' } : ''
+      return {
+        'display': 'flex',
+        'justify-content': this.justify,
+        'align-items': this.align,
+        ...temp
+      }
     }
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.n-row {
-  display: flex
-}
-</style>

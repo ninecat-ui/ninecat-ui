@@ -14,7 +14,6 @@
 <script>
 export default {
   name: 'NCol',
-  // inject: ['gutter'],
   props: {
     span: {
       type: [Number, String],
@@ -36,6 +35,7 @@ export default {
 <style lang="scss" scoped>
 .n-col {
   width: 50%;
+  padding: 16px 0;
   $class-prefix: n-col-;
   @for $n from 1 through 24 {
     &.#{$class-prefix}#{$n} {

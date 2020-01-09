@@ -12,7 +12,7 @@ import nTable from '../markdown/nTable/index.md'
 import nPagination from '../markdown/nPagination/index.md'
 // import nIcon from '../pages/nIcon/index.vue'
 // import nButtonGroup from '../pages/nButtonGroup/index.vue'
-// import nRowNCol from '../pages/nRow-nCol/index.vue'
+import nGrid from '../markdown/nGrid/index.md'
 // import nToast from '../pages/nToast/index.vue'
 
 Vue.use(VueRouter)
@@ -37,6 +37,14 @@ export const commonRoutes = [
 ]
 
 export const componentRoutes = [
+  {
+    path: '/nGrid',
+    name: 'nGrid',
+    meta: {
+      name: 'nGrid'
+    },
+    component: nGrid
+  },
   {
     path: '/nAlert',
     name: 'nAlert',

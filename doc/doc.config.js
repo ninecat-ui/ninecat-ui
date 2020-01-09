@@ -24,40 +24,51 @@ export default {
     ]
   }, {
     name: '组件',
-    groups: [{
-      groupName: '基础组件',
-      list: [
-        {
-          path: '/nButton',
-          title: 'Button'
-        },
-        {
-          path: '/nLoader',
-          title: 'Loader'
-        },
-        {
-          path: '/nMessage',
-          name: 'Message'
-        },
-        {
-          path: '/nAlert',
-          name: 'Alert'
-        },
-        {
-          path: '/nInput',
-          name: 'Input'
-        }
-      ] },
-    {
-      groupName: 'Data',
-      list: [{
-        path: '/nTable',
-        name: 'Table'
-      }, {
-        path: '/nPagination',
-        name: 'Pagination'
-      }]
-    }
+    groups: [
+      {
+        groupName: '布局',
+        list: [
+          {
+            path: '/nGrid',
+            title: 'Grid'
+          }
+        ]
+      },
+      {
+        groupName: '基础组件',
+        list: [
+          {
+            path: '/nButton',
+            title: 'Button'
+          },
+          {
+            path: '/nLoader',
+            title: 'Loader'
+          },
+          {
+            path: '/nMessage',
+            name: 'Message'
+          },
+          {
+            path: '/nAlert',
+            name: 'Alert'
+          },
+          {
+            path: '/nInput',
+            name: 'Input'
+          }
+        ]
+      },
+      {
+        groupName: '数据',
+        list: [{
+          path: '/nTable',
+          name: 'Table'
+        }, {
+          path: '/nPagination',
+          name: 'Pagination'
+        }]
+      }
     ]
   }]
 }
