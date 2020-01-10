@@ -81,3 +81,19 @@
 
 :::
 
+### API
+
+#### Row
+
+| 参数 | 说明 | 类型 | 默认值 |
+| :--- | :--- | :--- | :--- |
+| align | flex 布局下的垂直对齐方式：`top` `middle` `bottom` | String | center |
+| gutter | 栅格间隔，可以写成像素值或支持响应式的对象写法来设置水平间隔  | Number/String | - |
+| justify    | flex 布局下的水平排列方式：`start` `end` `center` `space-around` `space-between` | String | center |
+
+#### Col
+| 参数 | 说明 | 类型 | 默认值 |
+| :--- | :--- | :--- | :--- |
+| span | 栅格占位格数 | String/Number | - |
+| offset | 栅格左侧的间隔格数，间隔内不可以有栅格  | Number/String | - |
+
