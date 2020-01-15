@@ -83,11 +83,11 @@ export default {
     text-align: center;
     list-style-type:none;
     display: inline-block;
+    cursor:pointer;
     a{
       font-family: Avenir-Book;
       color: #575757 !important;
       line-height: 20px;
-      cursor:'pointer';
     }
   }
   :hover{
