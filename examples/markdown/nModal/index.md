@@ -12,7 +12,7 @@
 <template>
   <n-button 
     @click.native="openModal">
-    open
+    Open modal
   </n-button>
   <n-modal
     :show.sync="modalShow"

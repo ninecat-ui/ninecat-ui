@@ -58,8 +58,14 @@ export default {
       type: String,
       default: ''
     },
-    confirm: Function,
-    cancel: Function
+    confirm: {
+      type: Function,
+      default: function () {}
+    },
+    cancel: {
+      type: Function,
+      default: function () {}
+    }
   },
   data: function () {
     return {

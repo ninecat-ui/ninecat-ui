@@ -60,7 +60,7 @@ button{
 }
 
 .nbutton{
-  width: 80px;
+  min-width: 80px;
   height: 36px;
   padding: 0.5em 1em;
   background-color: #F7F7FA;
