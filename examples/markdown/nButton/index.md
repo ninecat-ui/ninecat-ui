@@ -1,11 +1,13 @@
-### Button按钮
+# Button按钮
 按钮用于开始一个即时操作。
 
-#### 何时使用
+## 何时使用
 标记了一个（或封装一组）操作命令，响应用户点击行为，触发相应的业务逻辑。
 
+### 代码演示
 
-:::demo 按钮有五种类型：默认按钮、主按钮、微妙按钮、幽灵按钮、链接按钮。主按钮在同一个操作区域最多出现一次。
+#### 按钮类型
+:::demo 按钮有五种类型：默认按钮、主按钮、链接按钮、幽灵按钮、微妙按钮。
 ```html
 <template>
    <n-button>Default</n-button>
@@ -13,27 +15,14 @@
       Primary
     </n-button>
     <n-button type="link">
-          Link
+      Link
     </n-button>
     <n-button type="ghost">
-          Ghost
+      Ghost
     </n-button>
     <n-button type="delicate">
       Delicate
     </n-button>
-    <n-button icon="icon-home" />
-    <n-button loading />
-    <n-button
-      @click="handleClick"
-    >
-      Click
-    </n-button>
-    <n-button
-      disabled
-      @click="handleClick"
-    >
-      Disable
-  </n-button>
 </template>
 <script>
 export default {
@@ -45,6 +34,19 @@ export default {
 }
 </script>
 
+```
+:::
+
+#### 图标按钮
+
+:::demo 当需要在 Button 内嵌入 Icon 时，可以设置 icon 属性，或者直接在 Button 内使用 Icon 组件。
+```html
+<template>
+   <n-button icon="icon-home" />
+   <n-button><n-icon name="icon-home" /></n-button>
+   <n-button icon="icon-home" type="primary"/>
+   <n-button icon="icon-home" type="link"/>
+</template>
 ```
 :::
 

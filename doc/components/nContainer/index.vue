@@ -56,37 +56,49 @@ export default {
     h6 {
       line-height: 1.5;
       font-weight: 400;
-      color:#333;
+      color:#455a64;
       cursor: pointer;
     }
 
     h1 {
-      margin: 0 0 40px;
-      font-size: 40px;
-      cursor: default;
+      margin-top: 8px;
+      margin-bottom: 20px;
+      font-weight: 500;
+      font-size: 30px;
+      font-family: Avenir, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+      line-height: 38px;
     }
 
     h2 {
-      font-size: 35px;
-      margin: 45px 0 20px;
+      clear: both;
+      font-size: 26px;
+      margin: 1em 0 0.6em;
+      font-weight: 500;
+      font-family: Avenir, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
     }
 
     h3 {
-      font-size: 30px;
+      clear: both;
+      font-size: 22px;
+      margin: 1em 0 0.6em;
       font-weight: 500;
-      margin-bottom: 12px;
+      font-family: Avenir, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
     }
 
     h4 {
-      font-size: 20px;
+      clear: both;
+      font-size: 18px;
+      margin: 1em 0 0.6em;
       font-weight: 500;
-      margin: 24px 0 12px;
+      font-family: Avenir, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
     }
 
     h5 {
+      clear: both;
       font-size: 14px;
+      margin: 1em 0 0.6em;
       font-weight: 500;
-      margin: 24px 0 12px;
+      font-family: Avenir, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
     }
 
     p {

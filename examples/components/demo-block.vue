@@ -60,7 +60,7 @@ export default {
 
 <style lang="scss" scoped>
 .grid{
-  padding-top: 20px;
+  padding-top: 10px;
   width: 90%;
   display:flex;
   .demo-box{

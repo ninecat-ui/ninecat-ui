@@ -70,6 +70,7 @@ button{
   font-family: PingFangSC-Regular;
   font-size: 14px;
   line-height: 20px;
+  cursor:pointer;
   .nbutton-icon{
     display: inline-block;
     margin-right: 0.2em;
