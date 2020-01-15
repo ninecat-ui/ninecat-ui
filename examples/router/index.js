@@ -15,6 +15,7 @@ import nPagination from '../markdown/nPagination/index.md'
 import nGrid from '../markdown/nGrid/index.md'
 // import nToast from '../pages/nToast/index.vue'
 import nModal from '../markdown/nModal/index.md'
+import nProgress from '../markdown/nProgress/index.md'
 
 Vue.use(VueRouter)
 
@@ -109,6 +110,14 @@ export const componentRoutes = [
       name: 'nModal'
     },
     component: nModal
+  },
+  {
+    path: '/nProgress',
+    name: 'nProgress',
+    meta: {
+      name: 'nProgress'
+    },
+    component: nProgress
   }
 ]
 
