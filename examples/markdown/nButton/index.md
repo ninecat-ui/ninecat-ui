@@ -50,6 +50,39 @@ export default {
 ```
 :::
 
+
+#### 按钮组合
+
+:::demo 可以将多个 Button 放入 n-button-group 的容器中。
+```html
+<template>
+  <n-button-group>
+    <n-button type="primary">
+      Primary1
+    </n-button>
+    <n-button type="primary">
+      Primary2
+    </n-button>
+    <n-button type="primary">
+      Primary3
+    </n-button>
+  </n-button-group>
+  <n-button-group>
+    <n-button>
+      Default1
+    </n-button>
+    <n-button>
+      Default2
+    </n-button>
+    <n-button>
+      Default3
+    </n-button>
+  </n-button-group>
+</template>
+```
+:::
+
+
 ### API
 
 | 参数 | 说明 | 类型 | 默认值 |
