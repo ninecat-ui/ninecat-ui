@@ -14,11 +14,6 @@
 <template>
   <n-input size="md" />
 </template>
-<script>
-export default {
-  data: () => {}
-}
-</script>
 ```
 :::
 

@@ -64,7 +64,7 @@ export default {
       }
     }
   },
-  data () {
+  data: function () {
     const headerConfig = this.config
     return {
       headerConfig,

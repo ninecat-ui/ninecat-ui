@@ -18,7 +18,7 @@
 </template>
 <script>
 export default {
-  data: () => {
+  data: function () {
     return {
       show: true,
     }

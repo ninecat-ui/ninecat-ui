@@ -63,7 +63,7 @@
 </template>
 <script>
     export default {
-        data: function() {
+        data: function () {
             return {
                 styleObjectOne: {
                     background: `rgba(0, 160, 233, 0.7)` ,

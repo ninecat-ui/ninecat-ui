@@ -33,7 +33,7 @@ Vue.component('demo-block', demoBlock)
 export default {
   name: 'App',
   components: { nHeader, nNav, nContainer },
-  data () {
+  data: function () {
     return {
       config: config
     }

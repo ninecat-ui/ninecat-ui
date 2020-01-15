@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  data () {
+  data: function () {
     return {
       title: '首页'
     }

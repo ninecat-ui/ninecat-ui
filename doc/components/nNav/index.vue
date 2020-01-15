@@ -65,7 +65,7 @@ export default {
       default: ''
     }
   },
-  data () {
+  data: function () {
     return {
       top: 60,
       bottom: 0,

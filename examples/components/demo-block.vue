@@ -36,7 +36,7 @@
 <script>
 export default {
   name: 'DemoBlock',
-  data: () => {
+  data: function () {
     return {
       metaShow: false
     }

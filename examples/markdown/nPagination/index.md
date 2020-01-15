@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  data: () => {
+  data: function() {
     return {
       total: 100,
       pageSize: 10,
