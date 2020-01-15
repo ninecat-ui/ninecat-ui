@@ -14,6 +14,7 @@ import nPagination from '../markdown/nPagination/index.md'
 // import nButtonGroup from '../pages/nButtonGroup/index.vue'
 import nGrid from '../markdown/nGrid/index.md'
 // import nToast from '../pages/nToast/index.vue'
+import nModal from '../markdown/nModal/index.md'
 
 Vue.use(VueRouter)
 
@@ -100,6 +101,14 @@ export const componentRoutes = [
       name: 'nPagination'
     },
     component: nPagination
+  },
+  {
+    path: '/nModal',
+    name: 'nModal',
+    meta: {
+      name: 'nModal'
+    },
+    component: nModal
   }
 ]
 

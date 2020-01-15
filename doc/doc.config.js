@@ -42,6 +42,10 @@ export default {
             title: 'Button'
           },
           {
+            path: '/nInput',
+            name: 'Input'
+          },
+          {
             path: '/nLoader',
             title: 'Loader'
           },
@@ -54,8 +58,8 @@ export default {
             name: 'Alert'
           },
           {
-            path: '/nInput',
-            name: 'Input'
+            path: '/nModal',
+            name: 'Modal'
           }
         ]
       },

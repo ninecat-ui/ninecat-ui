@@ -12,6 +12,7 @@ import nRow from '../packages/nRow'
 import nToast from '../packages/nToast'
 import nTable from '../packages/nTable'
 import nPagination from '../packages/nPagination'
+import nModal from '../packages/nModal'
 const components = {
   nAlert: nAlert,
   nButton: nButton,
@@ -24,7 +25,8 @@ const components = {
   nRow: nRow,
   nToast: nToast,
   nTable: nTable,
-  nPagination: nPagination
+  nPagination: nPagination,
+  nModal: nModal
 }
 
 Object.values(components).forEach(component => {
