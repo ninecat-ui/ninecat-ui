@@ -4,7 +4,8 @@ import NMessage from './src/index.vue'
 const nMessage = function (options) {
   let defaults = {
     type: 'info',
-    message: '一般的文字信息，默认左对齐，可以带图标。'
+    message: '一般的文字信息，默认左对齐，可以带图标。',
+    duration: 3000
   }
 
   const Component = Vue.extend(NMessage)

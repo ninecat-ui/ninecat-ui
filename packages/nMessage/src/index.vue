@@ -50,7 +50,7 @@ export default {
     return {
       timer: null,
       show: false,
-      duration: 3000,
+      duration: '',
       message: '',
       type: '',
       messageTitle: '',
@@ -70,10 +70,11 @@ export default {
       this.show = false
     },
     startTimer () {
+      console.log(this.duration)
       if (this.duration > 0) {
         this.timer = setTimeout(() => {
           this.closeMessage()
-        }, this.duration)
+        }, 3000)
       }
     }
   }
