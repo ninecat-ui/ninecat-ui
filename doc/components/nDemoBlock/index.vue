@@ -71,7 +71,7 @@ export default {
     transition: .2s;
     flex: 1;
     .source{
-      padding: 35px;
+      padding: 10px 20px 10px 20px;
     }
     .meta{
       background-color: #fafafa;

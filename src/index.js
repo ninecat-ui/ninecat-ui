@@ -15,12 +15,13 @@ import nPagination from '../packages/nPagination'
 import nModal from '../packages/nModal'
 import nProgress from '../packages/nProgress'
 
+Vue.prototype.$nMessage = nMessage
+
 const components = {
   nAlert: nAlert,
   nButton: nButton,
   nLoader: nLoader,
   NIcon: nIcon,
-  nMessage: nMessage,
   nButtonGroup: nButtonGroup,
   nInput: nInput,
   nCol: nCol,

@@ -12,19 +12,16 @@
 :::demo
 ```html
 <template>
-  <n-message
-    :show="show"
-    :type="infoType"
-    :message="infoMessage"
-  />
+  <n-button @click="openMessage">Open Message</n-button>
 </template>
 <script>
 export default {
-  data: function () {
-    return {
-      show: true,
-      infoType: 'info',
-      infoMessage: '一般的文字信息，默认左对齐，可以带图标。',
+  methods:{
+    openMessage(){
+      this.$nMessage({
+        type: 'info',
+        message: '我打开了提示框',
+      })
     }
   }
 }
@@ -36,6 +33,6 @@ export default {
 
 | 参数 | 说明 | 类型 | 默认值 |
 | :--- | :--- | :--- | :--- |
-| show | 是否展示信息提示 | Boolean | false |
-| infoType | 信息类型,可选值`info`,`success`,`warning`,`error` | String | info |
-| message    | 信息内容 | String     |  |
+| type | 信息类型,可选值`info`,`success`,`warning`,`error` | String | info |
+| message| 信息内容 | String |  |
+| duration| 信息展示的时间（ms） | Number | 3000 |
