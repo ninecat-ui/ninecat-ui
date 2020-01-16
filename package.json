@@ -9,7 +9,7 @@
     "dev": "webpack-dev-server --progress --history-api-fallback --config build/webpack.config.dev.js",
     "start": "npm run dev",
     "prod": "webpack --config build/webpack.config.prod.js",
-    "lint": "eslint --ext .js --ext .vue src --ext .vue packages --ext .vue examples",
+    "lint": "eslint --ext .js --ext .vue src --ext .vue packages --ext .vue",
     "lint:fix": "eslint --ext .js,.vue src --fix",
     "lint:staged": "lint-staged",
     "test:unit": "jest --config test/jest.config.js",
