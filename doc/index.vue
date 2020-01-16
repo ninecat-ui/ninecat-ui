@@ -14,11 +14,11 @@
 
 <script>
 import Vue from 'vue'
-import nHeader from '../doc/components/nHeader'
-import nNav from '../doc/components/nNav'
-import nContainer from '../doc/components/nContainer'
-import config from '../doc/doc.config'
-import demoBlock from './components/demo-block'
+import nHeader from './components/nHeader'
+import nNav from './components/nNav'
+import nContainer from './components/nContainer'
+import config from './doc.config'
+import demoBlock from './components/nDemoBlock'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/googlecode.css'
 Vue.directive('highlight', function (el) {
