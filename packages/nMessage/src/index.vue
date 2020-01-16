@@ -3,7 +3,7 @@
   author:Terence
 -->
 <template>
-  <div>
+  <transition name="nmessage">
     <div
       v-show="show"
       class="base-message"
@@ -36,7 +36,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script>
@@ -153,6 +153,12 @@ export default {
       margin: 0;
       padding-left: 10px;
     }
+  }
+  .nmessage-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+  .nmessage-enter, .fade-leave-to {
+    opacity: 0;
   }
 
 </style>

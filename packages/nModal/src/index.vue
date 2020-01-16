@@ -1,5 +1,5 @@
 <template>
-  <transition>
+  <transition name="nmodal">
     <div
       v-if="show"
       class="n-modal-wrapper"
@@ -170,33 +170,12 @@ export default {
     }
   }
 }
-.nmodal-fade-enter-active {
-  animation: nmodal-fade-in 0.3s;
+
+.nmodal-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.nmodal-enter, .fade-leave-to {
+  opacity: 0;
 }
 
-.nmodal-fade-leave-active {
-  animation: nmodal-fade-out 0.3s;
-}
-
-@keyframes nmodal-fade-in {
-  0% {
-    transform: translate3d(0, -20px, 0);
-    opacity: 0;
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
-@keyframes nmodal-fade-out {
-  0% {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-  100% {
-    transform: translate3d(0, -20px, 0);
-    opacity: 0;
-  }
-}
 </style>
