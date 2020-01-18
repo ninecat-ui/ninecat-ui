@@ -13,7 +13,7 @@ module.exports = {
     alias: {
       'assets': utils.resolve('assets'),
       'static': utils.resolve('static'),
-      'components': utils.resolve('packages')
+      'packages': utils.resolve('packages')
     }
   },
 
