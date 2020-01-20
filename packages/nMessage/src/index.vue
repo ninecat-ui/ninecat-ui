@@ -70,11 +70,10 @@ export default {
       this.show = false
     },
     startTimer () {
-      console.log(this.duration)
       if (this.duration > 0) {
         this.timer = setTimeout(() => {
           this.closeMessage()
-        }, 3000)
+        }, this.duration)
       }
     }
   }
