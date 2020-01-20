@@ -16,6 +16,7 @@ import nGrid from '../markdown/nGrid/index.md'
 // import nToast from '../pages/nToast/index.vue'
 import nModal from '../markdown/nModal/index.md'
 import nProgress from '../markdown/nProgress/index.md'
+import nDrawer from '../markdown/nDrawer/index.md'
 
 Vue.use(VueRouter)
 
@@ -110,6 +111,14 @@ export const componentRoutes = [
       name: 'nModal'
     },
     component: nModal
+  },
+  {
+    path: '/nDrawer',
+    name: 'nDrawer',
+    meta: {
+      name: 'nDrawer'
+    },
+    component: nDrawer
   },
   {
     path: '/nProgress',

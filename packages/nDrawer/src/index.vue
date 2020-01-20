@@ -1,51 +1,48 @@
 <template>
-  <transition name="nmodal">
+  <div
+    v-if="show"
+    class="n-drawer-wrapper"
+  >
     <div
-      v-if="show"
-      class="n-modal-wrapper"
-    >
-      <div
-        class="n-modal-backdrop"
-        role="button"
-        tabindex="-1"
-        @click="closeModal"
-      />
-      <div class="n-modal">
-        <div class="n-modal-content">
-          <div class="n-modal-header">
-            <div class="title">
-              {{ title }}
-            </div>
-            <div class="close">
-              <span
-                class="icon-close"
-                @click="closeModal"
-              />
-            </div>
+      class="n-drawer-backdrop"
+      role="button"
+      tabindex="-1"
+      @click="closeDrawer"
+    />
+    <transition name="ndrawer">
+      <div class="n-drawer">
+        <div class="n-drawer-header">
+          <div class="title">
+            {{ title }}
           </div>
-          <slot />
-          <div class="n-modal-footer">
-            <n-button
-              type="primary"
-              @click="nconfirm"
-            >
-              确认
-            </n-button>
-            <n-button @click="ncancel">
-              取消
-            </n-button>
+          <div class="close">
+            <span
+              class="icon-close"
+              @click="closeDrawer"
+            />
           </div>
         </div>
+        <slot />
+        <div class="n-drawer-footer">
+          <n-button
+            type="primary"
+            @click="nconfirm"
+          >
+            确认
+          </n-button>
+          <n-button @click="ncancel">
+            取消
+          </n-button>
+        </div>
       </div>
-    </div>
-  </transition>
+    </transition>
+  </div>
 </template>
 
 <script>
 import nButton from '../../nButton'
-
 export default {
-  name: 'NModal',
+  name: 'NDrawer',
   components: {
     nButton
   },
@@ -68,27 +65,27 @@ export default {
     }
   },
   methods: {
-    closeModal () {
+    closeDrawer () {
       this.$emit('update:show', false)
     },
     nconfirm () {
       if (typeof this.confirm === 'function') {
         this.confirm()
       }
-      this.closeModal()
+      this.closeDrawer()
     },
     ncancel () {
       if (typeof this.cancel === 'function') {
         this.cancel()
       }
-      this.closeModal()
+      this.closeDrawer()
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.n-modal-wrapper {
+.n-drawer-wrapper{
   position: fixed;
   overflow: auto;
   z-index: 1050;
@@ -96,8 +93,7 @@ export default {
   bottom: 0;
   right: 0;
   left: 0;
-
-  .n-modal-backdrop {
+  .n-drawer-backdrop{
     position: fixed;
     top: 0;
     right: 0;
@@ -106,27 +102,23 @@ export default {
     background-color: #272c36;
     opacity: 0.3;
   }
-  .n-modal {
+  .n-drawer{
     background: #ffffff;
     opacity: 1;
-    width: 600px;
+    width: 50%;
+    height: 100vh;
     overflow: visible;
     outline: 0;
-    margin: 30px auto 0;
-    position: relative;
+    position: absolute;
+    right: 0;
+    top:0;
     z-index: 1050;
-    .n-modal-content {
-      position: relative;
-      background-color: #fff;
-      border-radius: 6px;
-      outline: 0;
-      -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12),
-        0 0 10px rgba(0, 0, 0, 0.06);
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12), 0 0 10px rgba(0, 0, 0, 0.06);
-      padding: 20px;
-      .n-modal-header {
+    .n-drawer-header {
+        padding: 10px;
         display: flex;
+        color:#575757;
         .title {
+          font-size: 16px;
           width: 95%;
         }
         .close {
@@ -158,18 +150,21 @@ export default {
           }
         }
       }
-      .n-modal-footer{
-        text-align: end;
-      }
+    .n-drawer-footer{
+      position: absolute;
+      right: 10px;
+      bottom: 5px;
     }
   }
 }
-
-.nmodal-enter-active, .fade-leave-active {
-  transition: opacity .5s;
-}
-.nmodal-enter, .fade-leave-to {
-  opacity: 0;
-}
-
+.ndrawer-enter-active,  .ndrawer-leave-active {
+    transition: all 0.3s linear;
+    transform: translateX(0);
+  }
+   .ndrawer-enter,  .ndrawer-leave {
+    transform: translateX(100%);
+  }
+   .ndrawer-leave-to{
+     transform: translateX(100%);
+   }
 </style>

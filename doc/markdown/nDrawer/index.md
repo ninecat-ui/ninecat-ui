@@ -1,41 +1,41 @@
-# Modal 对话框
+# Drawer 抽屉
 
-模态对话框。
+屏幕边缘滑出的浮层面板。
 
 ## 何时使用
-需要用户处理事务，又不希望跳转页面以致打断工作流程时，可以使用 Modal 在当前页面正中打开一个浮层，承载相应的操作。
 
+一个从页面边缘滑动出来的浮层，可以替代 Modal 放更多内容。
 
 ### 代码演示
 :::demo
 ```html
 <template>
   <n-button 
-    @click.native="openModal">
-    Open modal
+    @click.native="openDrawer">
+    Open Drawer
   </n-button>
-  <n-modal
-    :show.sync="modalShow"
-    :title="modalTitle"
+  <n-drawer
+    :show.sync="drawerShow"
+    title="Drawer Title"
     :confirm="confirm"
     :cancel="cancel"
   >
     <p>Some contents...</p>
     <p>Some contents...</p>
     <p>Some contents...</p>
-  </n-Modal>
+  </n-drawer>
 </template>
 <script>
   export default{
     data:function(){
       return {
-        modalShow:false,
-        modalTitle:'这是标题'
+        drawerShow:false,
+        drawerTitle:'这是标题'
       }
     },
     methods:{
-      openModal () {
-        this.modalShow = true
+      openDrawer () {
+        this.drawerShow = true
       },
       confirm () {
         console.log('confirm')
@@ -55,6 +55,6 @@
 | 参数 | 说明 | 类型 | 默认值 |
 | :--- | :--- | :--- | :--- |
 | show | 是否展示modal | Boolean | false |
-| title | 弹框的标题 | String |  |
+| title | 抽屉的标题 | String |  |
 | confirm    | 确认的回调函数 | Function     |  |
 | cancel    | 取消的回调函数 | Function     |  |

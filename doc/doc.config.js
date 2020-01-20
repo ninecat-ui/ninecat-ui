@@ -62,6 +62,10 @@ export default {
             name: 'Modal'
           },
           {
+            path: '/nDrawer',
+            name: 'Drawer'
+          },
+          {
             path: '/nProgress',
             name: 'Progress'
           }
