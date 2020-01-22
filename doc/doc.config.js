@@ -73,13 +73,19 @@ export default {
       },
       {
         groupName: '数据',
-        list: [{
-          path: '/nTable',
-          name: 'Table'
-        }, {
-          path: '/nPagination',
-          name: 'Pagination'
-        }]
+        list: [
+          {
+            path: '/nAvatar',
+            name: 'Avatar'
+          },
+          {
+            path: '/nTable',
+            name: 'Table'
+          },
+          {
+            path: '/nPagination',
+            name: 'Pagination'
+          }]
       }
     ]
   }]

@@ -17,6 +17,7 @@ import nGrid from '../markdown/nGrid/index.md'
 import nModal from '../markdown/nModal/index.md'
 import nProgress from '../markdown/nProgress/index.md'
 import nDrawer from '../markdown/nDrawer/index.md'
+import nAvatar from '../markdown/nAvatar/index.md'
 
 Vue.use(VueRouter)
 
@@ -127,6 +128,14 @@ export const componentRoutes = [
       name: 'nProgress'
     },
     component: nProgress
+  },
+  {
+    path: '/nAvatar',
+    name: 'nAvatar',
+    meta: {
+      name: 'nAvatar'
+    },
+    component: nAvatar
   }
 ]
 

@@ -15,6 +15,7 @@ import nPagination from '../packages/nPagination'
 import nModal from '../packages/nModal'
 import nProgress from '../packages/nProgress'
 import nDrawer from '../packages/nDrawer'
+import nAvatar from '../packages/nAvatar'
 
 Vue.prototype.$nMessage = nMessage
 
@@ -32,7 +33,8 @@ const components = {
   nPagination: nPagination,
   nModal: nModal,
   nProgress: nProgress,
-  nDrawer: nDrawer
+  nDrawer: nDrawer,
+  nAvatar: nAvatar
 }
 
 Object.values(components).forEach(component => {
