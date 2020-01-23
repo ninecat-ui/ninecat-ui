@@ -71,7 +71,7 @@ export default {
     const headerConfig = this.config
     return {
       headerConfig,
-      lang: 'English'
+      lang: ''
     }
   },
   computed: {
@@ -79,13 +79,30 @@ export default {
       return this.lang === 'English' ? '搜索文档' : 'Please input'
     }
   },
+  mounted () {
+    this.setLang()
+  },
   methods: {
-    changeLang () {
-      if (this.lang === 'English') {
+    setLang () {
+      const lang = window.sessionStorage.getItem('lang')
+      if (lang === 'zh-CN') {
+        this.lang = 'English'
+      } else if (lang === 'en-US') {
         this.lang = '中文'
       } else {
         this.lang = 'English'
       }
+    },
+    changeLang () {
+      console.log(this.lang)
+      if (this.lang === 'English') {
+        this.lang = '中文'
+        window.sessionStorage.setItem('lang', 'en-US')
+      } else {
+        this.lang = 'English'
+        window.sessionStorage.setItem('lang', 'zh-CN')
+      }
+      window.location.reload()
     }
   }
 }

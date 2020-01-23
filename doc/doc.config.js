@@ -1,3 +1,5 @@
+const localLang = window.sessionStorage.getItem('lang')
+
 export default {
   headerConfig: {
     logo: {
@@ -12,23 +14,23 @@ export default {
   },
   navConfig: [
     {
-      name: '开发指南',
+      name: localLang === 'en-US' ? 'Development Guide' : '开发指南',
       groups: [
         {
           list: [
             {
               path: '/about',
-              title: '介绍'
+              title: localLang === 'en-US' ? 'About' : '介绍'
             }
           ]
         }
       ]
     },
     {
-      name: '组件',
+      name: localLang === 'en-US' ? 'Components' : '组件',
       groups: [
         {
-          groupName: '布局',
+          groupName: localLang === 'en-US' ? 'Layout' : '布局',
           list: [
             {
               path: '/nGrid',
@@ -37,7 +39,7 @@ export default {
           ]
         },
         {
-          groupName: '基础组件',
+          groupName: localLang === 'en-US' ? 'Base Components' : '基础组件',
           list: [
             {
               path: '/nButton',
@@ -74,7 +76,7 @@ export default {
           ]
         },
         {
-          groupName: '数据',
+          groupName: localLang === 'en-US' ? 'Data' : '数据',
           list: [
             {
               path: '/nAvatar',

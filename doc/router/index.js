@@ -1,11 +1,13 @@
 import VueRouter from 'vue-router'
 import Vue from 'vue'
 import hljs from 'highlight.js'
-
 import docConfig from '../doc.config'
 
+const localLang = window.sessionStorage.getItem('lang')
+
 function loadDoc (lang, path) {
-  return resolve => require.ensure([], () => resolve(require(`../markdown${path}/${lang}/index.md`)))
+  const docLang = lang || 'zh-CN'
+  return resolve => require.ensure([], () => resolve(require(`../markdown${path}/${docLang}/index.md`)))
 }
 
 Vue.use(VueRouter)
@@ -15,17 +17,17 @@ export const commonRoutes = [
     path: '/',
     name: 'about',
     meta: {
-      name: '首页'
+      name: 'HomePage'
     },
-    component: loadDoc('zh-CN', '/about')
+    component: loadDoc(localLang, '/about')
   },
   {
     path: '/ninecat-ui',
     name: 'about',
     meta: {
-      name: '首页'
+      name: 'HomePage'
     },
-    component: loadDoc('zh-CN', '/about')
+    component: loadDoc(localLang, '/about')
   }
 ]
 
@@ -43,7 +45,7 @@ navConfig.forEach(navItem => {
           meta: {
             name: item.path.slice(1)
           },
-          component: loadDoc('zh-CN', item.path)
+          component: loadDoc(localLang, item.path)
         })
       }
     })

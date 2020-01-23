@@ -15,29 +15,30 @@ Ninecat-ui
 </h1>
 
 
-`Ninecat-ui` 是基于<a href="https://rsuitejs.com/design/default/index.html" target="_blank">RSUITE</a>原型设计的VUE UI组件库。
+Ninecat-ui is a VUE UI component library based on <a href="https://rsuitejs.com/design/default/index.html" target="_blank">RSUITE</a> prototype design.
 
-经过一番搜寻，找到了RSUITE的UI元件库，于是开始用VUE来构建一个UI组件库。
+After some searching, We found the UI component library of RSUITE, so we started using VUE to build a UI component library.
 
-## 支持环境
- - 现代浏览器和 IE10及以上
 
-## 安装
+## Supporting environment
+ - Modern browsers and IE10 and above
 
-使用 npm 或 yarn 安装
+## Install
 
-我们推荐使用 npm 或 yarn 的方式进行开发，不仅可在开发环境轻松调试，也可放心地在生产环境打包部署使用，享受整个生态圈和工具链带来的诸多好处。
+Install using npm or yarn
+
+We recommend using npm or yarn for development, not only for easy debugging in the development environment, but also for packaging and deployment in the production environment, and enjoy the many benefits brought by the entire ecosystem and toolchain.
 
 `npm install ninecat-ui --S`
 
 `yarn add ninecat-ui`
 
-## 示例
+## Example
 
 ```
 import Vue from 'vue'
 import Ninecat from 'ninecat-ui'
-// 引入样式文件
+// Introduce style files
 import 'ninecat-ui/package/main.css'
 
 Vue.use(Ninecat)
