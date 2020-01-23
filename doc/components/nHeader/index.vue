@@ -16,14 +16,17 @@
       >
 
       <ul class="nav">
-        <li class="item">
+        <!-- <li class="item">
           <span class="cube version">
             1.0.1
           </span>
-        </li>
+        </li> -->
         <li class="item">
-          <span class="cube lang">
-            {{ headerConfig.lang }}
+          <span
+            class="cube lang"
+            @click="changeLang"
+          >
+            {{ lang }}
           </span>
         </li>
         <li class="item">
@@ -68,7 +71,21 @@ export default {
     const headerConfig = this.config
     return {
       headerConfig,
-      searchPlaceholder: headerConfig.lang === 'zh-CN' ? '搜索文档' : 'Please input'
+      lang: 'English'
+    }
+  },
+  computed: {
+    searchPlaceholder () {
+      return this.lang === 'English' ? '搜索文档' : 'Please input'
+    }
+  },
+  methods: {
+    changeLang () {
+      if (this.lang === 'English') {
+        this.lang = '中文'
+      } else {
+        this.lang = 'English'
+      }
     }
   }
 }

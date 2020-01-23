@@ -10,83 +10,85 @@ export default {
     githubLink: 'https://github.com/ninecat-ui/ninecat-ui',
     simulators: []
   },
-  navConfig: [{
-    name: '开发指南',
-    groups: [
-      {
-        list: [
-          {
-            path: '/',
-            title: '介绍'
-          }
-        ]
-      }
-    ]
-  }, {
-    name: '组件',
-    groups: [
-      {
-        groupName: '布局',
-        list: [
-          {
-            path: '/nGrid',
-            title: 'Grid'
-          }
-        ]
-      },
-      {
-        groupName: '基础组件',
-        list: [
-          {
-            path: '/nButton',
-            title: 'Button'
-          },
-          {
-            path: '/nInput',
-            name: 'Input'
-          },
-          {
-            path: '/nLoader',
-            title: 'Loader'
-          },
-          {
-            path: '/nMessage',
-            name: 'Message'
-          },
-          {
-            path: '/nAlert',
-            name: 'Alert'
-          },
-          {
-            path: '/nModal',
-            name: 'Modal'
-          },
-          {
-            path: '/nDrawer',
-            name: 'Drawer'
-          },
-          {
-            path: '/nProgress',
-            name: 'Progress'
-          }
-        ]
-      },
-      {
-        groupName: '数据',
-        list: [
-          {
-            path: '/nAvatar',
-            name: 'Avatar'
-          },
-          {
-            path: '/nTable',
-            name: 'Table'
-          },
-          {
-            path: '/nPagination',
-            name: 'Pagination'
-          }]
-      }
-    ]
-  }]
+  navConfig: [
+    {
+      name: '开发指南',
+      groups: [
+        {
+          list: [
+            {
+              path: '/about',
+              title: '介绍'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      name: '组件',
+      groups: [
+        {
+          groupName: '布局',
+          list: [
+            {
+              path: '/nGrid',
+              title: 'Grid'
+            }
+          ]
+        },
+        {
+          groupName: '基础组件',
+          list: [
+            {
+              path: '/nButton',
+              title: 'Button'
+            },
+            {
+              path: '/nInput',
+              name: 'Input'
+            },
+            {
+              path: '/nLoader',
+              title: 'Loader'
+            },
+            {
+              path: '/nMessage',
+              name: 'Message'
+            },
+            {
+              path: '/nAlert',
+              name: 'Alert'
+            },
+            {
+              path: '/nModal',
+              name: 'Modal'
+            },
+            {
+              path: '/nDrawer',
+              name: 'Drawer'
+            },
+            {
+              path: '/nProgress',
+              name: 'Progress'
+            }
+          ]
+        },
+        {
+          groupName: '数据',
+          list: [
+            {
+              path: '/nAvatar',
+              name: 'Avatar'
+            },
+            {
+              path: '/nTable',
+              name: 'Table'
+            },
+            {
+              path: '/nPagination',
+              name: 'Pagination'
+            }]
+        }
+      ]
+    }]
 }
