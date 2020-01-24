@@ -1,14 +1,14 @@
 
-# Loading加载中
+# Loading
 
-用于页面和区块的加载中状态。
+Used for page and block loading status.
 
-## 何时使用
-页面局部处于等待异步数据或正在渲染过程时，合适的加载动效会有效缓解用户的焦虑。
+## When To Use
+When the page is partially waiting for asynchronous data or the rendering process is in progress, proper loading animation will effectively relieve the user's anxiety.
 
-### 代码演示
+### Examples
 
-:::demo Loading加载数据时显示动效,可以的对大小进行改变。
+:::demo Loading shows dynamic effects when loading data, you can change the size.
 
 ```html
 <template>
@@ -31,8 +31,8 @@ export default {
 
 ### API
 
-| 参数 | 说明 | 类型 | 默认值 |
+| Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
-| show | 是否展示loading | Boolean | false |
-| loaddingText | loading的文字说明 | String | Loading... |
-| size    | loading图标的大小,可选值 `xs`,`sm`,`md`,`lg` | String     | md |
+| show | Whether to show loading | Boolean | false |
+| loaddingText | loading text | String | Loading... |
+| size    | loading icon size, options: `xs`,`sm`,`md`,`lg` | String     | md |

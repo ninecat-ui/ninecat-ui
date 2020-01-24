@@ -1,11 +1,11 @@
-# Grid栅格
+# Grid
 
-24 栅格系统。
+24 Grids System.
 
-## 基础
-从堆叠到水平排列。使用单一的一组 Row 和 Col 栅格组件，就可以创建一个基本的栅格系统，所有列（Col）必须放在 Row 内。
+## Basic Use
+From stacked to horizontal arrangement. With a single set of Row and Col grid components, a basic grid system can be created, and all columns (Col) must be placed in a Row.
 
-### 代码演示
+### Examples
 :::demo
 ```html
 <template>
@@ -87,15 +87,15 @@
 
 #### Row
 
-| 参数 | 说明 | 类型 | 默认值 |
+| Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
-| align | flex 布局下的垂直对齐方式：`top` `middle` `bottom` | String | center |
-| gutter | 栅格间隔，可以写成像素值或支持响应式的对象写法来设置水平间隔  | Number/String | - |
-| justify    | flex 布局下的水平排列方式：`start` `end` `center` `space-around` `space-between` | String | center |
+| align | the vertical alignment of the flex layout：`top` `middle` `bottom` | String | center |
+| gutter | Grid interval, which can be written as pixel values ​​or supports responsive object notation to set the horizontal interval  | Number/String | - |
+| justify    | horizontal arrangement of the flex layout:：`start` `end` `center` `space-around` `space-between` | String | center |
 
 #### Col
-| 参数 | 说明 | 类型 | 默认值 |
+| Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
-| span | 栅格占位格数 | String/Number | - |
-| offset | 栅格左侧的间隔格数，间隔内不可以有栅格  | Number/String | - |
+| span | raster number of cells to occupy | String/Number | - |
+| offset | the number of cells to offset Col from the left  | Number/String | - |
 

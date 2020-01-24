@@ -28,10 +28,10 @@
             type="primary"
             @click="nconfirm"
           >
-            确认
+            Confirm
           </n-button>
           <n-button @click="ncancel">
-            取消
+            Cancel
           </n-button>
         </div>
       </div>

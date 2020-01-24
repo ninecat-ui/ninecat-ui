@@ -1,13 +1,13 @@
-# Button按钮
-按钮用于开始一个即时操作。
+# Button
+To trigger an operation.
 
-## 何时使用
-标记了一个（或封装一组）操作命令，响应用户点击行为，触发相应的业务逻辑。
+## When To Use
+A button means an operation (or a series of operations). Clicking a button will trigger corresponding business logic.
 
-### 代码演示
+### Examples
 
-#### 按钮类型
-:::demo 按钮有五种类型：默认按钮、主按钮、链接按钮、幽灵按钮、微妙按钮。
+#### Button type
+:::demo There are five types of buttons: default button, home button, link button, ghost button, delicate button.
 ```html
 <template>
    <n-button>Default</n-button>
@@ -37,9 +37,9 @@ export default {
 ```
 :::
 
-#### 图标按钮
+#### Icon button
 
-:::demo 当需要在 Button 内嵌入 Icon 时，可以设置 icon 属性，或者直接在 Button 内使用 Icon 组件。
+:::demo When you need to embed an Icon in a Button, you can set the icon property or use the Icon component directly in the Button.
 ```html
 <template>
    <n-button icon="icon-home" />
@@ -51,9 +51,9 @@ export default {
 :::
 
 
-#### 按钮组合
+#### Button combinations
 
-:::demo 可以将多个 Button 放入 n-button-group 的容器中。
+:::demo You can put multiple Buttons in a n-button-group container.
 ```html
 <template>
   <n-button-group>
@@ -85,9 +85,9 @@ export default {
 
 ### API
 
-| 参数 | 说明 | 类型 | 默认值 |
+| Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
-| type | 按钮类型,可选择值`default`,`primary`,`link`,`ghost`,`delicate` | String | default |
-| icon | 图标按钮,可选择就跟图标的值一样 | String |  |
-| loading    | loading状态 | Boolean     | false |
-| disabled    | 禁用状态 | Boolean     |  |
+| type | can be set to `default`,`primary`,`link`,`ghost`,`delicate` | String | default |
+| icon | Icon button, selectable just like the value of the icon | String |  |
+| loading    | set the loading status of button | Boolean     | false |
+| disabled    | disabled state of button | Boolean     |  |

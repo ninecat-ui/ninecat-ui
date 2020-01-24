@@ -1,13 +1,13 @@
 
-# 信息提示Message
+# Message
 
 用于页面信息提示。
 
-## 何时使用
+## When To Use
 
-页面中需要有操作提示或者信息提示的时候使用。
+Used for page information prompts.
 
-### 代码演示
+### Examples
 
 :::demo
 ```html
@@ -20,7 +20,7 @@ export default {
     openMessage(){
       this.$nMessage({
         type: 'info',
-        message: '我打开了提示框',
+        message: 'I open the Message',
       })
     }
   }
@@ -31,8 +31,8 @@ export default {
 
 ### API
 
-| 参数 | 说明 | 类型 | 默认值 |
+| Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
-| type | 信息类型,可选值`info`,`success`,`warning`,`error` | String | info |
-| message| 信息内容 | String |  |
-| duration| 信息展示的时间（ms） | Number | 3000 |
+| type | type of the message,options：`info`,`success`,`warning`,`error` | String | info |
+| message| message content | String |  |
+| duration| message display time (ms) | Number | 3000 |

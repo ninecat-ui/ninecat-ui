@@ -1,13 +1,13 @@
 
-# 输入框Input
+# Input
 
-用于输入。
+Used for input.
 
-## 何时使用
+## When To Use
 
-页面中需要有输入的地方使用。
+Use it where you need input.
 
-### 代码演示
+### Examples
 
 :::demo
 ```html
@@ -19,7 +19,7 @@
 
 ### API
 
-| 参数 | 说明 | 类型 | 默认值 |
+| Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
-| size | input输入框大小 | String | middle |
-| disabled | 是否可输入 | Boolean |  |
+| size | Input box size | String | middle |
+| disabled | Whether the input is disabled. | Boolean | false |

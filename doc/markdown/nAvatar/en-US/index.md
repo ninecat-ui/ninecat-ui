@@ -1,11 +1,11 @@
-# Avatar 头像
+# Avatar
 
-用来代表用户或事物，支持图片、图标或字符展示。
+Used to represent users or things, and supports pictures, icons, or character display.
 
-### 代码演示
+### When To Use
 
-#### 基本使用
-头像有四种尺寸，两种形状可选。
+#### Basic use
+The avatar is available in four sizes and two shapes.
 :::demo
 ```html
 <div>
@@ -26,8 +26,8 @@
 ```
 :::
 
-#### 类型
-支持三种类型：图片、Icon 以及字符
+#### Type
+Supports three types: image, icon, and character
 :::demo
 ```html
 <div>
@@ -40,8 +40,8 @@
 ```
 :::
 
-| 参数 | 说明 | 类型 | 默认值 |
+| Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
-| size | 尺寸大小 | String | md |
-| shape | 头像的形状 | String | square |
-| src    | 头像为图片时的src | String     |  |
+| size | size of the avatar | String | md |
+| shape | shape of the avatar | String | square |
+| src    | Src when the avatar is a picture | String     |  |

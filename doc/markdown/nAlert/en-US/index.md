@@ -1,13 +1,13 @@
 
-# Alert警告提示
+# Alert
 
-警告提示，展现需要关注的信息。
+Alert component for feedback.
 
-## 何时使用
+## When To Use
 
-当某个页面需要向用户显示警告的信息时。
+When you need to show alert messages to users.
 
-### 代码演示
+### Examples
 :::demo
 ```html
 <template>
@@ -35,8 +35,8 @@ export default {
 
 ### API
 
-| 参数 | 说明 | 类型 | 默认值 |
+| Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
-| show | 是否展示 | Boolean | false |
-| message | 提示内容 | String |  |
-| type    | 提示类型，可选值`info`,`success`,`warning`,`error` | String | info |
+| show | Whether to show | Boolean | false |
+| message | Content of Alert | String |  |
+| type    | Type of Alert styles, options:`info`,`success`,`warning`,`error` | String | info |

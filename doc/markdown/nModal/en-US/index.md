@@ -1,12 +1,12 @@
-# Modal 对话框
+# Modal
 
-模态对话框。
+Modal dialog
 
-## 何时使用
-需要用户处理事务，又不希望跳转页面以致打断工作流程时，可以使用 Modal 在当前页面正中打开一个浮层，承载相应的操作。
+## When To Use
+When users need to handle transactions and do not want to jump to the page to interrupt the workflow, you can use Modal to open a floating layer in the middle of the current page to carry the corresponding operations.
 
 
-### 代码演示
+### Examples
 :::demo
 ```html
 <template>
@@ -30,7 +30,7 @@
     data:function(){
       return {
         modalShow:false,
-        modalTitle:'这是标题'
+        modalTitle:'This is title'
       }
     },
     methods:{
@@ -52,9 +52,9 @@
 
 ### API
 
-| 参数 | 说明 | 类型 | 默认值 |
+| Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
-| show | 是否展示modal | Boolean | false |
-| title | 弹框的标题 | String |  |
-| confirm    | 确认的回调函数 | Function     |  |
-| cancel    | 取消的回调函数 | Function     |  |
+| show | Whether to show modal | Boolean | false |
+| title | title of the modal | String |  |
+| confirm    | Confirm callback function | Function     |  |
+| cancel    | Cancel callback function | Function     |  |

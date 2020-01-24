@@ -1,12 +1,12 @@
-# Drawer 抽屉
+# Drawer
 
-屏幕边缘滑出的浮层面板。
+Floating panel sliding out of the edge of the screen.
 
-## 何时使用
+## When To Use
 
-一个从页面边缘滑动出来的浮层，可以替代 Modal 放更多内容。
+A floating layer that slides from the edge of the page can replace Modal to put more content.
 
-### 代码演示
+### Examples
 :::demo
 ```html
 <template>
@@ -30,7 +30,6 @@
     data:function(){
       return {
         drawerShow:false,
-        drawerTitle:'这是标题'
       }
     },
     methods:{
@@ -52,9 +51,9 @@
 
 ### API
 
-| 参数 | 说明 | 类型 | 默认值 |
+| Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
-| show | 是否展示modal | Boolean | false |
-| title | 抽屉的标题 | String |  |
-| confirm    | 确认的回调函数 | Function     |  |
-| cancel    | 取消的回调函数 | Function     |  |
+| show | Whether to show | Boolean | false |
+| title | title of the Drawer| String |  |
+| confirm    | Confirm callback function | Function     |  |
+| cancel    | Cancel callback function | Function     |  |

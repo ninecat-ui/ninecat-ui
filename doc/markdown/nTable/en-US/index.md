@@ -1,11 +1,11 @@
 
-# Table组件
-展示行列数据。
+# Table
+Show rows and columns of data.
 
-## 何时使用
-展示大量数据用。
+## When To Use
+For displaying large amounts of data.
 
-### 代码演示
+### Examples
 :::demo
 
 ```html
@@ -23,28 +23,28 @@ export default {
     return {
       columns: [
         {
-          title: '姓名',
+          title: 'Name',
           dataIndex: 'name',
           align: 'center',
           width: 100
         },
         {
-          title: '年龄',
+          title: 'Age',
           dataIndex: 'age'
         },
         {
-          title: '性别',
+          title: 'Sex',
           dataIndex: 'sex'
         },
         {
-          title: '住址',
+          title: 'Address',
           dataIndex: 'address'
         }
       ],
       data: [
-        { name: '张三', age: '11', sex: '男', address: '上海路' },
-        { name: '李四', age: '12', sex: '男', address: '北京路' },
-        { name: '李花', age: '12', sex: '女', address: '天津路' }
+        { name: 'Tom', age: '11', sex: 'male', address: 'Shanghai Road' },
+        { name: 'Jack', age: '12', sex: 'male', address: 'Beijing Road' },
+        { name: 'Marry', age: '12', sex: 'Female', address: 'Tianjin Road' }
       ]
     }
   }
@@ -55,15 +55,15 @@ export default {
 
 ### API
 
-| 参数 | 说明 | 类型 | 默认值 |
+| Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
-| columns | 行相关设置 |  | 具体见下表的参数说明 |
-| data | table表格数据 | Array | [] |
+| columns | row related settings |  | See the parameter description in the table below for details |
+| data | table data | Array | [] |
 
 #### columns
-| 参数 | 说明 | 类型 | 默认值 |
+| Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
-| title | 行名称 | String |  |
-| dataIndex | table列数据在数据项中对应的 key | String |  |
-| align | 居中方式 | String | 'left' |
-| width | 宽度 | Number | |
+| title |row name | String |  |
+| dataIndex | The key of the table column data in the data item | String |  |
+| align | columns alignment | String | 'left' |
+| width | columns width | Number | |

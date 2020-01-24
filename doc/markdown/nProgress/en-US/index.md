@@ -1,11 +1,11 @@
-## Progress进度条
-展示操作的当前进度。
+## Progress
+Show the current progress of the operation.
 
-## 何时使用
-在操作需要较长时间才能完成时，为用户显示该操作的当前进度和状态。
+## When To Use
+When an operation takes a long time to complete, the user is shown the current progress and status of the operation.
 
 
-### 代码演示
+### Examples
 :::demo
 ```html
   <template>
@@ -20,8 +20,8 @@
 
 ### API
 
-| 参数 | 说明 | 类型 | 默认值 |
+| Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
-| color | 线条颜色 | String | |
-| percent | 进度百分比 | Number | 0 |
-| width | 进度条宽度 | Number | 10 |
+| color | Line color | String | |
+| percent | Progress percentage | Number | 0 |
+| width | Progress bar width | Number | 10 |

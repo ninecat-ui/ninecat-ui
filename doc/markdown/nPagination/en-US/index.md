@@ -1,13 +1,13 @@
 
-# Pagination 分页
+# Pagination
 
-分页导航，用于辅助长列表只加载部分数据，可以快速切换到指定数据页。
+Pagination navigation, used to help long lists only load part of the data, and can quickly switch to a specified data page.
 
-## 何时使用
+## When To Use
 
-当加载/渲染所有数据将花费很多时间时；可切换页码浏览数据。
+When loading / rendering all data will take a lot of time; switch page numbers to browse the data.
 
-### 代码演示
+### Examples
 :::demo
 ```html
 <template>
@@ -40,10 +40,10 @@ export default {
 
 ### API
 
-| 参数 | 说明 | 类型 | 默认值 |
+| Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
-| total | 总数 | Number | 0 |
-| current | 当前页数 | Number | 1 |
-| page-size | 每页数码 | Number | 10 |
-| size | 类型 | String,可选:'xs','sm','md','lg' | 'sm' |
-|onChangePgae|点击切换页面的回调方法|Function| |
+| total | total | Number | 0 |
+| current | current page number | Number | 1 |
+| page-size |digital per page | Number | 10 |
+| size | size of pagination | String,options:'xs','sm','md','lg' | 'sm' |
+|onChangePgae|Click the callback method to switch pages|Function| |
