@@ -11,7 +11,7 @@
 
 A Vue.js 2.0 Web UI Toolkit.
 
-## 📦Install 
+## 📦 Install 
 
 ```bash
 npm install ninecat-ui --S
@@ -21,7 +21,7 @@ npm install ninecat-ui --S
 yarn add ninecat-ui
 ```
 
-## 🔨Quick Start
+## 🔨 Quick Start
 
 ```javascript
 import Vue from 'vue'
@@ -40,5 +40,5 @@ Vue.component(Button.name, Button)
 
 ```
 
-## 🖥 Browser Support
+## 🖥  Browser Support
 Modern browsers and Internet Explorer 10+.
