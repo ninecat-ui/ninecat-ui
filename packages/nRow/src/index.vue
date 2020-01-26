@@ -28,15 +28,22 @@ export default {
       type: [String],
       default: 'center'
     }
-
   },
   computed: {
     gutterStyle () {
       const temp = this.gutter ? { marginLeft: -this.gutter + 'px', marginRight: -this.gutter + 'px' } : ''
+      let alignItems = ''
+      if (this.align === 'top') {
+        alignItems = 'flex-start'
+      } else if (this.align === 'middle') {
+        alignItems = 'center'
+      } else if (this.align === 'buttom') {
+        alignItems = 'flex-end'
+      }
       return {
         'display': 'flex',
         'justify-content': this.justify,
-        'align-items': this.align,
+        'align-items': alignItems,
         ...temp
       }
     }

@@ -6,6 +6,7 @@
 From stacked to horizontal arrangement. With a single set of Row and Col grid components, a basic grid system can be created, and all columns (Col) must be placed in a Row.
 
 ### Examples
+**Base grid**：From stacked to horizontal arrangement. With a single set of Row and Col grid components, a basic grid system can be created, and all columns (Col) must be placed in a Row.
 :::demo
 ```html
 <template>
@@ -80,7 +81,121 @@ From stacked to horizontal arrangement. With a single set of Row and Col grid co
     }
 </script>
 ```
+:::
 
+**Left and right offset**：Column offset. Use offset to offset the column to the right. For example, offset = "8" shifts the element to the right by the width of 8 columns.
+:::demo
+```html
+<template>
+    <n-row>
+        <n-col span="8">
+            <div v-bind:style="styleObjectOne">
+                8
+            </div>
+        </n-col>
+        <n-col span="8" offset="8">
+            <div v-bind:style="styleObjectOne">
+                8
+            </div>
+        </n-col>
+    </n-row>
+</template>
+<script>
+    export default {
+        data: function () {
+            return {
+                styleObjectOne: {
+                    background: `rgba(0, 160, 233, 0.7)` ,
+                    color: '#fff',
+                    height:'50px',
+                },
+            }
+        }
+    }
+</script>
+```
+:::
+
+**flex alignment**：Flex child elements aligned vertically.
+:::demo
+```html
+<template>
+    <n-row align="top">
+        <n-col span="8">
+            <div v-bind:style="styleObjectOne">
+                8
+            </div>
+        </n-col>
+        <n-col span="8" >
+            <div v-bind:style="styleObjectTwo">
+                8
+            </div>
+        </n-col>
+        <n-col span="8" >
+            <div v-bind:style="styleObjectThree">
+                8
+            </div>
+        </n-col>
+    </n-row>
+     <n-row align="middle">
+        <n-col span="8">
+            <div v-bind:style="styleObjectOne">
+                8
+            </div>
+        </n-col>
+        <n-col span="8" >
+            <div v-bind:style="styleObjectTwo">
+                8
+            </div>
+        </n-col>
+        <n-col span="8" >
+            <div v-bind:style="styleObjectThree">
+                8
+            </div>
+        </n-col>
+    </n-row>
+    <n-row align="buttom">
+        <n-col span="8">
+            <div v-bind:style="styleObjectOne">
+                8
+            </div>
+        </n-col>
+        <n-col span="8" >
+            <div v-bind:style="styleObjectTwo">
+                8
+            </div>
+        </n-col>
+        <n-col span="8" >
+            <div v-bind:style="styleObjectThree">
+                8
+            </div>
+        </n-col>
+    </n-row>
+</template>
+<script>
+    export default {
+        data: function () {
+            return {
+                styleObjectOne: {
+                    background: `rgba(0, 160, 233, 0.7)` ,
+                    color: '#fff',
+                    height:'100px',
+                },
+                styleObjectTwo: {
+                    background: `#00a0e9` ,
+                    color: '#fff',
+                    height:'50px',
+                },
+                styleObjectThree: {
+                    background: `rgba(0, 160, 233, 0.7)`,
+                    color: '#fff',
+                    height:'150px',
+                }
+            }
+        }
+    }
+</script>
+```
 :::
 
 ### API

@@ -2,10 +2,9 @@
 
 24 栅格系统。
 
-## 基础
-从堆叠到水平排列。使用单一的一组 Row 和 Col 栅格组件，就可以创建一个基本的栅格系统，所有列（Col）必须放在 Row 内。
 
 ### 代码演示
+**基础栅格**：从堆叠到水平排列。使用单一的一组 Row 和 Col 栅格组件，就可以创建一个基本的栅格系统，所有列（Col）必须放在 Row 内。
 :::demo
 ```html
 <template>
@@ -80,7 +79,121 @@
     }
 </script>
 ```
+:::
 
+**左右偏移**：列偏移。使用 offset 可以将列向右侧偏。例如，offset="8" 将元素向右侧偏移了 8 个列（column）的宽度。
+:::demo
+```html
+<template>
+    <n-row>
+        <n-col span="8">
+            <div v-bind:style="styleObjectOne">
+                8
+            </div>
+        </n-col>
+        <n-col span="8" offset="8">
+            <div v-bind:style="styleObjectOne">
+                8
+            </div>
+        </n-col>
+    </n-row>
+</template>
+<script>
+    export default {
+        data: function () {
+            return {
+                styleObjectOne: {
+                    background: `rgba(0, 160, 233, 0.7)` ,
+                    color: '#fff',
+                    height:'50px',
+                },
+            }
+        }
+    }
+</script>
+```
+:::
+
+**flex对齐**：Flex 子元素垂直对齐。
+:::demo
+```html
+<template>
+    <n-row align="top">
+        <n-col span="8">
+            <div v-bind:style="styleObjectOne">
+                8
+            </div>
+        </n-col>
+        <n-col span="8" >
+            <div v-bind:style="styleObjectTwo">
+                8
+            </div>
+        </n-col>
+        <n-col span="8" >
+            <div v-bind:style="styleObjectThree">
+                8
+            </div>
+        </n-col>
+    </n-row>
+     <n-row align="middle">
+        <n-col span="8">
+            <div v-bind:style="styleObjectOne">
+                8
+            </div>
+        </n-col>
+        <n-col span="8" >
+            <div v-bind:style="styleObjectTwo">
+                8
+            </div>
+        </n-col>
+        <n-col span="8" >
+            <div v-bind:style="styleObjectThree">
+                8
+            </div>
+        </n-col>
+    </n-row>
+    <n-row align="buttom">
+        <n-col span="8">
+            <div v-bind:style="styleObjectOne">
+                8
+            </div>
+        </n-col>
+        <n-col span="8" >
+            <div v-bind:style="styleObjectTwo">
+                8
+            </div>
+        </n-col>
+        <n-col span="8" >
+            <div v-bind:style="styleObjectThree">
+                8
+            </div>
+        </n-col>
+    </n-row>
+</template>
+<script>
+    export default {
+        data: function () {
+            return {
+                styleObjectOne: {
+                    background: `rgba(0, 160, 233, 0.7)` ,
+                    color: '#fff',
+                    height:'100px',
+                },
+                styleObjectTwo: {
+                    background: `#00a0e9` ,
+                    color: '#fff',
+                    height:'50px',
+                },
+                styleObjectThree: {
+                    background: `rgba(0, 160, 233, 0.7)`,
+                    color: '#fff',
+                    height:'150px',
+                }
+            }
+        }
+    }
+</script>
+```
 :::
 
 ### API
