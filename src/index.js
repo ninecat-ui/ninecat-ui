@@ -1,5 +1,4 @@
-import Vue from 'vue'
-import '../assets/font/iconfont.css'
+import './../assets/font/iconfont.css'
 import nAlert from '../packages/nAlert'
 import nButton from '../packages/nButton'
 import nLoader from '../packages/nLoader'
@@ -17,26 +16,50 @@ import nProgress from '../packages/nProgress'
 import nDrawer from '../packages/nDrawer'
 import nAvatar from '../packages/nAvatar'
 
-Vue.prototype.$nMessage = nMessage
-
 const components = {
-  nAlert: nAlert,
-  nButton: nButton,
-  nLoader: nLoader,
-  NIcon: nIcon,
-  nButtonGroup: nButtonGroup,
-  nInput: nInput,
-  nCol: nCol,
-  nRow: nRow,
-  nToast: nToast,
-  nTable: nTable,
-  nPagination: nPagination,
+  nAlert,
+  nButton,
+  nLoader,
+  nIcon,
+  nButtonGroup,
+  nInput,
+  nCol,
+  nRow,
+  nToast,
+  nTable,
+  nPagination,
   nModal: nModal,
-  nProgress: nProgress,
-  nDrawer: nDrawer,
-  nAvatar: nAvatar
+  nProgress,
+  nDrawer,
+  nAvatar
 }
 
-Object.values(components).forEach(component => {
-  Vue.use(component)
-})
+const install = function (Vue, opts = {}) {
+  Object.values(components).forEach(component => {
+    Vue.use(component)
+  })
+  Vue.prototype.$nMessage = nMessage
+}
+
+if (typeof window !== 'undefined' && window.Vue) {
+  install(window.Vue)
+}
+
+export default {
+  install,
+  nAlert,
+  nButton,
+  nLoader,
+  nIcon,
+  nButtonGroup,
+  nInput,
+  nCol,
+  nRow,
+  nToast,
+  nTable,
+  nPagination,
+  nModal,
+  nProgress,
+  nDrawer,
+  nAvatar
+}

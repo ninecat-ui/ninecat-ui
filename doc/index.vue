@@ -14,6 +14,7 @@
 
 <script>
 import Vue from 'vue'
+import Ninecat from '../src/index.js'
 import nHeader from './components/nHeader'
 import nNav from './components/nNav'
 import nContainer from './components/nContainer'
@@ -21,6 +22,7 @@ import config from './doc.config'
 import demoBlock from './components/nDemoBlock'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/googlecode.css'
+Vue.use(Ninecat)
 Vue.directive('highlight', function (el) {
   let blocks = el.querySelectorAll('pre code')
   blocks.forEach((block) => {

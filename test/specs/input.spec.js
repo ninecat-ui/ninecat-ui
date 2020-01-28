@@ -1,9 +1,15 @@
-import nInput from '../../packages/nInput'
-import { mount } from '@vue/test-utils'
+import { createVue, destroyVm } from '../utils/util'
 
 describe('nInput', () => {
-  it('name should return NInput', () => {
-    const wrapper = mount(nInput)
-    expect(wrapper.name()).toBe('NInput')
+  let vm
+  afterEach(() => {
+    destroyVm(vm)
+  })
+  it('default to empty', () => {
+    vm = createVue({
+      template: '<n-input />'
+    }, true)
+    let inputElm = vm.$el.querySelector('input')
+    expect(inputElm.value).toEqual('')
   })
 })

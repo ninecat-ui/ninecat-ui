@@ -44,12 +44,16 @@
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-standard": "4.0.0",
     "eslint-plugin-vue": "5.2.3",
+    "file-loader": "4.2.0",
     "friendly-errors-webpack-plugin": "1.7.0",
     "html-webpack-plugin": "3.2.0",
     "husky": "2.7.0",
     "jest": "24.9.0",
     "jest-serializer-vue": "2.0.2",
     "lint-staged": "8.2.1",
+    "markdown-it-anchor": "^5.2.5",
+    "markdown-it-chain": "^1.3.0",
+    "markdown-it-container": "^2.0.0",
     "mini-css-extract-plugin": "0.5.0",
     "node-sass": "4.12.0",
     "sass-loader": "7.2.0",
@@ -58,6 +62,7 @@
     "stylus": "0.54.5",
     "stylus-loader": "3.0.2",
     "text-loader": "0.0.1",
+    "transliteration": "^2.1.8",
     "uglify-es": "3.3.9",
     "url-loader": "1.1.2",
     "vue": "2.6.10",
@@ -70,12 +75,7 @@
     "webpack": "4.39.2",
     "webpack-cli": "3.3.6",
     "webpack-dev-server": "3.8.0",
-    "webpack-merge": "4.2.1",
-    "file-loader": "4.2.0",
-    "markdown-it-anchor": "^5.2.5",
-    "markdown-it-chain": "^1.3.0",
-    "markdown-it-container": "^2.0.0",
-    "transliteration": "^2.1.8"
+    "webpack-merge": "4.2.1"
   },
   "lint-staged": {
     "linters": {
@@ -98,7 +98,7 @@
     "url": "https://github.com/ninecat-ui/ninecat-ui"
   },
   "dependencies": {
-    
+    "identity-obj-proxy": "^3.0.0"
   },
   "publishConfig": {
     "access": "public"

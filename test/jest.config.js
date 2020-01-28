@@ -12,7 +12,8 @@ module.exports = {
     'vue'
   ],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1'
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '\\.(scss|sass|css)$': 'identity-obj-proxy'
   },
   transform: {
     '^.+\\.js$': 'babel-jest',
