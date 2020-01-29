@@ -9,6 +9,7 @@
         }
       ]"
       type="text"
+      :placeholder="placeholder"
       :disabled="disabled"
       :value="value"
       @input="handleInput"
@@ -38,6 +39,10 @@ export default {
     size: {
       type: String,
       default: 'md'
+    },
+    placeholder: {
+      type: String,
+      default: 'Please input'
     }
   },
   data: function () {
@@ -58,7 +63,7 @@ export default {
   .n-input-md{
     font-family: PingFangSC-Regular;
     font-size: 14px;
-    color: #8E8E93;
+    color:  #575757;
     line-height: 20px;
     padding: 8px 12px;
     width: 300px;
@@ -99,5 +104,8 @@ export default {
       outline: none;
       cursor: not-allowed;
     }
+  }
+  .n-input::placeholder{
+    color: #8E8E93;
   }
 </style>

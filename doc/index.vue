@@ -22,6 +22,7 @@ import config from './doc.config'
 import demoBlock from './components/nDemoBlock'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/googlecode.css'
+import './style/index.scss'
 Vue.use(Ninecat)
 Vue.directive('highlight', function (el) {
   let blocks = el.querySelectorAll('pre code')
