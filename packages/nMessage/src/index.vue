@@ -3,8 +3,9 @@
   author:Terence
 -->
 <template>
-  <div v-show="showMessage">
+  <transition name="nmessage">
     <div
+      v-show="show"
       class="base-message"
       :class="type"
     >
@@ -35,7 +36,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script>
@@ -45,34 +46,35 @@ export default {
   components: {
     nIcon
   },
-  props: {
-    show: {
-      type: Boolean,
-      default: false
-    },
-    message: {
-      type: String,
-      default: ''
-    },
-    type: {
-      type: String,
-      default: 'info'
-    },
-    messageTitle: {
-      type: String,
-      default: ''
-    }
-  },
   data: function () {
     return {
-      showMessage: this.show,
-      iconClass: `icon-${this.type}`,
-      hasTitle: this.messageTitle !== ''
+      timer: null,
+      show: false,
+      duration: '',
+      message: '',
+      type: '',
+      messageTitle: '',
+      hasTitle: false
     }
+  },
+  computed: {
+    iconClass () {
+      return `icon-${this.type}`
+    }
+  },
+  mounted () {
+    this.startTimer()
   },
   methods: {
     closeMessage () {
-      this.showMessage = false
+      this.show = false
+    },
+    startTimer () {
+      if (this.duration > 0) {
+        this.timer = setTimeout(() => {
+          this.closeMessage()
+        }, this.duration)
+      }
     }
   }
 }
@@ -80,7 +82,12 @@ export default {
 
 <style lang="scss" scoped>
   .base-message{
-    position: relative;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 999;
+    top: 20px;
     height: 60px;
     width: 500px;
     border-radius: 6px;
@@ -145,6 +152,12 @@ export default {
       margin: 0;
       padding-left: 10px;
     }
+  }
+  .nmessage-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+  .nmessage-enter, .fade-leave-to {
+    opacity: 0;
   }
 
 </style>

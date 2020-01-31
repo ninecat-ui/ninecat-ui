@@ -34,7 +34,7 @@ export default {
   props: {
     type: {
       type: String,
-      default: '',
+      default: 'default',
       validator (value) {
         return typeof value === 'string'
       }
@@ -55,25 +55,69 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+button{
+  outline:none;
+}
 
 .nbutton{
+  min-width: 80px;
+  height: 36px;
   padding: 0.5em 1em;
   background-color: #F7F7FA;
   border-radius: 6px;
   border: 0;
   vertical-align: middle;
-  cursor: pointer;
-  &:focus,&:hover{
-    background-color: #E5E5EA;
-    outline: none;
-  }
-  &:active{
-    background-color: #D9D9D9;
-  }
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  line-height: 20px;
+  cursor:pointer;
   .nbutton-icon{
     display: inline-block;
     margin-right: 0.2em;
   }
+}
+
+.default{
+  color: #575757;
+  &:focus,&:hover{
+    background: #E5E5EA;
+  };
+  &:active{
+    color: #272C36;
+    background: #D9D9D9;
+  }
+}
+
+.primary{
+  background: #34C3FF;
+  color: #ffffff;
+  &:focus,&:hover{
+    background: #2EABDF;
+  };
+  &:active{
+    background: #2792BF;;
+  }
+  &:disabled{
+    background: #C2EDFF;
+  }
+}
+
+.link{
+  color: #34C3FF;
+  background: none;
+  border: none;
+}
+
+.ghost{
+  color: #34C3FF;
+  background: #ffffff;
+  border: 1px solid #34C3FF;
+}
+
+.delicate{
+  color: #8E8E93;
+  background: none;
+  border: none;
 }
 
 .nbutton-disabled {

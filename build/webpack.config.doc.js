@@ -2,12 +2,14 @@ const path = require('path')
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.config.base')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 
 module.exports = merge(baseConfig, {
   mode: 'production',
-  entry: path.resolve(__dirname, '../index.js'),
+  entry: path.resolve(__dirname, '../doc/index.js'),
   output: {
-    path: path.resolve(__dirname, '../doc'),
+    path: path.resolve(__dirname, '../docs'),
     publicPath: './',
     library: 'ninecat-doc',
     libraryTarget: 'umd',
@@ -50,6 +52,10 @@ module.exports = merge(baseConfig, {
     ]
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      template: './404.html',
+      filename: '404.html',
+    }),
     new MiniCssExtractPlugin({
       filename: 'ninecatdoc.min.css'
     })

@@ -5,6 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 
 const utils = require('./utils')
+const path = require('path')
 
 module.exports = {
   resolve: {
@@ -12,17 +13,18 @@ module.exports = {
     alias: {
       'assets': utils.resolve('assets'),
       'static': utils.resolve('static'),
-      'components': utils.resolve('packages')
+      'packages': utils.resolve('packages')
     }
   },
 
   module: {
     rules: [
+      // {
+      //   test: /\.(js|vue)$/,
+      //   use: 'eslint-loader',
+      //   enforce: 'pre'
+      // }, 
       {
-        test: /\.(js|vue)$/,
-        use: 'eslint-loader',
-        enforce: 'pre'
-      }, {
         test: /\.vue$/,
         use: 'vue-loader'
       }, {
@@ -59,9 +61,21 @@ module.exports = {
           }
         }
       },{
-        test: /.md$/,
-        use: 'text-loader',        
-      }
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'vue-loader',
+            options: {
+              compilerOptions: {
+                preserveWhitespace: false
+              }
+            }
+          },
+          {
+            loader: path.resolve(__dirname, './md-loader/index.js')
+          }
+        ]
+      },
     ]
   },
 
@@ -69,6 +83,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './index.html',
       filename: 'index.html',
+      favicon:'./favicon.ico',
       inject: true
     }),
     new VueLoaderPlugin(),

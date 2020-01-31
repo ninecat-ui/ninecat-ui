@@ -1,5 +1,11 @@
+
 # Designated language. https://docs.travis-ci.com/user/languages/javascript-with-nodejs/
 language: node_js
+
+env:
+  global:
+    - GitHub_REF: github.com/ninecat-ui/ninecat-ui.github.io.git
+    - Npm_Email: ninecatui@outlook.com
 
 # Install dependence
 install:
@@ -7,21 +13,61 @@ install:
   - npm install -g codecov
 
 # Cache the node_modules folder and don't need to download and install all npm packages every time.
-cache:
-  directories:
-    - node_modules
+# cache:
+#   directories:
+#     - node_modules
 # Specify the node version.
 node_js:
-  - "11.1.0"
-# Perform builds only on the specified branch.  https://docs.travis-ci.com/user/customizing-the-build/#building-specific-branches
+  - "11"
+  - "10"
+  - "9"
+
 branches:
   only:
     - master
-# The script to execute.
-script:
-  - npm test
-  - codecov
+
+stages:
+  - test
+  - build doc
+  - deploy
+
+jobs:
+  include:
+    - stage: test
+      script:
+        - npm test
+        - codecov
+
+    - stage: build doc
+      script:
+        - npm run docs:build
+        - cd docs
+        - git init
+        - git add -A
+        - git commit -m "docs:update docs"
+        - git push --force --quiet "https://${GitHub_TOKEN}@${GitHub_REF}" master:master
+
+
+    - stage: deploy
+      script:
+        - npm run prod
+      before_deploy:
+        - npm pack
+      deploy:
+        provider: npm
+        email: "$NPM_EMAIL"
+        api_key: "$NPM_TOKEN"
+        skip_cleanup: true
+        on:
+          tags: true
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)  
+
+      
+      
 # Configure to send notifications when the build fails. https://docs.travis-ci.com/user/notifications
+
 notifications:
   webhooks:
     urls:
