@@ -1,6 +1,7 @@
 import './../assets/font/iconfont.css'
 import nAlert from '../packages/nAlert'
 import nButton from '../packages/nButton'
+import nBadge from '../packages/nBadge'
 import nLoader from '../packages/nLoader'
 import nIcon from '../packages/nIcon'
 import nMessage from '../packages/nMessage'
@@ -19,6 +20,7 @@ import nAvatar from '../packages/nAvatar'
 const components = {
   nAlert,
   nButton,
+  nBadge,
   nLoader,
   nIcon,
   nButtonGroup,
@@ -49,6 +51,7 @@ export default {
   install,
   nAlert,
   nButton,
+  nBadge,
   nLoader,
   nIcon,
   nButtonGroup,

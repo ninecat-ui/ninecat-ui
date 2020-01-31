@@ -46,6 +46,10 @@ export default {
               title: 'Button'
             },
             {
+              path: '/nBadge',
+              title: 'Badge'
+            },
+            {
               path: '/nInput',
               name: 'Input'
             },
