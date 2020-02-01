@@ -139,7 +139,7 @@ export default {
       border: none;
       color: #fff;
       font-size: 14px;
-      margin-left: 140px;
+      // left: 140px;
       background-color: transparent;
       &:focus {
         outline: none;
@@ -148,6 +148,9 @@ export default {
         opacity: 0.7;
         color: #fff;
       }
+    }
+    .algolia-autocomplete{
+      left: 140px;
     }
     .nav{
       flex: 1;
