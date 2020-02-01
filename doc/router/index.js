@@ -55,7 +55,6 @@ navConfig.forEach(navItem => {
 const routes = componentRoutes.concat(commonRoutes)
 
 const router = new VueRouter({
-  mode: 'history',
   routes: routes
 })
 
