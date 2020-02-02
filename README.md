@@ -21,9 +21,10 @@
 
 </div>
 
-![WechatIMG4.png](https://upload-images.jianshu.io/upload_images/8108267-93cf8617b1963c9c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![readme-en.png](https://github.com/ninecat-ui/ninecat-ui/blob/master/static/readme-en.png?raw=true)
 
-![WechatIMG5.png](https://upload-images.jianshu.io/upload_images/8108267-8cb38923846c2489.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![readme-zh.png](https://github.com/ninecat-ui/ninecat-ui/blob/master/static/readme-zh.png?raw=true)
+
 
 ## 📦 Install 
 
