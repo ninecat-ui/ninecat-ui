@@ -16,6 +16,7 @@ import nModal from '../packages/nModal'
 import nProgress from '../packages/nProgress'
 import nDrawer from '../packages/nDrawer'
 import nAvatar from '../packages/nAvatar'
+import nUpload from '../packages/nUpload'
 
 const components = {
   nAlert,
@@ -30,10 +31,11 @@ const components = {
   nToast,
   nTable,
   nPagination,
-  nModal: nModal,
+  nModal,
   nProgress,
   nDrawer,
-  nAvatar
+  nAvatar,
+  nUpload
 }
 
 const install = function (Vue, opts = {}) {

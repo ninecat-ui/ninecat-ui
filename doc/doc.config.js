@@ -94,6 +94,14 @@ export default {
               path: '/nPagination',
               name: 'Pagination'
             }]
+        },
+        {
+          groupName: localLang === 'en-US' ? 'Data Entry' : '数据录入',
+          list: [
+            {
+              path: '/nUpload',
+              name: 'Upload'
+            }]
         }
       ]
     }]
