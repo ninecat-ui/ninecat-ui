@@ -62,6 +62,8 @@ Modern browsers and Internet Explorer 10+.
 
 - [x] Document directory custom configuration.
 - [x] Preview demo online.
+- [x] Integrated Travis CI.
+- [x] Integrated codecov.
 - [x] Building documents automatically. 
 - [x] Tag to build npm packages automatically.
 - [x] Component unit testing. 
