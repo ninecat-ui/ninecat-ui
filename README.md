@@ -67,7 +67,7 @@ Modern browsers and Internet Explorer 10+.
 - [x] Component unit testing. 
 - [x] Integrated docsearch.(Some problems,need fix.)
 - [ ] Integrated codepen.(Doing)
-- [ ] Common component development
+- [ ] Common component development.(Doing)
 - [ ] Color theme customization.
 - [ ] Globalization.
 - [ ] Mixed development with typescript and JavaScript.
