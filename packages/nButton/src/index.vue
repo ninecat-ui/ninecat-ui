@@ -3,7 +3,8 @@
     class="nbutton"
     :class="[
       type ? type : '',
-      disabled ? 'nbutton-disabled' : ''
+      disabled ? 'nbutton-disabled' : '',
+      size ? size : ''
     ]"
     :disabled="disabled"
     @click="$emit('click')"
@@ -49,6 +50,10 @@ export default {
     },
     disabled: {
       type: Boolean
+    },
+    size: {
+      type: String,
+      default: ''
     }
   }
 }
@@ -127,5 +132,33 @@ button{
     background-color: #F7F7FA;
     outline: none;
   }
+}
+
+.lg{
+  width: 96px;
+  height: 24px;
+  font-size: 16px;
+  padding: 10px 16px;
+}
+
+.md{
+  width: 80px;
+  height: 36px;
+  font-size: 14px;
+  padding: 8px 12px;
+}
+
+.sm{
+  width: 76px;
+  height: 30px;
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
+.xs{
+  width: 64px;
+  height: 24px;
+  font-size: 12px;
+  padding: 2px 8px;
 }
 </style>

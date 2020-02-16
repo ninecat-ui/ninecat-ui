@@ -57,3 +57,19 @@ Vue.component(Button.name, Button)
 
 ## 🖥  Browser Support
 Modern browsers and Internet Explorer 10+.
+
+## ✅ Todo List
+
+- [x] Document directory custom configuration.
+- [x] Preview demo online.
+- [x] Building documents automatically. 
+- [x] Tag to build npm packages automatically.
+- [x] Component unit testing. 
+- [x] Integrated docsearch.(Some problems,need fix.)
+- [ ] Integrated codepen.(Doing)
+- [ ] Common component development
+- [ ] Color theme customization.
+- [ ] Globalization.
+- [ ] Mixed development with typescript and JavaScript.
+
+
