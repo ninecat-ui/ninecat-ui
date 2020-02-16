@@ -62,13 +62,13 @@ Modern browsers and Internet Explorer 10+.
 
 - [x] Document directory custom configuration.
 - [x] Preview demo online.
-- [x] Integrated Travis CI.
-- [x] Integrated codecov.
+- [x] Integrate Travis CI.
+- [x] Integrate codecov.
 - [x] Building documents automatically. 
 - [x] Tag to build npm packages automatically.
 - [x] Component unit testing. 
-- [x] Integrated docsearch.(Some problems,need fix.)
-- [ ] Integrated codepen.(Doing)
+- [x] Integrate docsearch.(Some problems,need fix.)
+- [ ] Integrate codepen.(Doing)
 - [ ] Common component development.(Doing)
 - [ ] Color theme customization.
 - [ ] Globalization.
