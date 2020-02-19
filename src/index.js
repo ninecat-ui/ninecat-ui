@@ -40,7 +40,7 @@ const components = {
 
 const install = function (Vue, opts = {}) {
   Object.values(components).forEach(component => {
-    Vue.use(component)
+    Vue.component(component.name, component)
   })
   Vue.prototype.$nMessage = nMessage
 }
