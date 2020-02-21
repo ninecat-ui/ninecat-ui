@@ -53,7 +53,13 @@ module.exports = merge(baseConfig, {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './404.html',
+      template: './doc/index.html',
+      filename: 'index.html',
+      favicon:'./doc/favicon.ico',
+      inject: true
+    }),
+    new HtmlWebpackPlugin({
+      template: './doc/404.html',
       filename: '404.html',
     }),
     new MiniCssExtractPlugin({

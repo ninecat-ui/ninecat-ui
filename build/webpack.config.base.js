@@ -80,12 +80,6 @@ module.exports = {
   },
 
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './index.html',
-      filename: 'index.html',
-      favicon:'./favicon.ico',
-      inject: true
-    }),
     new VueLoaderPlugin(),
     new CopyWebpackPlugin([{
       from: utils.resolve('static/img'),
