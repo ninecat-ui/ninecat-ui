@@ -15,7 +15,7 @@ Ninecat-ui
 </h1>
 
 
-`Ninecat-ui` 是基于<a href="https://rsuitejs.com/design/default/index.html" target="_blank">RSUITE</a>原型设计的VUE UI组件库。
+`Ninecat-ui` 是基于<a href="https://rsuitejs.com/design/default" target="_blank">RSUITE</a>原型设计的VUE UI组件库。
 
 经过一番搜寻，找到了RSUITE的UI元件库，于是开始用VUE来构建一个UI组件库。
 

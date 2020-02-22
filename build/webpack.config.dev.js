@@ -3,7 +3,9 @@ const path = require('path')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.config.base')
-const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 
 const HOST = 'localhost'
 const PORT = 8081
@@ -52,6 +54,12 @@ module.exports = merge(baseConfig, {
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: './doc/index.html',
+      filename: 'index.html',
+      favicon:'./doc/favicon.ico',
+      inject: true
+    }),
     new FriendlyErrorsWebpackPlugin({
       compilationSuccessInfo: {
         messages: [

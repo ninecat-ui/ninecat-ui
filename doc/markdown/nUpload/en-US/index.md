@@ -21,7 +21,7 @@ T
 <template>
   <div>
     <n-upload>
-      <n-button type="primary">
+      <n-button>
         Click Upload
       </n-button>
     </n-upload>

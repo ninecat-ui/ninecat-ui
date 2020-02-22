@@ -15,7 +15,7 @@ Ninecat-ui
 </h1>
 
 
-Ninecat-ui is a VUE UI component library based on <a href="https://rsuitejs.com/design/default/index.html" target="_blank">RSUITE</a> prototype design.
+Ninecat-ui is a VUE UI component library based on <a href="https://rsuitejs.com/design/default" target="_blank">RSUITE</a> prototype design.
 
 After some searching, We found the UI component library of RSUITE, so we started using VUE to build a UI component library.
 
