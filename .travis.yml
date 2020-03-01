@@ -24,8 +24,7 @@ node_js:
 
 branches:
   only:
-    - master
-    - /v\d+\.\d+[a-z]/
+    - /.*/
 
 stages:
   - test
