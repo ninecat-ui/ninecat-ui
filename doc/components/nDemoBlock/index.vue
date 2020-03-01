@@ -30,7 +30,7 @@
         <n-icon
           :name="iconName"
         />
-        <span v-show="hovering">Show Code</span>
+        <span v-show="hovering">{{ hoveringText }}</span>
         <!-- Todo -->
         <!-- <span
           v-show="hovering"
@@ -63,6 +63,13 @@ export default {
         return 'icon-sort-up'
       } else {
         return 'icon-sort-down'
+      }
+    },
+    hoveringText () {
+      if (this.metaShow) {
+        return 'Hide'
+      } else {
+        return 'Expand'
       }
     }
   },
