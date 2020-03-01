@@ -60,7 +60,6 @@ export default {
           name: value.target.files[0].name
         }
       )
-      console.log(value.target.files)
     }
   }
 }

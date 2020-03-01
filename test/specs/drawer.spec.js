@@ -8,7 +8,7 @@ describe('nDrawer', () => {
 
   it('create', () => {
     vm = createVue({
-      template: `<n-drawer title="Drawer Title" show='show'/>`,
+      template: `<n-drawer title="Drawer Title" :show='show'/>`,
       data () {
         return {
           show: true
@@ -16,5 +16,17 @@ describe('nDrawer', () => {
       }
     }, true)
     expect(vm.$el).toBeTruthy()
+  })
+
+  it('open and close', () => {
+    vm = createVue({
+      template: `<n-drawer title='Drawer Title' :show='show' />`,
+      data () {
+        return {
+          show: true
+        }
+      }
+    }, true)
+    vm.$children[0].$el.querySelector('.nbutton').click()
   })
 })

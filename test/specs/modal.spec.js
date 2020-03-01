@@ -17,4 +17,16 @@ describe('nModal', () => {
     }, true)
     expect(vm.$el).toBeTruthy()
   })
+
+  it('open and close', () => {
+    vm = createVue({
+      template: `<n-modal title='modal title' :show='show' ref='modal'/>`,
+      data () {
+        return {
+          show: true
+        }
+      }
+    }, true)
+    vm.$children[0].$el.querySelector('.nbutton-content').click()
+  })
 })
