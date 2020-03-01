@@ -68,10 +68,10 @@ Modern browsers and Internet Explorer 10+.
 - [x] Tag to build npm packages automatically.
 - [x] Component unit testing. 
 - [x] Integrate docsearch.(Some problems,need fix.)
-- [ ] Integrate codepen.(Doing)
-- [ ] Common component development.(Doing)
+- [ ] Common component develop.(Doing)
+- [ ] Integrate codepen.
 - [ ] Color theme customization.
 - [ ] Globalization.
-- [ ] Mixed development with typescript and JavaScript.
+- [ ] Mixed develop with typescript and JavaScript.
 
 
