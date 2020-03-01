@@ -13,7 +13,6 @@ describe('nPagination', () => {
           :total="total"
           :page-size="pageSize"
           :current="current"
-          :on-change-pgae="onChangePgae"
         />
       `,
       data () {
