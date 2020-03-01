@@ -60,6 +60,7 @@ jobs:
         skip_cleanup: true
         on:
           tags: true
+          all_branches: true
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)  
