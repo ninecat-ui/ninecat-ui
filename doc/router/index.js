@@ -3,10 +3,11 @@ import Vue from 'vue'
 import hljs from 'highlight.js'
 import docConfig from '../doc.config'
 
-const localLang = window.sessionStorage.getItem('lang')
+const navigatorLanguage = navigator.language || navigator.userLanguage
+const localLang = window.sessionStorage.getItem('lang') || navigatorLanguage
 
 function loadDoc (lang, path) {
-  const docLang = lang || 'zh-CN'
+  const docLang = lang
   return resolve => require.ensure([], () => resolve(require(`../markdown${path}/${docLang}/index.md`)))
 }
 
