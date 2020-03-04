@@ -18,9 +18,15 @@
     "docs:build": "webpack --config build/webpack.config.doc.js"
   },
   "keywords": [
+    "ninecat",
+    "ninecat ui",
+    "ninecat-ui",
+    "ninecat Ui",
+    "Ninecat Ui",
+    "Vue.js 2.0 Web UI",
+    "Vue UI",
     "Vue",
-    "Webpack 4",
-    "ninecat"
+    "Webpack 4"
   ],
   "license": "MIT",
   "dependencies": {
