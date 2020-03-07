@@ -81,7 +81,8 @@
     "webpack": "4.39.2",
     "webpack-cli": "3.3.6",
     "webpack-dev-server": "3.8.0",
-    "webpack-merge": "4.2.1"
+    "webpack-merge": "4.2.1",
+    "vue-i18n": "^8.15.4"
   },
   "lint-staged": {
     "linters": {
