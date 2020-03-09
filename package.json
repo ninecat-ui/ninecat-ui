@@ -30,6 +30,7 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "deepmerge": "^4.2.2",
     "vue": "2.6.10"
   },
   "devDependencies": {
@@ -72,6 +73,7 @@
     "transliteration": "^2.1.8",
     "uglify-es": "3.3.9",
     "url-loader": "1.1.2",
+    "vue-i18n": "^8.15.4",
     "vue-jest": "3.0.4",
     "vue-loader": "15.7.0",
     "vue-markdown": "^2.2.4",
@@ -81,8 +83,7 @@
     "webpack": "4.39.2",
     "webpack-cli": "3.3.6",
     "webpack-dev-server": "3.8.0",
-    "webpack-merge": "4.2.1",
-    "vue-i18n": "^8.15.4"
+    "webpack-merge": "4.2.1"
   },
   "lint-staged": {
     "linters": {
