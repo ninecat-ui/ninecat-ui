@@ -22,10 +22,10 @@
 </div>
 
 
-![readme-zh.png](https://github.com/ninecat-ui/ninecat-ui/blob/master/static/readme-zh.png?raw=true)
+![readme-en.png](https://github.com/ninecat-ui/ninecat-ui/blob/master/static/readme-en.png?raw=true)
 
 
-## 📦 Install 
+## 📦 安装
 
 ```bash
 npm install ninecat-ui --S
@@ -35,7 +35,7 @@ npm install ninecat-ui --S
 yarn add ninecat-ui
 ```
 
-## 🔨 Quick Start
+## 🔨 快速开始
 
 ```javascript
 import Vue from 'vue'
@@ -54,16 +54,17 @@ Vue.component(Button.name, Button)
 
 ```
 
-## 🖥  Browser Support
-Modern browsers and Internet Explorer 10+.
+## 🖥 浏览器支持
 
-## 🔗 Links
+现代浏览器或者IE10以上
 
-- [Home page](https://ninecat-ui.github.io)
+## 🔗 链接
 
-## ⌨️ Development
+- [主页](https://ninecat-ui.github.io)
 
-Clone locally
+## ⌨️ 开发
+
+本地Colone
 
 ```bash
 $ git clone https://github.com/ninecat-ui/ninecat-ui.git
@@ -71,22 +72,22 @@ $ cd ninecat-ui
 $ yarn install
 $ yarn start
 ```
-English | [简体中文](./README-zh_CN.md)
+简体中文 | [English](./README.md)
 
 ## ✅ Todo List
 
-- [x] Document directory custom configuration.
-- [x] Preview demo online.
-- [x] Integrate Travis CI.
-- [x] Integrate codecov.
-- [x] Building documents automatically. 
-- [x] Tag to build npm packages automatically.
-- [x] Component unit testing. 
-- [x] Integrate docsearch.(Some problems,need fix.)
-- [ ] Common component develop.(Doing)
-- [ ] Integrate codepen.
-- [ ] Color theme customization.
-- [ ] Globalization.
-- [ ] Mixed develop with typescript and JavaScript.
+- [x] 自定义文档目录结构
+- [x] 在线预览UI组件
+- [x] 集成Travis CI实现自动化构建
+- [x] 集成Codecov展示测试覆盖率
+- [x] 自动构建发布文档 
+- [x] 自动通过git tag 发布npm
+- [x] 完成组件单元测试
+- [x] 集成Docsearch
+- [ ] 基本组件开发完善（进行中）
+- [ ] 集成codepen完成在线编辑代码
+- [ ] 自定义主题色
+- [ ] 国际化
+- [ ] Typescript 和 JavaScript混合开发
 
 
