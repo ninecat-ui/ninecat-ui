@@ -6,7 +6,7 @@
 
 <h1 align="center">ninecat-ui</h1>
 
-<h3 align="center">一个VU2.0 UI Web框架</h3>
+<h3 align="center">一个 Vue 2.0 UI Web框架</h3>
 
 
 
