@@ -24,6 +24,8 @@
 
 ![readme-en.png](https://github.com/ninecat-ui/ninecat-ui/blob/master/static/readme-en.png?raw=true)
 
+简体中文 | [English](./README.md)
+
 
 ## 📦 安装
 
@@ -72,7 +74,6 @@ $ cd ninecat-ui
 $ yarn install
 $ yarn start
 ```
-简体中文 | [English](./README.md)
 
 ## ✅ Todo List
 

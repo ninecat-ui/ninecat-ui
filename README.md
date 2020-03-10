@@ -24,6 +24,8 @@
 
 ![readme-zh.png](https://github.com/ninecat-ui/ninecat-ui/blob/master/static/readme-zh.png?raw=true)
 
+English | [简体中文](./README-zh_CN.md)
+
 
 ## 📦 Install 
 
@@ -71,7 +73,6 @@ $ cd ninecat-ui
 $ yarn install
 $ yarn start
 ```
-English | [简体中文](./README-zh_CN.md)
 
 ## ✅ Todo List
 
