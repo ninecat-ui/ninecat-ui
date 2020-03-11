@@ -48,5 +48,6 @@ const i18n = function (fn) {
 
 export default {
   use,
-  i18n
+  i18n,
+  t
 }
