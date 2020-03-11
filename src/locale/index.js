@@ -4,8 +4,9 @@ import Vue from 'vue'
 import deepmerge from 'deepmerge'
 
 const navigatorLanguage = navigator.language || navigator.userLanguage
+console.log(navigatorLanguage)
 
-let lang = navigatorLanguage === 'en-Us' ? enLang : zhLang
+let lang = navigatorLanguage === 'en-US' ? enLang : zhLang
 
 let merged = false
 let i18nHandler = function () {
@@ -24,15 +25,21 @@ let i18nHandler = function () {
 
 export const t = function (path, options) {
   let value = i18nHandler.apply(this, arguments)
-  if (value !== null && value !== undefined) return value
-
+  if (value !== null && value !== undefined) {
+    return value
+  }
   const array = path.split('.')
   let current = lang
 
   for (let i = 0, j = array.length; i < j; i++) {
     const property = array[i]
     value = current[property]
-    if (!value) return ''
+    if (i === j - 1) {
+      return value
+    }
+    if (!value) {
+      return ''
+    }
     current = value
   }
   return ''

@@ -13,17 +13,12 @@ module.exports = {
     alias: {
       'assets': utils.resolve('assets'),
       'static': utils.resolve('static'),
-      'packages': utils.resolve('packages')
+      'packages': utils.resolve('packages'),
     }
   },
 
   module: {
     rules: [
-      // {
-      //   test: /\.(js|vue)$/,
-      //   use: 'eslint-loader',
-      //   enforce: 'pre'
-      // }, 
       {
         test: /\.vue$/,
         use: 'vue-loader'

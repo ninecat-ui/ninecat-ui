@@ -30,7 +30,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="scss" scoped>
 .nBadge {
   width: 33px;
   outline : none;
@@ -42,8 +42,8 @@ export default {
   background-color: #F44336;
 }
 .badgeTitle{
-  position relative
-  top: -1px
+  position:relative;
+  top: -1px;
   color:#fff;
   margin-left :-2px;
   margin-top :-2px;

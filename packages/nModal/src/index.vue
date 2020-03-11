@@ -29,10 +29,10 @@
               type="primary"
               @click="nconfirm"
             >
-              Confirm
+              {{ t('ni.modal.confirmButtonText') }}
             </n-button>
             <n-button @click="ncancel">
-              Cancel
+              {{ t('ni.drawer.cancelButtonText') }}
             </n-button>
           </div>
         </div>
@@ -42,6 +42,7 @@
 </template>
 
 <script>
+import Locale from '../../../src/mixins/locale'
 import nButton from '../../nButton'
 
 export default {
@@ -49,6 +50,7 @@ export default {
   components: {
     nButton
   },
+  mixins: [Locale],
   props: {
     show: {
       type: Boolean,

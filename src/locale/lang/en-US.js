@@ -115,6 +115,14 @@ export default {
     popconfirm: {
       confirmButtonText: 'Yes',
       cancelButtonText: 'No'
+    },
+    drawer: {
+      confirmButtonText: 'Confirm',
+      cancelButtonText: 'Cancel'
+    },
+    modal: {
+      confirmButtonText: 'Confirm',
+      cancelButtonText: 'Cancel'
     }
   }
 }

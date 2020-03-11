@@ -28,10 +28,10 @@
             type="primary"
             @click="nconfirm"
           >
-            Confirm
+            {{ t('ni.drawer.confirmButtonText') }}
           </n-button>
           <n-button @click="ncancel">
-            Cancel
+            {{ t('ni.drawer.cancelButtonText') }}
           </n-button>
         </div>
       </div>
@@ -40,12 +40,14 @@
 </template>
 
 <script>
+import Locale from '../../../src/mixins/locale'
 import nButton from '../../nButton'
 export default {
   name: 'NDrawer',
   components: {
     nButton
   },
+  mixins: [Locale],
   props: {
     show: {
       type: Boolean,

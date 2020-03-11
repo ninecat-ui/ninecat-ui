@@ -115,6 +115,14 @@ export default {
     popconfirm: {
       confirmButtonText: '确定',
       cancelButtonText: '取消'
+    },
+    drawer: {
+      confirmButtonText: '确定',
+      cancelButtonText: '取消'
+    },
+    modal: {
+      confirmButtonText: '确定',
+      cancelButtonText: '取消'
     }
   }
 }

@@ -17,6 +17,7 @@ import nProgress from '../packages/nProgress'
 import nDrawer from '../packages/nDrawer'
 import nAvatar from '../packages/nAvatar'
 import nUpload from '../packages/nUpload'
+import locale from './locale/index'
 
 const components = {
   nAlert,
@@ -39,6 +40,8 @@ const components = {
 }
 
 const install = function (Vue, opts = {}) {
+  locale.use(opts.locale)
+  locale.i18n(opts.i18n)
   Object.values(components).forEach(component => {
     Vue.component(component.name, component)
   })
@@ -50,6 +53,8 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
+  locale: locale.use,
+  i18n: locale.i18n,
   install,
   nAlert,
   nButton,
