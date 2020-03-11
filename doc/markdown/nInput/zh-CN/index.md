@@ -1,15 +1,15 @@
 
-# 输入框Input
+# Input 输入框
 
-用于输入。
+用于输入文本。
 
 ## 何时使用
 
-页面中需要有输入的地方使用。
+页面中需要有输入文本的地方使用。
 
-### 代码演示
+## 代码演示
 
-#### 基本用法
+### 基本用法
 :::demo
 ```html
 <template>
@@ -18,19 +18,19 @@
 ```
 :::
 
-#### 尺寸大小
+### 尺寸大小
 :::demo
 ```html
 <template>
-  <n-input class="example-input" size="lg"/>
-  <n-input class="example-input" size="md"/>
-  <n-input class="example-input" size="sm"/>
-  <n-input class="example-input" size="xs"/>
+  <n-input style="margin: 10px auto" size="lg"/>
+  <n-input style="margin: 10px auto" size="md"/>
+  <n-input style="margin: 10px auto" size="sm"/>
+  <n-input style="margin: 10px auto" size="xs"/>
 </template>
 ```
 :::
 
-#### 禁用
+### 禁用
 
 :::demo
 ```html
@@ -41,9 +41,9 @@
 :::
 
 
-### API
+## API
 
 | 参数 | 说明 | 类型 | 默认值 |
 | :--- | :--- | :--- | :--- |
-| size | input输入框大小 | String | md |
-| disabled | 是否可输入 | Boolean | false |
+| size | 输入框大小，可选值`lg`,`md`,`sm`,`xs` | String | md |
+| disabled | 是否禁用输入 | Boolean | false |

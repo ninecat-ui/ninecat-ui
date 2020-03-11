@@ -6,7 +6,7 @@
 
 一个从页面边缘滑动出来的浮层，可以替代 Modal 放更多内容。
 
-### 代码演示
+## 代码演示
 :::demo
 ```html
 <template>
@@ -16,7 +16,7 @@
   </n-button>
   <n-drawer
     :show.sync="drawerShow"
-    title="Drawer Title"
+    :title="drawerTitle"
     :confirm="confirm"
     :cancel="cancel"
   >
@@ -27,13 +27,13 @@
 </template>
 <script>
   export default{
-    data:function(){
+    data: function() {
       return {
-        drawerShow:false,
-        drawerTitle:'这是标题'
+        drawerShow: false,
+        drawerTitle: '抽屉标题'
       }
     },
-    methods:{
+    methods: {
       openDrawer () {
         this.drawerShow = true
       },
@@ -50,11 +50,11 @@
 ```
 :::
 
-### API
+## API
 
 | 参数 | 说明 | 类型 | 默认值 |
 | :--- | :--- | :--- | :--- |
-| show | 是否展示modal | Boolean | false |
+| show | 是否展示抽屉 | Boolean | false |
 | title | 抽屉的标题 | String |  |
-| confirm    | 确认的回调函数 | Function     |  |
-| cancel    | 取消的回调函数 | Function     |  |
+| confirm    | 确认按钮点击的回调函数 | Function     |  |
+| cancel    | 取消按钮点击的回调函数 | Function     |  |

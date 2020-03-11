@@ -1,5 +1,5 @@
 
-# 标记Badge
+# Badge 标记
 
 标记用于新消息提示。
 
@@ -7,21 +7,19 @@
 
 有新消息需要提示的场景。
 
-### 代码演示
+## 代码演示
 
 :::demo
 ```html
 <template>
-  <n-badge>99+</n-badge>
-  <n-badge type="new">
-    New
-  </n-badge>
+  <n-badge type="default">99+</n-badge>
+  <n-badge type="new">New</n-badge>
   <n-badge type="small" />
 </template>
 ```
 :::
 
-### API
+## API
 
 | 参数 | 说明 | 类型 | 默认值 |
 | :--- | :--- | :--- | :--- |
