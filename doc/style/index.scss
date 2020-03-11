@@ -1,24 +1,28 @@
-.grid{
+.grid {
   padding-top: 20px;
   width: 90%;
-  display:flex;
-  .demo-box{
+  display: flex;
+
+  .demo-box {
     height: auto;
     margin: 10px;
     border: 1px solid #ebebeb;
     border-radius: 3px;
     transition: .2s;
     flex: 1;
-    .source{
+
+    .source {
       padding: 20px 20px 10px 20px;
     }
-    .meta{
+
+    .meta {
       background-color: #fafafa;
       border-top: 1px solid #eaeefb;
       overflow: hidden;
       height: auto;
       transition: height .2s;
-      .p{
+
+      .p {
         padding: 20px;
         box-sizing: border-box;
         border: 1px solid #ebebeb;
@@ -31,7 +35,8 @@
         background-color: #fff;
       }
     }
-    .demo-block-control{
+
+    .demo-block-control {
       padding-top: 10px;
       border-top: 1px solid #eaeefb;
       border-bottom: 1px solid #eaeefb;
@@ -45,11 +50,21 @@
       color: #d3dce6;
       cursor: pointer;
       position: relative;
-      &:focus,&:hover{
-        color:#34C3FF;
-      };
-    }  
+
+      &:focus,
+      &:hover {
+        color: #34C3FF;
+      }
+
+      ;
+    }
   }
+}
+
+pre,
+code {
+  font-family: 'Consolas';
+  font-size: 14px;
 }
 
 @import './input.scss'

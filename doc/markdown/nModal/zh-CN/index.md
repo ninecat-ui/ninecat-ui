@@ -6,13 +6,13 @@
 需要用户处理事务，又不希望跳转页面以致打断工作流程时，可以使用 Modal 在当前页面正中打开一个浮层，承载相应的操作。
 
 
-### 代码演示
+## 代码演示
 :::demo
 ```html
 <template>
   <n-button 
     @click.native="openModal">
-    Open modal
+    Open Modal
   </n-button>
   <n-modal
     :show.sync="modalShow"
@@ -29,8 +29,8 @@
   export default{
     data:function(){
       return {
-        modalShow:false,
-        modalTitle:'这是标题'
+        modalShow: false,
+        modalTitle: '这是标题'
       }
     },
     methods:{
@@ -50,11 +50,11 @@
 ```
 :::
 
-### API
+## API
 
 | 参数 | 说明 | 类型 | 默认值 |
 | :--- | :--- | :--- | :--- |
-| show | 是否展示modal | Boolean | false |
-| title | 弹框的标题 | String |  |
-| confirm    | 确认的回调函数 | Function     |  |
-| cancel    | 取消的回调函数 | Function     |  |
+| show | 是否展示对话框 | Boolean | false |
+| title | 对话框标题 | String |  |
+| confirm    | 确认按钮按下的回调函数 | Function     |  |
+| cancel    | 取消按钮按下的回调函数 | Function     |  |

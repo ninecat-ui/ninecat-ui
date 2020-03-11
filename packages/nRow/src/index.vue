@@ -32,14 +32,10 @@ export default {
   computed: {
     gutterStyle () {
       const temp = this.gutter ? { marginLeft: -this.gutter + 'px', marginRight: -this.gutter + 'px' } : ''
-      let alignItems = ''
-      if (this.align === 'top') {
-        alignItems = 'flex-start'
-      } else if (this.align === 'middle') {
-        alignItems = 'center'
-      } else if (this.align === 'buttom') {
-        alignItems = 'flex-end'
-      }
+      let alignItems =
+        this.align === 'top' ? 'flex-start'
+          : this.align === 'middle' ? 'center'
+            : this.align === 'bottom' ? 'flex-end' : ''
       return {
         'display': 'flex',
         'justify-content': this.justify,

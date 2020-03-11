@@ -1,5 +1,5 @@
 
-# 信息提示Message
+# Message 信息提示
 
 用于页面信息提示。
 
@@ -7,7 +7,7 @@
 
 页面中需要有操作提示或者信息提示的时候使用。
 
-### 代码演示
+## 代码演示
 
 :::demo
 ```html
@@ -15,21 +15,21 @@
   <n-button @click="openMessage">Open Message</n-button>
 </template>
 <script>
-export default {
-  methods:{
-    openMessage(){
-      this.$nMessage({
-        type: 'info',
-        message: '我打开了提示框',
-      })
+  export default {
+    methods: {
+      openMessage(){
+        this.$nMessage({
+          type: 'info',
+          message: '打开了提示框...',
+        })
+      }
     }
   }
-}
 </script>
 ```
 :::
 
-### API
+## API
 
 | 参数 | 说明 | 类型 | 默认值 |
 | :--- | :--- | :--- | :--- |
