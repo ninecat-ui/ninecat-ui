@@ -120,6 +120,7 @@ export default {
     line-height: 60px;
     .logo{
       display: block;
+      text-decoration: none;
       img,span{
         display: inline-block;
         vertical-align: middle;
