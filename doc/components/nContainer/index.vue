@@ -109,7 +109,7 @@ export default {
     }
 
     pre{
-      padding: 20px;
+      padding: 18px 20px;
       background: #fafafa;
       font-size: 14px;
     }

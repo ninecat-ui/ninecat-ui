@@ -63,8 +63,10 @@
 
 pre,
 code {
-  font-family: 'Consolas';
+  font-family:Menlo,Monaco,Consolas,Courier,monospace;
+  background-color: #fafafa;
   font-size: 14px;
+  line-height: 1.8;
 }
 
 @import './input.scss'
