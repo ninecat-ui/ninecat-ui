@@ -46,7 +46,8 @@ describe('nLoader', () => {
   })
   it('render md size default', () => {
     let nLoaderVm = getRenderedVm(nLoader, {
-      show: true
+      show: true,
+      size: ''
     })
     expect(nLoaderVm.$el.querySelector('.loadding-text.md-text')).toBeTruthy()
   })

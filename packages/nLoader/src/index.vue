@@ -37,7 +37,7 @@ export default {
     return {
       sizeStyleObject: this.getSize(this.size),
       loaddingTextClass: 'loadding-text',
-      textSizeClass: `${this.size}-text`
+      textSizeClass: this.size ? `${this.size}-text` : 'md-text'
     }
   },
   methods: {
@@ -73,7 +73,6 @@ export default {
   }
 }
 </script>
-
 <style lang="scss" scoped>
   .loadding{
     position: relative;
@@ -113,5 +112,4 @@ export default {
       font-size: 16px;
     }
   }
-
 </style>
