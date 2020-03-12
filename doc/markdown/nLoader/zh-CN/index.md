@@ -9,7 +9,9 @@
 
 ## 代码演示
 
-:::demo 加载数据时显示动效，可以对大小进行改变。
+### 基本用法
+
+:::demo 一个简单的loading状态。
 
 ```html
 <template>
@@ -29,6 +31,73 @@
 
 ```
 :::
+
+### 各种大小
+
+:::demo 可以对loading的形状大小进行控制。
+
+```html
+<template>
+  <n-loader
+    size="xs"
+    :show="show"
+  />
+  <n-loader
+    size="sm"
+    :show="show"
+  />
+  <n-loader
+    size="md"
+    :show="show"
+  />
+  <n-loader
+    size="lg"
+    :show="show"
+  />
+</template>
+<script>
+  export default {
+    data: function () {
+      return {
+        show: true,
+      }
+    }
+  }
+</script>
+
+```
+:::
+
+### 自定义加载文案
+
+:::demo 可以对加载中的文字描述进行更改。
+
+```html
+<template>
+  <n-loader
+    :show="show"
+    loadding-text="加载中..."
+  />
+
+  <n-loader
+    :show="show"
+    loadding-text="请等待..."
+  />
+  
+</template>
+<script>
+  export default {
+    data: function () {
+      return {
+        show: true,
+      }
+    }
+  }
+</script>
+
+```
+:::
+
 
 ## API
 

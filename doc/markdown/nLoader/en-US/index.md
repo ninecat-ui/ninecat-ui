@@ -8,7 +8,9 @@ When the page is partially waiting for asynchronous data or the rendering proces
 
 ### Examples
 
-:::demo Loading shows dynamic effects when loading data, you can change the size.
+### Basic use
+
+:::demo A simple loading state.
 
 ```html
 <template>
@@ -17,13 +19,79 @@ When the page is partially waiting for asynchronous data or the rendering proces
   />
 </template>
 <script>
-export default {
-  data: function () {
-    return {
-      show: true,
+  export default {
+    data: function () {
+      return {
+        show: true,
+      }
     }
   }
-}
+</script>
+
+```
+:::
+
+### Size
+
+:::demo You can control the size of the loading shape.
+
+```html
+<template>
+  <n-loader
+    size="xs"
+    :show="show"
+  />
+  <n-loader
+    size="sm"
+    :show="show"
+  />
+  <n-loader
+    size="md"
+    :show="show"
+  />
+  <n-loader
+    size="lg"
+    :show="show"
+  />
+</template>
+<script>
+  export default {
+    data: function () {
+      return {
+        show: true,
+      }
+    }
+  }
+</script>
+
+```
+:::
+
+### Custom loading text
+
+:::demo You can change the text description in the load.
+
+```html
+<template>
+  <n-loader
+    :show="show"
+    loadding-text="Loading..."
+  />
+
+  <n-loader
+    :show="show"
+    loadding-text="Please wait..."
+  />
+  
+</template>
+<script>
+  export default {
+    data: function () {
+      return {
+        show: true,
+      }
+    }
+  }
 </script>
 
 ```

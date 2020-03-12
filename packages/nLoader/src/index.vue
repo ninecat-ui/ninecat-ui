@@ -9,32 +9,7 @@
   >
     <div :style="sizeStyleObject" />
     <span
-      v-if="size === 'xs'"
-      class="loadding-text xs-text"
-    >
-      {{ loaddingText }}
-    </span>
-    <span
-      v-else-if="size === 'sm'"
-      class="loadding-text sm-text"
-    >
-      {{ loaddingText }}
-    </span>
-    <span
-      v-else-if="size === 'md'"
-      class="loadding-text md-text"
-    >
-      {{ loaddingText }}
-    </span>
-    <span
-      v-else-if="size === 'lg'"
-      class="loadding-text lg-text"
-    >
-      {{ loaddingText }}
-    </span>
-    <span
-      v-else
-      class="loadding-text md-text"
+      :class="[loaddingTextClass,textSizeClass]"
     >
       {{ loaddingText }}
     </span>
@@ -60,7 +35,9 @@ export default {
   },
   data: function () {
     return {
-      sizeStyleObject: this.getSize(this.size)
+      sizeStyleObject: this.getSize(this.size),
+      loaddingTextClass: 'loadding-text',
+      textSizeClass: `${this.size}-text`
     }
   },
   methods: {
@@ -100,8 +77,11 @@ export default {
 <style lang="scss" scoped>
   .loadding{
     position: relative;
+    display: inline-block;
     z-index: 999;
+    text-align: center;
     div{
+      display: inline-block;
       border-radius: 50%;
       border: 3px solid rgba(247,247,250,0.80);
       border-top-color:  #A6A6A6;
@@ -109,29 +89,26 @@ export default {
     }
     @keyframes spinner2 {to {transform: rotate(360deg);}}
     .loadding-text{
+      display: block;
       font-family: PingFangSC-Regular;
       color: #575757;
       line-height: 20px;
     }
     .xs-text{
-      position: absolute;
       left: 26px;
       top: 2px;
       font-size: 12px;
     }
     .sm-text{
-      position: absolute;
       left: 30px;
       top: 2px;
       font-size: 14px;
     }
     .md-text{
-      position: absolute;
       margin-top:12px;
       font-size: 14px;
     }
     .lg-text{
-      position: absolute;
       margin-top:12px;
       font-size: 16px;
     }

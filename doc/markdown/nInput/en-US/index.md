@@ -9,7 +9,7 @@ Use it where you need input.
 
 ### Examples
 
-#### Basic Use
+#### Basic use
 :::demo
 ```html
 <template>

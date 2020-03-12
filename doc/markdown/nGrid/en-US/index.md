@@ -2,7 +2,7 @@
 
 24 Grids System.
 
-## Basic Use
+## Basic use
 From stacked to horizontal arrangement. With a single set of Row and Col grid components, a basic grid system can be created, and all columns (Col) must be placed in a Row.
 
 ### Examples
