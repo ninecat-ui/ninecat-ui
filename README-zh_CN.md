@@ -63,6 +63,7 @@ Vue.component(Button.name, Button)
 ## 🔗 链接
 
 - [主页](https://ninecat-ui.github.io)
+- [贡献指南](./.github/CONTRIBUTING.zh-CN.md)
 
 ## ⌨️ 开发
 

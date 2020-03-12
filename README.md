@@ -62,6 +62,7 @@ Modern browsers and Internet Explorer 10+.
 ## 🔗 Links
 
 - [Home page](https://ninecat-ui.github.io)
+- [Contribution Guide](./.github/CONTRIBUTING.en-US.md)
 
 ## ⌨️ Development
 
