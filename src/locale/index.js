@@ -4,7 +4,6 @@ import Vue from 'vue'
 import deepmerge from 'deepmerge'
 
 const navigatorLanguage = navigator.language || navigator.userLanguage
-console.log(navigatorLanguage)
 
 let lang = navigatorLanguage === 'en-US' ? enLang : zhLang
 
