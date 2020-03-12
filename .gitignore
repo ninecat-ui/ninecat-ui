@@ -61,6 +61,3 @@ typings/
 dist
 package
 docs
-
-# .lock
-*.lock
