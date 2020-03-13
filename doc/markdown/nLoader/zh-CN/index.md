@@ -104,5 +104,5 @@
 | 参数 | 说明 | 类型 | 默认值 |
 | :--- | :--- | :--- | :--- |
 | show | 是否展示加载中图标 | Boolean | false |
-| loaddingText | 文字说明 | String | Loading... |
+| loadding-text | 文字说明 | String | Loading... |
 | size    | 图标的大小，可选值 `xs`,`sm`,`md`,`lg` | String     | md |

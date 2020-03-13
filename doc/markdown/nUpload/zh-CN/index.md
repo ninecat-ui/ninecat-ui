@@ -17,9 +17,9 @@
 ```html
 <template>
   <div>
-    <n-upload :fileList="fileList">
+    <n-upload :file-list="fileList">
       <n-button>
-        Click Upload
+        点击上传
       </n-button>
     </n-upload>
   </div>
@@ -41,3 +41,9 @@
 </script>
 ```
 :::
+
+## API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| :--- | :--- | :--- | :--- |
+| file-list | 上传的文件列表, 例如: [{name: 'food.jpg', url: 'https://xxx.cdn.com/xxx.jpg'}] | Array | |

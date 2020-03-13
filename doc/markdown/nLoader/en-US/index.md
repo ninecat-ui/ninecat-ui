@@ -102,5 +102,5 @@ When the page is partially waiting for asynchronous data or the rendering proces
 | Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
 | show | Whether to show loading | Boolean | false |
-| loaddingText | loading text | String | Loading... |
+| loadding-text | loading text | String | Loading... |
 | size    | loading icon size, options: `xs`,`sm`,`md`,`lg` | String     | md |

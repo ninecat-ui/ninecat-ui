@@ -20,12 +20,33 @@ T
 ```html
 <template>
   <div>
-    <n-upload>
+    <n-upload :file-list="fileList">
       <n-button>
         Click Upload
       </n-button>
     </n-upload>
   </div>
 </template>
+<script>
+  export default {
+    data: function () {
+      return {
+        fileList: [{
+          name: 'food1.jpeg',
+          url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg'
+        }, {
+          name: 'food2.jpeg',
+          url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg'
+        }]
+      };
+    },
+  }
+</script>
 ```
 :::
+
+## API
+
+| Property | Description | Type | Default |
+| :--- | :--- | :--- | :--- |
+| file-list | List of uploaded files, eg: [{name: 'food.jpg', url: 'https://xxx.cdn.com/xxx.jpg'}] | Array | |
