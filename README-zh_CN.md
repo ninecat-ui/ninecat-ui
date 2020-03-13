@@ -67,7 +67,7 @@ Vue.component(Button.name, Button)
 
 ## ⌨️ 开发
 
-本地Colone
+本地Clone
 
 ```bash
 $ git clone https://github.com/ninecat-ui/ninecat-ui.git
