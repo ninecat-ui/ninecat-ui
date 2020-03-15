@@ -82,7 +82,7 @@ export default {
 
 <style lang="scss" scoped>
   .base-message{
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     margin: auto;

@@ -12,7 +12,7 @@
 <template>
   <n-button 
     @click.native="openDrawer">
-    Open Drawer
+    打开抽屉
   </n-button>
   <n-drawer
     :show.sync="drawerShow"

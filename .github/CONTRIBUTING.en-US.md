@@ -37,3 +37,7 @@ First you need Node.js 4+, yarn and npm 3+. Note: We use yarn to lock dependency
 `yarn start`
 
 Interview http://localhost:8081
+
+## unit test
+
+You can run `npm run test:unit`,then you can get the test result.

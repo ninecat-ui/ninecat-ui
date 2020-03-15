@@ -37,3 +37,7 @@ Hi，很高兴认识你！你能来贡献代码真的太好了，欢迎欢迎！
 `yarn start`
 
 访问http://localhost:8081
+
+## 单元测试
+
+你可以运行 `npm run test:unit`,然后就可以看到测试详情。
