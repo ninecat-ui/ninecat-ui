@@ -13,7 +13,7 @@ Use it where you need input.
 :::demo
 ```html
 <template>
-  <n-input />
+  <n-input placeholder="Please input"/>
 </template>
 ```
 :::
@@ -23,16 +23,16 @@ Use it where you need input.
 ```html
 <template>
   <div class="example-input">
-     <n-input size="lg"/>
+     <n-input size="lg" placeholder="Please input"/>
   </div>
   <div class="example-input">
-    <n-input size="md"/>
+    <n-input size="md" placeholder="Please input"/>
   </div>
   <div class="example-input">
-    <n-input size="sm"/>
+    <n-input size="sm" placeholder="Please input"/>
   </div>
   <div class="example-input">
-    <n-input size="xs"/>
+    <n-input size="xs" placeholder="Please input"/>
   </div>
 </template>
 ```
@@ -43,14 +43,44 @@ Use it where you need input.
 :::demo
 ```html
 <template>
-  <n-input :disabled="true"/>
+  <n-input :disabled="true" placeholder="Please input" />
 </template>
+```
+:::
+
+### Input Events
+
+:::demo
+```html
+<template>
+  <n-input @change="handChange"  placeholder="Please input"/>
+</template>
+<script>
+  export default {
+    methods: {
+      handChange(event){
+        console.log(event)
+      }
+    }
+  }
+</script>
 ```
 :::
 
 ### API
 
+### Input
 | Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
 | size | Input box size | String | md |
+| placeholder | Input box placeholder text | String |  |
 | disabled | Whether the input is disabled. | Boolean | false |
+
+### Input Events
+
+| 事件名称 | 说明 | 回调参数 |
+| :--- | :--- | :--- | :--- |
+|input|	Trigger on input|	(event: Event)
+|blur|	Fires when Input loses focus|	(event: Event)
+|focus|	Fires when Input receives focus|	(event: Event)
+|change	|Only fires when the input box loses focus|	(event: Event)

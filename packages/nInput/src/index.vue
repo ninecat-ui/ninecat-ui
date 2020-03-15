@@ -12,7 +12,7 @@
       :placeholder="placeholder"
       :disabled="disabled"
       :value="value"
-      @input="handleInput"
+      @input="$emit('input', $event)"
       @change="$emit('change', $event)"
       @blur="$emit('blur', $event)"
       @focus="$emit('focus', $event)"
@@ -42,17 +42,12 @@ export default {
     },
     placeholder: {
       type: String,
-      default: 'Please input'
+      default: ''
     }
   },
   data: function () {
     return {
       inputSize: this.size
-    }
-  },
-  methods: {
-    handleInput (e) {
-      this.$emit('input', e.target.value)
     }
   }
 }
