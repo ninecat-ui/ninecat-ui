@@ -22,10 +22,18 @@ Use it where you need input.
 :::demo
 ```html
 <template>
-  <n-input class="example-input" size="lg"/>
-  <n-input class="example-input" size="md"/>
-  <n-input class="example-input" size="sm"/>
-  <n-input class="example-input" size="xs"/>
+  <div class="example-input">
+     <n-input size="lg"/>
+  </div>
+  <div class="example-input">
+    <n-input size="md"/>
+  </div>
+  <div class="example-input">
+    <n-input size="sm"/>
+  </div>
+  <div class="example-input">
+    <n-input size="xs"/>
+  </div>
 </template>
 ```
 :::

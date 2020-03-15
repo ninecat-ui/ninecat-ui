@@ -22,10 +22,18 @@
 :::demo
 ```html
 <template>
-  <n-input style="margin: 10px auto" size="lg"/>
-  <n-input style="margin: 10px auto" size="md"/>
-  <n-input style="margin: 10px auto" size="sm"/>
-  <n-input style="margin: 10px auto" size="xs"/>
+  <div class="example-input">
+     <n-input size="lg"/>
+  </div>
+  <div class="example-input">
+    <n-input size="md"/>
+  </div>
+  <div class="example-input">
+    <n-input size="sm"/>
+  </div>
+  <div class="example-input">
+    <n-input size="xs"/>
+  </div>
 </template>
 ```
 :::
