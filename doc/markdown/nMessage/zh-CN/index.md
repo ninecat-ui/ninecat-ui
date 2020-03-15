@@ -12,7 +12,7 @@
 :::demo
 ```html
 <template>
-  <n-button @click="openMessage">Open Message</n-button>
+  <n-button @click="openMessage">打开消息</n-button>
 </template>
 <script>
   export default {
