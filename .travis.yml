@@ -28,8 +28,10 @@ branches:
 
 stages:
   - test
-  - build doc
-  - deploy
+  - name: build doc
+    if: branch = master
+  - name: deploy
+    if: branch = master
 
 jobs:
   include:
