@@ -78,7 +78,7 @@ Use it where you need input.
 
 ### Input Events
 
-| 事件名称 | 说明 | 回调参数 |
+| Event name | Description | Callback parameter |
 | :--- | :--- | :--- | :--- |
 |input|	Trigger on input|	(event: Event)
 |blur|	Fires when Input loses focus|	(event: Event)
