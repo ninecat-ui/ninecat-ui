@@ -43,7 +43,7 @@ import 'ninecat-ui/package/main.css'
 
 Vue.use(Ninecat)
 
-// or
+// Or partially introduced
 import {
   Button
   // ...
