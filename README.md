@@ -91,4 +91,11 @@ $ yarn start
 - [ ] Globalization.
 - [ ] Mixed develop with typescript and JavaScript.
 
+## 🤝 Join Discussion Group
+
+Scan the QR code using [QQ](https://im.qq.com/) to join in discussion group
+
+![share.JPG](https://github.com/ninecat-ui/ninecat-ui/blob/master/static/share.JPG?raw=true)
+
+
 

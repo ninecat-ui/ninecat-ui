@@ -92,4 +92,8 @@ $ yarn start
 - [ ] 国际化
 - [ ] Typescript 和 JavaScript混合开发
 
+## 🤝加入讨论群
 
+用[QQ](https://im.qq.com/) 扫描下方二维码加入群聊
+
+![share.JPG](https://github.com/ninecat-ui/ninecat-ui/blob/master/static/share.JPG?raw=true)
