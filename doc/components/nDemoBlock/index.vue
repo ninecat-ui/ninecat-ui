@@ -49,6 +49,7 @@
 </template>
 
 <script>
+import hljs from 'highlight.js'
 export default {
   name: 'DemoBlock',
   data: function () {
@@ -71,6 +72,15 @@ export default {
       } else {
         return 'Expand'
       }
+    }
+  },
+  created () {
+    const highlight = this.$slots.highlight
+    if (highlight) {
+      this.$nextTick().then(() => {
+        const blocks = document.querySelectorAll('pre code:not(.hljs)')
+        Array.prototype.forEach.call(blocks, hljs.highlightBlock)
+      })
     }
   },
   methods: {

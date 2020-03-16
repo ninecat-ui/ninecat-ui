@@ -118,7 +118,7 @@ export default {
       margin: 0;
       padding: 0;
       overflow: auto;
-      color: #314659;
+      // color: #314659;
       line-height: 20px;
       font-size: 14px;
       background: #fafafa;
