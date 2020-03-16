@@ -96,4 +96,5 @@ $ yarn start
 
 用[QQ](https://im.qq.com/) 扫描下方二维码加入群聊
 
-![share.JPG](https://github.com/ninecat-ui/ninecat-ui/blob/master/static/share.JPG?raw=true)
+<img alter="Discussion Group" src="https://github.com/ninecat-ui/ninecat-ui/blob/master/static/share.JPG?raw=true" width="250px" >
+
