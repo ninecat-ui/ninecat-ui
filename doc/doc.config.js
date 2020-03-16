@@ -60,12 +60,12 @@ export default {
               title: 'Loader'
             },
             {
-              path: '/nMessage',
-              name: 'Message'
-            },
-            {
               path: '/nAlert',
               name: 'Alert'
+            },
+            {
+              path: '/nMessage',
+              name: 'Message'
             },
             {
               path: '/nModal',
