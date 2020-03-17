@@ -21,7 +21,7 @@ import nContainer from './components/nContainer'
 import config from './doc.config'
 import demoBlock from './components/nDemoBlock'
 import hljs from 'highlight.js/lib/highlight'
-import 'highlight.js/styles/gitHub.css'
+import 'highlight.js/styles/github.css'
 import './style/index.scss'
 Vue.use(Ninecat)
 Vue.directive('highlight', function (el) {
