@@ -26,34 +26,34 @@ describe('nAlert', () => {
     let nAlertVm = getRenderedVm(nAlert, {
       show: true
     })
-    expect(nAlertVm.$el.querySelector('.info')).toBeTruthy()
+    expect(nAlertVm.$el._prevClass.includes('info')).toBeTruthy()
   })
   it('render info style when the type is info', () => {
     let nAlertVm = getRenderedVm(nAlert, {
       show: true,
       type: 'info'
     })
-    expect(nAlertVm.$el.querySelector('.info')).toBeTruthy()
+    expect(nAlertVm.$el._prevClass.includes('info')).toBeTruthy()
   })
   it('render success style when the type is success', () => {
     let nAlertVm = getRenderedVm(nAlert, {
       show: true,
       type: 'success'
     })
-    expect(nAlertVm.$el.querySelector('.success')).toBeTruthy()
+    expect(nAlertVm.$el._prevClass.includes('success')).toBeTruthy()
   })
   it('render warning style when the type is warning', () => {
     let nAlertVm = getRenderedVm(nAlert, {
       show: true,
       type: 'warning'
     })
-    expect(nAlertVm.$el.querySelector('.warning')).toBeTruthy()
+    expect(nAlertVm.$el._prevClass.includes('warning')).toBeTruthy()
   })
   it('render error style when the type is error', () => {
     let nAlertVm = getRenderedVm(nAlert, {
       show: true,
       type: 'error'
     })
-    expect(nAlertVm.$el.querySelector('.error')).toBeTruthy()
+    expect(nAlertVm.$el._prevClass.includes('error')).toBeTruthy()
   })
 })
