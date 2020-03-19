@@ -1,7 +1,7 @@
 
 # Message
 
-用于页面信息提示。
+Used for page information prompts.
 
 ## When To Use
 
