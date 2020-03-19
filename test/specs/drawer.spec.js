@@ -18,7 +18,7 @@ describe('nDrawer', () => {
     expect(vm.$el).toBeTruthy()
   })
 
-  it('open and close', () => {
+  it('confirm', () => {
     vm = createVue({
       template: `<n-drawer title='Drawer Title' :show='show' />`,
       data () {
@@ -27,6 +27,18 @@ describe('nDrawer', () => {
         }
       }
     }, true)
-    vm.$children[0].$el.querySelector('.nbutton').click()
+    vm.$children[0].$el.querySelector('.primary').click()
+  })
+
+  it('cancel', () => {
+    vm = createVue({
+      template: `<n-drawer title='Drawer Title' :show='show' />`,
+      data () {
+        return {
+          show: true
+        }
+      }
+    }, true)
+    vm.$children[0].$el.querySelector('.default').click()
   })
 })
