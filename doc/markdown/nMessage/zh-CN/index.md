@@ -12,14 +12,17 @@
 :::demo
 ```html
 <template>
-  <n-button @click="openMessage">打开消息</n-button>
+  <n-button @click="openMessage('info')">普通消息</n-button>
+  <n-button @click="openMessage('success')">成功消息</n-button>
+  <n-button @click="openMessage('warning')">警告消息</n-button>
+  <n-button @click="openMessage('error')">错误消息</n-button>
 </template>
 <script>
   export default {
     methods: {
-      openMessage(){
+      openMessage(type){
         this.$nMessage({
-          type: 'info',
+          type,
           message: '打开了提示框...',
         })
       }
