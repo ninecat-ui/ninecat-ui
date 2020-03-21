@@ -22,7 +22,7 @@
 </div>
 
 
-![readme-zh.png](https://github.com/ninecat-ui/ninecat-ui/blob/master/static/readme-zh.png?raw=true)
+<img style="height:100%;width:100%" src="https://github.com/ninecat-ui/ninecat-ui/blob/master/static/readme-en.png?raw=true"/>
 
 English | [简体中文](./README-zh_CN.md)
 

@@ -21,8 +21,8 @@
 
 </div>
 
+<img style="height:100%;width:100%" src="https://github.com/ninecat-ui/ninecat-ui/blob/master/static/readme-zh.png?raw=true"/>
 
-![readme-en.png](https://github.com/ninecat-ui/ninecat-ui/blob/master/static/readme-en.png?raw=true)
 
 简体中文 | [English](./README.md)
 
