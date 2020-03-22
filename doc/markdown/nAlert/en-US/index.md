@@ -7,7 +7,7 @@ Alert component for feedback.
 
 When you need to show alert messages to users.
 
-### Examples
+## Examples
 :::demo
 ```html
 <template>

@@ -7,9 +7,9 @@ Used for input.
 
 Use it where you need input.
 
-### Examples
+## Examples
 
-#### Basic use
+### Basic use
 :::demo
 ```html
 <template>
@@ -18,7 +18,7 @@ Use it where you need input.
 ```
 :::
 
-#### Size
+### Size
 :::demo
 ```html
 <template>
@@ -38,7 +38,7 @@ Use it where you need input.
 ```
 :::
 
-#### Disabled
+### Disabled
 
 :::demo
 ```html
@@ -67,7 +67,7 @@ Use it where you need input.
 ```
 :::
 
-### API
+## API
 
 ### Input
 | Property | Description | Type | Default |

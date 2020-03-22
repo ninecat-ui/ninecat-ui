@@ -5,7 +5,7 @@
 ## Basic use
 From stacked to horizontal arrangement. With a single set of Row and Col grid components, a basic grid system can be created, and all columns (Col) must be placed in a Row.
 
-### Examples
+## Examples
 **Base grid**：From stacked to horizontal arrangement. With a single set of Row and Col grid components, a basic grid system can be created, and all columns (Col) must be placed in a Row.
 :::demo
 ```html
@@ -198,9 +198,9 @@ From stacked to horizontal arrangement. With a single set of Row and Col grid co
 ```
 :::
 
-### API
+## API
 
-#### Row
+### Row
 
 | Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
@@ -208,7 +208,7 @@ From stacked to horizontal arrangement. With a single set of Row and Col grid co
 | gutter | Grid interval, which can be written as pixel values ​​or supports responsive object notation to set the horizontal interval  | Number/String | - |
 | justify    | horizontal arrangement of the flex layout:：`start` `end` `center` `space-around` `space-between` | String | center |
 
-#### Col
+### Col
 | Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
 | span | raster number of cells to occupy | String/Number | - |

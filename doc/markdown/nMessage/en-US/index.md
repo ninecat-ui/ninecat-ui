@@ -7,7 +7,7 @@ Used for page information prompts.
 
 Used for page information prompts.
 
-### Examples
+## Examples
 
 :::demo
 ```html

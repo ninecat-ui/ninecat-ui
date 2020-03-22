@@ -4,9 +4,9 @@ To trigger an operation.
 ## When To Use
 A button means an operation (or a series of operations). Clicking a button will trigger corresponding business logic.
 
-### Examples
+## Examples
 
-#### Button type
+### Button type
 :::demo There are five types of buttons: default button, home button, link button, ghost button, delicate button.
 ```html
 <template>
@@ -37,7 +37,7 @@ export default {
 ```
 :::
 
-#### Icon button
+### Icon button
 
 :::demo When you need to embed an Icon in a Button, you can set the icon property or use the Icon component directly in the Button.
 ```html
@@ -51,7 +51,7 @@ export default {
 :::
 
 
-#### Button combinations
+### Button combinations
 
 :::demo You can put multiple Buttons in a n-button-group container.
 ```html

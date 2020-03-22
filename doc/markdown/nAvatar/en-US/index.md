@@ -2,9 +2,9 @@
 
 Used to represent users or things, and supports pictures, icons, or character display.
 
-### When To Use
+## Examples
 
-#### Basic use
+### Basic use
 The avatar is available in four sizes and two shapes.
 :::demo
 ```html
@@ -26,7 +26,7 @@ The avatar is available in four sizes and two shapes.
 ```
 :::
 
-#### Type
+### Type
 Supports three types: image, icon, and character
 :::demo
 ```html

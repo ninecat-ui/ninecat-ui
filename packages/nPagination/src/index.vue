@@ -87,7 +87,6 @@ export default {
     a{
       font-family: Avenir-Book;
       color: #575757 !important;
-      line-height: 20px;
     }
   }
   :hover{
@@ -95,10 +94,29 @@ export default {
     border-radius: 6px;
     border-radius: 6px;
   }
+  .xs{
+    height: 18px;
+    width: 18px;
+    font-size: 12px;
+    line-height: 18px;
+  }
   .sm{
     height: 24px;
     width: 24px;
     font-size: 12px;
+    line-height: 24px;
+  }
+  .md{
+    height: 32px;
+    width: 32px;
+    font-size: 16px;
+    line-height: 32px;
+  }
+  .lg{
+    height: 36px;
+    width: 36px;
+    font-size: 18px;
+    line-height: 36px;
   }
   .active{
     color: #1675E0 !important;

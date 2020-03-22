@@ -8,6 +8,8 @@
 当加载/渲染所有数据将花费很多时间时；可切换页码浏览数据。
 
 ## 代码演示
+
+### 基本使用
 :::demo
 ```html
 <template>
@@ -37,6 +39,51 @@
 </script>
 ```
 :::
+
+### 尺寸大小
+:::demo
+```html
+<template>
+  <n-pagination
+    size="xs"
+    :total="total"
+    :page-size="pageSize"
+    :current="current"
+  />
+  <n-pagination
+    size="sm"
+    :total="total"
+    :page-size="pageSize"
+    :current="current"
+  />
+  <n-pagination
+    size="md"
+    :total="total"
+    :page-size="pageSize"
+    :current="current"
+  />
+  <n-pagination
+    size="lg"
+    :total="total"
+    :page-size="pageSize"
+    :current="current"
+  />
+</template>
+
+<script>
+  export default {
+    data: function() {
+      return {
+        total: 100,
+        pageSize: 10,
+        current: 1
+      }
+    }
+  }
+</script>
+```
+:::
+
 
 ## API
 

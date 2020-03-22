@@ -6,7 +6,7 @@ Used for page and block loading status.
 ## When To Use
 When the page is partially waiting for asynchronous data or the rendering process is in progress, proper loading animation will effectively relieve the user's anxiety.
 
-### Examples
+## Examples
 
 ### Basic use
 

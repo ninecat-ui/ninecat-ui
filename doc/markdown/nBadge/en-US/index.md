@@ -7,7 +7,7 @@ Used for remind.
 
 Use it where you need news to remind.
 
-### Examples
+## Examples
 
 :::demo
 ```html

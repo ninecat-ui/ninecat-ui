@@ -7,7 +7,9 @@ Pagination navigation, used to help long lists only load part of the data, and c
 
 When loading / rendering all data will take a lot of time; switch page numbers to browse the data.
 
-### Examples
+## Examples
+
+### Basic use
 :::demo
 ```html
 <template>
@@ -34,6 +36,50 @@ export default {
     }
   }
 }
+</script>
+```
+:::
+
+### Size
+:::demo
+```html
+<template>
+  <n-pagination
+    size="xs"
+    :total="total"
+    :page-size="pageSize"
+    :current="current"
+  />
+  <n-pagination
+    size="sm"
+    :total="total"
+    :page-size="pageSize"
+    :current="current"
+  />
+  <n-pagination
+    size="md"
+    :total="total"
+    :page-size="pageSize"
+    :current="current"
+  />
+  <n-pagination
+    size="lg"
+    :total="total"
+    :page-size="pageSize"
+    :current="current"
+  />
+</template>
+
+<script>
+  export default {
+    data: function() {
+      return {
+        total: 100,
+        pageSize: 10,
+        current: 1
+      }
+    }
+  }
 </script>
 ```
 :::

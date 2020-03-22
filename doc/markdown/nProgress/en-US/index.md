@@ -5,7 +5,7 @@ Show the current progress of the operation.
 When an operation takes a long time to complete, the user is shown the current progress and status of the operation.
 
 
-### Examples
+## Examples
 :::demo
 ```html
   <template>

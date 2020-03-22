@@ -6,7 +6,7 @@ Modal dialog
 When users need to handle transactions and do not want to jump to the page to interrupt the workflow, you can use Modal to open a floating layer in the middle of the current page to carry the corresponding operations.
 
 
-### Examples
+## Examples
 :::demo
 ```html
 <template>

@@ -6,7 +6,7 @@ Floating panel sliding out of the edge of the screen.
 
 A floating layer that slides from the edge of the page can replace Modal to put more content.
 
-### Examples
+## Examples
 :::demo
 ```html
 <template>

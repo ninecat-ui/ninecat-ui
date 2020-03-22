@@ -5,7 +5,7 @@ Show rows and columns of data.
 ## When To Use
 For displaying large amounts of data.
 
-### Examples
+## Examples
 :::demo
 
 ```html
@@ -53,14 +53,14 @@ export default {
 ```
 :::
 
-### API
+## API
 
 | Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
 | columns | row related settings |  | See the parameter description in the table below for details |
 | data | table data | Array | [] |
 
-#### columns
+### columns
 | Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
 | title |row name | String |  |
