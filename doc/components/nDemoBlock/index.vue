@@ -67,10 +67,11 @@ export default {
       }
     },
     hoveringText () {
+      const lang = sessionStorage.getItem('lang')
       if (this.metaShow) {
-        return 'Hide'
+        return lang === 'en-US' ? 'Hide' : '收起'
       } else {
-        return 'Expand'
+        return lang === 'en-US' ? 'Expand' : '展开'
       }
     }
   },
