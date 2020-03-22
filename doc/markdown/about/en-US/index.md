@@ -8,11 +8,12 @@ Ninecat-ui
       >
       <img src="https://travis-ci.com/ninecat-ui/ninecat-ui.svg?branch=master">
       <img src="https://codecov.io/gh/ninecat-ui/ninecat-ui/branch/master/graph/badge.svg">
+      <img src="https://img.shields.io/npm/dt/ninecat-ui">
       <img src="https://img.shields.io/badge/license-MIT-000000.svg">
       <img src="https://img.shields.io/badge/webpack-4-blue.svg">
       <img src="https://img.shields.io/badge/vue-2.6.10-green.svg">
-      <img src="https://img.shields.io/badge/npm-6.4.1-lightblue.svg">
 </h1>
+
 
 
 Ninecat-ui is a VUE UI component library based on <a href="https://rsuitejs.com/design/default" target="_blank">RSUITE</a> prototype design.
