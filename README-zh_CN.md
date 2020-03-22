@@ -29,10 +29,12 @@
 
 
 ## 📦 安装
+通过npm
 
 ```bash
 npm install ninecat-ui --S
 ```
+通过yarn
 
 ```bash
 yarn add ninecat-ui

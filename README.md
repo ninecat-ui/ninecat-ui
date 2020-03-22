@@ -27,11 +27,15 @@
 English | [简体中文](./README-zh_CN.md)
 
 
-## 📦 Install 
+## 📦 Install
+
+Use npm
 
 ```bash
 npm install ninecat-ui --S
 ```
+
+Use yarn
 
 ```bash
 yarn add ninecat-ui
