@@ -14,12 +14,13 @@
 
 [![Build Status](https://travis-ci.com/ninecat-ui/ninecat-ui.svg?branch=master)](https://travis-ci.com/ninecat-ui/ninecat-ui)
 [![codecov](https://codecov.io/gh/ninecat-ui/ninecat-ui/branch/master/graph/badge.svg)](https://codecov.io/gh/ninecat-ui/ninecat-ui)
-![](https://img.shields.io/badge/license-MIT-000000.svg)
-![](https://img.shields.io/badge/webpack-4-blue.svg)
-![](https://img.shields.io/badge/vue-2.6.10-green.svg)
-![](https://img.shields.io/badge/npm-6.4.1-lightblue.svg)
+![npm](https://img.shields.io/npm/dt/ninecat-ui)
+![MIT](https://img.shields.io/badge/license-MIT-000000.svg)
+![webpack](https://img.shields.io/badge/webpack-4-blue.svg)
+![vue](https://img.shields.io/badge/vue-2.6.10-green.svg)
 
 </div>
+
 
 <img style="height:100%;width:100%" src="https://github.com/ninecat-ui/ninecat-ui/blob/master/static/Screenshot_zh.jpg?raw=true"/>
 
