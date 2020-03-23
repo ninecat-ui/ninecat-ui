@@ -51,6 +51,7 @@
 <script>
 import 'docsearch.js/dist/cdn/docsearch.min.css'
 import docsearch from 'docsearch.js'
+import { getLang, setLang } from '../../util/lang'
 export default {
   name: 'NHeader',
   props: {
@@ -84,7 +85,7 @@ export default {
   },
   methods: {
     setLang () {
-      const lang = window.sessionStorage.getItem('lang')
+      const lang = getLang()
       if (lang === 'zh-CN') {
         this.lang = 'English'
       } else if (lang === 'en-US') {
@@ -96,10 +97,10 @@ export default {
     changeLang () {
       if (this.lang === 'English') {
         this.lang = '中文'
-        window.sessionStorage.setItem('lang', 'en-US')
+        setLang('en-US')
       } else {
         this.lang = 'English'
-        window.sessionStorage.setItem('lang', 'zh-CN')
+        setLang('zh-CN')
       }
       window.location.reload()
     }

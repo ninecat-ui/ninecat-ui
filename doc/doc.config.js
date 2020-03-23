@@ -1,6 +1,6 @@
-const navigatorLanguage = navigator.language || navigator.userLanguage
+import { getLang } from './util/lang'
 
-const localLang = window.sessionStorage.getItem('lang') || navigatorLanguage
+const localLang = getLang()
 
 export default {
   headerConfig: {
