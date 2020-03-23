@@ -2,9 +2,9 @@ import VueRouter from 'vue-router'
 import Vue from 'vue'
 import hljs from 'highlight.js'
 import docConfig from '../doc.config'
+import { getLang } from '../util/lang'
 
-const navigatorLanguage = navigator.language || navigator.userLanguage
-const localLang = window.sessionStorage.getItem('lang') || navigatorLanguage
+const localLang = getLang()
 
 function loadDoc (lang, path) {
   const docLang = lang
