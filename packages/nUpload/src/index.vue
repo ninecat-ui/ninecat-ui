@@ -16,11 +16,18 @@
         :key="index"
         class="nupload-list-item"
       >
+        <img src="../../../assets/img/upload/attachment.svg">
         <span class="nupload-list-item-title">
           <a
             :href="file.url"
             :download="file.name"
           >{{ file.name }}</a>
+        </span>
+        <span
+          class="nupload-close"
+          @click="deleteFile(file,index)"
+        >
+          <img src="../../../assets/img/upload/close.svg">
         </span>
       </div>
     </div>
@@ -60,6 +67,9 @@ export default {
           name: value.target.files[0].name
         }
       )
+    },
+    deleteFile (file, index) {
+      this.nfileList.splice(index, 1)
     }
   }
 }
@@ -86,18 +96,29 @@ export default {
   }
 
   .nupload-list{
-    margin-top: 10px;
     .nupload-list-item{
-      line-height: 30px;
-      height: 30px;
+      margin-top: 10px;
+      vertical-align:middle;
       width: 300px;
       background: #FFFFFF;
       font-family: PingFangSC-Regular;
       font-size: 14px;
       color: #575757;
+      img{
+        padding: 7px 0 7px 10px;
+        vertical-align:middle;
+      }
       .nupload-list-item-title{
-        padding-left: 10px;
-        a{text-decoration:none;color: #575757;}
+        padding: 5px;
+        line-height: 20px;
+        a{
+          text-decoration:none;
+          color: #575757;
+        }
+      }
+      .nupload-close{
+        position: absolute;
+        right:10px;
       }
     }
     :hover{
