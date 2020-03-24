@@ -38,6 +38,15 @@ First you need Node.js 4+, yarn and npm 3+. Note: We use yarn to lock dependency
 
 Interview http://localhost:8081
 
-## unit test
+# Development Agreement
+
+- If you want to add new components, first create your component directory under the packages directory. The directory starts with `n`, you can refer to the existing component writing.
+
+- Then create your component document directory in the markdown directory of the doc directory. The directory starts with `n`, which contains two en-US and zh-CN directories.
+en-US is an English document, zh-CN is a Chinese document
+
+- After developing your component, you need to add your unit tests in the test / specs folder.
+
+# unit test
 
 You can run `npm run test:unit`,then you can get the test result.
