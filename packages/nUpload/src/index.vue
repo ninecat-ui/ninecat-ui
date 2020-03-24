@@ -62,9 +62,12 @@ export default {
   },
   methods: {
     handleChange (value) {
+      console.log(value)
       this.nfileList.push(
         {
-          name: value.target.files[0].name
+          name: value.target.files[0].name,
+          size: value.target.files[0].size,
+          type: value.target.files[0].type
         }
       )
     },

@@ -13,7 +13,33 @@ T
 
 ## Examples
 
-### Click upload
+### Basic use
+
+:::demo
+
+```html
+<template>
+  <div>
+    <n-upload :file-list="fileList">
+      <n-button>
+        Click Upload
+      </n-button>
+    </n-upload>
+  </div>
+</template>
+<script>
+  export default {
+    data: function () {
+      return {
+        fileList: []
+      };
+    },
+  }
+</script>
+```
+:::
+
+### List of initialization files
 
 :::demo
 

@@ -12,6 +12,35 @@
 
 ## 代码演示
 
+### 基本使用
+
+:::demo
+
+```html
+<template>
+  <div>
+    <n-upload :file-list="fileList">
+      <n-button>
+        点击上传
+      </n-button>
+    </n-upload>
+  </div>
+</template>
+<script>
+  export default {
+    data: function () {
+      return {
+        fileList: []
+      };
+    },
+  }
+</script>
+```
+:::
+
+
+### 初始化文件列表
+
 :::demo
 
 ```html
