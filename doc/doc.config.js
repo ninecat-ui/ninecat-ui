@@ -1,6 +1,13 @@
 import { getLang } from './util/lang'
 
 const localLang = getLang()
+const developmentGuideString = localLang === 'en-US' ? 'Development Guide' : '开发指南'
+const componentsString = localLang === 'en-US' ? 'Components' : '组件'
+const aboutString = localLang === 'en-US' ? 'About' : '介绍'
+const layoutString = localLang === 'en-US' ? 'Layout' : '布局'
+const baseComponentsString = localLang === 'en-US' ? 'Base Components' : '基础组件'
+const dataString = localLang === 'en-US' ? 'Data' : '数据'
+const dataEntryString = localLang === 'en-US' ? 'Data Entry' : '数据录入'
 
 export default {
   headerConfig: {
@@ -16,23 +23,23 @@ export default {
   },
   navConfig: [
     {
-      name: localLang === 'en-US' ? 'Development Guide' : '开发指南',
+      name: developmentGuideString,
       groups: [
         {
           list: [
             {
               path: '/about',
-              title: localLang === 'en-US' ? 'About' : '介绍'
+              title: aboutString
             }
           ]
         }
       ]
     },
     {
-      name: localLang === 'en-US' ? 'Components' : '组件',
+      name: componentsString,
       groups: [
         {
-          groupName: localLang === 'en-US' ? 'Layout' : '布局',
+          groupName: layoutString,
           list: [
             {
               path: '/nGrid',
@@ -41,7 +48,7 @@ export default {
           ]
         },
         {
-          groupName: localLang === 'en-US' ? 'Base Components' : '基础组件',
+          groupName: baseComponentsString,
           list: [
             {
               path: '/nButton',
@@ -82,7 +89,7 @@ export default {
           ]
         },
         {
-          groupName: localLang === 'en-US' ? 'Data' : '数据',
+          groupName: dataString,
           list: [
             {
               path: '/nAvatar',
@@ -93,12 +100,16 @@ export default {
               name: 'Table'
             },
             {
+              path: '/nList',
+              name: 'List'
+            },
+            {
               path: '/nPagination',
               name: 'Pagination'
             }]
         },
         {
-          groupName: localLang === 'en-US' ? 'Data Entry' : '数据录入',
+          groupName: dataEntryString,
           list: [
             {
               path: '/nUpload',

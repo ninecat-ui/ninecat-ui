@@ -17,6 +17,7 @@ import nProgress from '../packages/nProgress'
 import nDrawer from '../packages/nDrawer'
 import nAvatar from '../packages/nAvatar'
 import nUpload from '../packages/nUpload'
+import nList from '../packages/nList'
 import locale from './locale/index'
 
 const components = {
@@ -71,5 +72,6 @@ export default {
   nModal,
   nProgress,
   nDrawer,
-  nAvatar
+  nAvatar,
+  nList
 }
