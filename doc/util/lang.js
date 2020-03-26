@@ -13,9 +13,9 @@ export function transformLang (originalLang) {
 }
 
 export function getLang (refresh) {
-  // 由于window.sessionStorage.setItem的特殊性，很短时间内的getItem将无法获取到更新后的值，所以用一个内存中的变量实时更新
+  // Because window.sessionStorage.setItem is special，can't get value in a short time use getItem,so use a temp variable
   if (lang == null || lang === '') {
-    // 第一次获取
+    // first time get
     const langTransform = transformLang(
       window.sessionStorage.getItem('lang') ||
         navigator.language ||
@@ -24,7 +24,7 @@ export function getLang (refresh) {
     setLang(langTransform)
     return langTransform
   } else {
-    // 非第一次获取则根据refresh参数进行选择性获取
+    // isn't first time get ,use refresh choose get value
     return refresh
       ? window.sessionStorage.getItem('lang') ||
           navigator.language ||
