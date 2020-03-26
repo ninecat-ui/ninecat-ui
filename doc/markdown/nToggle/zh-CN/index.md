@@ -11,8 +11,8 @@
 ```html
 <template>
   <div>
-    <n-toggle v-model="isOn"></n-toggle>
-    <n-toggle :disabled="isDisabled"></n-toggle>
+    <n-toggle v-model="isOn" />
+    <n-toggle :disabled="isDisabled"/>
   </div>
 </template>
 

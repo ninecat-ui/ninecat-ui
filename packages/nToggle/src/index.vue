@@ -61,6 +61,7 @@ $button-toggle-offset: 3px;
 $toggle-border-radius: 18px;
 
 .n-toggle {
+  display: inline-block;
   width: $button-width;
   height: $button-height;
 }
