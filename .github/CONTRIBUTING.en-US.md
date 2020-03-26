@@ -45,6 +45,8 @@ Interview http://localhost:8081
 - Then create your component document directory in the markdown directory of the doc directory. The directory starts with `n`, which contains two en-US and zh-CN directories.
 en-US is an English document, zh-CN is a Chinese document
 
+- In doc.config.js in the doc directory, add the path and name of the component, sub-layout, basic components, data components, and data entry components.
+
 - After developing your component, you need to add your unit tests in the test / specs folder.
 
 # unit test

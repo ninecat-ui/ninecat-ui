@@ -18,6 +18,7 @@ import nDrawer from '../packages/nDrawer'
 import nAvatar from '../packages/nAvatar'
 import nUpload from '../packages/nUpload'
 import nToggle from '../packages/nToggle'
+import nList from '../packages/nList'
 import locale from './locale/index'
 
 const components = {
@@ -38,7 +39,8 @@ const components = {
   nDrawer,
   nAvatar,
   nUpload,
-  nToggle
+  nToggle,
+  nList
 }
 
 const install = function (Vue, opts = {}) {
@@ -58,21 +60,5 @@ export default {
   locale: locale.use,
   i18n: locale.i18n,
   install,
-  nAlert,
-  nButton,
-  nBadge,
-  nLoader,
-  nIcon,
-  nButtonGroup,
-  nInput,
-  nCol,
-  nRow,
-  nToast,
-  nTable,
-  nPagination,
-  nModal,
-  nProgress,
-  nDrawer,
-  nAvatar,
-  nToggle
+  ...components
 }
