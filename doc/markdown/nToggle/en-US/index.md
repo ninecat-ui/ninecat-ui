@@ -5,7 +5,7 @@ Toggle, used to indicate the switch status.
 ## When To Use
 Use when you need to indicate the switch status.
 
-## 代码演示
+## Demo
 :::demo
 
 ```html
