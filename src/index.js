@@ -17,6 +17,7 @@ import nProgress from '../packages/nProgress'
 import nDrawer from '../packages/nDrawer'
 import nAvatar from '../packages/nAvatar'
 import nUpload from '../packages/nUpload'
+import nToggle from '../packages/nToggle'
 import locale from './locale/index'
 
 const components = {
@@ -36,7 +37,8 @@ const components = {
   nProgress,
   nDrawer,
   nAvatar,
-  nUpload
+  nUpload,
+  nToggle
 }
 
 const install = function (Vue, opts = {}) {
@@ -71,5 +73,6 @@ export default {
   nModal,
   nProgress,
   nDrawer,
-  nAvatar
+  nAvatar,
+  nToggle
 }
