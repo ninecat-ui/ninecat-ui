@@ -78,6 +78,10 @@ export default {
             {
               path: '/nProgress',
               name: 'Progress'
+            },
+            {
+              path: '/nToggle',
+              name: 'Toggle'
             }
           ]
         },
