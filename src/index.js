@@ -37,7 +37,8 @@ const components = {
   nProgress,
   nDrawer,
   nAvatar,
-  nUpload
+  nUpload,
+  nList
 }
 
 const install = function (Vue, opts = {}) {
@@ -57,21 +58,5 @@ export default {
   locale: locale.use,
   i18n: locale.i18n,
   install,
-  nAlert,
-  nButton,
-  nBadge,
-  nLoader,
-  nIcon,
-  nButtonGroup,
-  nInput,
-  nCol,
-  nRow,
-  nToast,
-  nTable,
-  nPagination,
-  nModal,
-  nProgress,
-  nDrawer,
-  nAvatar,
-  nList
+  ...components
 }
