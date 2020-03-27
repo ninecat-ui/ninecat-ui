@@ -15,6 +15,11 @@ module.exports = merge(baseConfig, {
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
+  externals:{
+    'vue': 'Vue',
+    'vue-router': 'VueRouter',
+    'highlight.js': 'hljs',
+  },
   optimization: {
     splitChunks: {
       cacheGroups: {

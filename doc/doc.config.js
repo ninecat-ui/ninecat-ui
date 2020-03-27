@@ -1,13 +1,10 @@
+import enLang from './lang/en-US'
+import zhLang from './lang/zh-CN'
 import { getLang } from './util/lang'
 
 const localLang = getLang()
-const developmentGuideString = localLang === 'en-US' ? 'Development Guide' : '开发指南'
-const componentsString = localLang === 'en-US' ? 'Components' : '组件'
-const aboutString = localLang === 'en-US' ? 'About' : '介绍'
-const layoutString = localLang === 'en-US' ? 'Layout' : '布局'
-const baseComponentsString = localLang === 'en-US' ? 'Base Components' : '基础组件'
-const dataString = localLang === 'en-US' ? 'Data' : '数据'
-const dataEntryString = localLang === 'en-US' ? 'Data Entry' : '数据录入'
+
+let lang = localLang === 'en-US' ? enLang : zhLang
 
 export default {
   headerConfig: {
@@ -23,23 +20,23 @@ export default {
   },
   navConfig: [
     {
-      name: developmentGuideString,
+      name: lang.developmentGuide,
       groups: [
         {
           list: [
             {
               path: '/about',
-              title: aboutString
+              title: lang.about
             }
           ]
         }
       ]
     },
     {
-      name: componentsString,
+      name: lang.components,
       groups: [
         {
-          groupName: layoutString,
+          groupName: lang.layout,
           list: [
             {
               path: '/nGrid',
@@ -48,7 +45,7 @@ export default {
           ]
         },
         {
-          groupName: baseComponentsString,
+          groupName: lang.baseComponents,
           list: [
             {
               path: '/nButton',
@@ -93,7 +90,7 @@ export default {
           ]
         },
         {
-          groupName: dataString,
+          groupName: lang.data,
           list: [
             {
               path: '/nAvatar',
@@ -113,7 +110,7 @@ export default {
             }]
         },
         {
-          groupName: dataEntryString,
+          groupName: lang.dataEntry,
           list: [
             {
               path: '/nUpload',
