@@ -6,7 +6,7 @@
 
 <h1 align="center">ninecat-ui</h1>
 
-<h3 align="center">A Vue.js 2.0 Web UI Toolkit.</h3>
+<h3 align="center">A Light Vue 2.0 Web UI Framework</h3>
 
 
 
