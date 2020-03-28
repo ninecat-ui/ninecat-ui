@@ -12,7 +12,7 @@ Ninecat-ui
   </h1>
 
 
-`ninecat-ui` 是基于一款轻量级的VUE UI WEB组件库。
+`Ninecat-ui` 是基于一款轻量级的VUE UI WEB组件库。
 
 ## 支持环境
  - 现代浏览器和 IE 10 及以上
