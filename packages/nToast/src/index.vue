@@ -15,11 +15,11 @@ export default {
   },
   mounted () {
     setTimeout(() => {
-      this.$el.remove()
-      this.$destroy()
-    }, 3000)
+      this.$el.remove();
+      this.$destroy();
+    }, 3000);
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

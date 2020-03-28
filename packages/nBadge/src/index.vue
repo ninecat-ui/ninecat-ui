@@ -19,7 +19,7 @@ export default {
       type: String,
       default: 'default',
       validator (value) {
-        return typeof value === 'string'
+        return typeof value === 'string';
       }
     },
     badgeTitle: {
@@ -27,7 +27,7 @@ export default {
       default: 'default'
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

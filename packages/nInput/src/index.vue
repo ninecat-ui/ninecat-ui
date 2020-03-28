@@ -48,9 +48,9 @@ export default {
   data: function () {
     return {
       inputSize: this.size
-    }
+    };
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

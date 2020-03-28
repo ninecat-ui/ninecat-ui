@@ -37,7 +37,7 @@ export default {
       type: String,
       default: 'default',
       validator (value) {
-        return typeof value === 'string'
+        return typeof value === 'string';
       }
     },
     icon: {
@@ -56,7 +56,7 @@ export default {
       default: ''
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

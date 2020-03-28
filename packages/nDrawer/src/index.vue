@@ -40,8 +40,8 @@
 </template>
 
 <script>
-import Locale from '../../../src/mixins/locale'
-import nButton from '../../nButton'
+import Locale from '../../../src/mixins/locale';
+import nButton from '../../nButton';
 export default {
   name: 'NDrawer',
   components: {
@@ -68,22 +68,22 @@ export default {
   },
   methods: {
     closeDrawer () {
-      this.$emit('update:show', false)
+      this.$emit('update:show', false);
     },
     nconfirm () {
       if (typeof this.confirm === 'function') {
-        this.confirm()
+        this.confirm();
       }
-      this.closeDrawer()
+      this.closeDrawer();
     },
     ncancel () {
       if (typeof this.cancel === 'function') {
-        this.cancel()
+        this.cancel();
       }
-      this.closeDrawer()
+      this.closeDrawer();
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

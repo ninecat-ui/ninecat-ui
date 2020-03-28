@@ -24,9 +24,9 @@ export default {
       default: 'md',
       validator (val) {
         if (typeof val === 'string') {
-          return ['lg', 'md', 'sm', 'xs'].includes(val)
+          return ['lg', 'md', 'sm', 'xs'].includes(val);
         }
-        return typeof val === 'number'
+        return typeof val === 'number';
       }
     },
     shape: {
@@ -45,40 +45,40 @@ export default {
 
   computed: {
     avatarClass () {
-      const { size, icon, shape } = this
-      let classList = ['navatar']
+      const { size, icon, shape } = this;
+      let classList = ['navatar'];
       if (size && typeof size === 'string') {
-        classList.push(`navatar-${size}`)
+        classList.push(`navatar-${size}`);
       }
       if (icon) {
-        classList.push('navatar-icon')
+        classList.push('navatar-icon');
       }
       if (shape) {
-        classList.push(`navatar-${shape}`)
+        classList.push(`navatar-${shape}`);
       }
-      return classList.join(' ')
+      return classList.join(' ');
     },
     sizeStyle () {
-      const { size } = this
+      const { size } = this;
       return typeof size === 'number' ? {
         height: `${size}px`,
         width: `${size}px`,
         lineHeight: `${size}px`
-      } : {}
+      } : {};
     },
     bgStyle () {
-      const { src } = this
+      const { src } = this;
       if (src) {
-        return {}
+        return {};
       } else {
         return {
           background: '#CCCCCC'
-        }
+        };
       }
     }
   }
 
-}
+};
 </script>
 
 <style lang="scss" scoped>

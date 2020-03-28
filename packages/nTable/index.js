@@ -1,7 +1,7 @@
-import nTable from './src/index.vue'
+import nTable from './src/index.vue';
 
 nTable.install = function (Vue) {
-  Vue.component(nTable.name, nTable)
-}
+  Vue.component(nTable.name, nTable);
+};
 
-export default nTable
+export default nTable;

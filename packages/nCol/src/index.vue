@@ -26,10 +26,10 @@ export default {
   },
   computed: {
     gutterStyle () {
-      return { marginLeft: this.gutter + 'px', marginRight: this.gutter + 'px' }
+      return { marginLeft: this.gutter + 'px', marginRight: this.gutter + 'px' };
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

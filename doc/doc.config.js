@@ -1,10 +1,10 @@
-import enLang from './lang/en-US'
-import zhLang from './lang/zh-CN'
-import { getLang } from './util/lang'
+import enLang from './lang/en-US';
+import zhLang from './lang/zh-CN';
+import { getLang } from './util/lang';
 
-const localLang = getLang()
+const localLang = getLang();
 
-let lang = localLang === 'en-US' ? enLang : zhLang
+let lang = localLang === 'en-US' ? enLang : zhLang;
 
 export default {
   headerConfig: {
@@ -119,4 +119,4 @@ export default {
         }
       ]
     }]
-}
+};

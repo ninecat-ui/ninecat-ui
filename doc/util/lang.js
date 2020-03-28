@@ -1,15 +1,15 @@
-export let lang = window.sessionStorage.getItem('lang')
+export let lang = window.sessionStorage.getItem('lang');
 
 export const langTransformMap = {
   zh: 'zh-CN',
   en: 'en-US'
-}
+};
 
 export function transformLang (originalLang) {
-  let langTransform = langTransformMap[originalLang]
-  if (langTransform === void 0) langTransform = originalLang
-  lang = langTransform
-  return langTransform
+  let langTransform = langTransformMap[originalLang];
+  if (langTransform === void 0) langTransform = originalLang;
+  lang = langTransform;
+  return langTransform;
 }
 
 export function getLang (refresh) {
@@ -20,19 +20,19 @@ export function getLang (refresh) {
       window.sessionStorage.getItem('lang') ||
         navigator.language ||
         navigator.userLanguage
-    )
-    setLang(langTransform)
-    return langTransform
+    );
+    setLang(langTransform);
+    return langTransform;
   } else {
     // isn't first time get ,use refresh choose get value
     return refresh
       ? window.sessionStorage.getItem('lang') ||
           navigator.language ||
           navigator.userLanguage
-      : lang
+      : lang;
   }
 }
 
 export function setLang (langType) {
-  window.sessionStorage.setItem('lang', langType)
+  window.sessionStorage.setItem('lang', langType);
 }

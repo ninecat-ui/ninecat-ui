@@ -1,7 +1,7 @@
-import nList from './src/index.vue'
+import nList from './src/index.vue';
 
 nList.install = function (Vue) {
-  Vue.component(nList.name, nList)
-}
+  Vue.component(nList.name, nList);
+};
 
-export default nList
+export default nList;

@@ -17,7 +17,7 @@ export default {
     data: {
       type: Array,
       default: function () {
-        return []
+        return [];
       }
     },
     size: {
@@ -28,11 +28,11 @@ export default {
 
   computed: {
     sizeClass () {
-      const { size } = this
-      return size
+      const { size } = this;
+      return size;
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

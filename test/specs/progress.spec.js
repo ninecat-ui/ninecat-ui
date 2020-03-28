@@ -1,15 +1,15 @@
-import { createVue, destroyVm } from '../utils/util'
+import { createVue, destroyVm } from '../utils/util';
 
 describe('nProgress', () => {
-  let vm
+  let vm;
   afterEach(() => {
-    destroyVm(vm)
-  })
+    destroyVm(vm);
+  });
 
   it('create', () => {
     vm = createVue({
       template: `<n-progress />`
-    }, true)
-    expect(vm.$el).toBeTruthy()
-  })
-})
+    }, true);
+    expect(vm.$el).toBeTruthy();
+  });
+});

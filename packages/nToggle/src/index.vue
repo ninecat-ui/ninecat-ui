@@ -37,14 +37,14 @@ export default {
   data: function () {
     return {
       isChecked: this.$props.checked
-    }
+    };
   },
   methods: {
     handleChange () {
-      this.$emit('updateModel', this.isChecked)
+      this.$emit('updateModel', this.isChecked);
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

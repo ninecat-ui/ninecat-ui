@@ -1,7 +1,7 @@
-import nInput from './src/index.vue'
+import nInput from './src/index.vue';
 
 nInput.install = function (Vue) {
-  Vue.component(nInput.name, nInput)
-}
+  Vue.component(nInput.name, nInput);
+};
 
-export default nInput
+export default nInput;

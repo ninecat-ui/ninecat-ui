@@ -1,7 +1,7 @@
-import nRow from './src/index.vue'
+import nRow from './src/index.vue';
 
 nRow.install = function (Vue) {
-  Vue.component(nRow.name, nRow)
-}
+  Vue.component(nRow.name, nRow);
+};
 
-export default nRow
+export default nRow;

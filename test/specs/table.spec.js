@@ -1,10 +1,10 @@
-import { createVue, destroyVm } from '../utils/util'
+import { createVue, destroyVm } from '../utils/util';
 
 describe('nTable', () => {
-  let vm
+  let vm;
   afterEach(() => {
-    destroyVm(vm)
-  })
+    destroyVm(vm);
+  });
 
   it('create', () => {
     vm = createVue({
@@ -24,9 +24,9 @@ describe('nTable', () => {
           data: [
             { name: 'name', age: '11', sex: 'male', address: 'shanghai' }
           ]
-        }
+        };
       }
-    }, true)
-    expect(vm.$el).toBeTruthy()
-  })
-})
+    }, true);
+    expect(vm.$el).toBeTruthy();
+  });
+});

@@ -5,4 +5,4 @@ export default {
   baseComponents: '基础组件',
   data: '数据',
   dataEntry: '数据录入'
-}
+};

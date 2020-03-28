@@ -1,7 +1,7 @@
-import NButton from './src/index.vue'
+import NButton from './src/index.vue';
 
 NButton.install = function (Vue) {
-  Vue.component(NButton.name, NButton)
-}
+  Vue.component(NButton.name, NButton);
+};
 
-export default NButton
+export default NButton;

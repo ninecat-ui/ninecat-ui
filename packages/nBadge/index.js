@@ -1,7 +1,7 @@
-import NBadge from './src/index.vue'
+import NBadge from './src/index.vue';
 
 NBadge.install = function (Vue) {
-  Vue.component(NBadge.name, NBadge)
-}
+  Vue.component(NBadge.name, NBadge);
+};
 
-export default NBadge
+export default NBadge;

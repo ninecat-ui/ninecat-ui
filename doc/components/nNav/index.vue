@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import nNavLink from '../nNavLink'
+import nNavLink from '../nNavLink';
 export default {
   name: 'NNav',
   components: { nNavLink },
@@ -57,7 +57,7 @@ export default {
     config: {
       type: Array,
       default: () => {
-        return []
+        return [];
       }
     },
     base: {
@@ -70,27 +70,27 @@ export default {
       top: 60,
       bottom: 0,
       navConfig: this.config
-    }
+    };
   },
   computed: {
     style () {
       return {
         top: this.top + 'px',
         bottom: this.bottom + 'px'
-      }
+      };
     }
   },
   created () {
-    window.addEventListener('scroll', this.onScroll)
-    this.onScroll()
+    window.addEventListener('scroll', this.onScroll);
+    this.onScroll();
   },
   methods: {
     onScroll () {
-      const { pageYOffset: offset } = window
-      this.top = Math.max(0, 60 - offset)
+      const { pageYOffset: offset } = window;
+      this.top = Math.max(0, 60 - offset);
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

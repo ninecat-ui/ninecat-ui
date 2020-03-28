@@ -1,7 +1,7 @@
-import nProgress from './src/index.vue'
+import nProgress from './src/index.vue';
 
 nProgress.install = function (Vue) {
-  Vue.component(nProgress.name, nProgress)
-}
+  Vue.component(nProgress.name, nProgress);
+};
 
-export default nProgress
+export default nProgress;

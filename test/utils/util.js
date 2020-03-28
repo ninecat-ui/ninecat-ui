@@ -1,28 +1,28 @@
-import Vue from 'vue/dist/vue.js'
-import Ninecat from '../../src/index.js'
+import Vue from 'vue/dist/vue.js';
+import Ninecat from '../../src/index.js';
 
-Vue.use(Ninecat)
+Vue.use(Ninecat);
 
-let id = 0
+let id = 0;
 
 const createElm = function () {
-  const elm = document.createElement('div')
+  const elm = document.createElement('div');
 
-  elm.id = 'app' + ++id
-  document.body.appendChild(elm)
+  elm.id = 'app' + ++id;
+  document.body.appendChild(elm);
 
-  return elm
-}
+  return elm;
+};
 
 /**
  * Recycle vm
  * @param {Object} vm
  */
 function destroyVm (vm) {
-  vm.$destroy && vm.$destroy()
+  vm.$destroy && vm.$destroy();
   vm.$el &&
   vm.$el.parentNode &&
-  vm.$el.parentNode.removeChild(vm.$el)
+  vm.$el.parentNode.removeChild(vm.$el);
 }
 
 /**
@@ -33,9 +33,9 @@ function destroyVm (vm) {
  */
 function createVue (component, mounted = false) {
   if (Object.prototype.toString.call(component) === '[object String]') {
-    component = { template: component }
+    component = { template: component };
   }
-  return new Vue(component).$mount(mounted === false ? null : createElm())
+  return new Vue(component).$mount(mounted === false ? null : createElm());
 }
 
 /**
@@ -46,9 +46,9 @@ function createVue (component, mounted = false) {
  * @return {Object} Vue instance
  */
 function getRenderedVm (component, propsData) {
-  const Ctor = Vue.extend(component)
-  const vm = new Ctor({ propsData }).$mount()
-  return vm
+  const Ctor = Vue.extend(component);
+  const vm = new Ctor({ propsData }).$mount();
+  return vm;
 }
 
-export { destroyVm, createVue, getRenderedVm }
+export { destroyVm, createVue, getRenderedVm };

@@ -1,10 +1,10 @@
-import { createVue, destroyVm } from '../utils/util'
+import { createVue, destroyVm } from '../utils/util';
 
 describe('nPagination', () => {
-  let vm
+  let vm;
   afterEach(() => {
-    destroyVm(vm)
-  })
+    destroyVm(vm);
+  });
 
   it('create', () => {
     vm = createVue({
@@ -20,9 +20,9 @@ describe('nPagination', () => {
           total: 100,
           pageSize: 10,
           current: 1
-        }
+        };
       }
-    }, true)
-    expect(vm.$el).toBeTruthy()
-  })
-})
+    }, true);
+    expect(vm.$el).toBeTruthy();
+  });
+});

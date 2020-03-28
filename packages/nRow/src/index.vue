@@ -13,7 +13,7 @@ export default {
   provide () {
     return {
       gutter: this.gutter
-    }
+    };
   },
   props: {
     gutter: {
@@ -31,18 +31,18 @@ export default {
   },
   computed: {
     gutterStyle () {
-      const temp = this.gutter ? { marginLeft: -this.gutter + 'px', marginRight: -this.gutter + 'px' } : ''
+      const temp = this.gutter ? { marginLeft: -this.gutter + 'px', marginRight: -this.gutter + 'px' } : '';
       let alignItems =
         this.align === 'top' ? 'flex-start'
           : this.align === 'middle' ? 'center'
-            : this.align === 'bottom' ? 'flex-end' : ''
+            : this.align === 'bottom' ? 'flex-end' : '';
       return {
         'display': 'flex',
         'justify-content': this.justify,
         'align-items': alignItems,
         ...temp
-      }
+      };
     }
   }
-}
+};
 </script>

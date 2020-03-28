@@ -1,7 +1,7 @@
-import NIcon from './src/index.vue'
+import NIcon from './src/index.vue';
 
 NIcon.install = function (Vue) {
-  Vue.component(NIcon.name, NIcon)
-}
+  Vue.component(NIcon.name, NIcon);
+};
 
-export default NIcon
+export default NIcon;

@@ -5,4 +5,4 @@ export default {
   baseComponents: 'Base Components',
   data: 'Data',
   dataEntry: 'Data Entry'
-}
+};

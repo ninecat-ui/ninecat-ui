@@ -74,63 +74,63 @@
 </template>
 
 <script>
-import 'docsearch.js/dist/cdn/docsearch.min.css'
-import docsearch from 'docsearch.js'
-import { getLang, setLang } from '../../util/lang'
+import 'docsearch.js/dist/cdn/docsearch.min.css';
+import docsearch from 'docsearch.js';
+import { getLang, setLang } from '../../util/lang';
 export default {
   name: 'NHeader',
   props: {
     config: {
       type: Object,
       default: () => {
-        return {}
+        return {};
       }
     }
   },
   data: function () {
-    const headerConfig = this.config
+    const headerConfig = this.config;
     return {
       headerConfig,
       lang: ''
-    }
+    };
   },
   computed: {
     searchPlaceholder () {
-      return this.lang === 'English' ? '搜索文档' : 'Please input'
+      return this.lang === 'English' ? '搜索文档' : 'Please input';
     }
   },
   mounted () {
-    this.setLang()
+    this.setLang();
     docsearch({
       apiKey: 'e3b8bf7a6a9475a23bf57ac66efc6960',
       indexName: 'ninecat-ui',
       inputSelector: '.ndoc-search',
       debug: false // Set debug to true if you want to inspect the dropdown
-    })
+    });
   },
   methods: {
     setLang () {
-      const lang = getLang()
+      const lang = getLang();
       if (lang === 'zh-CN') {
-        this.lang = 'English'
+        this.lang = 'English';
       } else if (lang === 'en-US') {
-        this.lang = '中文'
+        this.lang = '中文';
       } else {
-        this.lang = 'English'
+        this.lang = 'English';
       }
     },
     changeLang () {
       if (this.lang === 'English') {
-        this.lang = '中文'
-        setLang('en-US')
+        this.lang = '中文';
+        setLang('en-US');
       } else {
-        this.lang = 'English'
-        setLang('zh-CN')
+        this.lang = 'English';
+        setLang('zh-CN');
       }
-      window.location.reload()
+      window.location.reload();
     }
   }
-}
+};
 </script>
 
 <style lang="scss">

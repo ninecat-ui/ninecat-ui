@@ -1,17 +1,17 @@
-import VueRouter from 'vue-router'
-import Vue from 'vue'
-import hljs from 'highlight.js'
-import docConfig from '../doc.config'
-import { getLang } from '../util/lang'
+import VueRouter from 'vue-router';
+import Vue from 'vue';
+import hljs from 'highlight.js';
+import docConfig from '../doc.config';
+import { getLang } from '../util/lang';
 
-const localLang = getLang()
+const localLang = getLang();
 
 function loadDoc (lang, path) {
-  const docLang = lang
-  return resolve => require.ensure([], () => resolve(require(`../markdown${path}/${docLang}/index.md`)))
+  const docLang = lang;
+  return resolve => require.ensure([], () => resolve(require(`../markdown${path}/${docLang}/index.md`)));
 }
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 export const commonRoutes = [
   {
@@ -30,11 +30,11 @@ export const commonRoutes = [
     },
     component: loadDoc(localLang, '/about')
   }
-]
+];
 
-const componentRoutes = []
+const componentRoutes = [];
 
-const { navConfig } = docConfig
+const { navConfig } = docConfig;
 
 navConfig.forEach(navItem => {
   navItem.groups.forEach(groupItem => {
@@ -47,23 +47,23 @@ navConfig.forEach(navItem => {
             name: item.path.slice(1)
           },
           component: loadDoc(localLang, item.path)
-        })
+        });
       }
-    })
-  })
-})
+    });
+  });
+});
 
-const routes = componentRoutes.concat(commonRoutes)
+const routes = componentRoutes.concat(commonRoutes);
 
 const router = new VueRouter({
   routes: routes
-})
+});
 
 router.afterEach(route => {
   Vue.nextTick(() => {
-    const blocks = document.querySelectorAll('pre code:not(.hljs)')
-    Array.prototype.forEach.call(blocks, hljs.highlightBlock)
-  })
-})
+    const blocks = document.querySelectorAll('pre code:not(.hljs)');
+    Array.prototype.forEach.call(blocks, hljs.highlightBlock);
+  });
+});
 
-export default router
+export default router;

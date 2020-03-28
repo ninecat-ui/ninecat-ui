@@ -45,37 +45,37 @@ export default {
     headers: {
       type: Object,
       default: function () {
-        return {}
+        return {};
       }
     },
     fileList: {
       type: Array,
       default: function () {
-        return []
+        return [];
       }
     }
   },
   data: function () {
     return {
       nfileList: this.fileList
-    }
+    };
   },
   methods: {
     handleChange (value) {
-      console.log(value)
+      console.log(value);
       this.nfileList.push(
         {
           name: value.target.files[0].name,
           size: value.target.files[0].size,
           type: value.target.files[0].type
         }
-      )
+      );
     },
     deleteFile (file, index) {
-      this.nfileList.splice(index, 1)
+      this.nfileList.splice(index, 1);
     }
   }
-}
+};
 </script>
 
 <style lang="scss">

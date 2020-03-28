@@ -38,7 +38,7 @@ export default {
       sizeStyleObject: this.getSize(this.size),
       loaddingTextClass: 'loadding-text',
       textSizeClass: this.size ? `${this.size}-text` : 'md-text'
-    }
+    };
   },
   methods: {
     getSize (size) {
@@ -47,31 +47,31 @@ export default {
           return {
             height: '16px',
             width: '16px'
-          }
+          };
         case 'sm':
           return {
             height: '18px',
             width: '18px'
-          }
+          };
         case 'md':
           return {
             height: '36px',
             width: '36px'
-          }
+          };
         case 'lg':
           return {
             height: '64px',
             width: '64px'
-          }
+          };
         default:
           return {
             height: '36px',
             width: '36px'
-          }
+          };
       }
     }
   }
-}
+};
 </script>
 <style lang="scss" scoped>
   .loadding{

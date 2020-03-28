@@ -49,31 +49,31 @@ export default {
       nCurrent: this.current,
       nPageKeyMap: [],
       itemStatus: ''
-    }
+    };
   },
   mounted () {
-    this.getPageKeyMap(this.nTotal, this.nPageSize)
+    this.getPageKeyMap(this.nTotal, this.nPageSize);
   },
 
   methods: {
     getPageKeyMap (total, pageSize) {
-      const pageKeyMap = []
-      const page = Math.ceil(total / pageSize)
+      const pageKeyMap = [];
+      const page = Math.ceil(total / pageSize);
       for (let i = 1; i <= page; i += 1) {
         pageKeyMap.push({
           key: i,
           value: i
-        })
+        });
       }
-      this.nPageKeyMap = pageKeyMap
-      return pageKeyMap
+      this.nPageKeyMap = pageKeyMap;
+      return pageKeyMap;
     },
     handClickPage (page) {
-      this.nCurrent = page
-      this.onChangePgae(page)
+      this.nCurrent = page;
+      this.onChangePgae(page);
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

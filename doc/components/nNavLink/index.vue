@@ -32,17 +32,17 @@ export default {
     item: {
       type: Object,
       default: () => {
-        return {}
+        return {};
       }
     }
   },
 
   computed: {
     name () {
-      return (this.item.title || this.item.name).split(' ')
+      return (this.item.title || this.item.name).split(' ');
     }
   }
-}
+};
 </script>
 <style lang="scss" scoped>
   .title{

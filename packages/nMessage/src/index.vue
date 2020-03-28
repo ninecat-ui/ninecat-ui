@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import nIcon from '../../nIcon'
+import nIcon from '../../nIcon';
 export default {
   name: 'NMessage',
   components: {
@@ -55,29 +55,29 @@ export default {
       type: '',
       messageTitle: '',
       hasTitle: false
-    }
+    };
   },
   computed: {
     iconClass () {
-      return `icon-${this.type}`
+      return `icon-${this.type}`;
     }
   },
   mounted () {
-    this.startTimer()
+    this.startTimer();
   },
   methods: {
     closeMessage () {
-      this.show = false
+      this.show = false;
     },
     startTimer () {
       if (this.duration > 0) {
         this.timer = setTimeout(() => {
-          this.closeMessage()
-        }, this.duration)
+          this.closeMessage();
+        }, this.duration);
       }
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

@@ -48,18 +48,18 @@ export default {
     currentPage () {
       const {
         path
-      } = this.$route
+      } = this.$route;
       if (path) {
-        return path.split('/').slice(-1)[0]
+        return path.split('/').slice(-1)[0];
       }
-      return this.$route.name
+      return this.$route.name;
     },
     currentGithubUrl () {
-      const lang = sessionStorage.getItem('lang')
-      return `https://github.com/ninecat-ui/ninecat-ui/tree/master/doc/markdown/${this.currentPage}/${lang}/index.md`
+      const lang = sessionStorage.getItem('lang');
+      return `https://github.com/ninecat-ui/ninecat-ui/tree/master/doc/markdown/${this.currentPage}/${lang}/index.md`;
     }
   }
-}
+};
 </script>
 
 <style lang="scss">

@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import nIcon from '../../nIcon'
+import nIcon from '../../nIcon';
 export default {
   name: 'NAlert',
   components: {
@@ -46,14 +46,14 @@ export default {
     return {
       showAlert: this.show,
       iconClass: `icon-${this.type}`
-    }
+    };
   },
   methods: {
     closeAlert () {
-      this.showAlert = false
+      this.showAlert = false;
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

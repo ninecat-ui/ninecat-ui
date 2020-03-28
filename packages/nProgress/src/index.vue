@@ -40,10 +40,10 @@ export default {
   },
   computed: {
     progressWidth () {
-      return `${this.percent}%`
+      return `${this.percent}%`;
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

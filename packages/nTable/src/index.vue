@@ -39,13 +39,13 @@ export default {
     columns: {
       type: Array,
       default: function () {
-        return []
+        return [];
       }
     },
     data: {
       type: Array,
       default: function () {
-        return []
+        return [];
       }
     }
   },
@@ -53,18 +53,18 @@ export default {
     return {
       currentColumns: this.columns,
       currentData: this.data
-    }
+    };
   },
   methods: {
     dealTableData (currentDataItem, currentColumns) {
-      let res = []
+      let res = [];
       currentColumns.forEach((item, index) => {
-        res.push(currentDataItem[item.dataIndex])
-      })
-      return res
+        res.push(currentDataItem[item.dataIndex]);
+      });
+      return res;
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

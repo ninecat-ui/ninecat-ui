@@ -1,7 +1,7 @@
-import nAlert from './src/index.vue'
+import nAlert from './src/index.vue';
 
 nAlert.install = function (Vue) {
-  Vue.component(nAlert.name, nAlert)
-}
+  Vue.component(nAlert.name, nAlert);
+};
 
-export default nAlert
+export default nAlert;

@@ -1,15 +1,15 @@
-import { createVue, destroyVm } from '../utils/util'
+import { createVue, destroyVm } from '../utils/util';
 
 describe('nInput', () => {
-  let vm
+  let vm;
   afterEach(() => {
-    destroyVm(vm)
-  })
+    destroyVm(vm);
+  });
   it('default to empty', () => {
     vm = createVue({
       template: '<n-input />'
-    }, true)
-    let inputElm = vm.$el.querySelector('input')
-    expect(inputElm.value).toEqual('')
-  })
-})
+    }, true);
+    let inputElm = vm.$el.querySelector('input');
+    expect(inputElm.value).toEqual('');
+  });
+});

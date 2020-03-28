@@ -49,47 +49,47 @@
 </template>
 
 <script>
-import hljs from 'highlight.js'
+import hljs from 'highlight.js';
 export default {
   name: 'DemoBlock',
   data: function () {
     return {
       metaShow: false,
       hovering: false
-    }
+    };
   },
   computed: {
     iconName () {
       if (this.metaShow) {
-        return 'icon-sort-up'
+        return 'icon-sort-up';
       } else {
-        return 'icon-sort-down'
+        return 'icon-sort-down';
       }
     },
     hoveringText () {
-      const lang = sessionStorage.getItem('lang')
+      const lang = sessionStorage.getItem('lang');
       if (this.metaShow) {
-        return lang === 'en-US' ? 'Hide' : '收起'
+        return lang === 'en-US' ? 'Hide' : '收起';
       } else {
-        return lang === 'en-US' ? 'Expand' : '展开'
+        return lang === 'en-US' ? 'Expand' : '展开';
       }
     }
   },
   created () {
-    const highlight = this.$slots.highlight
+    const highlight = this.$slots.highlight;
     if (highlight) {
       this.$nextTick().then(() => {
-        const blocks = document.querySelectorAll('pre code:not(.hljs)')
-        Array.prototype.forEach.call(blocks, hljs.highlightBlock)
-      })
+        const blocks = document.querySelectorAll('pre code:not(.hljs)');
+        Array.prototype.forEach.call(blocks, hljs.highlightBlock);
+      });
     }
   },
   methods: {
     showMeta () {
-      this.metaShow = !this.metaShow
+      this.metaShow = !this.metaShow;
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

@@ -1,7 +1,7 @@
-import nLoader from './src/index.vue'
+import nLoader from './src/index.vue';
 
 nLoader.install = function (Vue) {
-  Vue.component(nLoader.name, nLoader)
-}
+  Vue.component(nLoader.name, nLoader);
+};
 
-export default nLoader
+export default nLoader;
