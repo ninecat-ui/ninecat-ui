@@ -1,6 +1,8 @@
 <p align="center">
   <a href="https://ninecat-ui.github.io">
-    <img width="150" height="150" src="https://upload-images.jianshu.io/upload_images/8108267-a50cf1a6c1991720.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" />
+    <a href="https://ninecat-ui.github.io">
+    <img width="161" height="125" src="https://upload-images.jianshu.io/upload_images/8108267-b9d5a9dea5e57a79.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" />
+  </a>
   </a>
 </p>
 
