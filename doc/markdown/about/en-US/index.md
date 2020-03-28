@@ -27,9 +27,13 @@ Install using npm or yarn
 
 We recommend using npm or yarn for development, not only for easy debugging in the development environment, but also for packaging and deployment in the production environment, and enjoy the many benefits brought by the entire ecosystem and toolchain.
 
-`npm install ninecat-ui --S`
+```shell
+// use npm
+npm install ninecat-ui -S
 
-`yarn add ninecat-ui`
+// use yarn
+yarn add ninecat-ui
+```
 
 ## Example
 
@@ -49,3 +53,8 @@ import {
 
 Vue.component(Button.name, Button)
 ```
+
+## Development Guide
+
+- [Vue](https://cn.vuejs.org/index.html)
+- [Contribution Guide](https://github.com/ninecat-ui/ninecat-ui/blob/master/.github/CONTRIBUTING.en-US.md)

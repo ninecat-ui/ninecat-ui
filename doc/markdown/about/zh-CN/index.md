@@ -22,7 +22,10 @@ ninecat-ui
 我们推荐使用 npm 或 yarn 的方式进行安装，不仅可在开发环境轻松调试，也可放心地在生产环境打包部署使用，享受整个生态圈和工具链带来的诸多好处。
 
 ```shell
+// 使用npm
 npm install ninecat-ui -S
+
+// 使用yarn
 yarn add ninecat-ui
 ```
 
@@ -44,3 +47,8 @@ import {
 } from 'ninecat-ui'
 Vue.component(Button.name, Button)
 ```
+
+## 开发指南
+
+- [Vue](https://cn.vuejs.org/index.html)
+- [贡献指南](https://github.com/ninecat-ui/ninecat-ui/blob/master/.github/CONTRIBUTING.zh-CN.md)
