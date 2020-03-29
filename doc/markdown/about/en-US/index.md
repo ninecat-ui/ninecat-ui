@@ -12,7 +12,7 @@ Ninecat-ui
   </h1>
 
 
-`Ninecat-ui` is a light vue 2.0 web UI framework
+`Ninecat-ui` is a light Vue 2.0 web UI framework
 
 
 ## Supporting environment

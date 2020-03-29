@@ -1,9 +1,12 @@
 <template>
-  <ul class="n-list">
+  <ul
+    class="n-list"
+    :class="borderedClass"
+  >
     <li
       v-for="(item,index) in data"
       :key="index"
-      :class="[sizeClass]"
+      :class="[sizeClass,borderedClass]"
     >
       {{ item }}
     </li>
@@ -23,6 +26,12 @@ export default {
     size: {
       type: String,
       default: 'md'
+    },
+    bordered: {
+      type: [String, Boolean],
+      default: function () {
+        return false;
+      }
     }
   },
 
@@ -30,6 +39,14 @@ export default {
     sizeClass () {
       const { size } = this;
       return size;
+    },
+    borderedClass () {
+      const { bordered } = this;
+      if (bordered || bordered === 'true') {
+        return 'bordered';
+      } else {
+        return '';
+      }
     }
   }
 };
@@ -40,6 +57,8 @@ export default {
   background: #ffffff;
   padding: 0;
   margin: 0;
+  border-top: 1px solid  #E5E5EA;
+  border-bottom: 1px solid  #E5E5EA;
   li{
     list-style-type: none;
     font-family: PingFangSC-Regular;
@@ -47,8 +66,8 @@ export default {
     color: #575757;
     border-bottom: 1px solid  #E5E5EA;
   }
-  li:first-child{
-    border-top: 1px solid  #E5E5EA;
+  li:last-child{
+    border-bottom: none;
   }
   .sm{
     padding: 8px 0;
@@ -60,5 +79,15 @@ export default {
   .lg{
     padding: 20px 0;
   }
+  .bordered{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
+ul.bordered{
+  border-radius: 6px;
+  border-left: 1px solid  #E5E5EA;
+  border-right: 1px solid  #E5E5EA;
+}
+
 </style>

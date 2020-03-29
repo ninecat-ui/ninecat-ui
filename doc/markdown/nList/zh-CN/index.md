@@ -95,9 +95,32 @@
 ```
 :::
 
+### 边框
+:::demo
+```html
+<template>
+  <n-list :data="list" bordered="true" />
+</template>
+<script>
+  export default {
+    data: function () {
+      return {
+        list:[
+          `The shortest answer is doing.`,
+          `In doing we learn.`,
+          `Ninecat ui, my ui.`
+        ]
+      }
+    }
+  }
+</script>
+```
+:::
+
 ## API
 
 | 参数 | 说明 | 类型 | 默认值 |
 | :--- | :--- | :--- | :--- |
 | data | 列表数组 | Array | `[]` |
 | size | 尺寸大小 | String | `md` |
+| bordered | 是否有边框 | [String,Boolean] | `false` |

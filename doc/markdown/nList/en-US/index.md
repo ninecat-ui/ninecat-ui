@@ -95,9 +95,32 @@ Large
 ```
 :::
 
+### Bordered
+:::demo
+```html
+<template>
+  <n-list :data="list" bordered="true" />
+</template>
+<script>
+  export default {
+    data: function () {
+      return {
+        list:[
+          `The shortest answer is doing.`,
+          `In doing we learn.`,
+          `Ninecat ui, my ui.`
+        ]
+      }
+    }
+  }
+</script>
+```
+:::
+
 ## API
 
 | Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
 | data | List array | Array | `[]` |
 | size | The List Size | String | `md` |
+| bordered | Has border | [String,Boolean] | `false` |
