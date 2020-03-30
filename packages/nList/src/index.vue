@@ -1,12 +1,12 @@
 <template>
   <ul
     class="n-list"
-    :class="borderedClass"
+    :class="[borderedClass]"
   >
     <li
       v-for="(item,index) in data"
       :key="index"
-      :class="[sizeClass,borderedClass]"
+      :class="[sizeClass,borderedClass,hoverClass]"
     >
       {{ item }}
     </li>
@@ -32,6 +32,12 @@ export default {
       default: function () {
         return false;
       }
+    },
+    hover: {
+      type: [String, Boolean],
+      default: function () {
+        return false;
+      }
     }
   },
 
@@ -44,6 +50,14 @@ export default {
       const { bordered } = this;
       if (bordered || bordered === 'true') {
         return 'bordered';
+      } else {
+        return '';
+      }
+    },
+    hoverClass () {
+      const { hover } = this;
+      if (hover || hover === 'true') {
+        return 'hover';
       } else {
         return '';
       }
@@ -82,6 +96,9 @@ export default {
   .bordered{
     padding-left: 20px;
     padding-right: 20px;
+  }
+  li.hover:hover{
+    background: #F2FAFF;
   }
 }
 ul.bordered{
