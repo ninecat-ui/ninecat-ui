@@ -15,11 +15,11 @@ module.exports = merge(baseConfig, {
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
-  // externals:{
-  //   'vue': 'Vue',
-  //   'vue-router': 'VueRouter',
-  //   'highlight.js': 'hljs',
-  // },
+  externals:{
+    'vue': 'Vue',
+    'vue-router': 'VueRouter',
+    'highlight.js': 'hljs',
+  },
   optimization: {
     splitChunks: {
       cacheGroups: {
@@ -58,7 +58,7 @@ module.exports = merge(baseConfig, {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './doc/index.html',
+      template: './doc/doc.html',
       filename: 'index.html',
       favicon:'./doc/favicon.ico',
       inject: true
