@@ -1,54 +1,58 @@
 <template>
-  <button
-    class="nBadge"
-    :class="[type ? type : '']"
+  <div
+    class="n-badge"
   >
+    <slot />
     <span
-      class="badgeTitle"
-      :class="[type==='new'? 'newTitle' : '']"
+      class="n-badge-common"
+      :class="[content === '' ? 'n-badge-default' : 'n-badge-content']"
     >
-      <slot />
+      {{ content }}
     </span>
-  </button>
+  </div>
 </template>
 <script>
 export default {
   name: 'NBadge',
   props: {
-    type: {
-      type: String,
-      default: 'default',
-      validator (value) {
-        return typeof value === 'string';
-      }
-    },
-    badgeTitle: {
-      type: String,
-      default: 'default'
+    content: {
+      type: [String, Number],
+      default: ''
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-.nBadge {
-  width: 33px;
-  outline : none;
-  border:0;
-  border-radius: 15px;
-  height: 16px;
-  font: 12px;
-  color: #fff;
-  background-color: #F44336;
+.n-badge {
+  position: relative;
+  display: inline-block;
+  .n-badge-common{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    -webkit-transform: translate(50%,-50%);
+    transform: translate(50%,-50%);
+  }
+  .n-badge-default{
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #f44336;
+    padding: 0;
+  }
+  .n-badge-content{
+    background-color: #f44336;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 0 5px;
+    color: #fff;
+  }
 }
-.badgeTitle{
-  position:relative;
-  top: -1px;
-  color:#fff;
-  margin-left :-2px;
-  margin-top :-2px;
-}
-.newTitle{
+
+.new-title{
   margin-left: -3.5px;
 }
 .small{

@@ -9,12 +9,33 @@
 
 ## 代码演示
 
+### 基本使用
 :::demo
 ```html
 <template>
-  <n-badge type="default">99+</n-badge>
-  <n-badge type="new">New</n-badge>
-  <n-badge type="small" />
+  <n-badge>
+    <n-button>新消息</n-button>
+  </n-badge>
+</template>
+```
+:::
+
+### 自定义内容
+:::demo
+```html
+<template>
+  <n-badge content="99+">
+    <n-button>新消息</n-button>
+  </n-badge>
+</template>
+```
+:::
+
+### 单独使用
+:::demo
+```html
+<template>
+  <n-badge content="99+" />
 </template>
 ```
 :::
@@ -23,4 +44,4 @@
 
 | 参数 | 说明 | 类型 | 默认值 |
 | :--- | :--- | :--- | :--- |
-| type | 标记类型,可选择值`default`,`new`,`small` | String | default |
+| content | 内容 | String,Number |  |

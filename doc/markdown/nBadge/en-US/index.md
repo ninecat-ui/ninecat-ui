@@ -9,14 +9,33 @@ Use it where you need news to remind.
 
 ## Examples
 
+### Basic use
 :::demo
 ```html
 <template>
-  <n-badge>99+</n-badge>
-  <n-badge type="new">
-    New
+  <n-badge>
+    <n-button>New Message</n-button>
   </n-badge>
-  <n-badge type="small" />
+</template>
+```
+:::
+
+### Custom content
+:::demo
+```html
+<template>
+  <n-badge content="99+">
+    <n-button>New Message</n-button>
+  </n-badge>
+</template>
+```
+:::
+
+### Use alone
+:::demo
+```html
+<template>
+  <n-badge content="99+" />
 </template>
 ```
 :::
@@ -25,4 +44,4 @@ Use it where you need news to remind.
 
 | Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
-| type | there are three types:`default`,`new`,`small` | String | default |
+| content | content | String,Number |  |
