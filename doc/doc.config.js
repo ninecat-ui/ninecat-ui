@@ -1,17 +1,20 @@
-import enLang from './lang/en-US';
-import zhLang from './lang/zh-CN';
 import { getLang } from './util/lang';
 
 const localLang = getLang();
-
-let lang = localLang === 'en-US' ? enLang : zhLang;
+const developmentGuideString = localLang === 'en-US' ? 'Development Guide' : '开发指南';
+const componentsString = localLang === 'en-US' ? 'Components' : '组件';
+const aboutString = localLang === 'en-US' ? 'About' : '介绍';
+const layoutString = localLang === 'en-US' ? 'Layout' : '布局';
+const baseComponentsString = localLang === 'en-US' ? 'Base Components' : '基础组件';
+const dataString = localLang === 'en-US' ? 'Data' : '数据';
+const dataEntryString = localLang === 'en-US' ? 'Data Entry' : '数据录入';
 
 export default {
   headerConfig: {
     logo: {
       href: 'https://ninecat-ui.github.io',
       image: 'https://avatars3.githubusercontent.com/u/51054939?s=400&u=8d6342ba8bf5106086c26318ee290452501c6dff&v=4',
-      title: 'Ninecat-ui'
+      title: 'Ninecat'
     },
     lang: 'zh-CN',
     versions: ['1.0.0', '1.1.0'],
@@ -20,23 +23,23 @@ export default {
   },
   navConfig: [
     {
-      name: lang.developmentGuide,
+      name: developmentGuideString,
       groups: [
         {
           list: [
             {
               path: '/about',
-              title: lang.about
+              title: aboutString
             }
           ]
         }
       ]
     },
     {
-      name: lang.components,
+      name: componentsString,
       groups: [
         {
-          groupName: lang.layout,
+          groupName: layoutString,
           list: [
             {
               path: '/nGrid',
@@ -45,7 +48,7 @@ export default {
           ]
         },
         {
-          groupName: lang.baseComponents,
+          groupName: baseComponentsString,
           list: [
             {
               path: '/nButton',
@@ -84,13 +87,13 @@ export default {
               name: 'Progress'
             },
             {
-              path: '/nToggle',
-              name: 'Toggle'
+              path: '/nCard',
+              name: 'Card'
             }
           ]
         },
         {
-          groupName: lang.data,
+          groupName: dataString,
           list: [
             {
               path: '/nAvatar',
@@ -110,7 +113,7 @@ export default {
             }]
         },
         {
-          groupName: lang.dataEntry,
+          groupName: dataEntryString,
           list: [
             {
               path: '/nUpload',
