@@ -17,6 +17,8 @@
         <tr
           v-for="(dataItem,index) in currentData"
           :key="index"
+          @click="onClickRow(dataItem,$event)"
+          @dblclick="onDbClickRow(dataItem,$event)"
         >
           <td
             v-for="(item,itemIndex) in dealTableData(dataItem,currentColumns)"
@@ -47,6 +49,14 @@ export default {
       default: function () {
         return [];
       }
+    },
+    rowClick: {
+      type: Function,
+      default: null
+    },
+    rowDbclick: {
+      type: Function,
+      default: null
     }
   },
   data: function () {
@@ -62,6 +72,16 @@ export default {
         res.push(currentDataItem[item.dataIndex]);
       });
       return res;
+    },
+    onClickRow (dataItem, e) {
+      if (this.rowClick) {
+        this.rowClick(dataItem, e);
+      }
+    },
+    onDbClickRow (dataItem, e) {
+      if (this.rowDbclick) {
+        this.rowDbclick(dataItem, e);
+      }
     }
   }
 };
