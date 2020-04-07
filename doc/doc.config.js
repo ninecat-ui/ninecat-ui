@@ -122,6 +122,10 @@ export default {
             {
               path: '/nToggle',
               name: 'Toggle'
+            },
+            {
+              path: '/nRate',
+              name: 'Rate'
             }
           ]
         }
