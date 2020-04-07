@@ -19,6 +19,7 @@ import nDrawer from '../packages/nDrawer';
 import nAvatar from '../packages/nAvatar';
 import nUpload from '../packages/nUpload';
 import nList from '../packages/nList';
+import nToggle from '../packages/nToggle';
 import locale from './locale/index';
 
 const components = {
@@ -40,7 +41,8 @@ const components = {
   nAvatar,
   nUpload,
   nList,
-  nCard
+  nCard,
+  nToggle
 };
 
 const install = function (Vue, opts = {}) {

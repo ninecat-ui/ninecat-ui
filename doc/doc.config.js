@@ -59,10 +59,6 @@ export default {
               title: 'Badge'
             },
             {
-              path: '/nInput',
-              name: 'Input'
-            },
-            {
               path: '/nLoader',
               title: 'Loader'
             },
@@ -116,9 +112,18 @@ export default {
           groupName: dataEntryString,
           list: [
             {
+              path: '/nInput',
+              name: 'Input'
+            },
+            {
               path: '/nUpload',
               name: 'Upload'
-            }]
+            },
+            {
+              path: '/nToggle',
+              name: 'Toggle'
+            }
+          ]
         }
       ]
     }]

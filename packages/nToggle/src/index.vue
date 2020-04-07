@@ -72,6 +72,7 @@ $toggle-border-radius: 18px;
   background-color: $color-grey;
   border-radius: $toggle-border-radius;
   position: relative;
+  cursor:pointer;
   &::after {
     content: '';
     display: inline-block;
