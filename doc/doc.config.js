@@ -85,6 +85,10 @@ export default {
             {
               path: '/nCard',
               name: 'Card'
+            },
+            {
+              path: '/nTooltip',
+              name: 'Tooltip'
             }
           ]
         },
