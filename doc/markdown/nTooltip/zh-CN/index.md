@@ -6,7 +6,9 @@
 :::demo
 ```html
 <template>
-  <n-tooltip />
+  <n-tooltip content="Tooltip 文字提示" placement="top-start">
+    <n-button>默认</n-button>
+  </n-tooltip>
 </template>
 ```
 :::
