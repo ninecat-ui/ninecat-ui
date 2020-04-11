@@ -74,6 +74,20 @@ export default {
       this._mouseleaveEvent = EventListener.listen(trigger, 'mouseleave', () => {
         this.show = false;
       });
+    } else if (this.trigger === 'focus') {
+      this._focusEvent = EventListener.listen(trigger, 'focus', () => {
+        this.show = true;
+      });
+      this._blurEvent = EventListener.listen(trigger, 'blur', () => {
+        this.show = false;
+      });
+    } else {
+      this._clickEvent = EventListener.listen(trigger, 'click', this.toggle);
+    }
+  },
+  methods: {
+    toggle () {
+      this.show = !this.show;
     }
   }
 };
