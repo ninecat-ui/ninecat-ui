@@ -3,9 +3,9 @@ Commonly used to display the prompt information when the mouse hover.
 ## When To Use
 Used for auxiliary text prompts, which can replace the default title attribute of HTML elements.
 
-## Demo
+## Examples
 
-### Basic USe
+### Basic Use
 :::demo
 ```html
 <template>
