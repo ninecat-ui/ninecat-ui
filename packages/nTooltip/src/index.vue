@@ -1,46 +1,79 @@
 <template>
-  <div
-    ref="trigger"
-    class="n-tooltip"
-    @mouseover="hover()"
-  >
+  <div class="n-tooltip">
     <div
-      class="n-tooltip-container"
-      :class="[placement,visible]"
+      ref="popover"
+      class="tooltip-container"
+      role="tooltip"
+      :class="[ show ? 'visible' : 'not-visible']"
     >
       <div class="content">
         {{ content }}
       </div>
       <div
-        class="caret"
+        class="arrow"
         :class="placement"
       />
     </div>
-    <slot />
+    <span
+      ref="trigger"
+    >
+      <slot />
+    </span>
   </div>
 </template>
 
 <script>
+import EventListener from '../../../src/utils/eventlistener';
 export default {
   name: 'NTooltip',
   props: {
+    trigger: {
+      type: String,
+      default: 'hover'
+    },
     content: {
       type: String,
       default: ''
     },
     placement: {
       type: String,
-      default: 'top-start'
+      default: 'top'
     }
   },
   data () {
     return {
-      visible: ''
+      position: {
+        top: 0,
+        left: 0
+      },
+      show: false
     };
   },
-  methods: {
-    hover () {
-      this.visible = 'visible';
+  watch: {
+    show: function (val) {
+      if (val) {
+        const popover = this.$refs.popover;
+        const trigger = this.$refs.trigger.children[0];
+        switch (this.placement) {
+          case 'top' :
+            this.position.left = trigger.offsetLeft - popover.offsetWidth / 2 + trigger.offsetWidth / 2;
+            this.position.top = 0 - trigger.offsetHeight;
+            break;
+        }
+        this.$refs.popover.style.top = this.position.top + 'px';
+        this.$refs.popover.style.left = this.position.left + 'px';
+      }
+    }
+  },
+  mounted () {
+    const trigger = this.$refs.trigger.children[0];
+    if (this.trigger === 'hover' && trigger) {
+      this._mouseenterEvent = EventListener.listen(trigger, 'mouseenter', () => {
+        this.show = true;
+      });
+      this._mouseleaveEvent = EventListener.listen(trigger, 'mouseleave', () => {
+        this.show = false;
+      });
     }
   }
 };
@@ -48,8 +81,9 @@ export default {
 
 <style lang="scss">
   .n-tooltip{
-    .n-tooltip-container{
-      display:none;
+    position: relative;
+    .tooltip-container{
+      position: absolute;
       font-family: PingFangSC-Regular;
       font-size: 12px;
       color: #FFFFFF;
@@ -65,7 +99,7 @@ export default {
         color:#ffffff;
         padding:0 10px;
       }
-      .caret{
+      .arrow{
         position: relative;
         width: 0;
         height: 0;
@@ -73,15 +107,16 @@ export default {
         border-right: 6px solid transparent;
         border-left: 6px solid transparent;
       }
-      .top-start{
-        left:5px;
+      .top{
+        margin: 0 auto;
+        text-align:center;
       }
     }
     .visible{
-      display: block;
+      visibility: visible;
     }
-    .top-start{
-      top:0;
+    .not-visible{
+       visibility: hidden;
     }
   }
 </style>
