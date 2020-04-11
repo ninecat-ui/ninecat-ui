@@ -29,7 +29,6 @@ branches:
 stages:
   - test
   - name: build doc
-    if: branch = master
   - name: deploy
     if: branch = master
 
