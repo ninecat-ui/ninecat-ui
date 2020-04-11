@@ -59,6 +59,18 @@ export default {
             this.position.left = trigger.offsetLeft - popover.offsetWidth / 2 + trigger.offsetWidth / 2;
             this.position.top = 0 - trigger.offsetHeight;
             break;
+          case 'left':
+            this.position.left = trigger.offsetLeft - popover.offsetWidth;
+            this.position.top = trigger.offsetTop + trigger.offsetHeight / 2 - popover.offsetHeight / 2;
+            break;
+          case 'right':
+            this.position.left = trigger.offsetLeft + trigger.offsetWidth;
+            this.position.top = trigger.offsetTop + trigger.offsetHeight / 2 - popover.offsetHeight / 2;
+            break;
+          case 'bottom':
+            this.position.left = trigger.offsetLeft - popover.offsetWidth / 2 + trigger.offsetWidth / 2;
+            this.position.top = trigger.offsetTop + trigger.offsetHeight;
+            break;
         }
         this.$refs.popover.style.top = this.position.top + 'px';
         this.$refs.popover.style.left = this.position.left + 'px';
