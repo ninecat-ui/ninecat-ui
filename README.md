@@ -107,6 +107,3 @@ $ yarn start
 Scan the QR code using [QQ](https://im.qq.com/) to join in discussion group
 
 <img alter="Discussion Group" src="https://github.com/ninecat-ui/ninecat-ui/blob/master/static/share.JPG?raw=true" width="250px" >
-
-
-
