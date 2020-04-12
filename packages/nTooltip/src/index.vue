@@ -79,22 +79,24 @@ export default {
   },
   mounted () {
     const trigger = this.$refs.trigger.children[0];
-    if (this.trigger === 'hover' && trigger) {
-      this._mouseenterEvent = EventListener.listen(trigger, 'mouseenter', () => {
-        this.show = true;
-      });
-      this._mouseleaveEvent = EventListener.listen(trigger, 'mouseleave', () => {
-        this.show = false;
-      });
-    } else if (this.trigger === 'focus') {
-      this._focusEvent = EventListener.listen(trigger, 'focus', () => {
-        this.show = true;
-      });
-      this._blurEvent = EventListener.listen(trigger, 'blur', () => {
-        this.show = false;
-      });
-    } else {
-      this._clickEvent = EventListener.listen(trigger, 'click', this.toggle);
+    if (trigger) {
+      if (this.trigger === 'hover') {
+        this._mouseenterEvent = EventListener.listen(trigger, 'mouseenter', () => {
+          this.show = true;
+        });
+        this._mouseleaveEvent = EventListener.listen(trigger, 'mouseleave', () => {
+          this.show = false;
+        });
+      } else if (this.trigger === 'focus') {
+        this._focusEvent = EventListener.listen(trigger, 'focus', () => {
+          this.show = true;
+        });
+        this._blurEvent = EventListener.listen(trigger, 'blur', () => {
+          this.show = false;
+        });
+      } else {
+        this._clickEvent = EventListener.listen(trigger, 'click', this.toggle);
+      }
     }
   },
   methods: {
