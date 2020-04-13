@@ -96,6 +96,7 @@ $ yarn start
 - [x] Tag to build npm packages automatically.
 - [x] Component unit testing. 
 - [x] Integrate docsearch.(Some problems,need fix.)
+- [ ] Support JSX.
 - [ ] Common component develop.(Doing)
 - [ ] Integrate codepen.
 - [ ] Color theme customization.
