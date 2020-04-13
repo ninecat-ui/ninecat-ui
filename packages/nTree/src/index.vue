@@ -1,6 +1,10 @@
 <template>
   <div class="n-tree">
-    <node v-for="item of deepData" :key="item[nodeKey]" :data="item"></node>
+    <node
+      v-for="item of deepData"
+      :key="item[nodeKey]"
+      :data="item"
+    />
   </div>
 </template>
 
