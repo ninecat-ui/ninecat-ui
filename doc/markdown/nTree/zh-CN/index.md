@@ -53,11 +53,11 @@
 ```html
 <template>
   <div>
-    <button @click="setKeys">通过key选中河南和河北</button>
-    <button @click="getKeys">获取所有选中项的keys</button>
-    <button @click="getNodes">获取所有选中项的nodes</button>
-    <button @click="resetChecked">清空所有选中状态</button>
-    <button @click="getNode">通过key获取河北省节点</button>
+    <n-button @click="setKeys">通过key选中河南和河北</n-button>
+    <n-button @click="getKeys">获取所有选中项的keys</n-button>
+    <n-button @click="getNodes">获取所有选中项的nodes</n-button>
+    <n-button @click="resetChecked">清空所有选中状态</n-button>
+    <n-button @click="getNode">通过key获取河北省节点</n-button>
     <hr />
     <n-tree
       ref="tree"
@@ -177,8 +177,7 @@ export default {
 ```html
 <template>
   <div>
-    通过search设置关键词
-    <input v-model="input" type="text" />
+    <n-input v-model="input" size="sm" type="text" />
     <n-tree
       node-key="id"
       :data="treeList"
@@ -273,9 +272,9 @@ export default {
 <template>
   <div>
     <div style="overflow: hidden">
-      <button @click.stop="handleAppendRoot()" style="float: right">
+      <n-button @click.stop="handleAppendRoot()" style="float: right">
         添加根节点
-      </button>
+      </n-button>
     </div>
     <n-tree
       ref="tree"
@@ -287,14 +286,14 @@ export default {
       <template slot-scope="node">
         <div style="margin: 5px">
           <span>{{node.name}}</span>
-          <button
+          <n-button
             @click.stop="handleRemove(node)"
             style="float: right"
-          >删除</button>
-          <button
+          >删除</n-button>
+          <n-button
             @click.stop="handleAppend(node)"
-            style="float: right"
-          >添加</button>
+            style="float: right;margin-right: 10px"
+          >添加</n-button>
         </div>
       </template>
     </n-tree>
