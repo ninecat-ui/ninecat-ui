@@ -110,7 +110,12 @@ export default {
             {
               path: '/nPagination',
               name: 'Pagination'
-            }]
+            },
+            {
+              path: '/nTree',
+              name: 'Tree'
+            }
+          ]
         },
         {
           groupName: dataEntryString,
