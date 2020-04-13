@@ -22,6 +22,7 @@ import nList from '../packages/nList';
 import nToggle from '../packages/nToggle';
 import nRate from '../packages/nRate';
 import nTooltip from '../packages/nTooltip';
+import nTree from '../packages/nTree';
 import locale from './locale/index';
 
 const components = {
@@ -46,7 +47,8 @@ const components = {
   nCard,
   nToggle,
   nRate,
-  nTooltip
+  nTooltip,
+  nTree
 };
 
 const install = function (Vue, opts = {}) {
