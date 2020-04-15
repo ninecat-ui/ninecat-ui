@@ -1,9 +1,9 @@
-# Tree 树形控件
-用来展示多层级数据结构, 可展开折叠, 选中, 模糊搜索, 支持作用域插槽。
+# Tree
+It is used to display multi-level data structure, expand and collapse, select, fuzzy search, support scope slot.
 
-## 代码演示
+## Demo
 
-### 基本使用
+### Basic Use
 :::demo
 ```html
 <template>
@@ -20,23 +20,23 @@
         treeList: [
           {
             "id": 1007,
-            "name": "山东省",
+            "name": "Shandong Province",
             "children": [{
               "id": 1103,
-              "name": "济南市",
+              "name": "Jinan City",
               "children": [{
                 "id": 2544,
-                "name": "济南市无影山西路店"
+                "name": "West Road Store"
               }, {
                 "id": 2545,
-                "name": "济南市堤口路店"
+                "name": "Road Store"
               }]
             }, {
               "id": 1105,
-              "name": "沂市",
+              "name": "Yishi",
               "children": [{
                 "id": 2561,
-                "name": "沂市东岳庙店"
+                "name": "Dongyue Temple"
               }]
             }]
           }
@@ -48,16 +48,17 @@
 ```
 :::
 
-### 常用的属性和方法
+### Commonly used attributes and methods
 :::demo
 ```html
 <template>
   <div>
-    <button @click="setKeys">通过key选中河南和河北</button>
-    <button @click="getKeys">获取所有选中项的keys</button>
-    <button @click="getNodes">获取所有选中项的nodes</button>
-    <button @click="resetChecked">清空所有选中状态</button>
-    <button @click="getNode">通过key获取河北省节点</button>
+    <n-button @click="setKeys">Select Henan and Hebei by key</n-button>
+    <n-button @click="getKeys">Get the keys of all selected items</n-button>
+    <n-button @click="getNodes">Get all the selected nodes</n-button>
+    <n-button @click="resetChecked">Clear all selected states
+</n-button>
+    <n-button @click="getNode">Get Hebei node by key</n-button>
     <hr />
     <n-tree
       ref="tree"
@@ -78,66 +79,66 @@ export default {
       treeList: [
         {
           "id": 1000,
-          "name": "河南省",
+          "name": "Henan Province",
           "children": [{
             "id": 1009,
-            "name": "新乡市",
+            "name": "Xin xiang",
             "children": [{
               "id": 1119,
-              "name": "新乡市宏力大道店"
+              "name": "Xinxiang Hongli Avenue"
             }, {
               "id": 1120,
-              "name": "新乡市胜利北街店"
+              "name": "Xinxiang City Shengli North Street Store"
             }, {
               "id": 1121,
-              "name": "新乡市首比街店"
+              "name": "Xinxiang City Shoubi Street Store"
             }]
           },
           {
             "id": 1016,
-            "name": "巩义市",
+            "name": "Xinxiang Hongli Avenue",
             "children": [{
               "id": 1254,
-              "name": "巩义市新兴路店"
+              "name": "Xinxiang City Shengli"
             }]
           }]
         }, {
           "id": 1001,
-          "name": "河北省",
+          "name": "Henan Province",
           "children": []
         }, {
           "id": 1007,
-          "name": "山东省",
+          "name": "Henan Province",
           "children": [{
             "id": 1103,
-            "name": "济南市",
+            "name": "Xinxiang",
             "children": [{
               "id": 2544,
-              "name": "济南市无影山西路店"
+              "name": "Xinxiang-1"
             }, {
               "id": 2545,
-              "name": "济南市堤口路店"
+              "name": "Xinxiang-2"
             }]
           }, {
             "id": 1105,
-            "name": "沂市",
+            "name": "Yishi",
             "children": [{
               "id": 2561,
-              "name": "沂市东岳庙店"
+              "name": "Yishi-2"
             }]
           }]
         }, {
           "id": 1008,
-          "name": "甘肃省",
+          "name": "Ganshu",
           "children": [{
             "id": 1111,
-            "name": "兰州市",
+            "name": "Lanzou",
             "children": [{
               "id": 2649,
-              "name": "兰州市金港城店"
+              "name": "Lanzou-1"
             }, {
               "id": 2651,
-              "name": "兰州市秦安路店"
+              "name": "Lanzou-2"
             }]
           }]
         }
@@ -172,110 +173,16 @@ export default {
 ```
 :::
 
-### 模糊搜索功能
-:::demo
-```html
-<template>
-  <div>
-    通过search设置关键词
-    <input v-model="input" type="text" />
-    <n-tree
-      node-key="id"
-      :data="treeList"
-      :search="input"
-      :default-expand-all="true"
-    ></n-tree>
-  </div>
-</template>
 
-<script>
-export default {
-  data() {
-    return {
-      input: '济南无影山',
-      treeList: [
-        {
-          "id": 1000,
-          "name": "河南省",
-          "children": [{
-            "id": 1009,
-            "name": "新乡市",
-            "children": [{
-              "id": 1119,
-              "name": "新乡市宏力大道店"
-            }, {
-              "id": 1120,
-              "name": "新乡市胜利北街店"
-            }, {
-              "id": 1121,
-              "name": "新乡市首比街店"
-            }]
-          },
-          {
-            "id": 1016,
-            "name": "巩义市",
-            "children": [{
-              "id": 1254,
-              "name": "巩义市新兴路店"
-            }]
-          }]
-        }, {
-          "id": 1001,
-          "name": "河北省",
-          "children": []
-        }, {
-          "id": 1007,
-          "name": "山东省",
-          "children": [{
-            "id": 1103,
-            "name": "济南市",
-            "children": [{
-              "id": 2544,
-              "name": "济南市无影山西路店"
-            }, {
-              "id": 2545,
-              "name": "济南市堤口路店"
-            }]
-          }, {
-            "id": 1105,
-            "name": "沂市",
-            "children": [{
-              "id": 2561,
-              "name": "沂市东岳庙店"
-            }]
-          }]
-        }, {
-          "id": 1008,
-          "name": "甘肃省",
-          "children": [{
-            "id": 1111,
-            "name": "兰州市",
-            "children": [{
-              "id": 2649,
-              "name": "兰州市金港城店"
-            }, {
-              "id": 2651,
-              "name": "兰州市秦安路店"
-            }]
-          }]
-        }
-      ],
-    }
-  }
-}
-</script>
-```
-:::
-
-### 作用域插槽
+### Scope slot
 :::demo
 ```html
 <template>
   <div>
     <div style="overflow: hidden">
-      <button @click.stop="handleAppendRoot()" style="float: right">
-        添加根节点
-      </button>
+      <n-button @click.stop="handleAppendRoot()" style="float: right">
+        Add root node
+      </n-button>
     </div>
     <n-tree
       ref="tree"
@@ -287,14 +194,14 @@ export default {
       <template slot-scope="node">
         <div style="margin: 5px">
           <span>{{node.name}}</span>
-          <button
+          <n-button
             @click.stop="handleRemove(node)"
             style="float: right"
-          >删除</button>
-          <button
+          >Delete</n-button>
+          <n-button
             @click.stop="handleAppend(node)"
-            style="float: right"
-          >添加</button>
+            style="float: right;margin-right: 10px"
+          >Add</n-button>
         </div>
       </template>
     </n-tree>
@@ -308,23 +215,23 @@ export default {
       treeList: [
         {
           "id": 1007,
-          "name": "山东省",
+          "name": "Shandong Province",
           "children": [{
             "id": 1103,
-            "name": "济南市",
+            "name": "Jinan City",
             "children": [{
               "id": 2544,
-              "name": "济南市无影山西路店"
+              "name": "Jinan Wuyingshan West Road Store"
             }, {
               "id": 2545,
-              "name": "济南市堤口路店"
+              "name": "Jinan City Dikou Road Store"
             }]
           }, {
             "id": 1105,
-            "name": "沂市",
+            "name": "Yishi",
             "children": [{
               "id": 2561,
-              "name": "沂市东岳庙店"
+              "name": "Yiyue Dongyue Temple Store"
             }]
           }]
         }
@@ -332,13 +239,13 @@ export default {
     }
   },
   methods: {
-    handleRemove (data) { // 删除节点
+    handleRemove (data) {
       this.$refs.tree.remove(data.id)
     },
-    handleAppend (data) { // 添加子节点
+    handleAppend (data) {
       this.$refs.tree.append(data.id, { id: Date.now(), name: '新节点' })
     },
-    handleAppendRoot () { // 添加根节点
+    handleAppendRoot () {
       this.$refs.tree.append(null, { id: Date.now(), name: '新节点' })
     }
   }
@@ -347,47 +254,47 @@ export default {
 ```
 :::
 
-## 属性
+## Attributes
 
-| 参数 | 说明 | 类型 | 默认值 |
+| Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
-| data                  | 源数据 | Array | 必填项
-| node-key              | 节点的唯一标识 | String | `'id'`
-| search                | 模糊搜索的关键词 | String | `''`
-| empty-text            | 内容为空时展示的文本 | String | `''`
-| show-checkbox         | 是否显示checkbox | Boolean | `false`
-| default-expand-all    | 是否默认展开所有节点 | Boolean | `false`
-| expand-on-click-node  | 点击节点时是否展开或折叠 | Boolean | `true`
-| check-on-click-node   | 点击节点时是否选中节点 | Boolean | `false`
-| default-expanded-keys | 默认展开节点的keys | Array | `[]`
-| default-checked-keys  | 默认选中节点的keys | Array | `[]`
-| props                 | 配置选项，请看下表 | Object | ` `
+| data                  | source data | Array | Required field
+| node-key              | The unique identifier of the node | String | `'id'`
+| search                | Keywords for fuzzy search | String | `''`
+| empty-text            | Text displayed when the content is empty | String | `''`
+| show-checkbox         | Whether to show checkbox | Boolean | `false`
+| default-expand-all    | Whether to expand all nodes by default | Boolean | `false`
+| expand-on-click-node  | Whether to expand or collapse when clicking a node | Boolean | `true`
+| check-on-click-node   | Whether to select the node when clicking it | Boolean | `false`
+| default-expanded-keys | Expand the node keys by default | Array | `[]`
+| default-checked-keys  | The key of the selected node by default | Array | `[]`
+| props                 | For configuration options, please see the table below | Object | ` `
 
-## 配置项
+## Configuration item
 
-| 参数      | 说明 | 类型
+| Property | Description | Type |
 |  :--     | :-- | :--
-| name     | 节点名称 | String
-| children | 节点的子集 | String
+| name     | Node name | String
+| children | A subset of nodes | String
 
-## 事件
+## event
 
-| 事件名        | 说明 | 参数
+| Event name        | Description | Property
 | :--- | :--- | :---
-| node-click   | 节点被点击时触发 | 参数1: 事件参数event, 参数2: 当前node节点
-| node-checked | 节点的选中状态改变时触发 | 参数1: 事件参数event, 参数2: 当前node节点
-| node-expand  | 节点展开或折叠时触发 | 参数1: 事件参数event, 参数2: 当前node节点
+| node-click   | Fires when the node is clicked | Parameter 1: Event parameter event, Parameter 2: Current node node
+| node-checked | Triggered when the selected state of a node changes | Parameter 1: Event parameter event, Parameter 2: Current node node
+| node-expand  | Fired when the node is expanded or collapsed | Parameter 1: Event parameter event, Parameter 2: Current node node
 
-## 方法
+## Function
 
-| 方法名           | 说明 | 参数 | 参数类型 | 返回值
+| Function Name           | Description | Property | Type | Retrun
 | :--- | :--- | :--- | :--- | :---
-| getNode         | 通过key获取对应节点 | 参数1: 唯一标识key | String / Number | 成功返回对应的节点, 失败返回null
-| resetChecked    | 取消所有节点的选中状态 | - | - | -
-| setCheckedKeys  | 通过keys批量设置节点的选中状态 | 参数1: 唯一标识keys, 参数2: 状态 | 参数1: Array, 参数2: Boolean | -
-| getCheckedKeys  | 获取选中节点的keys | - | - | 所有选中节点的唯一标识keys
-| getCheckedNodes  | 获取选中的节点nodes | - | - | 所有选中的节点nodes
-| remove          | 通过key删除一个节点 | 参数1: 唯一标识key或当前节点 | String / Number | 成功返回true, 失败返回false
-| append          | 通过key添加一个子节点 | 参数1: 唯一标识key或当前节点, 参数2: node节点 | String / Number | 成功返回true, 失败返回false
-| insertBefore    | 通过key在前添加一个兄弟节点 | 参数1: 唯一标识key或当前节点, 参数2: node节点 | String / Number | 成功返回true, 失败返回false
-| insertAfter     | 通过key在后添加一个兄弟节点 | 参数1: 唯一标识key或当前节点, 参数2: node节点 | String / Number | 成功返回true, 失败返回false
+| getNode         | Get the corresponding node by key | Get the corresponding node by key | String / Number | Successfully return the corresponding node, fail return null
+| resetChecked    | Deselect all nodes | - | - | -
+| setCheckedKeys  | Set the selected state of nodes in batches by keys | Parameter 1: Unique identification keys, Parameter 2: Status | Parameter 1: Array, Parameter 2: Boolean | -
+| getCheckedKeys  | Get the keys of the selected node | - | - | The unique identification keys of all selected nodes
+| getCheckedNodes  | Get the selected nodes | - | - | All selected nodes
+| remove          | Delete a node by key | Parameter 1: Uniquely identify the key or current node | String / Number |Success return true, Failure returns false
+| append          | Add a child node by key | Parameter 1: Uniquely identify the key or current node, Parameter 2: node | String / Number | Success return true, Failure returns false
+| insertBefore    | Add a sibling node by key | Parameter 1: Uniquely identify the key or current node, Parameter 2: node | String / Number | Success return true, Failure returns false
+| insertAfter     | Add a sibling node after the key | Parameter 1: Uniquely identify the key or current node, Parameter 2: node | String / Number | Success return true, Failure returns false
