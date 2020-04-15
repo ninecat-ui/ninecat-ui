@@ -5,7 +5,8 @@ Toggle, used to indicate the switch status.
 ## When To Use
 Use when you need to indicate the switch status.
 
-## Examples
+## Demo
+### Basic Use
 :::demo
 
 ```html
