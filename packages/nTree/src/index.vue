@@ -17,7 +17,10 @@ export default {
   props: {
     data: {
       type: Array,
-      required: true
+      required: true,
+      default: function () {
+        return [];
+      }
     },
     nodeKey: {
       type: String,
