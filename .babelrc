@@ -7,5 +7,6 @@
         "node": "current"
       }
     }]
-  ]
+  ],
+  "plugins": ["jsx-v-model", "transform-vue-jsx"]
 }
