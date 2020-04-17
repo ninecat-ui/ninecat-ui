@@ -180,9 +180,9 @@ export default {
 <template>
   <div>
     <div style="overflow: hidden">
-      <n-button @click.stop="handleAppendRoot()" style="float: right">
+      <button @click="handleAppendRoot()" style="float: right">
         Add root node
-      </n-button>
+      </button>
     </div>
     <n-tree
       ref="tree"
@@ -194,14 +194,14 @@ export default {
       <template slot-scope="node">
         <div style="margin: 5px">
           <span>{{node.name}}</span>
-          <n-button
-            @click.stop="handleRemove(node)"
+          <button
+            @click.native.stop="handleRemove(node)"
             style="float: right"
-          >Delete</n-button>
-          <n-button
-            @click.stop="handleAppend(node)"
-            style="float: right;margin-right: 10px"
-          >Add</n-button>
+          >Delete</button>
+          <button
+            @click.native.stop="handleAppend(node)"
+            style="float: right"
+          >Add</button>
         </div>
       </template>
     </n-tree>

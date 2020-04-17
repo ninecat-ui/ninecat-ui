@@ -272,7 +272,7 @@ export default {
 <template>
   <div>
     <div style="overflow: hidden">
-      <n-button @click.stop="handleAppendRoot()" style="float: right">
+      <n-button @click="handleAppendRoot()" style="float: right">
         添加根节点
       </n-button>
     </div>
@@ -287,11 +287,11 @@ export default {
         <div style="margin: 5px">
           <span>{{node.name}}</span>
           <n-button
-            @click.stop="handleRemove(node)"
+            @click.native.stop="handleRemove(node)"
             style="float: right"
           >删除</n-button>
           <n-button
-            @click.stop="handleAppend(node)"
+            @click.native.stop="handleAppend(node)"
             style="float: right;margin-right: 10px"
           >添加</n-button>
         </div>

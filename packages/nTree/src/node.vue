@@ -51,16 +51,16 @@ import { deepCopy } from './utils.js';
 export default {
   name: 'Node',
   components: {
-    Render: { // 由于该脚手架不支持jsx语法, 这里使用渲染函数
-      render (h) {
+    Render: { // 渲染函数改jsx
+      render () {
         const { data, root } = this.$parent;
         const { name } = root.defaultProps;
         /* eslint-disable */
-        return root.$scopedSlots.default ? root.$scopedSlots.default(data) : h('div', { 'class': 'tree-text' }, [
-          data.$keys && !!data.$keys.length
-            ? data[name].split('').map((curr, i) => h('span', {'style': { color: data.$keys.indexOf(i) > -1 ? 'red' : '#666' }}, [curr]))
-            : h('span', { 'style': { color: '#666' } }, [data[name]])
-        ]);
+        return root.$scopedSlots.default ? root.$scopedSlots.default(data) : <div class="tree-text">
+          { data.$keys && data.$keys.length ? data[name].split('').map(
+            (curr, i) => <span style={{ color: data.$keys.indexOf(i) > -1 ? 'red': '#666' }}>{curr}</span>
+          ) : <span style={{ color: '#666' }}>{data[name]}</span> }
+        </div>
       }
     }
   },
