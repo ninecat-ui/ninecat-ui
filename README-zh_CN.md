@@ -88,6 +88,7 @@ $ yarn start
 - [x] 自动通过git tag 发布npm
 - [x] 完成组件单元测试
 - [x] 集成Docsearch
+- [x] 支持JSX
 - [ ] 基本组件开发完善（进行中）
 - [ ] 集成codepen完成在线编辑代码
 - [ ] 自定义主题色
