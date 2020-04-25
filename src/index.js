@@ -47,8 +47,8 @@ const components = {
   nCard,
   nToggle,
   nRate,
-  nTooltip,
-  nTree
+  nTree,
+  nTooltip
 };
 
 const install = function (Vue, opts = {}) {
