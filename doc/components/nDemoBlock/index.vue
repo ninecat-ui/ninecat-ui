@@ -98,6 +98,7 @@ export default {
   width: 90%;
   display:flex;
   .demo-box{
+    width: 100%;
     height: auto;
     margin: 10px;
     border: 1px solid #eaeefb;
