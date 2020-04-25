@@ -4,15 +4,24 @@
       ref="popover"
       class="tooltip-container"
       role="tooltip"
-      :class="[ show ? 'visible' : 'not-visible']"
+      :class="[ show ? 'visible' : 'not-visible',placement]"
     >
-      <div class="content">
+      <div
+        v-if="placement.includes('top') || placement.includes('left')"
+        class="content"
+      >
         {{ content }}
       </div>
       <div
         class="arrow"
-        :class="placement"
+        :class="[placement]"
       />
+      <div
+        v-if="placement.includes('bottom') || placement.includes('right')"
+        class="content"
+      >
+        {{ content }}
+      </div>
     </div>
     <span
       ref="trigger"
@@ -59,9 +68,17 @@ export default {
             this.position.left = trigger.offsetLeft - popover.offsetWidth / 2 + trigger.offsetWidth / 2;
             this.position.top = 0 - trigger.offsetHeight;
             break;
+          case 'top-start' :
+            this.position.left = trigger.offsetLeft - popover.offsetWidth / 2 + trigger.offsetWidth / 2;
+            this.position.top = 0 - trigger.offsetHeight;
+            break;
+          case 'top-end' :
+            this.position.left = trigger.offsetLeft - popover.offsetWidth / 2 + trigger.offsetWidth / 2;
+            this.position.top = 0 - trigger.offsetHeight;
+            break;
           case 'left':
-            this.position.left = trigger.offsetLeft - popover.offsetWidth;
-            this.position.top = trigger.offsetTop + trigger.offsetHeight / 2 - popover.offsetHeight / 2;
+            this.position.left = 0 - trigger.offsetLeft - 2 * popover.offsetWidth - 10;
+            this.position.top = popover.offsetHeight / 4;
             break;
           case 'right':
             this.position.left = trigger.offsetLeft + trigger.offsetWidth;
@@ -109,9 +126,11 @@ export default {
 
 <style lang="scss">
   .n-tooltip{
+    display:inline-block;
     position: relative;
     .tooltip-container{
       position: absolute;
+      z-index: 1000;
       font-family: PingFangSC-Regular;
       font-size: 12px;
       color: #FFFFFF;
@@ -131,14 +150,42 @@ export default {
         position: relative;
         width: 0;
         height: 0;
+      }
+      .top,.top-start,.top-end{
         border-top: 6px solid #272C36;
         border-right: 6px solid transparent;
         border-left: 6px solid transparent;
-      }
-      .top{
         margin: 0 auto;
         text-align:center;
       }
+      .left{
+        border-bottom: 6px solid transparent;
+        border-top: 6px solid transparent;
+        border-left: 6px solid #272C36;
+        margin: 0 auto;
+        text-align:center;
+        top:5px;
+        float:right;
+      }
+      .right{
+        border-bottom: 6px solid transparent;
+        border-top: 6px solid transparent;
+        border-right: 6px solid #272C36;
+        margin: 0 auto;
+        text-align:center;
+        float:right;
+        top:5px;
+      }
+      .bottom{
+        border-bottom: 6px solid #272C36;
+        border-right: 6px solid transparent;
+        border-left: 6px solid transparent;
+        margin: 0 auto;
+        text-align:center;
+      }
+    }
+    .left,.right{
+      display:flex;
     }
     .visible{
       visibility: visible;

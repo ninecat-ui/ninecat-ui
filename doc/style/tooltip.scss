@@ -1,0 +1,27 @@
+.tooltip-example{
+  height:250px;
+  width:400px;
+  .top {
+    text-align: center;
+  }
+
+  .left {
+    float: left;
+    width: 60px;
+    position: absolute;
+  }
+
+  .right {
+    float: right;
+    width: 60px;
+  }
+
+  .bottom {
+    clear: both;
+    text-align: center;
+  }
+
+  .item{
+    margin: 4px;
+  }
+}
