@@ -6,6 +6,7 @@ When an operation takes a long time to complete, the user is shown the current p
 
 
 ## Examples
+### Basic Use
 :::demo
 ```html
   <template>
@@ -18,10 +19,21 @@ When an operation takes a long time to complete, the user is shown the current p
 ```
 :::
 
+### Circular progress bar
+:::demo
+```html
+  <template>
+    <n-progress type="circle" width="100" stroke-width="10" color="rgb(52, 152, 255)" :percent="50"/>
+  </template>
+
+```
+:::
+
 ### API
 
 | Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
 | color | Line color | String | |
 | percent | Progress percentage | Number | 0 |
-| width | Progress bar width | Number | 10 |
+| width | Progress bar width,when type is circle,it means canvas width | Number | 10 |
+| stroke-width | When type is circle,it means the width of the circle | Number | 10 |
