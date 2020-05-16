@@ -33,20 +33,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.n-col {
-  width: 50%;
-  padding: 16px 0;
-  $class-prefix: n-col-;
-  @for $n from 1 through 24 {
-    &.#{$class-prefix}#{$n} {
-      width: ($n / 24) * 100%;
-    }
-  }
-  $class-prefix: offset-;
-  @for $n from 1 through 24 {
-    &.#{$class-prefix}#{$n} {
-      margin-left: ($n / 24) * 100%;
-    }
-  }
-}
+@import './index.scss'
 </style>
