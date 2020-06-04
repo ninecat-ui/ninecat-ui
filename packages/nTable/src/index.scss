@@ -3,13 +3,11 @@
   border-radius: 6px;
   margin: 0;
   padding-top:20px;
-}
-.ndoc-container .n-doc-content table{
-  background: #FFFFFF;
-  border: none;
-  margin: 0;
+  width:100%;
 }
 .base-table{
+  width:100%;
+  border-spacing: 0px;
   thead{
     font-family: PingFangSC-Regular;
     font-size: 12px;
@@ -19,7 +17,6 @@
     th{
       height: 20px;
       padding: 10px 0;
-      border: none;
       background: #ffffff;
     }
   }
@@ -29,11 +26,16 @@
       font-size: 14px;
       color: #575757;
       height: 46px;
-      border-top: 1px solid #F2F2F5;
       td{
         padding: 13px 0;
-        border: none;
       }
     }
+    :hover{
+      cursor:pointer;
+      background: #F2FAFF;
+    }
   }
+}
+.border{
+  border-bottom: 1px solid #F2F2F5
 }

@@ -23,6 +23,7 @@
           <td
             v-for="(item,itemIndex) in dealTableData(dataItem,currentColumns)"
             :key="itemIndex"
+            :class="{border:border}"
             class="tabel-td"
             :style="{textAlign:currentColumns[itemIndex].align}"
           >
@@ -50,6 +51,10 @@ export default {
         return [];
       }
     },
+    border: {
+      type: [Boolean, String],
+      default: true
+    },
     rowClick: {
       type: Function,
       default: null
@@ -61,11 +66,20 @@ export default {
   },
   data: function () {
     return {
-      currentColumns: this.columns,
+      currentColumns: this.dealColums(this.columns),
       currentData: this.data
     };
   },
   methods: {
+    dealColums (columns) {
+      return columns.map(item => {
+        return {
+          width: 200,
+          align: 'left',
+          ...item
+        };
+      });
+    },
     dealTableData (currentDataItem, currentColumns) {
       let res = [];
       currentColumns.forEach((item, index) => {
