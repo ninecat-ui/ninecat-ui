@@ -23,6 +23,7 @@ import nToggle from '../packages/nToggle';
 import nRate from '../packages/nRate';
 import nTooltip from '../packages/nTooltip';
 import nTree from '../packages/nTree';
+import nTag from '../packages/nTag';
 import locale from './locale/index';
 
 const components = {
@@ -47,8 +48,9 @@ const components = {
   nCard,
   nToggle,
   nRate,
+  nTree,
   nTooltip,
-  nTree
+  nTag
 };
 
 const install = function (Vue, opts = {}) {
