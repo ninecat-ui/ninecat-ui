@@ -1,6 +1,8 @@
 <template>
   <div class="n-tag">
-    <div :class="[type]">tag</div>
+    <div :class="[type]">
+      <span>tag</span>
+    </div>
   </div>
 </template>
 
