@@ -9,7 +9,7 @@ const path = require('path')
 
 module.exports = {
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['.js', '.vue', '.json','.ts', '.tsx'],
     alias: {
       'assets': utils.resolve('assets'),
       'static': utils.resolve('static'),
@@ -70,7 +70,20 @@ module.exports = {
             loader: path.resolve(__dirname, './md-loader/index.js')
           }
         ]
+      },{
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        loader: "ts-loader",
+        options: {
+          appendTsSuffixTo: [/\.vue$/],
+          allowTsInNodeModules: true
+        }
       },
+      {
+        test: /\.tsx$/,
+        exclude: /node_modules/,
+        loader: ['babel-loader', 'ts-loader']
+      }
     ]
   },
 

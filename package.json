@@ -31,7 +31,10 @@
   "license": "MIT",
   "dependencies": {
     "deepmerge": "^4.2.2",
-    "vue": "2.6.10"
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.5",
+    "vue": "2.6.10",
+    "vue-class-component": "^7.2.3"
   },
   "devDependencies": {
     "@babel/core": "7.5.5",

@@ -101,7 +101,7 @@ $ yarn start
 - [ ] Integrate codepen.
 - [ ] Color theme customization.
 - [ ] Globalization.
-- [ ] Mixed develop with typescript and JavaScript.
+- [x] Mixed develop with typescript and JavaScript.
 
 ## 🤝 Join Discussion Group
 

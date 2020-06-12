@@ -12,7 +12,7 @@ const PORT = 8081
 
 module.exports = merge(baseConfig, {
   mode: 'development',
-  entry: path.resolve(__dirname, '../doc/index.js'),
+  entry: path.resolve(__dirname, '../doc/index.ts'),
   devServer: {
     clientLogLevel: 'warning',
     hot: true,

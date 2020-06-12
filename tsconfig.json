@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "allowJs": true,
+    "noImplicitThis": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "target": "es5",
+    "module": "es2015",
+    "experimentalDecorators": true,
+    "jsx": "preserve",
+    "jsxFactory": "h"
+  },
+  "include": [
+    "types/**/*",
+    "src/**/*",
+    "node_modules/t-systems-aurelia-components/src/**/*.ts"
+  ],
+  "exclude": [
+    "**/*.spec.ts",
+    "**/*.spec.js",
+    "node_modules",
+  ]
+}
