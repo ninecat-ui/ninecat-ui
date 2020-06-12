@@ -35,12 +35,5 @@ export default {
 </script>
 
 <style lang="scss">
-.rate{
-  .icon-collection {
-    color:rgb(198, 209, 222);
-  }
-  .icon-collection-fill {
-    color:rgb(247, 186, 42);
-  }
-}
+@import './index.scss'
 </style>

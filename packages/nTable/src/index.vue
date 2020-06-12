@@ -23,6 +23,7 @@
           <td
             v-for="(item,itemIndex) in dealTableData(dataItem,currentColumns)"
             :key="itemIndex"
+            :class="{border:border}"
             class="tabel-td"
             :style="{textAlign:currentColumns[itemIndex].align}"
           >
@@ -50,6 +51,10 @@ export default {
         return [];
       }
     },
+    border: {
+      type: [Boolean, String],
+      default: true
+    },
     rowClick: {
       type: Function,
       default: null
@@ -61,11 +66,20 @@ export default {
   },
   data: function () {
     return {
-      currentColumns: this.columns,
+      currentColumns: this.dealColums(this.columns),
       currentData: this.data
     };
   },
   methods: {
+    dealColums (columns) {
+      return columns.map(item => {
+        return {
+          width: 200,
+          align: 'left',
+          ...item
+        };
+      });
+    },
     dealTableData (currentDataItem, currentColumns) {
       let res = [];
       currentColumns.forEach((item, index) => {
@@ -88,43 +102,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .tabel-content{
-    background: #FFFFFF;
-    border-radius: 6px;
-    margin: 0;
-    padding-top:20px;
-  }
-  .ndoc-container .n-doc-content table{
-    background: #FFFFFF;
-    border: none;
-    margin: 0;
-  }
-  .base-table{
-    thead{
-      font-family: PingFangSC-Regular;
-      font-size: 12px;
-      color: #8E8E93;
-      text-align: right;
-      line-height: 20px;
-      th{
-        height: 20px;
-        padding: 10px 0;
-        border: none;
-        background: #ffffff;
-      }
-    }
-    tbody{
-      tr{
-        font-family: PingFangSC-Regular;
-        font-size: 14px;
-        color: #575757;
-        height: 46px;
-        border-top: 1px solid #F2F2F5;
-        td{
-          padding: 13px 0;
-          border: none;
-        }
-      }
-    }
-  }
+@import './index.scss'
 </style>

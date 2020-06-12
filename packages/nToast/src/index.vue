@@ -23,14 +23,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.n-toast{
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform:  translateX(-50%) translateY(-50%);
-  background: rgba(0,0,0,0.6);
-  color: white;
-  padding: 0.2em 0.6em;
-  border-radius: 4px;
-}
+@import './index.scss'
 </style>

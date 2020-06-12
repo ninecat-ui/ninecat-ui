@@ -3,15 +3,34 @@ Commonly used to display the prompt information when the mouse hover.
 ## When To Use
 Used for auxiliary text prompts, which can replace the default title attribute of HTML elements.
 
-## Demo
+## Examples
 
-### Basic USe
+### Basic Use
 :::demo
 ```html
 <template>
-  <n-tooltip content="Tooltip some content" placement="top">
-    <n-button>Default</n-button>
-  </n-tooltip>
+  <div class="tooltip-example">
+    <div class="top">
+      <n-tooltip class="item" content="Some content" placement="top">
+        <n-button>Top</n-button>
+      </n-tooltip>
+    </div>
+    <div class="left">
+      <n-tooltip class="item" content="Some content" placement="left" trigger="click">
+        <n-button>Left</n-button>
+      </n-tooltip>
+    </div>
+    <div class="right">
+      <n-tooltip class="item" content="Some content" placement="right" trigger="click">
+        <n-button>Right</n-button>
+      </n-tooltip>
+    </div>
+    <div class="bottom">
+      <n-tooltip class="item" content="Some content" placement="bottom">
+        <n-button>Bottom</n-button>
+      </n-tooltip>
+    </div>
+  </div>
 </template>
 ```
 :::

@@ -25,28 +25,48 @@
       return {
         tableColumns: [
           {
-            title: '姓名',
+            title: 'Name',
             dataIndex: 'name',
             align: 'center',
             width: 100
           },
           {
-            title: '年龄',
-            dataIndex: 'age'
+            title: 'Age',
+            dataIndex: 'age',
+            align: 'center'
           },
           {
-            title: '性别',
-            dataIndex: 'sex'
+            title: 'Address',
+            dataIndex: 'address',
+            align: 'center'
           },
           {
-            title: '住址',
-            dataIndex: 'address'
+            title: 'Tags',
+            dataIndex: 'tags'
           }
         ],
         tableData: [
-          { name: '张三', age: '11', sex: '男', address: '上海路' },
-          { name: '李四', age: '12', sex: '男', address: '北京路' },
-          { name: '李花', age: '12', sex: '女', address: '天津路' }
+          {
+            key: '1',
+            name: 'John Brown',
+            age: 32,
+            address: 'New York No. 1 Lake Park',
+            tags: ['nice', 'developer'],
+          },
+          {
+            key: '2',
+            name: 'Jim Green',
+            age: 42,
+            address: 'London No. 1 Lake Park',
+            tags: ['loser'],
+          },
+          {
+            key: '3',
+            name: 'Joe Black',
+            age: 32,
+            address: 'Sidney No. 1 Lake Park',
+            tags: ['cool', 'teacher'],
+          },
         ]
       }
     }

@@ -15,7 +15,8 @@
     "test:unit": "jest --config test/jest.config.js",
     "test": "npm run lint && npm run test:unit",
     "test:debug": "node --inspect node_modules/.bin/jest --runInBand --config test/jest.config.js",
-    "docs:build": "webpack --config build/webpack.config.doc.js"
+    "docs:build": "webpack --config build/webpack.config.doc.js",
+    "createComponent": "node script/create-component.js"
   },
   "keywords": [
     "ninecat",
@@ -23,6 +24,7 @@
     "ninecat-ui",
     "ninecat Ui",
     "Ninecat Ui",
+    "Ninecat",
     "Vue.js 2.0 Web UI",
     "Vue UI",
     "Vue",
@@ -30,13 +32,13 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "deepmerge": "^4.2.2",
-    "ts-loader": "^7.0.5",
-    "typescript": "^3.9.5",
     "vue": "2.6.10",
     "vue-class-component": "^7.2.3"
   },
   "devDependencies": {
+    "deepmerge": "^4.2.2",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.5",
     "@babel/core": "7.5.5",
     "@babel/preset-env": "7.5.5",
     "@vue/test-utils": "1.0.0-beta.29",

@@ -60,7 +60,11 @@ Vue.component(Button.name, Button)
 
 ## 🖥 浏览器支持
 
-现代浏览器或者IE10以上
+现代浏览器或者IE11以上
+
+| <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" /></br>IE | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" /></br>Edge | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" /></br>Firefox | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" /> </br>Chrome | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" /></br>Safari |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| >=11                                                                                                                                                 | >= 14                                                                                                                                                  | >= 45                                                                                                                                                         | >=49                                                                                                                                                       | >=10                                                                                                                                                      |
 
 ## 🔗 链接
 
@@ -88,7 +92,7 @@ $ yarn start
 - [x] 自动通过git tag 发布npm
 - [x] 完成组件单元测试
 - [x] 集成Docsearch
-- [x] 支持JSX
+- [x] 支持JSX语法开发
 - [ ] 基本组件开发完善（进行中）
 - [ ] 集成codepen完成在线编辑代码
 - [ ] 自定义主题色

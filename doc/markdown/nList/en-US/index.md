@@ -4,7 +4,7 @@ General list.
 ## When To Use
 The most basic list display can carry text, lists, pictures, paragraphs, and is often used for background data display pages.
 
-## Demo
+## Examples
 
 ### Basic Use
 :::demo

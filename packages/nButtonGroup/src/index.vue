@@ -19,20 +19,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.n-button-group{
-   display: inline-flex;
-   vertical-align: middle;
-   /deep/ .nbutton{
-     border-radius: 0px;
-     &:first-child{
-       border-top-left-radius: 6px;
-       border-bottom-left-radius: 6px;
-     }
-     &:last-child{
-       border-top-right-radius: 6px;
-       border-bottom-right-radius: 6px;
-     }
-   }
-
-}
+@import './index.scss'
 </style>

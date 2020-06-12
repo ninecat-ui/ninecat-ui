@@ -9,9 +9,28 @@
 :::demo
 ```html
 <template>
-  <n-tooltip content="Tooltip 文字提示" placement="top">
-    <n-button>默认</n-button>
-  </n-tooltip>
+  <div class="tooltip-example">
+    <div class="top">
+      <n-tooltip class="item" content="Tooltip 文字提示" placement="top">
+        <n-button>上边</n-button>
+      </n-tooltip>
+    </div>
+    <div class="left">
+      <n-tooltip class="item" content="Tooltip 文字提示" placement="left" trigger="click">
+        <n-button>左边</n-button>
+      </n-tooltip>
+    </div>
+    <div class="right">
+      <n-tooltip class="item" content="Tooltip 文字提示" placement="right" trigger="click">
+        <n-button>右边</n-button>
+      </n-tooltip>
+    </div>
+    <div class="bottom">
+      <n-tooltip class="item" content="Tooltip 文字提示" placement="bottom">
+        <n-button>下边</n-button>
+      </n-tooltip>
+    </div>
+  </div>
 </template>
 ```
 :::
