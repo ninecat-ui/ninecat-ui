@@ -27,7 +27,7 @@ branches:
     - /.*/
 
 stages:
-  - test
+  # - test
   - name: build doc
     if: branch = master
   - name: deploy
