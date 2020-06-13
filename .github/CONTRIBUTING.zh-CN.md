@@ -48,6 +48,20 @@ Hi，很高兴认识你！你能来贡献代码真的太好了，欢迎欢迎！
 
 `test`为测试目录
 
+# 命令行简介
+
+启动项目:`yarn start`
+
+生产打包:`yarn prod`
+
+eslint: `yarn lint`
+
+单元测试: `yarn test`
+
+构建文档: `yarn docs:build`
+
+新建组件: `yarn createComponent XXX`
+
 # 开发约定
 
 - 如果想增加新的组件，先在packages目录下新建你的组件目录，目录以`n`开头，可参考现有的组件写法。
