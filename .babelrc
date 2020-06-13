@@ -8,5 +8,9 @@
       }
     }]
   ],
-  "plugins": ["jsx-v-model", "transform-vue-jsx"]
+  "plugins": [
+    "jsx-v-model", 
+    "transform-vue-jsx",
+    ["@babel/plugin-proposal-decorators",{"legacy": true}]
+  ]
 }

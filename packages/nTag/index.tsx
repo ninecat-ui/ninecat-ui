@@ -1,4 +1,4 @@
-import Vue, { CreateElement } from 'vue'
+import Vue from 'vue'
 import Component from 'vue-class-component'
 import './index.scss';
 
@@ -13,7 +13,7 @@ const nTagProps = Vue.extend({
 
 @Component
 export default class nTag extends nTagProps {
-  render(h: CreateElement) {
+  render() {
     return (
      <div class="n-tag">
        <div class={this.type}>

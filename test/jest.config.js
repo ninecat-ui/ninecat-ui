@@ -1,4 +1,5 @@
 const path = require('path');
+const { defaults } = require('jest-config');
 
 module.exports = {
   rootDir: path.resolve(__dirname, '..'),
@@ -7,17 +8,15 @@ module.exports = {
     '**/packages/**/*.vue'
   ],
   coverageDirectory: '<rootDir>/test/coverage',
-  moduleFileExtensions: [
-    'js',
-    'vue'
-  ],
+  moduleFileExtensions: [...defaults.moduleFileExtensions, 'ts', 'tsx'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '\\.(scss|sass|css)$': 'identity-obj-proxy'
   },
   transform: {
     '^.+\\.js$': 'babel-jest',
-    '^.+\\.vue$': 'vue-jest'
+    '^.+\\.vue$': 'vue-jest',
+    '^.+\\.[jt]sx?$': 'babel-jest'
   },
   snapshotSerializers: [
     '<rootDir>/node_modules/jest-serializer-vue'
