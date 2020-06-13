@@ -33,14 +33,14 @@
   "license": "MIT",
   "dependencies": {
     "vue": "2.6.10",
-    "vue-class-component": "^7.2.3"
+    "vue-class-component": "^7.2.3",
+    "vue-property-decorator": "^8.5.0"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-decorators": "^7.10.1",
-    "@vue/babel-preset-jsx": "^1.1.2",
-    "ts-jest": "^26.1.0",
     "@babel/core": "7.5.5",
+    "@babel/plugin-proposal-decorators": "^7.10.1",
     "@babel/preset-env": "7.5.5",
+    "@vue/babel-preset-jsx": "^1.1.2",
     "@vue/test-utils": "1.0.0-beta.29",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.0.2",
@@ -82,6 +82,7 @@
     "stylus": "0.54.5",
     "stylus-loader": "3.0.2",
     "transliteration": "^2.1.8",
+    "ts-jest": "^26.1.0",
     "ts-loader": "^7.0.5",
     "typescript": "^3.9.5",
     "uglify-es": "3.3.9",
