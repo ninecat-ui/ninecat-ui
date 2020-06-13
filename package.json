@@ -32,12 +32,13 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@babel/plugin-proposal-decorators": "^7.10.1",
-    "ts-jest": "^26.1.0",
     "vue": "2.6.10",
     "vue-class-component": "^7.2.3"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.10.1",
+    "@vue/babel-preset-jsx": "^1.1.2",
+    "ts-jest": "^26.1.0",
     "@babel/core": "7.5.5",
     "@babel/preset-env": "7.5.5",
     "@vue/test-utils": "1.0.0-beta.29",

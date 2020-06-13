@@ -35,31 +35,6 @@ module.exports = merge(baseConfig, {
       }
     }
   },
-  module: {
-    rules: [
-      {
-        test: /\.css?$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader'
-        ]
-      }, {
-        test: /\.styl(us)?$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'stylus-loader'
-        ]
-      }, {
-        test: /\.scss$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          'sass-loader'
-        ]
-      }
-    ]
-  },
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'main.css'

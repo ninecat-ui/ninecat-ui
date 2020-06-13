@@ -78,11 +78,30 @@ module.exports = {
           appendTsSuffixTo: [/\.vue$/],
           allowTsInNodeModules: true
         }
-      },
-      {
+      },{
         test: /\.tsx$/,
         exclude: /node_modules/,
         loader: ['babel-loader', 'ts-loader']
+      },{
+        test: /\.css$/,
+        use: [
+          'vue-style-loader',
+          'css-loader'
+        ]
+      },{
+        test: /\.styl(us)?$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'stylus-loader'
+        ]
+      },{
+        test: /\.scss$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
       }
     ]
   },

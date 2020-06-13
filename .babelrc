@@ -6,7 +6,13 @@
         "node": "current",
         "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
       }
-    }]
+    }],
+    [
+      "@vue/babel-preset-jsx",
+      {
+        "injectH": false
+      }
+    ]
   ],
   "plugins": [
     "jsx-v-model", 

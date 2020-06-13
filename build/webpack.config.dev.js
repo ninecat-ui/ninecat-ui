@@ -26,32 +26,6 @@ module.exports = merge(baseConfig, {
     quiet: true
   },
 
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [
-          'vue-style-loader',
-          'css-loader'
-        ]
-      }, {
-        test: /\.styl(us)?$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          'stylus-loader'
-        ]
-      }, {
-        test: /\.scss$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          'sass-loader'
-        ]
-      }
-    ]
-  },
-
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({

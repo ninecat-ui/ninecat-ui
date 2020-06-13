@@ -31,31 +31,6 @@ module.exports = merge(baseConfig, {
       }
     }
   },
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [
-          'vue-style-loader',
-          'css-loader'
-        ]
-      }, {
-        test: /\.styl(us)?$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          'stylus-loader'
-        ]
-      }, {
-        test: /\.scss$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          'sass-loader'
-        ]
-      }
-    ]
-  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './doc/doc.html',
