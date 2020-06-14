@@ -3,6 +3,7 @@ import Component from 'vue-class-component'
 import './index.scss';
 
 const nTagProps = Vue.extend({
+  name:'NTag',
   props: {
     type: {
       type: String,
@@ -23,3 +24,4 @@ export default class nTag extends nTagProps {
     )
   }
 }
+

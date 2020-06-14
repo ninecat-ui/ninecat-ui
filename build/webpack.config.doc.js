@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = merge(baseConfig, {
   mode: 'production',
-  entry: path.resolve(__dirname, '../doc/index.ts'),
+  entry: path.resolve(__dirname, '../doc/index.js'),
   output: {
     path: path.resolve(__dirname, '../docs'),
     publicPath: './',
