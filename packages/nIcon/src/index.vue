@@ -13,6 +13,3 @@ export default {
   }
 };
 </script>
-<style>
-@import '//at.alicdn.com/t/font_1213701_e5sqb0h5yj5.css'
-</style>
