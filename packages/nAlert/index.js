@@ -1,6 +1,6 @@
 import nAlert from './src/index.vue';
 
-(nAlert as any).install = function (Vue:any) {
+nAlert.install = function (Vue) {
   Vue.component(nAlert.name, nAlert);
 };
 

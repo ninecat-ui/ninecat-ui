@@ -1,6 +1,6 @@
 import NBadge from './src/index.vue';
 
-(NBadge as any).install = function (Vue:any) {
+NBadge.install = function (Vue) {
   Vue.component(NBadge.name, NBadge);
 };
 

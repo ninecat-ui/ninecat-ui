@@ -1,6 +1,6 @@
 import nAvatar from './src/index.vue';
 
-(nAvatar as any).install = function (Vue: any) {
+nAvatar.install = function (Vue) {
   Vue.component(nAvatar.name, nAvatar);
 };
 
