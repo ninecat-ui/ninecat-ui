@@ -14,6 +14,7 @@
 <template>
   <n-tag />
   <n-tag type="linkable"/>
+  <n-tag color="#2196F3"/>
 </template>
 ```
 :::

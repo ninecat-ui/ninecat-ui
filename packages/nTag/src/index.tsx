@@ -9,15 +9,25 @@ const nTagProps = Vue.extend({
       type: String,
       default: 'normal'
     },
+    color: {
+      type: String,
+    }
   }
 })
+
+function getStyle(color: String) {
+  return {
+    background: color,
+    color:color ? '#ffffff' : ''
+  }
+}
 
 @Component
 export default class nTag extends nTagProps {
   render(h: CreateElement) {
     return (
      <div class="n-tag">
-       <div class={this.type}>
+       <div class={this.type} style={getStyle(this.color)}>
         <span>tag</span>
       </div>
      </div>
