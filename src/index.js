@@ -25,6 +25,7 @@ import nTooltip from '../packages/nTooltip';
 import nTree from '../packages/nTree';
 import nTag from '../packages/nTag';
 import locale from './locale/index';
+import VueCompositionApi from '@vue/composition-api';
 
 const components = {
   nAlert,
@@ -54,6 +55,7 @@ const components = {
 };
 
 const install = function (Vue, opts = {}) {
+  Vue.use(VueCompositionApi);
   locale.use(opts.locale);
   locale.i18n(opts.i18n);
   Object.values(components).forEach(component => {

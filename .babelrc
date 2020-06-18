@@ -7,16 +7,7 @@
         "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
       }
     }],
-    [
-      "@vue/babel-preset-jsx",
-      {
-        "injectH": false
-      }
-    ]
-  ],
-  "plugins": [
-    "jsx-v-model", 
-    "transform-vue-jsx",
-    ["@babel/plugin-proposal-decorators",{"legacy": true}]
+    "vca-jsx",
+    "@vue/app"
   ]
 }

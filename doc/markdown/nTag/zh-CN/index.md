@@ -21,7 +21,9 @@
 
 ## API
 
-| Property | Description | Type |
+| 参数 | 说明 | 类型 |默认值 |
 | :--- | :--- | :--- | :--- |
+| type | 类型 | String | `normal` |
+| color | 颜色 | String | `blue` |
 
 

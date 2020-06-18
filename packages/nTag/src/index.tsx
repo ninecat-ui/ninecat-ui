@@ -1,9 +1,14 @@
-import Vue, { CreateElement } from 'vue'
-import Component from 'vue-class-component'
+import { defineComponent } from '@vue/composition-api';
 import './index.scss';
 
-const nTagProps = Vue.extend({
-  name:'NTag',
+function getStyle(color: any) {
+  return {
+    background: color,
+    color:color ? '#ffffff' : ''
+  }
+}
+export default defineComponent({
+  name: 'NTag',
   props: {
     type: {
       type: String,
@@ -11,27 +16,16 @@ const nTagProps = Vue.extend({
     },
     color: {
       type: String,
+      defalut: 'blue'
     }
-  }
-})
-
-function getStyle(color: String) {
-  return {
-    background: color,
-    color:color ? '#ffffff' : ''
-  }
-}
-
-@Component
-export default class nTag extends nTagProps {
-  render(h: CreateElement) {
-    return (
-     <div class="n-tag">
-       <div class={this.type} style={getStyle(this.color)}>
-        <span>tag</span>
+  },
+  setup(props) {
+    return () => (
+      <div class="n-tag">
+        <div class={props.type} style={getStyle(props.color)}>
+          <span>tag</span>
+        </div>
       </div>
-     </div>
     )
   }
-}
-
+})
