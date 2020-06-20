@@ -14,6 +14,7 @@ module.exports = {
       'assets': utils.resolve('assets'),
       'static': utils.resolve('static'),
       'packages': utils.resolve('packages'),
+      'types': utils.resolve('types'),
     }
   },
 
