@@ -15,11 +15,6 @@ module.exports = merge(baseConfig, {
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
-  externals:{
-    'vue': 'Vue',
-    'vue-router': 'VueRouter',
-    'highlight.js': 'hljs',
-  },
   optimization: {
     splitChunks: {
       cacheGroups: {
@@ -31,9 +26,34 @@ module.exports = merge(baseConfig, {
       }
     }
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          'vue-style-loader',
+          'css-loader'
+        ]
+      }, {
+        test: /\.styl(us)?$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'stylus-loader'
+        ]
+      }, {
+        test: /\.scss$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
+      }
+    ]
+  },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './doc/doc.html',
+      template: './doc/index.html',
       filename: 'index.html',
       favicon:'./doc/favicon.ico',
       inject: true

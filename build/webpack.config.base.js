@@ -9,7 +9,7 @@ const path = require('path')
 
 module.exports = {
   resolve: {
-    extensions: ['.js', '.vue', '.json','.ts', '.tsx'],
+    extensions: ['.js', '.vue', '.json'],
     alias: {
       'assets': utils.resolve('assets'),
       'static': utils.resolve('static'),
@@ -82,26 +82,6 @@ module.exports = {
         test: /\.tsx$/,
         exclude: /node_modules/,
         loader: ['babel-loader', 'ts-loader']
-      },{
-        test: /\.css$/,
-        use: [
-          'vue-style-loader',
-          'css-loader'
-        ]
-      },{
-        test: /\.styl(us)?$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          'stylus-loader'
-        ]
-      },{
-        test: /\.scss$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          'sass-loader'
-        ]
       }
     ]
   },

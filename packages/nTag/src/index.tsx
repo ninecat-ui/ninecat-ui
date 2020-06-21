@@ -19,7 +19,7 @@ export default defineComponent({
       defalut: 'blue'
     }
   },
-  setup(props) {
+  setup(props:any) {
     return () => (
       <div class="n-tag">
         <div class={props.type} style={getStyle(props.color)}>

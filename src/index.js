@@ -59,11 +59,7 @@ const install = function (Vue, opts = {}) {
   locale.use(opts.locale);
   locale.i18n(opts.i18n);
   Object.values(components).forEach(component => {
-    if (typeof component === 'function') {
-      Vue.use(component);
-    } else {
-      Vue.component(component.name, component);
-    }
+    Vue.component(component.name, component);
   });
   Vue.prototype.$nMessage = nMessage;
 };

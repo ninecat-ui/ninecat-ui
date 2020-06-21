@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import './index.scss';
 import nIcon from '../../nIcon';
 export default {
   name: 'NAlert',
