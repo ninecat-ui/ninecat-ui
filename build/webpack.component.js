@@ -3,18 +3,17 @@ const path = require('path')
 const merge = require('webpack-merge')
 const baseConfig = require('./webpack.config.base')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const Components = require('./components.config.json');
 
 module.exports = merge(baseConfig, {
   mode: 'production',
-  entry: {
-    'ninecat-ui': './src/index.js'
-  },
+  entry: Components,
   output: {
     path: path.resolve(__dirname, '../package'),
     publicPath: '/package/',
-    library: 'ninecat-ui',
-    libraryTarget: 'umd',
-    umdNamedDefine: true
+    filename: '[name].js',
+    chunkFilename: '[id].js',
+    libraryTarget: 'umd'
   },
   externals: {
     vue: {
@@ -54,7 +53,7 @@ module.exports = merge(baseConfig, {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'main.css'
+      filename: 'main.component.css'
     })
   ]
 })
