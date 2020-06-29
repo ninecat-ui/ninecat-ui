@@ -7,6 +7,7 @@ function getStyle(color:any) {
     color:color ? '#ffffff' : ''
   }
 }
+
 export default defineComponent({
   name: 'NTag',
   props: {
@@ -17,13 +18,18 @@ export default defineComponent({
     color: {
       type: String,
       defalut: 'blue'
+    },
+    closable: {
+      type: [String,Boolean],
     }
   },
-  setup(props:any) {
+  setup(props:any, { slots }) {
+    console.log(props)
     return () => (
       <div class="n-tag">
         <div class={props.type} style={getStyle(props.color)}>
-          <span>tag</span>
+          {slots.default && slots.default()}
+          {props.closable !== false && <i class='iconfont icon-times' />}
         </div>
       </div>
     )

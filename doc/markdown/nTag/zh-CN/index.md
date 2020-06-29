@@ -1,9 +1,13 @@
 
 # Tag 标签
 
+进行标记和分类的小标签
 
 ## 何时使用
 
+用于标记事物的属性和维度。
+
+进行分类。
 
 ## 代码演示
 
@@ -12,9 +16,14 @@
 :::demo
 ```html
 <template>
-  <n-tag />
-  <n-tag type="linkable"/>
-  <n-tag color="#2196F3"/>
+  <n-tag >Tag 1</n-tag>
+  <n-tag >
+    <a target="_blank" href="https://github.com/ninecat-ui/ninecat-ui">
+      Link
+    </a>
+  </n-tag>
+  <n-tag color="orange">Orange</n-tag>
+  <n-tag closable>Closable</n-tag>
 </template>
 ```
 :::
