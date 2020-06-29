@@ -34,5 +34,6 @@
 | :--- | :--- | :--- | :--- |
 | type | 类型 | String | `normal` |
 | color | 颜色 | String | `blue` |
+| closable | 是否可关闭 |  |  |
 
 
