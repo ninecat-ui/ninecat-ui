@@ -19,7 +19,7 @@
 
 ## API
 
-| Property | Description | Type |
+| Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
 
 

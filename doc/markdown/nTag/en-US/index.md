@@ -30,7 +30,7 @@ When categorizing.
 
 ## API
 
-| Property | Description | Type |
+| Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
 | type | type | String | `normal` |
 | color | color | String | `blue` |
