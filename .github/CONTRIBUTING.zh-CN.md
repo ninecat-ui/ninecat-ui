@@ -62,6 +62,12 @@ eslint: `yarn lint`
 
 新建组件: `yarn createComponent XXX`
 
+发布npm包: 
+
+`npm version patch`
+
+`git push origin --tag`
+
 # 开发约定
 
 - 如果想增加新的组件，先在packages目录下新建你的组件目录，目录以`n`开头，可参考现有的组件写法。
