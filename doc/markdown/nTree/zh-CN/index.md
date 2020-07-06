@@ -57,7 +57,7 @@
     <n-button @click="getKeys">获取所有选中项的keys</n-button>
     <n-button @click="getNodes">获取所有选中项的nodes</n-button>
     <n-button @click="resetChecked">清空所有选中状态</n-button>
-    <n-button @click="getNode">通过key获取河北省节点</n-button>
+    <n-button @click="getNodes">通过key获取河北省节点</n-button>
     <hr />
     <n-tree
       ref="tree"
@@ -146,7 +146,7 @@ export default {
   },
   methods: {
     setKeys () {
-      this.$refs.tree.setCheckedKeys([1000, 1001], true)
+      this.$refs.tree.setCheckedByKeys([1000, 1001], true)
     },
     getKeys () {
       const keys = this.$refs.tree.getCheckedKeys()
@@ -351,16 +351,21 @@ export default {
 | 参数 | 说明 | 类型 | 默认值 |
 | :--- | :--- | :--- | :--- |
 | data                  | 源数据 | Array | 必填项
-| node-key              | 节点的唯一标识 | String | `'id'`
-| search                | 模糊搜索的关键词 | String | `''`
-| empty-text            | 内容为空时展示的文本 | String | `''`
-| show-checkbox         | 是否显示checkbox | Boolean | `false`
-| default-expand-all    | 是否默认展开所有节点 | Boolean | `false`
-| expand-on-click-node  | 点击节点时是否展开或折叠 | Boolean | `true`
-| check-on-click-node   | 点击节点时是否选中节点 | Boolean | `false`
-| default-expanded-keys | 默认展开节点的keys | Array | `[]`
-| default-checked-keys  | 默认选中节点的keys | Array | `[]`
-| props                 | 配置选项，请看下表 | Object | ` `
+| node-key              | 节点的唯一标识 | String | 'id'
+| theme-color           | 主题色 | String | '#409eff'
+| search                | 模糊搜索的关键词 | String | ''
+| hide-misses           | 是否隐藏模糊搜索不匹配的节点 | Boolean | true
+| expand-misses         | 是否展开模糊搜索不匹配的节点 | Boolean | false
+| search-debounce       | 模糊搜索防抖 (毫秒) | Number | 500
+| empty-text            | 内容为空时展示的文本 | String | ''
+| show-checkbox         | 是否显示checkbox | Boolean | false
+| default-expand-all    | 是否默认展开所有节点 | Boolean | false
+| expand-on-click-node  | 点击节点时是否展开或折叠 | Boolean | true
+| check-on-click-node   | 点击节点时是否选中节点 | Boolean | false
+| default-expanded-keys | 默认展开节点的keys | Array | []
+| default-checked-keys  | 默认选中节点的keys | Array | []
+| filter-node           | 过滤显示的节点 (父节点全选时会选中隐藏的节点) | Function | -
+| props                 | 配置选项，请看下表 | Object | 
 
 ## 配置项
 
@@ -368,6 +373,7 @@ export default {
 |  :--     | :-- | :--
 | name     | 节点名称 | String
 | children | 节点的子集 | String
+| disabled | 该节点是否禁用 | String
 
 ## 事件
 
@@ -381,12 +387,13 @@ export default {
 
 | 方法名           | 说明 | 参数 | 参数类型 | 返回值
 | :--- | :--- | :--- | :--- | :---
-| getNode         | 通过key获取对应节点 | 参数1: 唯一标识key | String / Number | 成功返回对应的节点, 失败返回null
+| getNodeByKey    | 通过key获取对应节点 | 参数1: 唯一标识key | String / Number | 成功返回对应的节点, 失败返回null
 | resetChecked    | 取消所有节点的选中状态 | - | - | -
-| setCheckedKeys  | 通过keys批量设置节点的选中状态 | 参数1: 唯一标识keys, 参数2: 状态 | 参数1: Array, 参数2: Boolean | -
-| getCheckedKeys  | 获取选中节点的keys | - | - | 所有选中节点的唯一标识keys
-| getCheckedNodes  | 获取选中的节点nodes | - | - | 所有选中的节点nodes
+| setCheckedByKeys| 通过keys批量设置节点的选中状态 | 参数1: 唯一标识keys, 参数2: 状态 | 参数1: Array, 参数2: Boolean | -
+| getCheckedKeys  | 获取选中节点的keys | 参数1: 指定表示(默认为nodeKey) | String | 所有选中节点的唯一标识keys
+| getCheckedNodes | 获取选中的节点nodes | - | - | 所有选中的节点nodes
 | remove          | 通过key删除一个节点 | 参数1: 唯一标识key或当前节点 | String / Number | 成功返回true, 失败返回false
 | append          | 通过key添加一个子节点 | 参数1: 唯一标识key或当前节点, 参数2: node节点 | String / Number | 成功返回true, 失败返回false
 | insertBefore    | 通过key在前添加一个兄弟节点 | 参数1: 唯一标识key或当前节点, 参数2: node节点 | String / Number | 成功返回true, 失败返回false
 | insertAfter     | 通过key在后添加一个兄弟节点 | 参数1: 唯一标识key或当前节点, 参数2: node节点 | String / Number | 成功返回true, 失败返回false
+| getTotalOfNodes | 获取所有满足条件的节点数量 | - | Function | 所有满足条件的节点数量

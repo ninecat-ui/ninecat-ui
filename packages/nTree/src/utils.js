@@ -1,6 +1,6 @@
 // 计算匹配优先值
 export const computSortNum = keys => {
-  keys = JSON.parse(JSON.stringify(keys));
+  keys = keys.slice(0);
   let lev = 0;
   let curr = keys.shift();
   return keys.length < 1 ? +!!(curr + 1) : keys.reduce((s, next, i) => {
@@ -16,22 +16,14 @@ export const getSortData = arr => {
   const usable = [];
   const disable = [];
   arr.forEach(item => item.$sort === 0 ? disable.push(item) : usable.push(item));
-  for (let i = 0; i < usable.length - 1; i++) {
-    let maxIndex = i;
-    for (let j = i + 1; j < usable.length; j++) {
-      if (usable[maxIndex].$sort < usable[j].$sort) {
-        maxIndex = j;
-      }
-    }
-    ;[usable[i], usable[maxIndex]] = [usable[maxIndex], usable[i]];
-  }
-  return [...usable, ...disable];
+  usable.sort((a, b) => b.$sort - a.$sort);
+  return usable.concat(disable);
 };
 // 反推字典表
 export const getDictionary = (name, word) => {
   word = word.replace(/\s*/g, '');
   let res = [];
-  const _deep = word => {
+  const dfs = word => {
     let keys = [];
     let len = word.length;
     for (let i = len; i > 0; i--) {
@@ -53,13 +45,13 @@ export const getDictionary = (name, word) => {
       return true;
     })) return false;
     while (step > index) res.push(index++);
-    if (start - 0) _deep(word.slice(0, start));
-    if (end - len) _deep(word.slice(end, len));
+    if (start - 0) dfs(word.slice(0, start));
+    if (end - len) dfs(word.slice(end, len));
   };
-  _deep(word);
+  dfs(word);
   return res;
 };
-// 深拷贝
+// 深拷贝 (这个随便复制的)
 export const deepCopy = data => {
   const t = Object.prototype.toString.call(data);
   let o;
