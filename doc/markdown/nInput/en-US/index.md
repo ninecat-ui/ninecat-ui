@@ -80,7 +80,7 @@ Use it where you need input.
 
 | Event name | Description | Callback parameter |
 | :--- | :--- | :--- | :--- |
-|input|	Trigger on input|	(event: Event)
+|input|	Trigger on input|	(value: value)
 |blur|	Fires when Input loses focus|	(event: Event)
 |focus|	Fires when Input receives focus|	(event: Event)
 |change	|Only fires when the input box loses focus|	(event: Event)

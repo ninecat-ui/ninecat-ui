@@ -12,7 +12,7 @@
       :placeholder="placeholder"
       :disabled="disabled"
       :value="value"
-      @input="$emit('input', $event)"
+      @input="$emit('input', $event.target.value)"
       @change="$emit('change', $event)"
       @blur="$emit('blur', $event)"
       @focus="$emit('focus', $event)"

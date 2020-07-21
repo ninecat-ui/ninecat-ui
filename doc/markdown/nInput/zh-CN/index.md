@@ -82,7 +82,7 @@
 
 | 事件名称 | 说明 | 回调参数 |
 | :--- | :--- | :--- | :--- |
-|input|	在输入时触发|	(event: Event)
+|input|	在输入时触发|	(value: value)
 |blur|	在 Input 失去焦点时触发|	(event: Event)
 |focus|	在 Input 获得焦点时触发|	(event: Event)
 |change	|仅在输入框失去焦点时触发|	(event: Event)
