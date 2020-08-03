@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'zCheckbox',
+  name: 'ZCheckbox',
   functional: true,
   render (h, ctx) {
     const { props } = ctx;

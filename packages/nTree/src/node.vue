@@ -1,9 +1,9 @@
 <script>
-import zCheckbox from './z-checkbox.vue';
+import ZCheckbox from './z-checkbox.vue';
 import { deepCopy } from './utils.js';
 export default {
   name: 'Node',
-  components: { zCheckbox },
+  components: { ZCheckbox },
   props: {
     data: {
       type: Object,
