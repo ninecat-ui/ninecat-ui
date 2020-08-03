@@ -118,6 +118,10 @@ export default {
             {
               path: '/nTree',
               name: 'Tree'
+            },
+            {
+              path: '/nSteps',
+              name: 'Steps'
             }
           ]
         },

@@ -24,6 +24,7 @@ import nRate from 'packages/nRate';
 import nTooltip from 'packages/nTooltip';
 import nTree from 'packages/nTree';
 import nTag from 'packages/nTag';
+import nSteps from 'packages/nSteps';
 import locale from './locale/index';
 import VueCompositionApi from '@vue/composition-api';
 
@@ -51,7 +52,8 @@ const components = {
   nRate,
   nTree,
   nTooltip,
-  nTag
+  nTag,
+  nSteps
 };
 
 const install = function (Vue, opts = {}) {

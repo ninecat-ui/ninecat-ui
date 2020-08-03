@@ -97,7 +97,7 @@ $ yarn start
 - [ ] 集成codepen完成在线编辑代码
 - [ ] 自定义主题色
 - [ ] 国际化
-- [ ] Typescript 和 JavaScript混合开发
+- [x] Typescript 和 JavaScript混合开发
 
 ## 🤝加入讨论群
 
