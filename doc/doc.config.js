@@ -93,6 +93,10 @@ export default {
             {
               path: '/nTag',
               name: 'Tag'
+            },
+            {
+              path: '/nSidenav',
+              name: 'Sidenav'
             }
           ]
         },
