@@ -125,11 +125,6 @@ export default {
     };
     this._initData();
   },
-  render () {
-    return <div class="n-tree">
-      { this.deepData.map(item => <node key={item[this.nodeKey]} data={item}></node>) }
-    </div>;
-  },
   methods: {
     /**
      * 前序迭代所有节点
@@ -367,6 +362,11 @@ export default {
       this._preorder(this.sourceData, node => callback(deepCopy(node)) && n++ && false);
       return n;
     }
+  },
+  render () {
+    return <div class="n-tree">
+      { this.deepData.map(item => <node key={item[this.nodeKey]} data={item}></node>) }
+    </div>;
   }
 };
 </script>

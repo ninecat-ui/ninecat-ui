@@ -2,29 +2,37 @@
   <div>
     <div
       :class="[
-      head ? 'n-sub-sidenav' : 'n-sub-child',
-      disabled ? 'disabled' : '',
-    ]"
+        head ? 'n-sub-sidenav' : 'n-sub-child',
+        disabled ? 'disabled' : '',
+      ]"
       :disabled="disabled"
     >
-      <div v-if="head" class="n-sub-header">
-        <div class="n-sub-head"></div>
+      <div
+        v-if="head"
+        class="n-sub-header"
+      >
+        <div class="n-sub-head" />
       </div>
       <div class="n-right">
-        <div class="n-sub-font">{{name}}</div>
-        <div class="n-sub-footer" @click="handleChange">
-          <div class="n-sub-icon"></div>
+        <div class="n-sub-font">
+          {{ name }}
+        </div>
+        <div
+          class="n-sub-footer"
+          @click="handleChange"
+        >
+          <div class="n-sub-icon" />
         </div>
       </div>
     </div>
     <div v-if="!disabled && change">
-      <slot/>
+      <slot />
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: "NSubSidenav",
+  name: 'NSubSidenav',
   props: {
     name: {
       type: String
@@ -37,13 +45,13 @@ export default {
       default: false
     }
   },
-  data() {
+  data () {
     return {
       change: false
     };
   },
   methods: {
-    handleChange() {
+    handleChange () {
       this.change = !this.change;
     }
   }

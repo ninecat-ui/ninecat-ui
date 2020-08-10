@@ -1,5 +1,5 @@
 <template>
-<!-- 如果带属性值head，则为一级菜单，
+  <!-- 如果带属性值head，则为一级菜单，
 否则为二级。
 如果属性值为children，则为三级菜单，否则为二级。
  -->
@@ -9,46 +9,46 @@
       children ? 'n-item-child-child':'',
       disabled ? 'disabled' : '',
     ]"
-    
   >
-  <div class="n-item-header">
-    <div v-if="head" class="n-item-head">
+    <div class="n-item-header">
+      <div
+        v-if="head"
+        class="n-item-head"
+      />
     </div>
-  </div>
     <div class="n-right">
       <div class="n-item-font">
-     {{name}}
+        {{ name }}
+      </div>
     </div>
-    </div>
-    
   </div>
 </template>
 <script>
 export default {
-  name:'NButtonItem',
-  props:{
-    name:{
-      type:String,
+  name: 'NSidenavItem',
+  props: {
+    name: {
+      type: String,
+      default: ''
     },
     disabled: {
       type: Boolean
     },
-    head:{
-      type:Boolean,
-      default:false
+    head: {
+      type: Boolean,
+      default: false
     },
-    children:{
-      type:Boolean,
-      default:false
+    children: {
+      type: Boolean,
+      default: false
     }
   },
-  methods:{
-  },
-  mounted(){
-    
+  mounted () {
 
+  },
+  methods: {
   }
-}
+};
 </script>
 <style lang="scss" scoped>
 @import './index.scss'

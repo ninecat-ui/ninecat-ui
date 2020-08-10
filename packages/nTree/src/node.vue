@@ -21,6 +21,45 @@ export default {
     this.root = $parent.isTree ? $parent : $parent.root;
     this.$set(data, '$pid', $parent.isTree ? null : $parent.data[this.root.nodeKey]);
   },
+  methods: {
+    _upwardUpdateChecked (checked) {
+      const { data, root } = this;
+      const { children } = root.defaultProps;
+      let oneNodeIsIndeterminate = false;
+      let len = data[children].length;
+      // 获取所有选中节点的数量
+      const checkedNum = data[children].reduce((num, item) => {
+        if (item.indeterminate) oneNodeIsIndeterminate = true;
+        return (num += +item.checked);
+      }, 0);
+      // 所有节点都被选中时checked=true, 反之false
+      data.checked = checkedNum === len;
+      // 如果全部节点都选中了, 那么indeterminate必然等于false, 否则就看子节点是否有半选节点, 再看子节点是否有0个未选中
+      data.indeterminate = checkedNum === len ? false : (oneNodeIsIndeterminate || !!checkedNum);
+      this.$emit('check-change', data.checked);
+    },
+    handlerChecked (e) {
+      const { data, root } = this;
+      const { children, disabled } = root.defaultProps;
+      if (data[disabled]) return false;
+      let checked = !data.checked;
+      // 过滤所有disabled=false的叶子节点, 如果有没选中的就重写checked
+      data[children].length && checked && (
+        checked = !!root._levelOrder(data[children], item => !item[disabled] && !item.checked)
+      );
+      // 必须先向下改变状态
+      root._downwardUpdateChecked(data, checked);
+      // 再向上逐级传递状态
+      this.$emit('check-change', checked);
+      root.$emit('node-checked', e, deepCopy(data));
+    },
+    handlerExpand (e) {
+      const { data, root } = this;
+      if (!data.children.length) return false;
+      data.expand = !data.expand;
+      root.$emit('node-expand', e, deepCopy(data));
+    }
+  },
   render () {
     const { data, root } = this;
     const { name, children, disabled } = root.defaultProps;
@@ -70,45 +109,6 @@ export default {
         </div>
       }
     </ul> : null;
-  },
-  methods: {
-    _upwardUpdateChecked (checked) {
-      const { data, root } = this;
-      const { children } = root.defaultProps;
-      let oneNodeIsIndeterminate = false;
-      let len = data[children].length;
-      // 获取所有选中节点的数量
-      const checkedNum = data[children].reduce((num, item) => {
-        if (item.indeterminate) oneNodeIsIndeterminate = true;
-        return (num += +item.checked);
-      }, 0);
-      // 所有节点都被选中时checked=true, 反之false
-      data.checked = checkedNum === len;
-      // 如果全部节点都选中了, 那么indeterminate必然等于false, 否则就看子节点是否有半选节点, 再看子节点是否有0个未选中
-      data.indeterminate = checkedNum === len ? false : (oneNodeIsIndeterminate || !!checkedNum);
-      this.$emit('check-change', data.checked);
-    },
-    handlerChecked (e) {
-      const { data, root } = this;
-      const { children, disabled } = root.defaultProps;
-      if (data[disabled]) return false;
-      let checked = !data.checked;
-      // 过滤所有disabled=false的叶子节点, 如果有没选中的就重写checked
-      data[children].length && checked && (
-        checked = !!root._levelOrder(data[children], item => !item[disabled] && !item.checked)
-      );
-      // 必须先向下改变状态
-      root._downwardUpdateChecked(data, checked);
-      // 再向上逐级传递状态
-      this.$emit('check-change', checked);
-      root.$emit('node-checked', e, deepCopy(data));
-    },
-    handlerExpand (e) {
-      const { data, root } = this;
-      if (!data.children.length) return false;
-      data.expand = !data.expand;
-      root.$emit('node-expand', e, deepCopy(data));
-    }
   }
 };
 </script>
