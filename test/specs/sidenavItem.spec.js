@@ -2,8 +2,8 @@ import nSidenavItem from '../../packages/nSidenavItem';
 import { mount } from '@vue/test-utils';
 
 describe('nSidenavItem', () => {
-  it('render default style when not define type', () => {
+  it('name should return nSubSidenav', () => {
     const wrapper = mount(nSidenavItem);
-    expect(wrapper.classes()).toContain('default');
+    expect(wrapper.name()).toBe('NSidenavItem');
   });
 });
