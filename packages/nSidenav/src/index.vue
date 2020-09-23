@@ -1,15 +1,7 @@
 <template>
-  <div :class="change ? 'n-sidenav' : 'n-sidenav-contract'">
+  <div class="n-sidenav">
     <div class="n-child">
       <slot />
-    </div>
-    <div
-      class="n-sidenav-footer"
-      @click="handleChange"
-    >
-      <div class="n-sidenav-icon">
-        <div class="n-sidenav-icons" />
-      </div>
     </div>
   </div>
 </template>
@@ -18,13 +10,13 @@ export default {
   name: 'NSidenav',
   data () {
     return {
-      change: true
+      expand: true
     };
   },
   mounted () {},
   methods: {
     handleChange () {
-      this.change = !this.change;
+      this.expand = !this.expand;
     }
   }
 };

@@ -19,13 +19,13 @@
         </div>
         <div
           class="n-sub-footer"
-          @click="handleChange"
+          @click="handleExpand"
         >
           <div class="n-sub-icon" />
         </div>
       </div>
     </div>
-    <div v-if="!disabled && change">
+    <div v-if="!disabled && expand">
       <slot />
     </div>
   </div>
@@ -35,7 +35,8 @@ export default {
   name: 'NSubSidenav',
   props: {
     name: {
-      type: String
+      type: String,
+      default: ''
     },
     disabled: {
       type: Boolean
@@ -47,12 +48,13 @@ export default {
   },
   data () {
     return {
-      change: false
+      expand: false
     };
   },
   methods: {
-    handleChange () {
-      this.change = !this.change;
+    handleExpand () {
+      console.log(111);
+      this.expand = !this.expand;
     }
   }
 };

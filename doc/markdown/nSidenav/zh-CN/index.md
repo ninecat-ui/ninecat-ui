@@ -12,18 +12,11 @@
 <template>
   <nSidenav>
     <nSidenavItem head disabled name="壹级菜单壹"></nSidenavItem>
-    <nSubSidenav head name="壹级菜单贰" disabled>
+    <nSubSidenav head name="壹级菜单贰">
       <nSidenavItem  name="二级菜单"></nSidenavItem>
       <nSidenavItem  name="二级菜单"></nSidenavItem>
       <nSidenavItem  name="二级菜单"></nSidenavItem>
     </nSubSidenav>
-    <nSubSidenav head name="壹级菜单叁">
-      <nSidenavItem name="二级菜单"></nSidenavItem>
-      <nSubSidenav name="二级菜单">
-      <nSidenavItem children name="三级菜单"></nSidenavItem>
-      </nSubSidenav>
-    </nSubSidenav>
-    <nSidenavItem head name="壹级菜单"></nSidenavItem>
   </nSidenav>
 </template>
 
