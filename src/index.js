@@ -1,12 +1,14 @@
 import './../assets/font/iconfont.css';
-import nAlert from 'packages/nAlert';
-import nButton from 'packages/nButton';
+import nAlert from 'packages/n-alert';
+import nAvatar from 'packages/n-avatar';
+import nButton from 'packages/n-button';
+import nButtonGroup from 'packages/n-button-group';
+import nBadge from 'packages/n-badge';
+import nSubSidenav from 'packages/n-sub-sidenav';
 import nCard from 'packages/nCard';
-import nBadge from 'packages/nBadge';
 import nLoader from 'packages/nLoader';
 import nIcon from 'packages/nIcon';
 import nMessage from 'packages/nMessage';
-import nButtonGroup from 'packages/nButtonGroup';
 import nInput from 'packages/nInput';
 import nCol from 'packages/nCol';
 import nRow from 'packages/nRow';
@@ -16,7 +18,6 @@ import nPagination from 'packages/nPagination';
 import nModal from 'packages/nModal';
 import nProgress from 'packages/nProgress';
 import nDrawer from 'packages/nDrawer';
-import nAvatar from 'packages/nAvatar';
 import nUpload from 'packages/nUpload';
 import nList from 'packages/nList';
 import nToggle from 'packages/nToggle';
@@ -26,7 +27,7 @@ import nTree from 'packages/nTree';
 import nTag from 'packages/nTag';
 import nSidenav from 'packages/nSidenav';
 import nSidenavItem from 'packages/nSidenavItem';
-import nSubSidenav from 'packages/nSubSidenav';
+import nStep from 'packages/nStep';
 import locale from './locale/index';
 import VueCompositionApi from '@vue/composition-api';
 
@@ -57,7 +58,8 @@ const components = {
   nTag,
   nSidenav,
   nSidenavItem,
-  nSubSidenav
+  nSubSidenav,
+  nStep
 };
 
 const install = function (Vue, opts = {}) {

@@ -1,4 +1,4 @@
-import nButton from '../../packages/nButton';
+import nButton from '../../packages/n-button';
 import { mount } from '@vue/test-utils';
 
 describe('nButton', () => {

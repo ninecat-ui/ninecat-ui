@@ -1,4 +1,4 @@
-import nSubSidenav from '../../packages/nSubSidenav';
+import nSubSidenav from '../../packages/n-sub-sidenav';
 import { mount } from '@vue/test-utils';
 
 // test

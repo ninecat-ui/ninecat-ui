@@ -46,7 +46,7 @@
 
 <script>
 import Locale from '../../../src/mixins/locale';
-import nButton from '../../nButton';
+import nButton from '../../n-button';
 
 export default {
   name: 'NModal',
