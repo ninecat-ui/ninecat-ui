@@ -1,6 +1,7 @@
 import { defineComponent } from '@vue/composition-api';
 import './index.scss';
 
+
 function getStyle(color:any) {
   return {
     background: color,

@@ -25,6 +25,10 @@ import nTooltip from 'packages/nTooltip';
 import nTree from 'packages/nTree';
 import nTag from 'packages/nTag';
 import nSteps from 'packages/nSteps';
+import nSubSidenav from 'packages/nSubSidenav';
+import nSidenav from 'packages/nSidenav';
+import nSidenavItem from 'packages/nSidenavItem';
+import nStep from 'packages/n-step';
 import locale from './locale/index';
 import VueCompositionApi from '@vue/composition-api';
 
@@ -53,7 +57,11 @@ const components = {
   nTree,
   nTooltip,
   nTag,
-  nSteps
+  nSidenav,
+  nSidenavItem,
+  nSubSidenav,
+  nSteps,
+  nStep
 };
 
 const install = function (Vue, opts = {}) {
