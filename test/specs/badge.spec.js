@@ -1,4 +1,4 @@
-import nBadge from '../../packages/nBadge';
+import nBadge from '../../packages/n-badge';
 import { mount } from '@vue/test-utils';
 
 describe('nBadge', () => {

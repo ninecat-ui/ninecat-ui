@@ -1,4 +1,4 @@
-import { defineComponent } from '@vue/composition-api';
+import { defineComponent,onMounted } from '@vue/composition-api';
 import './index.scss';
 
 interface stepProps {
@@ -9,11 +9,20 @@ interface stepProps {
 export default defineComponent({
   name: 'NStep',
   props: ['title','description'],
-  setup(props:stepProps, {slots}) {
+  setup(props:stepProps, {parent,slots}) {
+    onMounted(async () => {
+      if (parent !== null) {
+        console.log(parent.$attrs.active)
+      }
+    })
     return () => (
       <div class={['n-step']}>
-        {props.title}
-        {props.description}
+        <div class="icon">1</div>
+        <div class="content">
+          <div class="title">{props.title}</div>
+          <div class="description">{props.description}</div>
+        </div>
+        <div class="line" />
         {slots.default && slots.default()}
       </div>
     )

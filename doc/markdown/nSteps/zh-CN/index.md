@@ -11,12 +11,13 @@
 :::demo
 ```html
 <template>
-  <n-steps>
+  <n-steps :active="1">
     <n-step title="步骤1" description="步骤1描述"/>
     <n-step title="步骤2" description="步骤2描述"/>
     <n-step title="步骤3" description="步骤3描述"/>
     <n-step title="步骤4" description="步骤4描述"/>
   </n-steps>
 </template>
+
 ```
 :::
