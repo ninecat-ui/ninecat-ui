@@ -4,7 +4,6 @@ import './index.scss';
 interface stepsProps {
   vertical: {
     type: Boolean,
-    default: false,
   },
   active: {
     type: Number,

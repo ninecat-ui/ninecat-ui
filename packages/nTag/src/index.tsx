@@ -9,6 +9,7 @@ function getStyle(color:any) {
   }
 }
 
+
 export default defineComponent({
   name: 'NTag',
   props: {
