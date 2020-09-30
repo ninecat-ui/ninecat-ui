@@ -2,12 +2,8 @@ import { defineComponent,watch } from '@vue/composition-api';
 import './index.scss';
 
 interface stepsProps {
-  vertical: {
-    type: Boolean,
-  },
-  active: {
-    type: Number,
-  }
+  vertical?: boolean, 
+  active?: number,
 }
 
 export default defineComponent({
