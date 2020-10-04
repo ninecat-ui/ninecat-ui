@@ -2,7 +2,7 @@
 引导用户按照流程完成任务的导航条。
 
 - Steps 步骤条组件
-- StepsItem 步骤条内的每一个步骤。
+- Step 步骤条内的每一个步骤。
 
 ## 代码演示
 
@@ -21,3 +21,23 @@
 
 ```
 :::
+
+## API
+
+### Steps
+
+整体步骤条。
+
+| 参数 | 说明 | 类型 | 默认值 |
+| :--- | :--- | :--- | :--- |
+| active | 当前活动值 | Number,String | |
+| direction | 指定步骤条方向。目前支持水平（horizontal）和竖直（vertical）两种方向 | String | horizontal |
+
+### Step
+
+步骤条内的每一个步骤。
+
+| 参数 | 说明 | 类型 | 默认值 |
+| :--- | :--- | :--- | :--- |
+| title | 标题 | String | |
+| description | 步骤的详情描述，可选 | String |  |

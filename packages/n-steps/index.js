@@ -1,4 +1,4 @@
-import nSteps from './src/index.tsx';
+import nSteps from './src/index';
 nSteps.install = function (Vue) {
   Vue.component('NSteps', nSteps);
 };

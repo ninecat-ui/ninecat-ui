@@ -2,27 +2,28 @@
   display: flex;
   align-items: center;
   margin: 0 0 0 5px;
+  color: #8E8E93;
   .icon{
     text-align: center;
     line-height: 30px;
     height: 30px;
     width: 30px;
-    color: #8E8E93;
     border: 1px solid #8E8E93;
     border-radius: 50%;
+  }
+  .active {
+    border: 1px solid #3498FF;
   }
   .content{
     margin-left: 10px;
     .title{
       font-family: PingFangSC-Medium;
       font-size: 16px;
-      color: #8E8E93;
       line-height: 30px;
     }
     .description{
       font-family: PingFangSC-Regular;
       font-size: 14px;
-      color: #8E8E93;
       line-height: 20px;
     }
   }
@@ -31,4 +32,7 @@
     height: 1px;
     background: #3498FF;
   }
+}
+.active {
+  color: #3498FF;
 }
