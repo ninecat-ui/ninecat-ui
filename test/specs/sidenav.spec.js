@@ -1,4 +1,4 @@
-import nSidenav from '../../packages/nSidenav';
+import nSidenav from '../../packages/n-sidenav';
 import { mount } from '@vue/test-utils';
 
 describe('nSidenav', () => {
