@@ -1,6 +1,5 @@
 .n-step{
   display: flex;
-  align-items: center;
   margin: 0 0 0 5px;
   color: #8E8E93;
   .icon{
@@ -32,7 +31,18 @@
     height: 1px;
     background: #3498FF;
   }
+  .vertical-line{
+    margin: 10px auto;
+    width: 1px;
+    height: 62px;
+    background: #3498FF;
+    display: flex;
+    flex-direction: column;
+  }
 }
 .active {
   color: #3498FF;
+}
+.n-step-center{
+  align-items: center;
 }

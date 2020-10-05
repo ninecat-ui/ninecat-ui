@@ -14,12 +14,14 @@ export default {
   },
   methods: {
     renderChild (child, index, filteredChildren) {
+      const { vertical } = this;
       const childProps = getPropsData(child);
       let setpProps = {
         props: {
           ...childProps,
-          active: index === this.active - 1,
+          vertical,
           index,
+          active: index === this.active - 1,
           isLatest: index === filteredChildren.length - 1
         }
       };

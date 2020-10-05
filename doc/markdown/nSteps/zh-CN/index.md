@@ -22,6 +22,22 @@
 ```
 :::
 
+### 垂直方向的步骤
+
+:::demo
+```html
+<template>
+  <n-steps :active="2" vertical>
+    <n-step title="步骤1" description="步骤1描述"/>
+    <n-step title="步骤2" description="步骤2描述"/>
+    <n-step title="步骤3" description="步骤3描述"/>
+    <n-step title="步骤4" description="步骤4描述"/>
+  </n-steps>
+</template>
+
+```
+:::
+
 ## API
 
 ### Steps
@@ -31,7 +47,7 @@
 | 参数 | 说明 | 类型 | 默认值 |
 | :--- | :--- | :--- | :--- |
 | active | 当前活动值 | Number,String | |
-| direction | 指定步骤条方向。目前支持水平（horizontal）和竖直（vertical）两种方向 | String | horizontal |
+| vertical | 是否竖直方向选项，目前支持水平（horizontal）和竖直（vertical）两种方向 | String |  |
 
 ### Step
 
