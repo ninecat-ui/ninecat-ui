@@ -29,6 +29,7 @@ import nRate from '../packages/nRate';
 import nTooltip from '../packages/nTooltip';
 import nTree from '../packages/nTree';
 import nTag from '../packages/nTag';
+import nCheckbox from '../packages/n-checkbox';
 import locale from './locale/index';
 import VueCompositionApi from '@vue/composition-api';
 
@@ -61,7 +62,8 @@ const components = {
   nSidenavItem,
   nSubSidenav,
   nSteps,
-  nStep
+  nStep,
+  nCheckbox
 };
 
 const install = function (Vue, opts = {}) {

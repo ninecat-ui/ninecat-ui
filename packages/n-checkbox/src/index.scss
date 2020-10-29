@@ -1,0 +1,37 @@
+.n-checkbox{
+  input{
+    width: 0;
+    height: 0;
+
+  }
+  label {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    border: 1px solid #34c3ff;
+    position: relative;
+    cursor: pointer;
+  }
+  label::before {
+      display: inline-block;
+      content: " ";
+      width: 10px;
+      border: 2px solid #fff;
+      height: 4px;
+      border-top: none;
+      border-right: none;
+      transform: rotate(-45deg);
+      top: 3px;
+      left: 2px;
+      position: absolute;
+      opacity: 0;
+  }
+  input:checked+label {
+      background: #34c3ff;
+  }
+  input:checked+label::before{
+      opacity: 1;
+      transform: all 0.5s;
+  }
+}

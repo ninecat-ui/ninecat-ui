@@ -137,6 +137,10 @@ export default {
               name: 'Input'
             },
             {
+              path: '/nCheckbox',
+              name: 'Checkbox'
+            },
+            {
               path: '/nUpload',
               name: 'Upload'
             },
