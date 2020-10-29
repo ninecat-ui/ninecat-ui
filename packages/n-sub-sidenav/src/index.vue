@@ -53,7 +53,6 @@ export default {
   },
   methods: {
     handleExpand () {
-      console.log(111);
       this.expand = !this.expand;
     }
   }

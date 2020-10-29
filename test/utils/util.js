@@ -1,7 +1,5 @@
 import Vue from 'vue/dist/vue.js';
-import Ninecat from '../../src/index.js';
-
-Vue.use(Ninecat);
+import { nextTick } from 'vue';
 
 let id = 0;
 
@@ -51,4 +49,47 @@ function getRenderedVm (component, propsData) {
   return vm;
 }
 
-export { destroyVm, createVue, getRenderedVm };
+/**
+ * 触发一个事件
+ * mouseenter, mouseleave, mouseover, keyup, change, click 等
+ * @param  {Element} elm
+ * @param  {String} name
+ * @param  {*} opts
+ */
+function triggerEvent (elm, name, ...opts) {
+  let eventName;
+
+  if (/^mouse|click/.test(name)) {
+    eventName = 'MouseEvents';
+  } else if (/^key/.test(name)) {
+    eventName = 'KeyboardEvent';
+  } else {
+    eventName = 'HTMLEvents';
+  }
+  const evt = document.createEvent(eventName);
+
+  evt.initEvent(name, ...opts);
+  elm.dispatchEvent
+    ? elm.dispatchEvent(evt)
+    : elm.fireEvent('on' + name, evt);
+
+  return elm;
+};
+
+function asyncExpect (fn, timeout) {
+  return new Promise(resolve => {
+    if (typeof timeout === 'number') {
+      setTimeout(() => {
+        fn();
+        resolve();
+      }, timeout);
+    } else {
+      nextTick(() => {
+        fn();
+        resolve();
+      });
+    }
+  });
+}
+
+export { destroyVm, createVue, getRenderedVm, triggerEvent, asyncExpect };
