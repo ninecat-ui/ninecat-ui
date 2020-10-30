@@ -1,13 +1,14 @@
 <template>
   <div class="n-checkbox">
     <input
-      id="checkbox"
+      :id="id"
       type="checkbox"
     >
-    <label for="checkbox" />
+    <label :for="id" />
   </div>
 </template>
 <script>
+import { guid } from '@/utils/util';
 export default {
   name: 'NCheckbox',
   props: {
@@ -15,6 +16,11 @@ export default {
       type: [Boolean],
       default: false
     }
+  },
+  data () {
+    return {
+      id: guid()
+    };
   }
 };
 </script>

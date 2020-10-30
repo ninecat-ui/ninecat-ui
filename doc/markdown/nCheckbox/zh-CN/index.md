@@ -12,9 +12,9 @@
 ```html
 <template>
   <n-checkbox />
+  <n-checkbox />
+  <n-checkbox />
 </template>
-<script>
-</script>
 
 ```
 :::
