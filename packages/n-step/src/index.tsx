@@ -1,4 +1,4 @@
-import { defineComponent,onMounted } from '@vue/composition-api';
+import { defineComponent,onMounted } from 'vue';
 import './index.scss';
 
 interface stepProps {

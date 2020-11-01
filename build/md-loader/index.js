@@ -54,12 +54,14 @@ module.exports = function(source) {
   }
 
   output.push(content.slice(start));
-  return `
-    <template>
-      <section>
-        ${output.join('')}
-      </section>
-    </template>
-    ${pageScript}
-  `;
+  const res = `
+  <template>
+    <section>
+      ${output.join('')}
+    </section>
+  </template>
+  ${pageScript}
+`
+console.log(res)
+  return res;
 };
