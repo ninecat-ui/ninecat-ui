@@ -7,7 +7,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = merge(baseConfig, {
   mode: 'production',
   entry: {
-    'ninecat-ui': './src/index.js'
+    'ninecat-ui': './src/main.js'
   },
   output: {
     path: path.resolve(__dirname, '../package'),
