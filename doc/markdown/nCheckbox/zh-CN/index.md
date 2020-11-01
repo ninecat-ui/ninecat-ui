@@ -11,9 +11,7 @@
 :::demo
 ```html
 <template>
-  <n-checkbox />
-  <n-checkbox />
-  <n-checkbox />
+  <n-checkbox :checked="true">Checkbox</n-checkbox>
 </template>
 
 ```

@@ -2,9 +2,13 @@
   <div class="n-checkbox">
     <input
       :id="id"
+      v-model="checkeval"
       type="checkbox"
     >
     <label :for="id" />
+    <div class="slot-text">
+      <slot />
+    </div>
   </div>
 </template>
 <script>
@@ -15,12 +19,28 @@ export default {
     autoFocus: {
       type: [Boolean],
       default: false
+    },
+    checked: {
+      type: [Boolean],
+      default: false
+    },
+    defaultChecked: {
+      type: [Boolean],
+      default: false
     }
   },
   data () {
     return {
       id: guid()
     };
+  },
+  computed: {
+    checkeval: function () {
+      if (this.checked) {
+        return this.checked;
+      }
+      return this.defaultChecked;
+    }
   }
 };
 </script>
