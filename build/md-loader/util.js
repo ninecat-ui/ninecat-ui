@@ -20,7 +20,10 @@ function stripTemplate(content) {
   if (!content) {
     return content;
   }
-  return content.replace(/<(script|style)[\s\S]+<\/\1>/g, '').trim();
+  const templateEndIndex = content.indexOf('</template>')
+  let html = content.slice(10,templateEndIndex)
+  return html
+  // return content.replace(/<(script|style)[\s\S]+<\/\1>/g, '').trim();
 }
 
 function pad(source) {
@@ -38,7 +41,7 @@ function genInlineComponentText(template, script) {
     compiler
   };
   const compiled = compileTemplate(finalOptions);
-  console.log(compiled)
+  // console.log(compiled)
   // tips
   if (compiled.tips && compiled.tips.length) {
     compiled.tips.forEach(tip => {
@@ -56,28 +59,27 @@ function genInlineComponentText(template, script) {
   let demoComponentContent = `
     ${compiled.code}
   `;
+  // console.log(demoComponentContent)
   // todo: 这里采用了硬编码有待改进
-  // demoComponentContent = script.replace(/import\s/, '');
-  // demoComponentContent = demoComponentContent.replace(/export/, '');
+  const vueIndex = demoComponentContent.indexOf('vue')
+  demoComponentContent = demoComponentContent.slice(vueIndex + 4);
+  demoComponentContent = demoComponentContent.replace(/export/, '');
   script = script.trim();
+  console.log(script)
   if (script) {
     script = script.replace(/export\s+default/, 'const democomponentExport =');
   } else {
     script = 'const democomponentExport = {}';
   }
-  // demoComponentContent = `(function() {
-  //   ${demoComponentContent}
-  //   ${script}
-  //   return {
-  //     render,
-  //     staticRenderFns,
-  //     ...democomponentExport
-  //   }
-  // })()`;
-  // demoComponentContent = `
-  //   ${demoComponentContent}
+  console.log(script)
+  demoComponentContent = `(function() {
+    ${demoComponentContent}
+    ${script}
+    return {
+      render,
+    }
+  })()`;
 
-  // `
 
   return demoComponentContent;
 }

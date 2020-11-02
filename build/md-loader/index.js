@@ -27,8 +27,9 @@ module.exports = function(source) {
     const html = stripTemplate(commentContent);
     const script = stripScript(commentContent);
     let demoComponentContent = genInlineComponentText(html, script);
+    console.log(demoComponentContent)
     const demoComponentName = `ninecat-demo${id}`;
-    output.push(`<template slot="source"><${demoComponentName} /></template>`);
+    output.push(`<${demoComponentName} />`);
     componenetsString += `${JSON.stringify(demoComponentName)}: ${demoComponentContent},`;
 
     // 重新计算下一次的位置
@@ -41,6 +42,7 @@ module.exports = function(source) {
   let pageScript = '';
   if (componenetsString) {
     pageScript = `<script>
+      import { createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock } from "vue"
       export default {
         name: 'component-doc',
         components: {
@@ -62,6 +64,6 @@ module.exports = function(source) {
   </template>
   ${pageScript}
 `
-console.log(res)
+// console.log(res)
   return res;
 };
