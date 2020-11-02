@@ -38,6 +38,7 @@ function genInlineComponentText(template, script) {
     compiler
   };
   const compiled = compileTemplate(finalOptions);
+  console.log(compiled)
   // tips
   if (compiled.tips && compiled.tips.length) {
     compiled.tips.forEach(tip => {
@@ -56,21 +57,28 @@ function genInlineComponentText(template, script) {
     ${compiled.code}
   `;
   // todo: 这里采用了硬编码有待改进
+  // demoComponentContent = script.replace(/import\s/, '');
+  // demoComponentContent = demoComponentContent.replace(/export/, '');
   script = script.trim();
   if (script) {
     script = script.replace(/export\s+default/, 'const democomponentExport =');
   } else {
     script = 'const democomponentExport = {}';
   }
-  demoComponentContent = `(function() {
-    ${demoComponentContent}
-    ${script}
-    return {
-      render,
-      staticRenderFns,
-      ...democomponentExport
-    }
-  })()`;
+  // demoComponentContent = `(function() {
+  //   ${demoComponentContent}
+  //   ${script}
+  //   return {
+  //     render,
+  //     staticRenderFns,
+  //     ...democomponentExport
+  //   }
+  // })()`;
+  // demoComponentContent = `
+  //   ${demoComponentContent}
+
+  // `
+
   return demoComponentContent;
 }
 
