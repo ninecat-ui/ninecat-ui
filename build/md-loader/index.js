@@ -27,7 +27,6 @@ module.exports = function(source) {
     const html = stripTemplate(commentContent);
     const script = stripScript(commentContent);
     let demoComponentContent = genInlineComponentText(html, script);
-    console.log(demoComponentContent)
     const demoComponentName = `ninecat-demo${id}`;
     output.push(`<${demoComponentName} />`);
     componenetsString += `${JSON.stringify(demoComponentName)}: ${demoComponentContent},`;
@@ -64,6 +63,5 @@ module.exports = function(source) {
   </template>
   ${pageScript}
 `
-// console.log(res)
   return res;
 };

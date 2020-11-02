@@ -1,5 +1,4 @@
 const { compileTemplate } = require('@vue/compiler-sfc');
-// const compiler = require('vue-template-compiler');
 const { compile } =  require('@vue/compiler-dom')
 
 const compiler = { compile }
@@ -14,16 +13,14 @@ function stripStyle(content) {
   return result && result[2] ? result[2].trim() : '';
 }
 
-// 编写例子时不一定有 template。所以采取的方案是剔除其他的内容
 function stripTemplate(content) {
   content = content.trim();
   if (!content) {
     return content;
   }
   const templateEndIndex = content.indexOf('</template>')
-  let html = content.slice(10,templateEndIndex)
+  const html = content.slice(10,templateEndIndex)
   return html
-  // return content.replace(/<(script|style)[\s\S]+<\/\1>/g, '').trim();
 }
 
 function pad(source) {
@@ -37,11 +34,10 @@ function genInlineComponentText(template, script) {
   // https://github.com/vuejs/vue-loader/blob/423b8341ab368c2117931e909e2da9af74503635/lib/loaders/templateLoader.js#L46
   const finalOptions = {
     source: `<div>${template}</div>`,
-    filename: 'inline-component', // TODO：这里有待调整
+    filename: 'inline-component',
     compiler
   };
   const compiled = compileTemplate(finalOptions);
-  // console.log(compiled)
   // tips
   if (compiled.tips && compiled.tips.length) {
     compiled.tips.forEach(tip => {
@@ -59,24 +55,21 @@ function genInlineComponentText(template, script) {
   let demoComponentContent = `
     ${compiled.code}
   `;
-  // console.log(demoComponentContent)
-  // todo: 这里采用了硬编码有待改进
   const vueIndex = demoComponentContent.indexOf('vue')
   demoComponentContent = demoComponentContent.slice(vueIndex + 4);
   demoComponentContent = demoComponentContent.replace(/export/, '');
   script = script.trim();
-  console.log(script)
   if (script) {
     script = script.replace(/export\s+default/, 'const democomponentExport =');
   } else {
     script = 'const democomponentExport = {}';
   }
-  console.log(script)
   demoComponentContent = `(function() {
     ${demoComponentContent}
     ${script}
     return {
       render,
+      ...democomponentExport
     }
   })()`;
 

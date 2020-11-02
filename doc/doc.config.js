@@ -28,8 +28,15 @@ export default {
         {
           list: [
             {
-              path: '/about',
-              title: aboutString
+              path: '/nAbout',
+              title: aboutString,
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/about/en-US/index.md');
+                } else {
+                  return import('./markdown/about/zh-CN/index.md');
+                }
+              }
             }
           ]
         }
@@ -43,7 +50,14 @@ export default {
           list: [
             {
               path: '/nGrid',
-              title: 'Grid'
+              title: 'Grid',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nGrid/en-US/index.md');
+                } else {
+                  return import('./markdown/nGrid/zh-CN/index.md');
+                }
+              }
             }
           ]
         },
@@ -52,7 +66,14 @@ export default {
           list: [
             {
               path: '/nButton',
-              title: 'Button'
+              title: 'Button',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nButton/en-US/index.md');
+                } else {
+                  return import('./markdown/nButton/zh-CN/index.md');
+                }
+              }
             },
             {
               path: '/nBadge',
