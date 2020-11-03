@@ -10,7 +10,7 @@ export const commonRoutes = [
     meta: {
       name: 'HomePage'
     },
-    component: () => import('../markdown/about/zh-CN/index.md')
+    component: () => import('../markdown/nAbout/zh-CN/index.md')
   }
 ];
 
@@ -36,7 +36,6 @@ navConfig.forEach(navItem => {
 });
 
 const routes = componentRoutes.concat(commonRoutes);
-console.log(routes);
 
 const router = createRouter({
   history: createWebHashHistory(),

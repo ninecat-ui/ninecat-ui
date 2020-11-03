@@ -7,7 +7,7 @@
       size ? size : ''
     ]"
     :disabled="disabled"
-    @click="$emit('click')"
+    @click="onClick"
   >
     <span
       v-if="icon || loading"
@@ -54,6 +54,11 @@ export default {
     size: {
       type: String,
       default: ''
+    }
+  },
+  methods: {
+    onClick () {
+      this.$emit('onClick');
     }
   }
 };

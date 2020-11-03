@@ -13,7 +13,7 @@
   <n-button type="default">
     Default
   </n-button>
-  <n-button type="primary" @click="handleClick">
+  <n-button type="primary" @onClick="handleClick">
     Primary
   </n-button>
   <n-button type="link">
@@ -31,7 +31,7 @@
 export default {
   methods: {
     handleClick () {
-      alert('Ninecat')
+      console.log('Ninecat')
     }
   }
 }

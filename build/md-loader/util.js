@@ -18,6 +18,7 @@ function stripTemplate(content) {
   if (!content) {
     return content;
   }
+  // return content.replace(/<(script|style)[\s\S]+<\/\1>/g, '').trim();
   const templateEndIndex = content.indexOf('</template>')
   const html = content.slice(10,templateEndIndex)
   return html
@@ -69,7 +70,7 @@ function genInlineComponentText(template, script) {
     ${script}
     return {
       render,
-      ...democomponentExport
+      ...democomponentExport,
     }
   })()`;
 

@@ -5,7 +5,7 @@ const {
 } = require('./util');
 const md = require('./config');
 
-module.exports = function(source) {
+module.exports = function (source) {
   const content = md.render(source);
 
   const startTag = '<!--ninecat-demo:';
@@ -28,7 +28,7 @@ module.exports = function(source) {
     const script = stripScript(commentContent);
     let demoComponentContent = genInlineComponentText(html, script);
     const demoComponentName = `ninecat-demo${id}`;
-    output.push(`<${demoComponentName} />`);
+    output.push(`<template v-slot:source><${demoComponentName} /></template>`);
     componenetsString += `${JSON.stringify(demoComponentName)}: ${demoComponentContent},`;
 
     // 重新计算下一次的位置
@@ -55,6 +55,7 @@ module.exports = function(source) {
   }
 
   output.push(content.slice(start));
+
   const res = `
   <template>
     <section>
