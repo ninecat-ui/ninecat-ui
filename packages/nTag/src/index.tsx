@@ -1,4 +1,5 @@
-import { defineComponent } from 'vue';
+// import { defineComponent,HTMLAttributes } from 'vue';
+import {defineComponent, HTMLAttributes, createApp} from 'vue';
 import './index.scss';
 
 
@@ -9,31 +10,27 @@ function getStyle(color:any) {
   }
 }
 
+export interface TagProps extends HTMLAttributes {
+  type?: string;
+  color?: string;
+  closable?: boolean;
+}
+
 
 export default defineComponent({
   name: 'NTag',
-  props: {
-    type: {
-      type: String,
-      default: 'normal'
-    },
-    color: {
-      type: String,
-      defalut: 'blue'
-    },
-    closable: {
-      type: [String,Boolean],
-    }
-  },
-  setup(props:any, { slots }) {
+  setup(props:TagProps, { slots }) {
     console.log(props)
     return () => (
-      <div class="n-tag">
-        <div class={props.type} style={getStyle(props.color)}>
-          {slots.default && slots.default()}
-          {props.closable !== false && <i class='iconfont icon-times' />}
-        </div>
-      </div>
+      <div>{slots.default && slots.default()}</div>
     )
+    // return () => (
+    //   <div class="n-tag">
+    //     <div class={props.type} style={getStyle(props.color)}>
+    //       {slots.default && slots.default()}
+    //       {props.closable !== false && <i class='iconfont icon-times' />}
+    //     </div>
+    //   </div>
+    // )
   }
 })

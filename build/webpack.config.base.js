@@ -2,10 +2,49 @@
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const { VueLoaderPlugin } = require('vue-loader')
+const VueLoaderPlugin = require('vue-loader/dist/plugin').default;
 
 const utils = require('./utils')
 const path = require('path')
+
+const babelConfig = {
+  cacheDirectory: true,
+  presets: [
+    [
+      '@babel/preset-env',
+      {
+        targets: {
+          browsers: [
+            'last 2 versions',
+            'Firefox ESR',
+            '> 1%',
+            'ie >= 11',
+            'iOS >= 8',
+            'Android >= 4',
+          ],
+        },
+      },
+    ],
+    '@babel/preset-typescript',
+  ],
+  plugins: [
+    [
+      'babel-plugin-import',
+      {
+        libraryName: 'ninecat-ui',
+        libraryDirectory: '', // default: lib
+        style: true,
+      },
+    ],
+    ['@vue/babel-plugin-jsx', { mergeProps: false }],
+    '@babel/plugin-proposal-optional-chaining',
+    '@babel/plugin-transform-object-assign',
+    '@babel/plugin-proposal-object-rest-spread',
+    '@babel/plugin-proposal-export-default-from',
+    '@babel/plugin-proposal-export-namespace-from',
+    '@babel/plugin-proposal-class-properties',
+  ],
+};
 
 module.exports = {
   resolve: {
@@ -26,9 +65,8 @@ module.exports = {
       }, {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        }
+        loader: 'babel-loader',
+        options: babelConfig,
       }, {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         use: {

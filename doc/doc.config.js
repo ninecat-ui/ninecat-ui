@@ -37,6 +37,17 @@ export default {
                   return import('./markdown/nAbout/zh-CN/index.md');
                 }
               }
+            },
+            {
+              path: '/nTest',
+              title: 'TEST',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/test/test.vue');
+                } else {
+                  return import('./markdown/test/test.vue');
+                }
+              }
             }
           ]
         }

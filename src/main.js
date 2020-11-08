@@ -27,8 +27,8 @@ import nList from '../packages/nList';
 import nToggle from '../packages/nToggle';
 import nRate from '../packages/nRate';
 import nTooltip from '../packages/nTooltip';
-import nTree from '../packages/nTree';
-// import nTag from '../packages/nTag';
+// import nTree from '../packages/nTree';
+import nTag from '../packages/nTag';
 import nCheckbox from '../packages/n-checkbox';
 import locale from './locale/index';
 
@@ -54,9 +54,9 @@ const components = {
   nCard,
   nToggle,
   nRate,
-  nTree,
+  // nTree,
   nTooltip,
-  // nTag,
+  nTag,
   nSidenav,
   nSidenavItem,
   nSubSidenav,
