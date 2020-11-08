@@ -13,24 +13,11 @@
 </template>
 
 <script>
-import Vue from 'vue';
 import nHeader from './components/nHeader';
 import nNav from './components/nNav';
 import nContainer from './components/nContainer';
 import config from './doc.config';
-import demoBlock from './components/nDemoBlock';
-import hljs from 'highlight.js/lib/highlight';
-import 'highlight.js/styles/github.css';
 import './style/index.scss';
-Vue.directive('highlight', function (el) {
-  let blocks = el.querySelectorAll('pre code');
-  blocks.forEach((block) => {
-    hljs.highlightBlock(block);
-  });
-});
-
-Vue.component('demo-block', demoBlock);
-
 export default {
   name: 'App',
   components: { nHeader, nNav, nContainer },

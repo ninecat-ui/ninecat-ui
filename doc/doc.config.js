@@ -28,9 +28,27 @@ export default {
         {
           list: [
             {
-              path: '/about',
-              title: aboutString
+              path: '/nAbout',
+              title: aboutString,
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nAbout/en-US/index.md');
+                } else {
+                  return import('./markdown/nAbout/zh-CN/index.md');
+                }
+              }
             }
+            // {
+            //   path: '/nTest',
+            //   title: 'TEST',
+            //   component: () => {
+            //     if (localLang === 'en-US') {
+            //       return import('./markdown/test/test.vue');
+            //     } else {
+            //       return import('./markdown/test/test.vue');
+            //     }
+            //   }
+            // }
           ]
         }
       ]
@@ -43,7 +61,14 @@ export default {
           list: [
             {
               path: '/nGrid',
-              title: 'Grid'
+              title: 'Grid',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nGrid/en-US/index.md');
+                } else {
+                  return import('./markdown/nGrid/zh-CN/index.md');
+                }
+              }
             }
           ]
         },
@@ -52,51 +77,135 @@ export default {
           list: [
             {
               path: '/nButton',
-              title: 'Button'
+              title: 'Button',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nButton/en-US/index.md');
+                } else {
+                  return import('./markdown/nButton/zh-CN/index.md');
+                }
+              }
             },
             {
               path: '/nBadge',
-              title: 'Badge'
+              title: 'Badge',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nBadge/en-US/index.md');
+                } else {
+                  return import('./markdown/nBadge/zh-CN/index.md');
+                }
+              }
             },
             {
               path: '/nLoader',
-              title: 'Loader'
+              title: 'Loader',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nLoader/en-US/index.md');
+                } else {
+                  return import('./markdown/nLoader/zh-CN/index.md');
+                }
+              }
             },
             {
               path: '/nAlert',
-              name: 'Alert'
+              name: 'Alert',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nAlert/en-US/index.md');
+                } else {
+                  return import('./markdown/nAlert/zh-CN/index.md');
+                }
+              }
             },
             {
               path: '/nMessage',
-              name: 'Message'
+              name: 'Message',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nMessage/en-US/index.md');
+                } else {
+                  return import('./markdown/nMessage/zh-CN/index.md');
+                }
+              }
             },
             {
               path: '/nModal',
-              name: 'Modal'
+              name: 'Modal',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nModal/en-US/index.md');
+                } else {
+                  return import('./markdown/nModal/zh-CN/index.md');
+                }
+              }
             },
             {
               path: '/nDrawer',
-              name: 'Drawer'
+              name: 'Drawer',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nDrawer/en-US/index.md');
+                } else {
+                  return import('./markdown/nDrawer/zh-CN/index.md');
+                }
+              }
             },
             {
               path: '/nProgress',
-              name: 'Progress'
+              name: 'Progress',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nProgress/en-US/index.md');
+                } else {
+                  return import('./markdown/nProgress/zh-CN/index.md');
+                }
+              }
             },
             {
               path: '/nCard',
-              name: 'Card'
+              name: 'Card',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nCard/en-US/index.md');
+                } else {
+                  return import('./markdown/nCard/zh-CN/index.md');
+                }
+              }
             },
             {
               path: '/nTooltip',
-              name: 'Tooltip'
+              name: 'Tooltip',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nTooltip/en-US/index.md');
+                } else {
+                  return import('./markdown/nTooltip/zh-CN/index.md');
+                }
+              }
             },
             {
               path: '/nTag',
-              name: 'Tag'
+              name: 'Tag',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nTag/en-US/index.md');
+                } else {
+                  return import('./markdown/nTag/zh-CN/index.md');
+                }
+              }
             },
             {
               path: '/nSidenav',
-              name: 'Sidenav'
+              name: 'Sidenav',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nSidenav/en-US/index.md');
+                } else {
+                  return import('./markdown/nSidenav/zh-CN/index.md');
+                }
+              }
             }
           ]
         },

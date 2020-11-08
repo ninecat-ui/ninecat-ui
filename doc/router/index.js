@@ -1,17 +1,7 @@
-import VueRouter from 'vue-router';
-import Vue from 'vue';
+import { createRouter, createWebHashHistory } from 'vue-router';
+import { nextTick } from 'vue';
 import hljs from 'highlight.js';
 import docConfig from '../doc.config';
-import { getLang } from '../util/lang';
-
-const localLang = getLang();
-
-function loadDoc (lang, path) {
-  const docLang = lang;
-  return resolve => require.ensure([], () => resolve(require(`../markdown${path}/${docLang}/index.md`)));
-}
-
-Vue.use(VueRouter);
 
 export const commonRoutes = [
   {
@@ -20,15 +10,7 @@ export const commonRoutes = [
     meta: {
       name: 'HomePage'
     },
-    component: loadDoc(localLang, '/about')
-  },
-  {
-    path: '/ninecat-ui',
-    name: 'about',
-    meta: {
-      name: 'HomePage'
-    },
-    component: loadDoc(localLang, '/about')
+    component: () => import('../markdown/nAbout/zh-CN/index.md')
   }
 ];
 
@@ -46,7 +28,7 @@ navConfig.forEach(navItem => {
           meta: {
             name: item.path.slice(1)
           },
-          component: loadDoc(localLang, item.path)
+          component: item.component
         });
       }
     });
@@ -55,12 +37,13 @@ navConfig.forEach(navItem => {
 
 const routes = componentRoutes.concat(commonRoutes);
 
-const router = new VueRouter({
+const router = createRouter({
+  history: createWebHashHistory(),
   routes: routes
 });
 
 router.afterEach(route => {
-  Vue.nextTick(() => {
+  nextTick(() => {
     const blocks = document.querySelectorAll('pre code:not(.hljs)');
     Array.prototype.forEach.call(blocks, hljs.highlightBlock);
   });

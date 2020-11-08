@@ -1,5 +1,7 @@
-const { compileTemplate } = require('@vue/component-compiler-utils');
-const compiler = require('vue-template-compiler');
+const { compileTemplate } = require('@vue/compiler-sfc');
+const { compile } =  require('@vue/compiler-dom')
+
+const compiler = { compile }
 
 function stripScript(content) {
   const result = content.match(/<(script)>([\s\S]+)<\/\1>/);
@@ -11,13 +13,15 @@ function stripStyle(content) {
   return result && result[2] ? result[2].trim() : '';
 }
 
-// 编写例子时不一定有 template。所以采取的方案是剔除其他的内容
 function stripTemplate(content) {
   content = content.trim();
   if (!content) {
     return content;
   }
-  return content.replace(/<(script|style)[\s\S]+<\/\1>/g, '').trim();
+  // return content.replace(/<(script|style)[\s\S]+<\/\1>/g, '').trim();
+  const templateEndIndex = content.indexOf('</template>')
+  const html = content.slice(10,templateEndIndex)
+  return html
 }
 
 function pad(source) {
@@ -31,7 +35,7 @@ function genInlineComponentText(template, script) {
   // https://github.com/vuejs/vue-loader/blob/423b8341ab368c2117931e909e2da9af74503635/lib/loaders/templateLoader.js#L46
   const finalOptions = {
     source: `<div>${template}</div>`,
-    filename: 'inline-component', // TODO：这里有待调整
+    filename: 'inline-component',
     compiler
   };
   const compiled = compileTemplate(finalOptions);
@@ -52,7 +56,9 @@ function genInlineComponentText(template, script) {
   let demoComponentContent = `
     ${compiled.code}
   `;
-  // todo: 这里采用了硬编码有待改进
+  const vueIndex = demoComponentContent.indexOf('vue')
+  demoComponentContent = demoComponentContent.slice(vueIndex + 4);
+  demoComponentContent = demoComponentContent.replace(/export/, '');
   script = script.trim();
   if (script) {
     script = script.replace(/export\s+default/, 'const democomponentExport =');
@@ -64,10 +70,11 @@ function genInlineComponentText(template, script) {
     ${script}
     return {
       render,
-      staticRenderFns,
-      ...democomponentExport
+      ...democomponentExport,
     }
   })()`;
+
+
   return demoComponentContent;
 }
 

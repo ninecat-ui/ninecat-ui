@@ -1,4 +1,4 @@
-import { defineComponent } from '@vue/composition-api';
+import { defineComponent,App } from 'vue';
 import './index.scss';
 
 
@@ -9,8 +9,7 @@ function getStyle(color:any) {
   }
 }
 
-
-export default defineComponent({
+const NTag = defineComponent({
   name: 'NTag',
   props: {
     type: {
@@ -37,3 +36,10 @@ export default defineComponent({
     )
   }
 })
+
+NTag.install = function(app: App) {
+  app.component(NTag.name, NTag);
+  return app;
+};
+
+export default NTag;

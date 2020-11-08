@@ -1,4 +1,4 @@
-import { defineComponent,onMounted } from '@vue/composition-api';
+import { defineComponent,App } from 'vue';
 import './index.scss';
 
 interface stepProps {
@@ -10,7 +10,7 @@ interface stepProps {
   active: boolean,
 }
 
-export default defineComponent({
+const NStep = defineComponent({
   name: 'NStep',
   props: ['title','description','isLatest','index', 'active', 'vertical'],
   setup(props:stepProps, {slots}) {
@@ -30,3 +30,10 @@ export default defineComponent({
     )
   }
 })
+
+NStep.install = function(app: App) {
+  app.component(NStep.name, NStep);
+  return app;
+};
+
+export default NStep;

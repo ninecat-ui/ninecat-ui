@@ -5,7 +5,7 @@ const {
 } = require('./util');
 const md = require('./config');
 
-module.exports = function(source) {
+module.exports = function (source) {
   const content = md.render(source);
 
   const startTag = '<!--ninecat-demo:';
@@ -28,7 +28,7 @@ module.exports = function(source) {
     const script = stripScript(commentContent);
     let demoComponentContent = genInlineComponentText(html, script);
     const demoComponentName = `ninecat-demo${id}`;
-    output.push(`<template slot="source"><${demoComponentName} /></template>`);
+    output.push(`<template v-slot:source><${demoComponentName} /></template>`);
     componenetsString += `${JSON.stringify(demoComponentName)}: ${demoComponentContent},`;
 
     // 重新计算下一次的位置
@@ -41,6 +41,7 @@ module.exports = function(source) {
   let pageScript = '';
   if (componenetsString) {
     pageScript = `<script>
+      import { createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock } from "vue"
       export default {
         name: 'component-doc',
         components: {
@@ -54,12 +55,14 @@ module.exports = function(source) {
   }
 
   output.push(content.slice(start));
-  return `
-    <template>
-      <section>
-        ${output.join('')}
-      </section>
-    </template>
-    ${pageScript}
-  `;
+
+  const res = `
+  <template>
+    <section>
+      ${output.join('')}
+    </section>
+  </template>
+  ${pageScript}
+`
+  return res;
 };
