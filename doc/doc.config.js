@@ -231,11 +231,18 @@ export default {
             {
               path: '/nTree',
               name: 'Tree'
-            },
-            {
-              path: '/nSteps',
-              name: 'Steps'
             }
+            // {
+            //   path: '/nSteps',
+            //   name: 'Steps',
+            //   component: () => {
+            //     if (localLang === 'en-US') {
+            //       return import('./markdown/nSteps/en-US/index.md');
+            //     } else {
+            //       return import('./markdown/nSteps/zh-CN/index.md');
+            //     }
+            //   }
+            // }
           ]
         },
         {

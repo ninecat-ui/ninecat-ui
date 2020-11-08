@@ -7,8 +7,8 @@ import nBadge from '../packages/n-badge';
 import nSidenav from '../packages/n-sidenav';
 import nSidenavItem from '../packages/n-sidenav-item';
 import nSubSidenav from '../packages/n-sub-sidenav';
-// import nSteps from '../packages/n-steps';
-// import nStep from '../packages/n-step';
+import nSteps from '../packages/n-steps';
+import nStep from '../packages/n-step/index.tsx';
 import nCard from '../packages/nCard';
 import nLoader from '../packages/nLoader';
 import nIcon from '../packages/nIcon';
@@ -28,7 +28,7 @@ import nToggle from '../packages/nToggle';
 import nRate from '../packages/nRate';
 import nTooltip from '../packages/nTooltip';
 // import nTree from '../packages/nTree';
-// import nTag from '../packages/nTag';
+import nTag from '../packages/nTag/index.tsx';
 import nCheckbox from '../packages/n-checkbox';
 import locale from './locale/index';
 
@@ -56,12 +56,12 @@ const components = {
   nRate,
   // nTree,
   nTooltip,
-  // nTag,
+  nTag,
   nSidenav,
   nSidenavItem,
   nSubSidenav,
-  // nSteps,
-  // nStep,
+  nSteps,
+  nStep,
   nCheckbox
 };
 

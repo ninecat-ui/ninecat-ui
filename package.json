@@ -34,6 +34,7 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "@vue/composition-api": "^1.0.0-beta.19",
     "core-js": "^3.6.5",
     "vue": "^3.0.2",
     "vue-types": "^2.0.2"

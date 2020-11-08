@@ -12,7 +12,6 @@ interface stepProps {
 
 const NStep = defineComponent({
   name: 'NStep',
-  props: ['title','description','isLatest','index', 'active', 'vertical'],
   setup(props:stepProps, {slots}) {
     return () => (
       <div class={['n-step',props.active ? 'active' : '',!props.vertical ? 'n-step-center' : '']}>
