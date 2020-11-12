@@ -49,11 +49,11 @@ export default {
   },
   computed: {
     currentPage () {
-      const { path } = this.$route;
-      if (path) {
-        return path.split('/').slice(-1)[0];
-      }
-      return this.$route.name;
+      // const { path } = this.$route;
+      // if (path) {
+      //   return path.split('/').slice(-1)[0];
+      // }
+      // return this.$route.name;
     },
     currentGithubUrl () {
       const lang = sessionStorage.getItem('lang');

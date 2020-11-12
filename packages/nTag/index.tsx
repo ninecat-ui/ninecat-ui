@@ -1,5 +1,5 @@
 import { defineComponent,App } from 'vue';
-import './index.scss';
+// import './index.scss';
 
 
 function getStyle(color:any) {

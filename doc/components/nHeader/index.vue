@@ -74,8 +74,8 @@
 </template>
 
 <script>
-import 'docsearch.js/dist/cdn/docsearch.min.css';
-import docsearch from 'docsearch.js';
+// import 'docsearch.js/dist/cdn/docsearch.min.css';
+// import docsearch from 'docsearch.js';
 import { getLang, setLang } from '../../util/lang';
 export default {
   name: 'NHeader',
@@ -101,12 +101,12 @@ export default {
   },
   mounted () {
     this.setLang();
-    docsearch({
-      apiKey: 'e3b8bf7a6a9475a23bf57ac66efc6960',
-      indexName: 'ninecat-ui',
-      inputSelector: '.ndoc-search',
-      debug: false // Set debug to true if you want to inspect the dropdown
-    });
+    // docsearch({
+    //   apiKey: 'e3b8bf7a6a9475a23bf57ac66efc6960',
+    //   indexName: 'ninecat-ui',
+    //   inputSelector: '.ndoc-search',
+    //   debug: false // Set debug to true if you want to inspect the dropdown
+    // });
   },
   methods: {
     setLang () {

@@ -12,7 +12,7 @@ const PORT = 8081
 
 module.exports = merge(baseConfig, {
   mode: 'development',
-  entry: path.resolve(__dirname, '../doc/index.js'),
+  entry: path.resolve(__dirname, '../doc/index.ts'),
   devServer: {
     clientLogLevel: 'warning',
     hot: true,
@@ -27,29 +27,7 @@ module.exports = merge(baseConfig, {
   },
 
   module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [
-          'vue-style-loader',
-          'css-loader'
-        ]
-      }, {
-        test: /\.styl(us)?$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          'stylus-loader'
-        ]
-      }, {
-        test: /\.scss$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
-          'sass-loader'
-        ]
-      }
-    ]
+    rules: []
   },
 
   plugins: [
