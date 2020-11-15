@@ -1,8 +1,8 @@
 import { defineComponent,App } from 'vue';
-// import './index.scss';
+import './index.scss';
 
 
-function getStyle(color:any) {
+function getStyle(color:string) {
   return {
     background: color,
     color:color ? '#ffffff' : ''
@@ -25,7 +25,6 @@ const NTag = defineComponent({
     }
   },
   setup(props:any, { slots }) {
-    console.log(props)
     return () => (
       <div class="n-tag">
         <div class={props.type} style={getStyle(props.color)}>

@@ -36,6 +36,7 @@ navConfig.forEach(navItem => {
 });
 
 const routes = componentRoutes.concat(commonRoutes);
+console.log(routes)
 
 const router = createRouter({
   history: createWebHashHistory(),

@@ -56,220 +56,220 @@ export default {
     {
       name: componentsString,
       groups: [
-        // {
-        //   groupName: layoutString,
-        //   list: [
-        //     {
-        //       path: '/nGrid',
-        //       title: 'Grid',
-        //       component: () => {
-        //         if (localLang === 'en-US') {
-        //           return import('./markdown/nGrid/en-US/index.md');
-        //         } else {
-        //           return import('./markdown/nGrid/zh-CN/index.md');
-        //         }
-        //       }
-        //     }
-        //   ]
-        // },
-        // {
-        //   groupName: baseComponentsString,
-        //   list: [
-        //     {
-        //       path: '/nButton',
-        //       title: 'Button',
-        //       component: () => {
-        //         if (localLang === 'en-US') {
-        //           return import('./markdown/nButton/en-US/index.md');
-        //         } else {
-        //           return import('./markdown/nButton/zh-CN/index.md');
-        //         }
-        //       }
-        //     },
-        //     {
-        //       path: '/nBadge',
-        //       title: 'Badge',
-        //       component: () => {
-        //         if (localLang === 'en-US') {
-        //           return import('./markdown/nBadge/en-US/index.md');
-        //         } else {
-        //           return import('./markdown/nBadge/zh-CN/index.md');
-        //         }
-        //       }
-        //     },
-        //     {
-        //       path: '/nLoader',
-        //       title: 'Loader',
-        //       component: () => {
-        //         if (localLang === 'en-US') {
-        //           return import('./markdown/nLoader/en-US/index.md');
-        //         } else {
-        //           return import('./markdown/nLoader/zh-CN/index.md');
-        //         }
-        //       }
-        //     },
-        //     {
-        //       path: '/nAlert',
-        //       name: 'Alert',
-        //       component: () => {
-        //         if (localLang === 'en-US') {
-        //           return import('./markdown/nAlert/en-US/index.md');
-        //         } else {
-        //           return import('./markdown/nAlert/zh-CN/index.md');
-        //         }
-        //       }
-        //     },
-        //     {
-        //       path: '/nMessage',
-        //       name: 'Message',
-        //       component: () => {
-        //         if (localLang === 'en-US') {
-        //           return import('./markdown/nMessage/en-US/index.md');
-        //         } else {
-        //           return import('./markdown/nMessage/zh-CN/index.md');
-        //         }
-        //       }
-        //     },
-        //     {
-        //       path: '/nModal',
-        //       name: 'Modal',
-        //       component: () => {
-        //         if (localLang === 'en-US') {
-        //           return import('./markdown/nModal/en-US/index.md');
-        //         } else {
-        //           return import('./markdown/nModal/zh-CN/index.md');
-        //         }
-        //       }
-        //     },
-        //     {
-        //       path: '/nDrawer',
-        //       name: 'Drawer',
-        //       component: () => {
-        //         if (localLang === 'en-US') {
-        //           return import('./markdown/nDrawer/en-US/index.md');
-        //         } else {
-        //           return import('./markdown/nDrawer/zh-CN/index.md');
-        //         }
-        //       }
-        //     },
-        //     {
-        //       path: '/nProgress',
-        //       name: 'Progress',
-        //       component: () => {
-        //         if (localLang === 'en-US') {
-        //           return import('./markdown/nProgress/en-US/index.md');
-        //         } else {
-        //           return import('./markdown/nProgress/zh-CN/index.md');
-        //         }
-        //       }
-        //     },
-        //     {
-        //       path: '/nCard',
-        //       name: 'Card',
-        //       component: () => {
-        //         if (localLang === 'en-US') {
-        //           return import('./markdown/nCard/en-US/index.md');
-        //         } else {
-        //           return import('./markdown/nCard/zh-CN/index.md');
-        //         }
-        //       }
-        //     },
-        //     {
-        //       path: '/nTooltip',
-        //       name: 'Tooltip',
-        //       component: () => {
-        //         if (localLang === 'en-US') {
-        //           return import('./markdown/nTooltip/en-US/index.md');
-        //         } else {
-        //           return import('./markdown/nTooltip/zh-CN/index.md');
-        //         }
-        //       }
-        //     },
-        //     {
-        //       path: '/nTag',
-        //       name: 'Tag',
-        //       component: () => {
-        //         if (localLang === 'en-US') {
-        //           return import('./markdown/nTag/en-US/index.md');
-        //         } else {
-        //           return import('./markdown/nTag/zh-CN/index.md');
-        //         }
-        //       }
-        //     },
-        //     {
-        //       path: '/nSidenav',
-        //       name: 'Sidenav',
-        //       component: () => {
-        //         if (localLang === 'en-US') {
-        //           return import('./markdown/nSidenav/en-US/index.md');
-        //         } else {
-        //           return import('./markdown/nSidenav/zh-CN/index.md');
-        //         }
-        //       }
-        //     }
-        //   ]
-        // },
-        // {
-        //   groupName: dataString,
-        //   list: [
-        //     {
-        //       path: '/nAvatar',
-        //       name: 'Avatar'
-        //     },
-        //     {
-        //       path: '/nTable',
-        //       name: 'Table'
-        //     },
-        //     {
-        //       path: '/nList',
-        //       name: 'List'
-        //     },
-        //     {
-        //       path: '/nPagination',
-        //       name: 'Pagination'
-        //     },
-        //     {
-        //       path: '/nTree',
-        //       name: 'Tree'
-        //     }
-        //     // {
-        //     //   path: '/nSteps',
-        //     //   name: 'Steps',
-        //     //   component: () => {
-        //     //     if (localLang === 'en-US') {
-        //     //       return import('./markdown/nSteps/en-US/index.md');
-        //     //     } else {
-        //     //       return import('./markdown/nSteps/zh-CN/index.md');
-        //     //     }
-        //     //   }
-        //     // }
-        //   ]
-        // },
-        // {
-        //   groupName: dataEntryString,
-        //   list: [
-        //     {
-        //       path: '/nInput',
-        //       name: 'Input'
-        //     },
-        //     {
-        //       path: '/nCheckbox',
-        //       name: 'Checkbox'
-        //     },
-        //     {
-        //       path: '/nUpload',
-        //       name: 'Upload'
-        //     },
-        //     {
-        //       path: '/nToggle',
-        //       name: 'Toggle'
-        //     },
-        //     {
-        //       path: '/nRate',
-        //       name: 'Rate'
-        //     }
-        //   ]
-        // }
+        {
+          groupName: layoutString,
+          list: [
+            {
+              path: '/nGrid',
+              title: 'Grid',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nGrid/en-US/index.md');
+                } else {
+                  return import('./markdown/nGrid/zh-CN/index.md');
+                }
+              }
+            }
+          ]
+        },
+        {
+          groupName: baseComponentsString,
+          list: [
+            {
+              path: '/nButton',
+              title: 'Button',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nButton/en-US/index.md');
+                } else {
+                  return import('./markdown/nButton/zh-CN/index.md');
+                }
+              }
+            },
+            {
+              path: '/nBadge',
+              title: 'Badge',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nBadge/en-US/index.md');
+                } else {
+                  return import('./markdown/nBadge/zh-CN/index.md');
+                }
+              }
+            },
+            {
+              path: '/nLoader',
+              title: 'Loader',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nLoader/en-US/index.md');
+                } else {
+                  return import('./markdown/nLoader/zh-CN/index.md');
+                }
+              }
+            },
+            {
+              path: '/nAlert',
+              name: 'Alert',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nAlert/en-US/index.md');
+                } else {
+                  return import('./markdown/nAlert/zh-CN/index.md');
+                }
+              }
+            },
+            {
+              path: '/nMessage',
+              name: 'Message',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nMessage/en-US/index.md');
+                } else {
+                  return import('./markdown/nMessage/zh-CN/index.md');
+                }
+              }
+            },
+            {
+              path: '/nModal',
+              name: 'Modal',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nModal/en-US/index.md');
+                } else {
+                  return import('./markdown/nModal/zh-CN/index.md');
+                }
+              }
+            },
+            {
+              path: '/nDrawer',
+              name: 'Drawer',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nDrawer/en-US/index.md');
+                } else {
+                  return import('./markdown/nDrawer/zh-CN/index.md');
+                }
+              }
+            },
+            {
+              path: '/nProgress',
+              name: 'Progress',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nProgress/en-US/index.md');
+                } else {
+                  return import('./markdown/nProgress/zh-CN/index.md');
+                }
+              }
+            },
+            {
+              path: '/nCard',
+              name: 'Card',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nCard/en-US/index.md');
+                } else {
+                  return import('./markdown/nCard/zh-CN/index.md');
+                }
+              }
+            },
+            {
+              path: '/nTooltip',
+              name: 'Tooltip',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nTooltip/en-US/index.md');
+                } else {
+                  return import('./markdown/nTooltip/zh-CN/index.md');
+                }
+              }
+            },
+            {
+              path: '/nTag',
+              name: 'Tag',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nTag/en-US/index.md');
+                } else {
+                  return import('./markdown/nTag/zh-CN/index.md');
+                }
+              }
+            },
+            {
+              path: '/nSidenav',
+              name: 'Sidenav',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nSidenav/en-US/index.md');
+                } else {
+                  return import('./markdown/nSidenav/zh-CN/index.md');
+                }
+              }
+            }
+          ]
+        },
+        {
+          groupName: dataString,
+          list: [
+            {
+              path: '/nAvatar',
+              name: 'Avatar'
+            },
+            {
+              path: '/nTable',
+              name: 'Table'
+            },
+            {
+              path: '/nList',
+              name: 'List'
+            },
+            {
+              path: '/nPagination',
+              name: 'Pagination'
+            },
+            {
+              path: '/nTree',
+              name: 'Tree'
+            }
+            // {
+            //   path: '/nSteps',
+            //   name: 'Steps',
+            //   component: () => {
+            //     if (localLang === 'en-US') {
+            //       return import('./markdown/nSteps/en-US/index.md');
+            //     } else {
+            //       return import('./markdown/nSteps/zh-CN/index.md');
+            //     }
+            //   }
+            // }
+          ]
+        },
+        {
+          groupName: dataEntryString,
+          list: [
+            {
+              path: '/nInput',
+              name: 'Input'
+            },
+            {
+              path: '/nCheckbox',
+              name: 'Checkbox'
+            },
+            {
+              path: '/nUpload',
+              name: 'Upload'
+            },
+            {
+              path: '/nToggle',
+              name: 'Toggle'
+            },
+            {
+              path: '/nRate',
+              name: 'Rate'
+            }
+          ]
+        }
       ]
     }]
 };
