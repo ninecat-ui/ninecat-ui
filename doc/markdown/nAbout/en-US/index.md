@@ -6,8 +6,8 @@ Ninecat-ui
       <img src="https://travis-ci.com/ninecat-ui/ninecat-ui.svg?branch=master">
       <img src="https://codecov.io/gh/ninecat-ui/ninecat-ui/branch/master/graph/badge.svg">
       <img src="https://img.shields.io/badge/license-MIT-000000.svg">
-      <img src="https://img.shields.io/badge/webpack-4-blue.svg">
-      <img src="https://img.shields.io/badge/vue-2.6.10-green.svg">
+      <img src="https://img.shields.io/badge/webpack-5-blue.svg">
+      <img src="https://img.shields.io/badge/vue-3.0.2-green.svg">
   </h1>
 
 
@@ -16,7 +16,9 @@ Ninecat-ui
 
 ## Supporting environment
  Supports all major modern browsers.
-
+| <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />IE | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />Edge | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />Firefox | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />Chrome | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />Safari |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| >=11                                                                                                                                                 | >= 14                                                                                                                                                  | >= 45                                                                                                                                                         | >=49                                                                                                                                                       | >=10                                                                                                                                                      |
 
 ## Install
 

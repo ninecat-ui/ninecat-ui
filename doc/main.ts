@@ -1,5 +1,5 @@
 
-import './../assets/font/iconfont.css';
+import './../assets/font/iconfont.scss';
 import { createApp } from 'vue';
 import App from './index.vue';
 import ninecat from '../src/index';

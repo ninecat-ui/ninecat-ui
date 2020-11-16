@@ -1,5 +1,6 @@
 const path = require('path')
 const utils = require('./utils')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/dist/plugin').default;
 const WebpackBar = require('webpackbar');
@@ -46,12 +47,13 @@ const babelConfig = {
 };
 
 module.exports = (env = {}) => ({
-  mode: env.prod ? 'production' : 'development',
+  mode: 'development',
   devtool: 'cheap-module-source-map',
   entry: path.resolve(__dirname, '../doc/main.ts'),
   output: {
     path: path.resolve(__dirname, '../dist'),
-    publicPath: '/dist/'
+    publicPath: '/dist/',
+    filename: "main.js",
   },
   module: {
     rules: [
@@ -122,7 +124,6 @@ module.exports = (env = {}) => ({
       {
         test: /\.css$/,
         use: [
-          'vue-style-loader',
           'css-loader',
         ]
       },
@@ -159,6 +160,9 @@ module.exports = (env = {}) => ({
     }),
     new VueLoaderPlugin(),
     new WebpackBar(),
+    new webpack.ProvidePlugin({
+      process: 'process/browser',
+    }),
     new FriendlyErrorsWebpackPlugin({
       compilationSuccessInfo: {
         messages: [

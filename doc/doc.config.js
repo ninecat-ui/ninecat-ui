@@ -27,28 +27,17 @@ export default {
       groups: [
         {
           list: [
-            // {
-            //   path: '/nAbout',
-            //   title: aboutString,
-            //   component: () => {
-            //     if (localLang === 'en-US') {
-            //       return import('./markdown/nAbout/en-US/index.md');
-            //     } else {
-            //       return import('./markdown/nAbout/zh-CN/index.md');
-            //     }
-            //   }
-            // }
-            // {
-            //   path: '/nTest',
-            //   title: 'TEST',
-            //   component: () => {
-            //     if (localLang === 'en-US') {
-            //       return import('./markdown/test/test.vue');
-            //     } else {
-            //       return import('./markdown/test/test.vue');
-            //     }
-            //   }
-            // }
+            {
+              path: '/nAbout',
+              title: aboutString,
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nAbout/en-US/index.md');
+                } else {
+                  return import('./markdown/nAbout/zh-CN/index.md');
+                }
+              }
+            }
           ]
         }
       ]

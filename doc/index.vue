@@ -7,8 +7,6 @@
       :config="config.navConfig"
     />
     <n-container>
-      <!-- <n-tag>TEST</n-tag>
-      <n-button>按钮</n-button> -->
       <router-view />
     </n-container>
   </div>
