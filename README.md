@@ -8,7 +8,7 @@
 
 <h1 align="center">ninecat-ui</h1>
 
-<h3 align="center">A Light Vue 2.0 Web UI Framework</h3>
+<h3 align="center">A Light Vue 3.0 Web UI Framework</h3>
 
 
 
@@ -86,6 +86,8 @@ $ yarn install
 $ yarn start
 ```
 
+Use Vue3 to refactor component（Doing and need help）
+
 ## ✅ Todo List
 
 - [x] Document directory custom configuration.
@@ -102,6 +104,7 @@ $ yarn start
 - [ ] Color theme customization.
 - [ ] Globalization.
 - [x] Mixed develop with typescript and JavaScript.
+- [x] Use Vue3 to refactor component（Doing and need help）.
 
 ## 🤝 Join Discussion Group
 

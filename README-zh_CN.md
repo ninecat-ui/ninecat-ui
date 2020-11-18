@@ -6,7 +6,7 @@
 
 <h1 align="center">ninecat-ui</h1>
 
-<h3 align="center">一个清爽的Vue 2.0 UI Web框架</h3>
+<h3 align="center">一个清爽的Vue 3.0 UI Web框架</h3>
 
 
 
@@ -81,6 +81,8 @@ $ cd ninecat-ui
 $ yarn install
 $ yarn start
 ```
+
+现在正在用VUE3重构组件，需要帮助，和我一下啊！
 
 ## ✅ Todo List
 
