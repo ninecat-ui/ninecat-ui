@@ -80,11 +80,12 @@ export default {
     sizeClass () {
       const { size } = this;
       return size;
-    }
+    },
   },
+  emits: ['update:show'],
   methods: {
     closeModal () {
-      this.$emit('update:show', false);
+      this.modalShow = false
     },
     nconfirm () {
       if (typeof this.confirm === 'function') {
