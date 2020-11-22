@@ -1,7 +1,7 @@
 <template>
   <transition name="nmodal">
     <div
-      v-if="show"
+      v-if="modalShow"
       class="n-modal-wrapper"
     >
       <div
@@ -75,6 +75,12 @@ export default {
       type: Function,
       default: function () {}
     }
+  },
+  data () {
+    modalShow: false
+  },
+  mouted () {
+    this.modalShow = false
   },
   computed: {
     sizeClass () {

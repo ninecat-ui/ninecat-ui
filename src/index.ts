@@ -3,7 +3,7 @@ import { App } from 'vue';
 import { default as nTag } from '../packages/nTag';
 import nAlert from '../packages/n-alert';
 import nAvatar from '../packages/n-avatar';
-import nButton from '../packages/n-button';
+import { default as nButton } from '../packages/n-button/index';
 import nButtonGroup from '../packages/n-button-group';
 import nBadge from '../packages/n-badge';
 import nSidenav from '../packages/n-sidenav';

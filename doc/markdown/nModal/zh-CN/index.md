@@ -16,7 +16,7 @@
     打开 Modal
   </n-button>
   <n-modal
-    :show.sync="modalShow"
+    :show="modalShow"
     :title="modalTitle"
     :confirm="confirm"
     :cancel="cancel"
