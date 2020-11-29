@@ -203,7 +203,14 @@ export default {
           list: [
             {
               path: '/nAvatar',
-              name: 'Avatar'
+              name: 'Avatar',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nAvatar/en-US/index.md');
+                } else {
+                  return import('./markdown/nAvatar/zh-CN/index.md');
+                }
+              }
             },
             {
               path: '/nTable',

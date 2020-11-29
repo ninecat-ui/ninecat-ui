@@ -2,7 +2,7 @@
 import { App } from 'vue';
 import { default as nTag } from '../packages/nTag';
 import nAlert from '../packages/n-alert';
-import nAvatar from '../packages/n-avatar';
+import { default as nAvatar } from '../packages/n-avatar/index';
 import { default as nButton } from '../packages/n-button/index';
 import nButtonGroup from '../packages/n-button-group';
 import nBadge from '../packages/n-badge';
@@ -32,6 +32,8 @@ import nTooltip from '../packages/nTooltip';
 // import nTree from '../packages/nTree';
 // import nCheckbox from '../packages/n-checkbox';
 // import locale from './locale/index';
+console.log(nButton)
+console.log(nAvatar)
 
 const components = [
   nAlert,

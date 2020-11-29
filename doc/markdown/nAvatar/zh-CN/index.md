@@ -9,7 +9,7 @@
 :::demo
 
 ```html
-<div>
+<template>
   <div>
     <n-avatar size="lg">LG</n-avatar>
     <n-avatar size="md">MD</n-avatar>
@@ -22,7 +22,7 @@
     <n-avatar size="sm" shape="circle">SM</n-avatar>
     <n-avatar size="xs" shape="circle">XS</n-avatar>
   </div>
-</div>
+</template>
 ```
 :::
 
@@ -30,13 +30,13 @@
 支持三种类型：图片、Icon 以及字符
 :::demo
 ```html
-<div>
+<template>
   <div>
-    <n-avatar>MD</n-avatar>
-    <n-avatar src="https://avatars2.githubusercontent.com/u/12592949?s=460&v=4"/>
-    <n-avatar><n-icon name="icon-home" /></n-avatar>
+    <div><n-avatar>MD</n-avatar></div>
+    <div><n-avatar src="https://avatars2.githubusercontent.com/u/12592949?s=460&v=4"/></div>
+    <div><n-avatar><n-icon name="icon-home" /></n-avatar></div>
   </div>  
-</div>
+</template>
 ```
 :::
 

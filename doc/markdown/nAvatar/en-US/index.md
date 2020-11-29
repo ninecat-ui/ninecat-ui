@@ -8,7 +8,7 @@ Used to represent users or things, and supports pictures, icons, or character di
 The avatar is available in four sizes and two shapes.
 :::demo
 ```html
-<div>
+<template>
   <div>
     <n-avatar size="lg">LG</n-avatar>
     <n-avatar>MD</n-avatar>
@@ -22,7 +22,7 @@ The avatar is available in four sizes and two shapes.
     <n-avatar size="xs" shape="circle">XS</n-avatar>
   </div>
   
-</div>
+</template>
 ```
 :::
 
@@ -30,13 +30,13 @@ The avatar is available in four sizes and two shapes.
 Supports three types: image, icon, and character
 :::demo
 ```html
-<div>
+<template>
   <div>
-    <n-avatar>MD</n-avatar>
-    <n-avatar src="https://avatars2.githubusercontent.com/u/12592949?s=460&v=4"/>
-    <n-avatar><n-icon name="icon-home" /></n-avatar>
+    <div><n-avatar>MD</n-avatar></div>
+    <div><n-avatar src="https://avatars2.githubusercontent.com/u/12592949?s=460&v=4"/></div>
+    <div><n-avatar><n-icon name="icon-home" /></n-avatar></div>
   </div>  
-</div>
+</template>
 ```
 :::
 
