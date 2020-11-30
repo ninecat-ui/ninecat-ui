@@ -28,8 +28,10 @@ const NBadge = defineComponent({
   }
 })
 
-NBadge.install = function (Vue) {
-  Vue.component(NBadge.name, NBadge);
+NBadge.install = function(app: App) {
+  app.component(NBadge.name, NBadge);
+  return app;
 };
+
 
 export default NBadge;
