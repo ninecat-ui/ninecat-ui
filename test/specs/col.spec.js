@@ -1,4 +1,4 @@
-import nCol from '../../packages/nCol';
+import nCol from '../../packages/n-col';
 import { mount } from '@vue/test-utils';
 
 describe('nCol', () => {

@@ -1,4 +1,4 @@
-import nRow from '../../packages/nRow';
+import nRow from '../../packages/n-row';
 import { mount } from '@vue/test-utils';
 
 describe('nRow', () => {
