@@ -1,4 +1,4 @@
-// import './../assets/font/iconfont.css';
+import './../assets/font/iconfont.scss';
 import { App } from 'vue';
 import { default as nTag } from '../packages/nTag';
 import nAlert from '../packages/n-alert';

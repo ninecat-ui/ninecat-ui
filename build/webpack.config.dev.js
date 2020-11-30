@@ -124,7 +124,8 @@ module.exports = (env = {}) => ({
       {
         test: /\.css$/,
         use: [
-          'css-loader',
+          MiniCssExtractPlugin.loader,
+          'css-loader'
         ]
       },
       {

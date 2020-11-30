@@ -1,4 +1,4 @@
-import nCheckbox from './src/index';
+import nCheckbox from './src/index.vue';
 nCheckbox.install = function (Vue) {
   Vue.component('NSteps', nCheckbox);
 };
