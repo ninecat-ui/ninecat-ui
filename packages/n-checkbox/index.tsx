@@ -1,15 +1,12 @@
 import { defineComponent,App,HTMLAttributes,SetupContext } from 'vue';
-import classNames from '../../src/utils/className';
 import './index.scss';
 import { guid } from '../../src/utils/util';
 
 const initDefaultProps = {
-  autoFocus: false,
   checked: false,
   defaultChecked: false,
 }
 export interface CheckboxProps extends HTMLAttributes {
-  autoFocus?: boolean;
   checked?: boolean;
   defaultChecked?: boolean;
 }
@@ -20,7 +17,7 @@ const nCheckbox = defineComponent({
   setup(_:CheckboxProps, { slots, attrs }: SetupContext){
     const props = attrs as CheckboxProps;
 
-    const {autoFocus,checked, defaultChecked} = {...initDefaultProps,...props}
+    const {checked, defaultChecked} = {...initDefaultProps,...props}
 
     const id = guid()
     const checkeval = () => {
@@ -31,7 +28,7 @@ const nCheckbox = defineComponent({
     }
     return () => (
       <div class="n-checkbox">
-        <input id={id} v-model={checkeval()} />
+        <input id={id} type="checkbox" checked={checkeval()}/>
         <label for={id} />
         <div class="slot-text">
           {slots.default && slots.default()}

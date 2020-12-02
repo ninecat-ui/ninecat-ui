@@ -30,7 +30,7 @@ import nToggle from '../packages/nToggle';
 import nRate from '../packages/nRate';
 import nTooltip from '../packages/nTooltip';
 // import nTree from '../packages/nTree';
-// import nCheckbox from '../packages/n-checkbox';
+import {default as nCheckbox} from '../packages/n-checkbox';
 // import locale from './locale/index';
 console.log(nButton)
 console.log(nAvatar)
@@ -65,7 +65,7 @@ const components = [
   nSubSidenav,
   // nSteps,
   // nStep,
-  // nCheckbox
+  nCheckbox
 ];
 
 const install = function(app: App) {

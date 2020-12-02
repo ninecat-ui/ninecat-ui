@@ -250,7 +250,14 @@ export default {
             },
             {
               path: '/nCheckbox',
-              name: 'Checkbox'
+              name: 'Checkbox',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nCheckbox/en-US/index.md');
+                } else {
+                  return import('./markdown/nCheckbox/zh-CN/index.md');
+                }
+              }
             },
             {
               path: '/nUpload',
