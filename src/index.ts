@@ -10,8 +10,8 @@ import nSidenav from '../packages/n-sidenav';
 import nSidenavItem from '../packages/n-sidenav-item';
 import nSubSidenav from '../packages/n-sub-sidenav';
 // import nSteps from '../packages/n-steps';
-// import nStep from '../packages/n-step/index.tsx';
-import nCard from '../packages/nCard';
+import { default as nStep } from '../packages/n-step';
+import { default as nCard } from '../packages/n-card';
 import nLoader from '../packages/nLoader';
 import nIcon from '../packages/nIcon';
 import nMessage from '../packages/nMessage';
@@ -64,7 +64,7 @@ const components = [
   nSidenavItem,
   nSubSidenav,
   // nSteps,
-  // nStep,
+  nStep,
   nCheckbox
 ];
 

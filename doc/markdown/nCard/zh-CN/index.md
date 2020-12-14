@@ -20,8 +20,8 @@
   export default {
     data () {
       return {
-        src: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1585736912147&di=b569099e49bb8d6216841e4819d98222&imgtype=0&src=http%3A%2F%2Fa4.att.hudong.com%2F21%2F09%2F01200000026352136359091694357.jpg',
-        description:'鸟，又称作鸟儿。定义：体表被覆羽毛的卵生脊椎动物，鸟的主要特征是：身体呈流线型（纺锤型或梭形），大多数飞翔生活。'
+        src: 'https://github.com/ninecat-ui/ninecat-ui/raw/master/static/Screenshot_en_new.png?raw=true',
+        description:'ninecat-ui,一个清爽的Vue 3.0 UI Web框架'
       }
     }
   }
@@ -31,11 +31,8 @@
 
 ## API
 
-| 参数 | 说明 | 类型 | 
+| 参数 | 说明 | 类型 | 默认值 |
 | :--- | :--- | :--- | :--- |
-| src | 图片地址 | String | 
-| title | 卡片标题 | String |  
-| description | 介绍内容 | String |  
-
-
-
+| src | 图片地址| String |  |
+| title | 卡片标题 | String |  |
+| description    | 介绍内容 | String     |  |

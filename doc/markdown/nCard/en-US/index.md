@@ -20,8 +20,8 @@ Use when you need to introduce something.
   export default {
     data () {
       return {
-        src: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1585736912147&di=b569099e49bb8d6216841e4819d98222&imgtype=0&src=http%3A%2F%2Fa4.att.hudong.com%2F21%2F09%2F01200000026352136359091694357.jpg',
-        description:'Birds, also called birds. Definition: Oviparous vertebrates covered with feathers on the body surface. The main characteristics of birds are: the body is streamlined (spindle or spindle), and most of them fly.'
+        src: 'https://github.com/ninecat-ui/ninecat-ui/raw/master/static/Screenshot_en_new.png?raw=true',
+        description:'ninecat-ui,A Light Vue 3.0 Web UI Framework'
       }
     }
   }

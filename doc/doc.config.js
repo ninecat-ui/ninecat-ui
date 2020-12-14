@@ -227,18 +227,18 @@ export default {
             {
               path: '/nTree',
               name: 'Tree'
+            },
+            {
+              path: '/nSteps',
+              name: 'Steps',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nSteps/en-US/index.md');
+                } else {
+                  return import('./markdown/nSteps/zh-CN/index.md');
+                }
+              }
             }
-            // {
-            //   path: '/nSteps',
-            //   name: 'Steps',
-            //   component: () => {
-            //     if (localLang === 'en-US') {
-            //       return import('./markdown/nSteps/en-US/index.md');
-            //     } else {
-            //       return import('./markdown/nSteps/zh-CN/index.md');
-            //     }
-            //   }
-            // }
           ]
         },
         {
@@ -269,7 +269,14 @@ export default {
             },
             {
               path: '/nRate',
-              name: 'Rate'
+              name: 'Rate',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nRate/en-US/index.md');
+                } else {
+                  return import('./markdown/nRate/zh-CN/index.md');
+                }
+              }
             }
           ]
         }
