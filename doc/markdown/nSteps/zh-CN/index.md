@@ -27,7 +27,7 @@
 :::demo
 ```html
 <template>
-  <n-steps :active="2" vertical>
+  <n-steps :active="2" :vertical="true">
     <n-step title="步骤1" description="步骤1描述"/>
     <n-step title="步骤2" description="步骤2描述"/>
     <n-step title="步骤3" description="步骤3描述"/>

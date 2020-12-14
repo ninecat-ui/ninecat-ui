@@ -1,29 +1,45 @@
 import { defineComponent,App } from 'vue';
 import './index.scss';
+import classNames from '../../src/utils/className';
 
 interface stepProps {
-  title: string
-  description: string,
-  index: number,
-  vertical: boolean,
-  isLatest: boolean,
-  active: boolean,
+  title?: string
+  description?: string,
+  index?: number,
+  vertical?: boolean,
+  isLatest?: boolean,
+  active?: boolean,
 }
 
 const NStep = defineComponent({
   name: 'NStep',
-  setup(props:stepProps, {slots}) {
+  setup(_:stepProps, {slots,attrs}) {
+    const {active,vertical,index,isLatest,title,description } = attrs as stepProps;
+
+    const nStepClass = () => {
+      const classList = ['n-step', active ? 'active' : '', vertical  ? '' : 'n-step-center'];
+      return classNames(classList)
+    }
+
+    const iconClass = () => {
+      const classList =['icon', active ? 'active' : '']
+      return classNames(classList)
+    }
+
+    console.log(isLatest)
+    console.log(vertical)
+
     return () => (
-      <div class={['n-step',props.active ? 'active' : '',!props.vertical ? 'n-step-center' : '']}>
+      <div class={nStepClass()}>
         <div>
-          <div class={['icon',props.active ? 'active' : '' ]}>{props.index + 1}</div>
-          { !props.isLatest && props.vertical  && <div class="vertical-line" /> }
+          <div class={iconClass()}>{index + 1}</div>
+          { !isLatest && vertical  && <div class="vertical-line" /> }
         </div>
         <div class="content">
-          <div class="title">{props.title}</div>
-          <div class="description">{props.description}</div>
+          <div class="title">{title}</div>
+          <div class="description">{description}</div>
         </div>
-        { !props.isLatest && !props.vertical && <div class="line" /> }
+        { !isLatest && !vertical && <div class="line" /> }
         {slots.default && slots.default()}
       </div>
     )

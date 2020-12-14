@@ -9,7 +9,7 @@ import nBadge from '../packages/n-badge';
 import nSidenav from '../packages/n-sidenav';
 import nSidenavItem from '../packages/n-sidenav-item';
 import nSubSidenav from '../packages/n-sub-sidenav';
-// import nSteps from '../packages/n-steps';
+import {default as nSteps}  from '../packages/n-steps';
 import { default as nStep } from '../packages/n-step';
 import { default as nCard } from '../packages/n-card';
 import nLoader from '../packages/nLoader';
@@ -63,7 +63,7 @@ const components = [
   nSidenav,
   nSidenavItem,
   nSubSidenav,
-  // nSteps,
+  nSteps,
   nStep,
   nCheckbox
 ];
@@ -103,7 +103,7 @@ export {
   nSidenav,
   nSidenavItem,
   nSubSidenav,
-  // nSteps,
+  nSteps,
   // nStep,
   // nCheckbox
 }
