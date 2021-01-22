@@ -13,7 +13,7 @@ import {default as nSteps}  from '../packages/n-steps';
 import { default as nStep } from '../packages/n-step';
 import { default as nCard } from '../packages/n-card';
 import nLoader from '../packages/nLoader';
-import nIcon from '../packages/nIcon';
+import {default as nIcon} from '../packages/n-icon';
 import nMessage from '../packages/nMessage';
 import nInput from '../packages/nInput';
 import nCol from '../packages/n-col';

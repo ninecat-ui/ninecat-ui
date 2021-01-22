@@ -15,7 +15,7 @@
         id="alertCloseIcon"
         name="icon-times"
         :class="iconClass"
-        @click.native="closeAlert"
+        @click="closeAlert"
       />
     </div>
   </div>
@@ -23,12 +23,8 @@
 
 <script>
 import './index.scss';
-import nIcon from '../../nIcon';
 export default {
   name: 'NAlert',
-  components: {
-    nIcon
-  },
   props: {
     show: {
       type: Boolean,
