@@ -25,7 +25,7 @@ import nModal from '../packages/nModal';
 import nProgress from '../packages/nProgress';
 import nDrawer from '../packages/nDrawer';
 // import nUpload from '../packages/nUpload';
-import nList from '../packages/nList';
+import {default as nList} from '../packages/n-list';
 import nToggle from '../packages/nToggle';
 import nRate from '../packages/nRate';
 import nTooltip from '../packages/nTooltip';

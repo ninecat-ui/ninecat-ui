@@ -218,7 +218,14 @@ export default {
             },
             {
               path: '/nList',
-              name: 'List'
+              name: 'List',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nList/en-US/index.md');
+                } else {
+                  return import('./markdown/nList/zh-CN/index.md');
+                }
+              }
             },
             {
               path: '/nPagination',
