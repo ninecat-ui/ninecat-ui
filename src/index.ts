@@ -1,23 +1,30 @@
 import './../assets/font/iconfont.scss';
 import { App } from 'vue';
 import { default as nTag } from '../packages/nTag';
-import nAlert from '../packages/n-alert';
+import { default as nAlert} from '../packages/n-alert';
 import { default as nAvatar } from '../packages/n-avatar/index';
 import { default as nButton } from '../packages/n-button/index';
-import nButtonGroup from '../packages/n-button-group';
-import nBadge from '../packages/n-badge';
+import { default as nButtonGroup } from '../packages/n-button-group';
+import { default as nBadge } from '../packages/n-badge';
+import { default as nSteps } from '../packages/n-steps';
+import { default as nStep } from '../packages/n-step';
+import { default as nCard } from '../packages/n-card';
+import { default as nLoader } from '../packages/n-loader';
+import { default as nIcon } from '../packages/n-icon';
+import { default as nCol } from '../packages/n-col';
+import { default as nRow } from '../packages/n-row';
+import { default as nList } from '../packages/n-list';
+import { default as nRate} from '../packages/n-rate';
+import { default as nCheckbox } from '../packages/n-checkbox';
+
+
 import nSidenav from '../packages/n-sidenav';
 import nSidenavItem from '../packages/n-sidenav-item';
 import nSubSidenav from '../packages/n-sub-sidenav';
-import {default as nSteps}  from '../packages/n-steps';
-import { default as nStep } from '../packages/n-step';
-import { default as nCard } from '../packages/n-card';
-import { default as nLoader }  from '../packages/n-loader';
-import {default as nIcon} from '../packages/n-icon';
+
 import nMessage from '../packages/nMessage';
 import nInput from '../packages/nInput';
-import nCol from '../packages/n-col';
-import nRow from '../packages/n-row';
+
 // import nToast from '../packages/nToast';
 import nTable from '../packages/nTable';
 import nPagination from '../packages/nPagination';
@@ -25,12 +32,11 @@ import nModal from '../packages/nModal';
 import nProgress from '../packages/nProgress';
 import nDrawer from '../packages/nDrawer';
 // import nUpload from '../packages/nUpload';
-import {default as nList} from '../packages/n-list';
 import nToggle from '../packages/nToggle';
-import nRate from '../packages/nRate';
+
 import nTooltip from '../packages/nTooltip';
 // import nTree from '../packages/nTree';
-import {default as nCheckbox} from '../packages/n-checkbox';
+
 // import locale from './locale/index';
 
 const components = [
@@ -66,7 +72,7 @@ const components = [
   nCheckbox
 ];
 
-const install = function(app: App) {
+const install = function (app: App) {
   components.forEach(component => {
     app.use(component as unknown as { install: () => any });
   });

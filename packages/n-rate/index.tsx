@@ -1,7 +1,4 @@
-// import nRate from './src/index.vue';
-
 import { defineComponent,App,HTMLAttributes,SetupContext } from 'vue';
-import classNames from '../../src/utils/className';
 import './index.scss';
 
 const initDefaultProps = {

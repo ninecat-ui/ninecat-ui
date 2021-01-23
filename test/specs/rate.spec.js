@@ -1,4 +1,4 @@
-import nRate from '../../packages/nRate';
+import nRate from '../../packages/n-rate';
 import { mount } from '@vue/test-utils';
 
 describe('nRate', () => {
