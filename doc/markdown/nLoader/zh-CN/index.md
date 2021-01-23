@@ -76,12 +76,12 @@
 <template>
   <n-loader
     :show="show"
-    loadding-text="加载中..."
+    loaddingText="加载中..."
   />
 
   <n-loader
     :show="show"
-    loadding-text="请等待..."
+    loaddingText="请等待..."
   />
   
 </template>

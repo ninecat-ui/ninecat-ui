@@ -49,7 +49,6 @@ export default {
   },
   computed: {
     currentPage () {
-      console.log(this.$route)
       const { path } = this.$route;
       if (path) {
         return path.split('/').slice(-1)[0];

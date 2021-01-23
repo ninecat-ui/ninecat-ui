@@ -12,7 +12,7 @@ import nSubSidenav from '../packages/n-sub-sidenav';
 import {default as nSteps}  from '../packages/n-steps';
 import { default as nStep } from '../packages/n-step';
 import { default as nCard } from '../packages/n-card';
-import nLoader from '../packages/nLoader';
+import { default as nLoader }  from '../packages/n-loader';
 import {default as nIcon} from '../packages/n-icon';
 import nMessage from '../packages/nMessage';
 import nInput from '../packages/nInput';
@@ -32,8 +32,6 @@ import nTooltip from '../packages/nTooltip';
 // import nTree from '../packages/nTree';
 import {default as nCheckbox} from '../packages/n-checkbox';
 // import locale from './locale/index';
-console.log(nButton)
-console.log(nAvatar)
 
 const components = [
   nAlert,
