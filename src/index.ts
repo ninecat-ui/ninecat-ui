@@ -16,13 +16,13 @@ import { default as nRow } from '../packages/n-row';
 import { default as nList } from '../packages/n-list';
 import { default as nRate} from '../packages/n-rate';
 import { default as nCheckbox } from '../packages/n-checkbox';
+import { default as nSidenav } from '../packages/n-sidenav';
 
 
-import nSidenav from '../packages/n-sidenav';
 import nSidenavItem from '../packages/n-sidenav-item';
 import nSubSidenav from '../packages/n-sub-sidenav';
 
-import nMessage from '../packages/nMessage';
+// import nMessage from '../packages/nMessage';
 import nInput from '../packages/nInput';
 
 // import nToast from '../packages/nToast';
