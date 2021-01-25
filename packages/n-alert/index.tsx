@@ -1,6 +1,7 @@
 import { defineComponent,ref,App, HTMLAttributes, SetupContext } from 'vue';
 import classNames from '../../src/utils/className';
 import './index.scss';
+import NIcon from '../n-icon'
 
 const initDefaultProps = {
   show: false,
@@ -28,18 +29,18 @@ const NAlert = defineComponent({
       showAlert.value = false
     }
     return () => (
-      showAlert.value && <div class={alertClass()}>
+      showAlert.value ? <div class={alertClass()}>
         <div class="alert-content">
-          <n-icon name={`icon-${type}`}/>
+          <NIcon name={`icon-${type}`}/>
           <span class="message-text">{ message }</span>
-          <n-icon
+          <NIcon
             id="alertCloseIcon"
             name="icon-times"
             class={iconClass}
             onClick={closeAlert}
           />
         </div>
-      </div>
+      </div> : null
     )
   }
 })
