@@ -1,4 +1,4 @@
-import nMessage from '../../packages/nMessage';
+import nMessage from '../../packages/n-message';
 
 describe('nMessage', () => {
   it('create', () => {
