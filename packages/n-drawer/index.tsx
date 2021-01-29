@@ -1,4 +1,4 @@
-import { defineComponent, App, HTMLAttributes, SetupContext, Transition, ref } from 'vue'
+import { defineComponent, App, HTMLAttributes, SetupContext, Transition, toRef } from 'vue'
 import './index.scss'
 import NButton from '../n-button'
 
@@ -14,50 +14,54 @@ const NDrawer = defineComponent({
 
   setup(_: DrawerProps, { slots, attrs, emit }: SetupContext) {
     const props = attrs as DrawerProps
-    // console.log(showDrawer)
-
+    const show = toRef(props, 'show')
     const closeDrawer = () => {
       emit('close', false)
     }
 
     const thisConfrim = () => {
+      props.confrim()
       closeDrawer()
     }
 
     const thisCancel = () => {
+      props.cancel()
       closeDrawer()
     }
 
     return () => (
-      props.show ? <div class="n-drawer-wrapper">
-        <div class="n-drawer-backdrop" role="button" tabindex={-1} onClick={closeDrawer}>
-        </div>
-        <div class="n-drawer">
-          <div class="n-drawer-header">
-            <div class="title">
-              {props.title}
+      <Transition name="ndrawer">
+        {show ? <div class="n-drawer-wrapper">
+          <div class="n-drawer-backdrop" role="button" tabindex={-1} onClick={closeDrawer}>
+          </div>
+          <div class="n-drawer">
+            <div class="n-drawer-header">
+              <div class="title">
+                {props.title}
+              </div>
+              <div class="close">
+                <span
+                  class="icon-close"
+                  onClick={closeDrawer}
+                />
+              </div>
             </div>
-            <div class="close">
-              <span
-                class="icon-close"
-                onClick={closeDrawer}
-              />
+            {slots.default && slots.default()}
+            <div class="n-drawer-footer">
+              <NButton
+                type="primary"
+                onClick={thisConfrim}
+              >
+                确认
+          </NButton>
+              <NButton onClick={thisCancel}>
+                取消
+          </NButton>
             </div>
           </div>
-          {slots.default && slots.default()}
-          <div class="n-drawer-footer">
-            <NButton
-              type="primary"
-              onClick={thisConfrim}
-            >
-              确认
-          </NButton>
-            <NButton onClick={thisCancel}>
-              取消
-          </NButton>
-          </div>
-        </div>
-      </div>: null
+        </div> : null}
+        
+      </Transition>
     )
   }
 })
