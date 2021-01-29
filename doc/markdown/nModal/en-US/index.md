@@ -16,10 +16,11 @@ When users need to handle transactions and do not want to jump to the page to in
     Open modal
   </n-button>
   <n-modal
-    :show.sync="modalShow"
+    :show="modalShow"
     :title="modalTitle"
     :confirm="confirm"
     :cancel="cancel"
+    @close="onClose"
   >
     <p>Some contents...</p>
     <p>Some contents...</p>
@@ -43,6 +44,9 @@ When users need to handle transactions and do not want to jump to the page to in
       },
       cancel () {
         console.log('cancel')
+      },
+      onClose () {
+        this.modalShow = false
       }
     }
   }
