@@ -1,26 +1,36 @@
-import { defineComponent, App, HTMLAttributes, SetupContext, Transition, toRef } from 'vue'
+import { defineComponent, App,PropType, SetupContext, Transition, toRef } from 'vue'
 import './index.scss'
 import NButton from '../n-button'
 
-export interface DrawerProps extends HTMLAttributes {
-  show?: boolean | string;
-  title?: string;
-  confrim?: any;
-  cancel?: any;
+const DrawerProps = {
+  show: {
+    type: Boolean as PropType<false>,
+    default: false
+  },
+  title: {
+    type: String as PropType<''>,
+    default: 'md'
+  },
+  confirm: {
+    type: Function as PropType<() => void>,
+    default: () => {}
+  },
+  cancel: {
+    type: Function as PropType<() => void>,
+    default: () => {}
+  }
 }
 
 const NDrawer = defineComponent({
   name: 'NDrawer',
-
-  setup(_: DrawerProps, { slots, attrs, emit }: SetupContext) {
-    const props = attrs as DrawerProps
-    const show = toRef(props, 'show')
+  props:DrawerProps,
+  setup(props, { slots, emit }: SetupContext) {
     const closeDrawer = () => {
       emit('close', false)
     }
 
-    const thisConfrim = () => {
-      props.confrim()
+    const thisConfirm = () => {
+      props.confirm()
       closeDrawer()
     }
 
@@ -31,7 +41,7 @@ const NDrawer = defineComponent({
 
     return () => (
       <Transition name="ndrawer">
-        {show ? <div class="n-drawer-wrapper">
+        {props.show ? <div class="n-drawer-wrapper">
           <div class="n-drawer-backdrop" role="button" tabindex={-1} onClick={closeDrawer}>
           </div>
           <div class="n-drawer">
@@ -50,7 +60,7 @@ const NDrawer = defineComponent({
             <div class="n-drawer-footer">
               <NButton
                 type="primary"
-                onClick={thisConfrim}
+                onClick={thisConfirm}
               >
                 确认
           </NButton>

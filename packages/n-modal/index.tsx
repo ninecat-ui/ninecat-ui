@@ -1,13 +1,10 @@
-import { defineComponent, App, HTMLAttributes, SetupContext, Transition, toRef, PropType } from 'vue'
+import { defineComponent, App, SetupContext, Transition, PropType } from 'vue'
 import './index.scss'
 import classNames from '../../src/utils/className';
 import NButton from '../n-button'
 
-
-const NModal = defineComponent({
-  name: 'NModal',
-  props: {
-    show: {
+const ModalProps = {
+  show: {
       type: Boolean as PropType<false>,
       default: false
     },
@@ -27,7 +24,12 @@ const NModal = defineComponent({
       type: Function as PropType<() => void>,
       default: () => {}
     }
-  },
+}
+
+
+const NModal = defineComponent({
+  name: 'NModal',
+  props: ModalProps,
   setup(props, { slots, emit }: SetupContext) {
 
     const modalClass = () => {
