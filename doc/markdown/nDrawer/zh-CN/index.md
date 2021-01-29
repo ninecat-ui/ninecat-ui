@@ -15,10 +15,11 @@
     打开抽屉
   </n-button>
   <n-drawer
-    :show.sync="drawerShow"
+    :show="drawerShow"
     :title="drawerTitle"
     :confirm="confirm"
     :cancel="cancel"
+    @close="onClose"
   >
     <p>Some contents...</p>
     <p>Some contents...</p>
@@ -42,6 +43,9 @@
       },
       cancel () {
         console.log('cancel')
+      },
+      onClose () {
+        this.drawerShow = false;
       }
     }
   }

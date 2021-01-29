@@ -18,6 +18,7 @@ import { default as nRate} from '../packages/n-rate';
 import { default as nCheckbox } from '../packages/n-checkbox';
 import { default as nSidenav } from '../packages/n-sidenav';
 import { default as nMessage } from '../packages/n-message';
+import { default as nDrawer }  from '../packages/n-drawer';
 
 import nSidenavItem from '../packages/n-sidenav-item';
 import nSubSidenav from '../packages/n-sub-sidenav';
@@ -30,7 +31,7 @@ import nTable from '../packages/nTable';
 import nPagination from '../packages/nPagination';
 import nModal from '../packages/nModal';
 import nProgress from '../packages/nProgress';
-import nDrawer from '../packages/nDrawer';
+
 // import nUpload from '../packages/nUpload';
 import nToggle from '../packages/nToggle';
 
