@@ -77,10 +77,11 @@
   </n-button>
   <n-modal
     :size="size"
-    :show.sync="modalShow"
+    :show="modalShow"
     :title="modalTitle"
     :confirm="confirm"
     :cancel="cancel"
+    @close="onClose"
   >
     <p>Some contents...</p>
     <p>Some contents...</p>
@@ -106,6 +107,9 @@
       },
       cancel () {
         console.log('cancel')
+      },
+      onClose () {
+        this.modalShow = false
       }
     }
   }

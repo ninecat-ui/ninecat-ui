@@ -1,4 +1,4 @@
-import { defineComponent, App, HTMLAttributes, SetupContext, Transition, ref, PropType } from 'vue'
+import { defineComponent, App, HTMLAttributes, SetupContext, Transition, toRef, PropType } from 'vue'
 import './index.scss'
 import classNames from '../../src/utils/className';
 import NButton from '../n-button'
@@ -30,7 +30,9 @@ const NModal = defineComponent({
   },
   setup(props, { slots, emit }: SetupContext) {
 
-    const modalClass = classNames(['n-modal', `${props.size}`])
+    const modalClass = () => {
+      return classNames(['n-modal', `${props.size}`])
+    }
 
     const closeModal = () => {
       emit('close', false)
@@ -50,7 +52,7 @@ const NModal = defineComponent({
       <Transition name="nmodal">
         {props.show ? <div class="n-modal-wrapper">
           <div class="n-modal-backdrop" role="button" tabindex={-1} onClick={closeModal} />
-          <div class={modalClass}>
+          <div class={modalClass()}>
             <div class="n-modal-content">
               <div class="n-modal-header">
                 <div class="title">

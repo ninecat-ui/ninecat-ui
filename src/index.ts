@@ -29,7 +29,7 @@ import nInput from '../packages/nInput';
 // import nToast from '../packages/nToast';
 import nTable from '../packages/nTable';
 import nPagination from '../packages/nPagination';
-import nModal from '../packages/nModal';
+import nModal from '../packages/n-modal';
 import nProgress from '../packages/nProgress';
 
 // import nUpload from '../packages/nUpload';
