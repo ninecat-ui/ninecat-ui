@@ -16,7 +16,7 @@
 ```html
 <template>
   <n-loader
-    :show="show"
+    v-model:show="show"
   />
 </template>
 <script>
@@ -40,19 +40,19 @@
 <template>
   <n-loader
     size="xs"
-    :show="show"
+    v-model:show="show"
   />
   <n-loader
     size="sm"
-    :show="show"
+    v-model:show="show"
   />
   <n-loader
     size="md"
-    :show="show"
+    v-model:show="show"
   />
   <n-loader
     size="lg"
-    :show="show"
+    v-model:show="show"
   />
 </template>
 <script>

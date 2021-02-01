@@ -13,22 +13,22 @@
 <template>
   <div >
     <n-alert
-      :show="show"
+      v-model:show="show1"
       message="Message"
       type="info"
     />
     <n-alert
-      :show="show"
+      v-model:show="show2"
       message="Message"
       type="success"
     />
     <n-alert
-      :show="show"
+      v-model:show="show3"
       message="Message"
       type="warning"
     />
     <n-alert
-      :show="show"
+      v-model:show="show4"
       message="Message"
       type="error"
     />
@@ -39,7 +39,10 @@
 export default {
   data: function () {
     return {
-      show: true
+      show1: true,
+      show2: true,
+      show3: true,
+      show4: true,
     }
   }
 }

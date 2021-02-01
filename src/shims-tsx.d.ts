@@ -8,6 +8,7 @@ declare global {
     interface ElementClass extends Vue {}
     interface IntrinsicElements {
       [elem: string]: any;
+      img: any
     }
   }
 }

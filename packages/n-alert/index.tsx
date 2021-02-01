@@ -1,38 +1,41 @@
-import { defineComponent,ref,App, HTMLAttributes, SetupContext } from 'vue';
+import { defineComponent,App, PropType, SetupContext, toRefs } from 'vue';
 import classNames from '../../src/utils/className';
 import './index.scss';
 import NIcon from '../n-icon'
 
-const initDefaultProps = {
-  show: false,
-  type: 'info',
-  message: '',
-}
 
-export interface AlterProps extends HTMLAttributes {
-  show?: boolean;
-  type?: string;
-  message?: string;
+const AlterProps = {
+  show: {
+    type: Boolean as PropType<false>,
+    default: false
+  },
+  type: {
+    type: String as PropType<''>,
+  },
+  message: {
+    type: String as PropType<''>,
+  },
 }
 
 const NAlert = defineComponent({
   name: 'NAlert',
-  setup(_: AlterProps, { attrs }: SetupContext) {
-    const props = attrs as AlterProps;
-    const { show, type, message } = { ...initDefaultProps, ...props };
-    const showAlert = ref(show)
+  props: AlterProps,
+  setup(props, { emit }: SetupContext) {
+    const { show, type, message } = toRefs(props);
+
+    
     const alertClass = () => {
-      return classNames(['base-alert', type])
+      return classNames(['base-alert', type.value])
     }
-    const iconClass = classNames([`icon-${type}`])
+    const iconClass = classNames([`icon-${type.value}`])
     const closeAlert = () => {
-      showAlert.value = false
+      emit('update:show', false);
     }
     return () => (
-      showAlert.value ? <div class={alertClass()}>
+      show.value ? <div class={alertClass()}>
         <div class="alert-content">
-          <NIcon name={`icon-${type}`}/>
-          <span class="message-text">{ message }</span>
+          <NIcon name={`icon-${type.value}`}/>
+          <span class="message-text">{ message.value }</span>
           <NIcon
             id="alertCloseIcon"
             name="icon-times"

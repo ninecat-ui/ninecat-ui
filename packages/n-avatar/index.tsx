@@ -1,50 +1,57 @@
-import { defineComponent,App,HTMLAttributes,SetupContext } from 'vue';
+import { defineComponent,PropType,App,toRefs,SetupContext,HTMLAttributes } from 'vue';
 import classNames from '../../src/utils/className';
 import './index.scss';
 
-const initDefaultProps = {
-  size: 'md',
-  shape: 'square',
-  src: '',
-  alt: '',
-  icons: ''
+const AvatarProps = {
+  size: {
+    type: String as PropType<''>,
+    default: 'md'
+  },
+  shape: {
+    type: String as PropType<''>,
+    default: 'square'
+  },
+  icon: {
+    type: String as PropType<''>,
+    default: ''
+  },
+  src: {
+    type: String as PropType<''>,
+    default: ''
+  },
+  alt: {
+    type: String as PropType<''>,
+    default: ''
+  },
 }
 
-export interface AvatarProps extends HTMLAttributes {
-  size?: string;
-  shape?: boolean;
-  src?: string;
-  alt?: string;
-  icon?: string;
-}
 
 const NAvatar = defineComponent({
   name: 'NAvatar',
-  setup(_:AvatarProps, { slots, attrs }: SetupContext) {
-    const props = attrs as AvatarProps;
-    const {size,shape,src,alt,icon} = {...initDefaultProps,...props}
+  props: AvatarProps,
+  setup(props, { slots }: SetupContext) {
     const avatarClass = () => {
       let classList = ['navatar'];
-      if (size && typeof size === 'string') {
-        classList.push(`navatar-${size}`);
+      if (props.size && typeof props.size === 'string') {
+        classList.push(`navatar-${props.size}`);
       }
-      if (icon) {
+      if (props.icon) {
         classList.push('navatar-icon');
       }
-      if (shape) {
-        classList.push(`navatar-${shape}`);
+      if (props.shape) {
+        classList.push(`navatar-${props.shape}`);
       }
       return classNames(classList);
     }
     const sizeStyle  = () => {
-      return typeof size === 'number' ? {
-        height: `${size}px`,
-        width: `${size}px`,
-        lineHeight: `${size}px`
+      return typeof props.size === 'number' ? {
+        height: `${props.size}px`,
+        width: `${props.size}px`,
+        lineHeight: `${props.size}px`
       } : {};
     }
     const bgStyle = () => {
-      if (src) {
+      if (props.src) {
         return {};
       } else {
         return {
@@ -59,11 +66,11 @@ const NAvatar = defineComponent({
     )
 
     const renderImg = () => (
-      <img class="navatar-img" src={src} alt={alt}/>
+      <img class="navatar-img" src={props.src} alt={props.alt}/>
     )
 
     const rederContent = () => {
-      if (src) {
+      if (props.src) {
         return renderImg()
       }
       return renderSolt()

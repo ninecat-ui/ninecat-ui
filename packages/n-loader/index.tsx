@@ -1,27 +1,30 @@
-import { defineComponent,App,HTMLAttributes,SetupContext } from 'vue';
+import { defineComponent,App,PropType,SetupContext,toRefs } from 'vue';
 import classNames from '../../src/utils/className';
 import './index.scss';
 
-const initDefaultProps = {
-  show: false,
-  loaddingText: 'Loading...',
-  size: 'md'
-}
-
-export interface LoaderProps extends HTMLAttributes {
-  show?: boolean;
-  loaddingText?: string;
-  size?: string;
+const LoaderProps = {
+  show: {
+    type: Boolean as PropType<false>,
+    default: false
+  },
+  loaddingText: {
+    type: String as PropType<string>,
+    default: 'Loading...'
+  },
+  size: {
+    type: String as PropType<string>,
+    default: 'md'
+  },
 }
 
 const NLoader = defineComponent({
   name: 'NLoader',
-  setup(_:LoaderProps, {attrs }: SetupContext) {
-    const props = attrs as LoaderProps;
-    const {show, loaddingText, size} = {...initDefaultProps, ...props};
+  props: LoaderProps,
+  setup(props) {
+    const {show, loaddingText, size} = toRefs(props);
 
     const sizeStyle = () => {
-      switch (size) {
+      switch (size.value) {
         case 'xs':
           return {
             height: '16px',
@@ -51,13 +54,13 @@ const NLoader = defineComponent({
     }
 
     const spanClass = () => {
-      return classNames(['loadding-text',`${size}-text`])
+      return classNames(['loadding-text',`${size.value}-text`])
     }
 
     return () => (
       show && <div class="loadding">
         <div style={{...sizeStyle()}} />
-        <span class={spanClass()}>{loaddingText}</span>
+        <span class={spanClass()}>{loaddingText.value}</span>
       </div>
     )
   }
