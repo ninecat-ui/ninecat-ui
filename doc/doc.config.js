@@ -229,7 +229,14 @@ export default {
             },
             {
               path: '/nPagination',
-              name: 'Pagination'
+              name: 'Pagination',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nPagination/en-US/index.md');
+                } else {
+                  return import('./markdown/nPagination/zh-CN/index.md');
+                }
+              }
             },
             {
               path: '/nTree',

@@ -4,6 +4,7 @@
   margin: 0;
   border-top: 1px solid  #E5E5EA;
   border-bottom: 1px solid  #E5E5EA;
+  width: 100%;
   li{
     list-style-type: none;
     font-family: PingFangSC-Regular;
@@ -11,21 +12,23 @@
     color: #575757;
     border-bottom: 1px solid  #E5E5EA;
     width: 100%;
+    text-align: left;
+    margin-left:5px;
   }
   li:last-child{
     border-bottom: none;
   }
-  .sm{
+  .lism{
     padding: 8px 0;
   }
-  .md{
+  .limd{
     padding: 13px 0;
     line-height: 20px;
   }
-  .lg{
+  .lilg{
     padding: 20px 0;
   }
-  .bordered{
+  .libordered{
     padding-left: 20px;
     padding-right: 20px;
   }

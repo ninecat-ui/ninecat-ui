@@ -19,6 +19,8 @@ import { default as nCheckbox } from '../packages/n-checkbox';
 import { default as nSidenav } from '../packages/n-sidenav';
 import { default as nMessage } from '../packages/n-message';
 import { default as nDrawer }  from '../packages/n-drawer';
+import { default as nPagination } from '../packages/n-pagination';
+
 
 import nSidenavItem from '../packages/n-sidenav-item';
 import nSubSidenav from '../packages/n-sub-sidenav';
@@ -28,7 +30,6 @@ import nInput from '../packages/nInput';
 
 // import nToast from '../packages/nToast';
 import nTable from '../packages/nTable';
-import nPagination from '../packages/nPagination';
 import nModal from '../packages/n-modal';
 import nProgress from '../packages/nProgress';
 

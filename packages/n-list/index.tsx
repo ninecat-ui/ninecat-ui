@@ -1,15 +1,26 @@
-import { defineComponent,App,HTMLAttributes,SetupContext } from 'vue';
+import { defineComponent,App,HTMLAttributes,SetupContext,PropType, toRefs } from 'vue';
 import classNames from '../../src/utils/className';
 import './index.scss';
 
-
-
-const initDefaultProps = {
-  data:[],
-  size: 'md',
-  bordered: false,
-  hover: false
+const ListProps= {
+  data:{
+    type: Object as PropType<[]>,
+    default: []
+  },
+  size:{
+    type: String as PropType<string>,
+    default: 'md',
+  },
+  bordered:{
+    type: Boolean as PropType<boolean>,
+    default: false,
+  },
+  hover: {
+    type: Boolean as PropType<boolean>,
+    default: false,
+  }
 }
+
 
 export interface ListProps extends HTMLAttributes {
   data?: Array<any>;
@@ -20,31 +31,31 @@ export interface ListProps extends HTMLAttributes {
 
 const NList = defineComponent({
   name: 'NList',
-  setup(_:ListProps, {attrs}: SetupContext) {
-    const props = attrs as ListProps;
-    const {data,size,bordered,hover} = {...initDefaultProps,...props};
+  props: ListProps,
+  setup(props) {
+    const {data,size,bordered,hover} = toRefs(props);
 
     const ulClass = () => {
-      const ulClassList = ['n-list',bordered ? 'bordered' : '']
+      const ulClassList = ['n-list',bordered.value ? 'bordered' : '']
       return classNames(ulClassList)
     }
 
     const listClass = () => {
       let classList = [];
-      if (size && typeof size === 'string') {
-        classList.push(size)
+      if (size.value && typeof size.value === 'string') {
+        classList.push(`li${size.value}`)
       }
-      if (bordered) {
+      if (bordered.value) {
         classList.push('bordered')
       }
-      if (hover) {
+      if (hover.value) {
         classList.push('hover')
       }
       return classNames(classList);
     }
 
     const renderLi = () => {
-      let res = data.map(dataItem => {
+      let res = data.value.map(dataItem => {
         return <li class={listClass()}>{dataItem}</li>
       })
       return (<>{res}</>)
