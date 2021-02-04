@@ -1,4 +1,4 @@
-import { defineComponent,App,PropType,SetupContext,toRefs } from 'vue';
+import { defineComponent,App,PropType,toRefs } from 'vue';
 import classNames from '../../src/utils/className';
 import './index.scss';
 

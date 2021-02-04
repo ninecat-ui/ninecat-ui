@@ -20,6 +20,7 @@ import { default as nSidenav } from '../packages/n-sidenav';
 import { default as nMessage } from '../packages/n-message';
 import { default as nDrawer }  from '../packages/n-drawer';
 import { default as nPagination } from '../packages/n-pagination';
+import { default as nProgress } from '../packages/n-progress';
 
 
 import nSidenavItem from '../packages/n-sidenav-item';
@@ -31,7 +32,7 @@ import nInput from '../packages/nInput';
 // import nToast from '../packages/nToast';
 import nTable from '../packages/nTable';
 import nModal from '../packages/n-modal';
-import nProgress from '../packages/nProgress';
+
 
 // import nUpload from '../packages/nUpload';
 import nToggle from '../packages/nToggle';

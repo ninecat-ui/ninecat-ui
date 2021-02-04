@@ -22,7 +22,7 @@
 :::demo
 ```html
   <template>
-    <n-progress type="circle" width="100" stroke-width="10" color="rgb(52, 152, 255)" :percent="50"/>
+    <n-progress type="circle" :width="100" :stroke-width="10" color="rgb(52, 152, 255)" :percent="50"/>
   </template>
 
 ```
