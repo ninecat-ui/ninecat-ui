@@ -12,7 +12,7 @@ Use when you need to indicate the switch status.
 ```html
 <template>
   <div>
-    <n-toggle v-model="isOn" />
+    <n-toggle :checked="isOn" />
     <n-toggle :disabled="isDisabled"/>
   </div>
 </template>

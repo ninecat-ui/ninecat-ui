@@ -13,8 +13,11 @@
 ```html
 <template>
   <div>
-    <n-toggle v-model="isOn" />
-    <n-toggle :disabled="isDisabled"/>
+    <n-toggle :checked="isOn" />
+    <span style="margin-left:20px">
+       <n-toggle :disabled="isDisabled"/>
+    </span>
+   
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 import './../assets/font/iconfont.scss';
 import { App } from 'vue';
-import { default as nTag } from '../packages/nTag';
+import { default as nTag } from '../packages/n-tag';
 import { default as nAlert} from '../packages/n-alert';
 import { default as nAvatar } from '../packages/n-avatar/index';
 import { default as nButton } from '../packages/n-button/index';
@@ -21,6 +21,7 @@ import { default as nMessage } from '../packages/n-message';
 import { default as nDrawer }  from '../packages/n-drawer';
 import { default as nPagination } from '../packages/n-pagination';
 import { default as nProgress } from '../packages/n-progress';
+import { default as nToggle } from '../packages/n-toggle';
 
 
 import nSidenavItem from '../packages/n-sidenav-item';
@@ -35,7 +36,6 @@ import nModal from '../packages/n-modal';
 
 
 // import nUpload from '../packages/nUpload';
-import nToggle from '../packages/nToggle';
 
 import nTooltip from '../packages/nTooltip';
 // import nTree from '../packages/nTree';

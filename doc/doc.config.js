@@ -279,7 +279,14 @@ export default {
             },
             {
               path: '/nToggle',
-              name: 'Toggle'
+              name: 'Toggle',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nToggle/en-US/index.md');
+                } else {
+                  return import('./markdown/nToggle/zh-CN/index.md');
+                }
+              }
             },
             {
               path: '/nRate',

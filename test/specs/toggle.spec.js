@@ -1,4 +1,4 @@
-import nToggle from '../../packages/nToggle';
+import nToggle from '../../packages/n-toggle';
 import { mount } from '@vue/test-utils';
 
 describe('nToggle', () => {
