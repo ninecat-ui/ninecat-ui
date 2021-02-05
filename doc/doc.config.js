@@ -214,7 +214,14 @@ export default {
             },
             {
               path: '/nTable',
-              name: 'Table'
+              name: 'Table',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nTable/en-US/index.md');
+                } else {
+                  return import('./markdown/nTable/zh-CN/index.md');
+                }
+              }
             },
             {
               path: '/nList',

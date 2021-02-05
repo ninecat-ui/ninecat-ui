@@ -22,6 +22,8 @@ import { default as nDrawer }  from '../packages/n-drawer';
 import { default as nPagination } from '../packages/n-pagination';
 import { default as nProgress } from '../packages/n-progress';
 import { default as nToggle } from '../packages/n-toggle';
+import { default as nTable }from '../packages/n-table';
+
 
 
 import nSidenavItem from '../packages/n-sidenav-item';
@@ -31,7 +33,6 @@ import nSubSidenav from '../packages/n-sub-sidenav';
 import nInput from '../packages/nInput';
 
 // import nToast from '../packages/nToast';
-import nTable from '../packages/nTable';
 import nModal from '../packages/n-modal';
 
 

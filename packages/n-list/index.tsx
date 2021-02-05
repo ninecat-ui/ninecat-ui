@@ -22,13 +22,6 @@ const ListProps= {
 }
 
 
-export interface ListProps extends HTMLAttributes {
-  data?: Array<any>;
-  size?: string;
-  bordered?: boolean;
-  hover?: boolean;
-}
-
 const NList = defineComponent({
   name: 'NList',
   props: ListProps,
