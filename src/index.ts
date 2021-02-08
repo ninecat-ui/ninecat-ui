@@ -23,6 +23,8 @@ import { default as nPagination } from '../packages/n-pagination';
 import { default as nProgress } from '../packages/n-progress';
 import { default as nToggle } from '../packages/n-toggle';
 import { default as nTable }from '../packages/n-table';
+import { default as nUpload } from '../packages/n-upload';
+
 
 
 
@@ -36,7 +38,6 @@ import nInput from '../packages/nInput';
 import nModal from '../packages/n-modal';
 
 
-// import nUpload from '../packages/nUpload';
 
 import nTooltip from '../packages/nTooltip';
 // import nTree from '../packages/nTree';
@@ -60,7 +61,7 @@ const components = [
   nProgress,
   nDrawer,
   nAvatar,
-  // nUpload,
+  nUpload,
   nList,
   nCard,
   nToggle,
@@ -102,7 +103,7 @@ export {
   nProgress,
   nDrawer,
   nAvatar,
-  // nUpload,
+  nUpload,
   nList,
   nCard,
   nToggle,

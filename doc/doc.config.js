@@ -282,7 +282,14 @@ export default {
             },
             {
               path: '/nUpload',
-              name: 'Upload'
+              name: 'Upload',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nUpload/en-US/index.md');
+                } else {
+                  return import('./markdown/nUpload/zh-CN/index.md');
+                }
+              }
             },
             {
               path: '/nToggle',
