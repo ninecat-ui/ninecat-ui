@@ -24,7 +24,7 @@ import { default as nProgress } from '../packages/n-progress';
 import { default as nToggle } from '../packages/n-toggle';
 import { default as nTable }from '../packages/n-table';
 import { default as nUpload } from '../packages/n-upload';
-
+import nTooltip from '../packages/n-tooltip';
 
 
 
@@ -39,7 +39,7 @@ import nModal from '../packages/n-modal';
 
 
 
-import nTooltip from '../packages/nTooltip';
+
 // import nTree from '../packages/nTree';
 
 // import locale from './locale/index';

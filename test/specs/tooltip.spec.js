@@ -1,4 +1,4 @@
-import nTooltip from '../../packages/nTooltip';
+import nTooltip from '../../packages/n-tooltip';
 import { mount } from '@vue/test-utils';
 
 describe('nTooltip', () => {

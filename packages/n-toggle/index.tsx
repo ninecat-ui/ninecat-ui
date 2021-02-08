@@ -1,5 +1,3 @@
-// import nToggle from './src/index.vue';
-
 import { defineComponent, App, SetupContext } from 'vue'
 import './index.scss';
 

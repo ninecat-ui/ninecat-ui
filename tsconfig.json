@@ -11,11 +11,12 @@
     "noUnusedLocals": true,
     "noImplicitAny": false,
     "module": "esnext",
-    "target": "es6",
+    "target": "es2015",
     "lib": ["dom", "es2017"],
     "skipLibCheck": true,
-    "allowJs": true
+    "allowJs": true,
+    "outDir": "true",
   },
-  "exclude": ["node_modules", "lib", "es"],
+  "exclude": ["node_modules", "lib", "es","assets"],
   "include": ["./"]
 }
