@@ -24,24 +24,16 @@ import { default as nProgress } from '../packages/n-progress';
 import { default as nToggle } from '../packages/n-toggle';
 import { default as nTable }from '../packages/n-table';
 import { default as nUpload } from '../packages/n-upload';
-import nTooltip from '../packages/n-tooltip';
-
+import { default as nTooltip}  from '../packages/n-tooltip';
+import { default as nInput} from '../packages/nInput';
+import { default as nModal}  from '../packages/n-modal';
 
 
 import nSidenavItem from '../packages/n-sidenav-item';
 import nSubSidenav from '../packages/n-sub-sidenav';
 
-
-import nInput from '../packages/nInput';
-
 // import nToast from '../packages/nToast';
-import nModal from '../packages/n-modal';
-
-
-
-
 // import nTree from '../packages/nTree';
-
 // import locale from './locale/index';
 
 const components = [

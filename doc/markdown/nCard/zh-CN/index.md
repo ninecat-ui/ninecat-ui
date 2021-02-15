@@ -14,7 +14,7 @@
 :::demo
 ```html
 <template>
-  <n-card :src="src" :description="description" title="鸟"/>
+  <n-card :src="src" :description="description" title="ninecat-ui"/>
 </template>
 <script>
   export default {

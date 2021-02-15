@@ -8,7 +8,7 @@ export interface CardProps extends HTMLAttributes {
   description?: string;
 }
 
-const nCard = defineComponent({
+const NCard = defineComponent({
   name: 'NCard',
   setup(_:CardProps, {attrs}:SetupContext) {
     const {title, src, description} = attrs as CardProps;
@@ -19,7 +19,7 @@ const nCard = defineComponent({
         class="card-img"
         src={src}
       />
-      <span class="card-title">{{ title }}</span>
+      <span class="card-title">{ title }</span>
       <p class="card-message">
         { description }
       </p>
@@ -28,9 +28,9 @@ const nCard = defineComponent({
   }
 })
 
-nCard.install = function (app: App) {
-  app.component(nCard.name, nCard);
+NCard.install = function (app: App) {
+  app.component(NCard.name, NCard);
   return app;
 };
 
-export default nCard;
+export default NCard;

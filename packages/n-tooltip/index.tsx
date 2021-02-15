@@ -49,6 +49,7 @@ const NTooltip = defineComponent({
 
 
     const popoverRef = (el) => {
+      if (!el){return false}
       nextTick(() => {
         switch (placement.value) {
           case 'top' :
@@ -86,6 +87,7 @@ const NTooltip = defineComponent({
 
 
     const triggerRef = (el) => {
+      if (!el){return false}
       nextTick(() => {
         state.triggerEl = el;
         state.triggerElPosition = {
@@ -94,7 +96,6 @@ const NTooltip = defineComponent({
           offsetHeight:el.offsetHeight,
           offsetTop: el.offsetTop,
         }
-        if (el) {
           if (trigger.value === 'hover') {
             EventListener.listen(el, 'mouseenter', () => {
               state.show = true;
@@ -114,7 +115,6 @@ const NTooltip = defineComponent({
               state.show = !state.show
             },{once: true})
           }
-        }
       })
     }
 

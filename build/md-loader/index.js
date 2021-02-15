@@ -41,7 +41,7 @@ module.exports = function (source) {
   let pageScript = '';
   if (componenetsString) {
     pageScript = `<script>
-      import { createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock } from "vue"
+      import { createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock, toDisplayString as _toDisplayString } from "vue"
       export default {
         name: 'component-doc',
         components: {

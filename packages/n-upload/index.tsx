@@ -1,4 +1,3 @@
-// import nUpload from './src/index.vue';
 import { defineComponent, App, SetupContext, toRef } from 'vue'
 import './index.scss';
 

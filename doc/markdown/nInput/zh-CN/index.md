@@ -1,4 +1,3 @@
-
 # Input 输入框
 
 用于输入文本。
@@ -10,63 +9,88 @@
 ## 代码演示
 
 ### 基本使用
+
 :::demo
-```html
+
+``` html
 <template>
-  <n-input placeholder="请输入"/>
+    <div class="example-input">
+        <n-input placeholder="请输入" />
+    </div>
+    <div class="example-input">
+        <n-input placeholder="请输入" v-model="test" />
+    </div>
 </template>
+<script>
+    export default {
+        data() {
+            return {
+                test: 'Test'
+            }
+        }
+    }
+</script>
 ```
+
 :::
 
 ### 尺寸大小
+
 :::demo
-```html
+
+``` html
 <template>
-  <div class="example-input">
-     <n-input placeholder="请输入" size="lg"/>
-  </div>
-  <div class="example-input">
-    <n-input placeholder="请输入" size="md"/>
-  </div>
-  <div class="example-input">
-    <n-input placeholder="请输入" size="sm"/>
-  </div>
-  <div class="example-input">
-    <n-input placeholder="请输入" size="xs"/>
-  </div>
+    <div class="example-input">
+        <n-input placeholder="请输入" size="lg" />
+    </div>
+    <div class="example-input">
+        <n-input placeholder="请输入" size="md" />
+    </div>
+    <div class="example-input">
+        <n-input placeholder="请输入" size="sm" />
+    </div>
+    <div class="example-input">
+        <n-input placeholder="请输入" size="xs" />
+    </div>
 </template>
 ```
+
 :::
 
 ### 禁用
 
 :::demo
-```html
+
+``` html
 <template>
-  <n-input :disabled="true" placeholder="请输入"/>
+    <div>
+        <n-input :disabled="true" placeholder="请输入" />
+    </div>
 </template>
 ```
+
 :::
 
 ### 绑定事件
 
 :::demo
-```html
+
+``` html
 <template>
-  <n-input @change="handChange"  placeholder="请输入"/>
+    <n-input @change="handChange" placeholder="请输入" />
 </template>
 <script>
-  export default {
-    methods: {
-      handChange(event){
-        console.log(event)
-      }
+    export default {
+        methods: {
+            handChange(event) {
+                console.log(event)
+            }
+        }
     }
-  }
 </script>
 ```
-:::
 
+:::
 
 ## API
 
@@ -74,13 +98,13 @@
 
 | 参数 | 说明 | 类型 | 默认值 |
 | :--- | :--- | :--- | :--- |
-| size | 输入框大小，可选值`lg`,`md`,`sm`,`xs` | String | md |
+| size | 输入框大小，可选值 `lg` , `md` , `sm` , `xs` | String | md |
 | placeholder | 输入框占位文本 | String |  |
 | disabled | 是否禁用输入 | Boolean | false |
 
 ### Input Events
 
-| 事件名称 | 说明 | 回调参数 |
+| 事件名称 | 说明 | 回调参数 | 默认值 |
 | :--- | :--- | :--- | :--- |
 |input|	在输入时触发|	(value: value)
 |blur|	在 Input 失去焦点时触发|	(event: Event)

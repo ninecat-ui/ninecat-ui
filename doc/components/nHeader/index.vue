@@ -184,6 +184,9 @@ export default {
         position: relative;
         vertical-align: middle;
       }
+      :hover{
+        background: none;
+      }
       .item{
         margin: 0 10px;
       }

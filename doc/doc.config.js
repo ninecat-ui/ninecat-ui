@@ -267,7 +267,14 @@ export default {
           list: [
             {
               path: '/nInput',
-              name: 'Input'
+              name: 'Input',
+              component: () => {
+                if (localLang === 'en-US') {
+                  return import('./markdown/nInput/en-US/index.md');
+                } else {
+                  return import('./markdown/nInput/zh-CN/index.md');
+                }
+              }
             },
             {
               path: '/nCheckbox',

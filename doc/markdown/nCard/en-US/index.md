@@ -14,7 +14,7 @@ Use when you need to introduce something.
 :::demo
 ```html
 <template>
-  <n-card :src="src" :description="description" title="Bird"/>
+  <n-card :src="src" :description="description" title="ninecat-ui"/>
 </template>
 <script>
   export default {
