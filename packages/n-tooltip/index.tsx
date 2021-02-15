@@ -1,4 +1,4 @@
-import { defineComponent, App, SetupContext, nextTick, toRefs,reactive, watch } from 'vue'
+import { defineComponent, App, SetupContext, nextTick, toRefs,reactive } from 'vue'
 import './index.scss';
 import EventListener from '../../src/utils/eventlistener'
 import classNames from '../../src/utils/className';
@@ -18,31 +18,26 @@ const TooltipProps = {
   }
 };
 
-interface stateData {
-  show: boolean,
-  triggerEl: Element,
-  popoverEl: Element,
-  position:object
-}
 
 const NTooltip = defineComponent({
   name: 'NTooltip',
   props: TooltipProps,
   setup(props,{slots}:SetupContext) {
     // const triggerRef = ref(null)
-    const state = reactive({show: false,triggerEl:{},popoverEl:{},position:{top:0,left:0}})
+    const state = reactive({
+      show: false,
+      triggerEl:{},
+      triggerElPosition:{
+        offsetLeft:0,
+        offsetWidth: 0,
+        offsetHeight:0,
+        offsetTop: 0
+      },
+      popoverEl:{},
+      position:{top:0,left:0}
+    })
 
     const {trigger,placement,content} = toRefs(props)
-
-    const toggle  = () => {
-      state.show = !state.show;
-    }
-
-    watch(() => state.show, (oldVlaue, newValue) => {
-      if (oldVlaue !== newValue) {
-
-      }
-    })
 
     const toolTipClass = () => {
       return classNames(['tooltip-container',`${placement.value}`,state.show ? 'visible' : 'not-visible'])
@@ -55,7 +50,36 @@ const NTooltip = defineComponent({
 
     const popoverRef = (el) => {
       nextTick(() => {
-        switch (placement.value) {}
+        switch (placement.value) {
+          case 'top' :
+            state.position.left = state.triggerElPosition.offsetLeft - el.offsetWidth / 2 + state.triggerElPosition.offsetWidth / 2;
+            state.position.top = 0 - state.triggerElPosition.offsetHeight;
+            break;
+          case 'top-start' :
+            state.position.left = state.triggerElPosition.offsetLeft - el.offsetWidth / 2 + state.triggerElPosition.offsetWidth / 2;
+            state.position.top = 0 - state.triggerElPosition.offsetHeight;
+            break;
+          case 'top-end' :
+            state.position.left = state.triggerElPosition.offsetLeft - el.offsetWidth / 2 + state.triggerElPosition.offsetWidth / 2;
+            state.position.top = 0 - state.triggerElPosition.offsetHeight;
+            break;
+          case 'left':
+            state.position.left = 0 - state.triggerElPosition.offsetLeft - 2 * el.offsetWidth - 10;
+            state.position.top = el.offsetHeight / 4;
+            break;
+          case 'right':
+            state.position.left = state.triggerElPosition.offsetLeft + state.triggerElPosition.offsetWidth;
+            state.position.top = state.triggerElPosition.offsetTop + state.triggerElPosition.offsetHeight / 2 - el.offsetHeight / 2;
+            break;
+          case 'bottom':
+            state.position.left = state.triggerElPosition.offsetLeft - el.offsetWidth / 2 + state.triggerElPosition.offsetWidth / 2;
+            state.position.top = state.triggerElPosition.offsetTop + state.triggerElPosition.offsetHeight;
+            break;
+          default:
+            break;
+        }
+        el.style.top = state.position.top + 'px';
+        el.style.left = state.position.left + 'px';
       })
     }
 
@@ -63,26 +87,32 @@ const NTooltip = defineComponent({
 
     const triggerRef = (el) => {
       nextTick(() => {
-        state.triggerEl = el.children[0];
-        if (state.triggerEl) {
+        state.triggerEl = el;
+        state.triggerElPosition = {
+          offsetLeft:el.offsetLeft,
+          offsetWidth: el.offsetWidth,
+          offsetHeight:el.offsetHeight,
+          offsetTop: el.offsetTop,
+        }
+        if (el) {
           if (trigger.value === 'hover') {
-            EventListener.listen(state.triggerEl, 'mouseenter', () => {
+            EventListener.listen(el, 'mouseenter', () => {
               state.show = true;
             });
-            EventListener.listen(state.triggerEl, 'mouseleave', () => {
+            EventListener.listen(el, 'mouseleave', () => {
               state.show = false;
             });
           } else if (trigger.value=== 'focus') {
-            EventListener.listen(state.triggerEl, 'focus', () => {
+            EventListener.listen(el, 'focus', () => {
               state.show = true;
             });
-            EventListener.listen(state.triggerEl, 'blur', () => {
+            EventListener.listen(el, 'blur', () => {
               state.show = false;
             });
           } else {
-            EventListener.listen(state.triggerEl, 'click', () => {
-              toggle()
-            });
+            el.addEventListener('click', () => {
+              state.show = !state.show
+            },{once: true})
           }
         }
       })
