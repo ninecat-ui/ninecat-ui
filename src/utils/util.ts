@@ -32,7 +32,7 @@ const hasOwnProperty = Object.prototype.hasOwnProperty;
 const hasOwn = (val, key) => hasOwnProperty.call(val, key);
 
 // change from vue sourcecode
-function resolvePropValue(options, props, key, value) {
+function resolvePropValue (options, props, key, value) {
   const opt = options[key];
   if (opt != null) {
     const hasDefault = hasOwn(opt, 'default');
@@ -53,7 +53,7 @@ function resolvePropValue(options, props, key, value) {
   return value;
 }
 
-export function getDataAndAriaProps(props) {
+export function getDataAndAriaProps (props) {
   return Object.keys(props).reduce((memo, key) => {
     if (key.substr(0, 5) === 'data-' || key.substr(0, 5) === 'aria-') {
       memo[key] = props[key];
@@ -68,5 +68,3 @@ const guid = () => {
 };
 
 export { guid, isOn, cacheStringFunction, camelize, hyphenate, capitalize, resolvePropValue };
-
-

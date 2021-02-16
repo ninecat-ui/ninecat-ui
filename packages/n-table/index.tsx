@@ -1,7 +1,6 @@
-import { defineComponent,App } from 'vue';
+import { defineComponent, App } from 'vue';
 import classNames from '../../src/utils/className';
 import './index.scss';
-
 
 const TableProps = {
   columns: {
@@ -28,67 +27,64 @@ const TableProps = {
     type: Function,
     default: null
   }
-}
+};
 
 export type TextAlignProperty = 'start' | 'end' | 'left' | 'right' | 'center' | 'justify' | 'match-parent'
-
 
 const NTable = defineComponent({
   name: 'NTable',
   props: TableProps,
-  setup(props) {
-    
-
+  setup (props) {
     const currentColumns = props.columns.map(item => {
       return {
         width: 200,
         align: 'left',
         title: '',
-        ...(item as object),
-      }
-    })
+        ...(item as object)
+      };
+    });
 
-    const tdClass = classNames(['tabel-td', props.border ? 'border' : ''])
+    const tdClass = classNames(['tabel-td', props.border ? 'border' : '']);
 
-   const dealTableData  = (currentDataItem, currentColumns) => {
-      let res = [];
+    const dealTableData = (currentDataItem, currentColumns) => {
+      const res = [];
       currentColumns.forEach((item) => {
         res.push(currentDataItem[item.dataIndex]);
       });
       return res;
-    }
+    };
 
-    const onClickRow = (dataItem,e) => {
-      props.rowClick(dataItem,e)
-    }
+    const onClickRow = (dataItem, e) => {
+      props.rowClick(dataItem, e);
+    };
 
-    const onDbClickRow = (dataItem,e) => {
-      props.rowDbclick(dataItem,e)
-    }
+    const onDbClickRow = (dataItem, e) => {
+      props.rowDbclick(dataItem, e);
+    };
 
     const rednerThead = () => {
-      let res = currentColumns.map((colum,index) => {
-        return <th key={index} style={{width: colum.width + 'px',textAlign:colum.align as TextAlignProperty}}>{colum.title}</th>
-      })
-      return (<thead><tr>{res}</tr></thead>)
-    }
+      const res = currentColumns.map((colum, index) => {
+        return <th key={index} style={{ width: colum.width + 'px', textAlign: colum.align as TextAlignProperty }}>{colum.title}</th>;
+      });
+      return (<thead><tr>{res}</tr></thead>);
+    };
 
     const renderThbody = () => {
-      let res = props.data.map((dataItem,index) => {
-        return <tr key={index} onClick={e => onClickRow(dataItem,e)} onDblclick={e => onDbClickRow(dataItem,e)}>
-          {renderTd(dataItem,currentColumns)}
-        </tr>
-      })
-      return (<tbody>{res}</tbody>)
-    }
+      const res = props.data.map((dataItem, index) => {
+        return <tr key={index} onClick={e => onClickRow(dataItem, e)} onDblclick={e => onDbClickRow(dataItem, e)}>
+          {renderTd(dataItem, currentColumns)}
+        </tr>;
+      });
+      return (<tbody>{res}</tbody>);
+    };
 
-    const renderTd = (dataItem,currentColumns) => {
-      const tableData = dealTableData(dataItem,currentColumns)
-      let res = tableData.map((tditem,itemIndex) => {
-        return <td key={itemIndex} class={tdClass} style={{textAlign:currentColumns[itemIndex].align as TextAlignProperty}}>{tditem}</td>
-      })
-      return res
-    }
+    const renderTd = (dataItem, currentColumns) => {
+      const tableData = dealTableData(dataItem, currentColumns);
+      const res = tableData.map((tditem, itemIndex) => {
+        return <td key={itemIndex} class={tdClass} style={{ textAlign: currentColumns[itemIndex].align as TextAlignProperty }}>{tditem}</td>;
+      });
+      return res;
+    };
 
     return () => (
       <div class="tabel-content">
@@ -97,9 +93,9 @@ const NTable = defineComponent({
             {renderThbody()}
         </table>
       </div>
-    )
+    );
   }
-})
+});
 
 NTable.install = function (app:App) {
   app.component(NTable.name, NTable);

@@ -16,8 +16,9 @@ module.exports = {
   transform: {
     '^.+\\.js$': 'babel-jest',
     '^.+\\.vue$': 'vue-jest',
-    '^.+\\.[jt]sx?$': 'babel-jest'
+    "^.+\\.tsx?$": "ts-jest"
   },
+  preset: 'ts-jest',
   snapshotSerializers: [
     '<rootDir>/node_modules/jest-serializer-vue'
   ]

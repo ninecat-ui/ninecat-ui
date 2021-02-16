@@ -1,4 +1,4 @@
-import { defineComponent,App,PropType,toRefs } from 'vue';
+import { defineComponent, App, PropType, toRefs } from 'vue';
 import classNames from '../../src/utils/className';
 import './index.scss';
 
@@ -14,14 +14,14 @@ const LoaderProps = {
   size: {
     type: String as PropType<string>,
     default: 'md'
-  },
-}
+  }
+};
 
 const NLoader = defineComponent({
   name: 'NLoader',
   props: LoaderProps,
-  setup(props) {
-    const {show, loaddingText, size} = toRefs(props);
+  setup (props) {
+    const { show, loaddingText, size } = toRefs(props);
 
     const sizeStyle = () => {
       switch (size.value) {
@@ -51,24 +51,24 @@ const NLoader = defineComponent({
             width: '36px'
           };
       }
-    }
+    };
 
     const spanClass = () => {
-      return classNames(['loadding-text',`${size.value}-text`])
-    }
+      return classNames(['loadding-text', `${size.value}-text`]);
+    };
 
     return () => (
       show && <div class="loadding">
-        <div style={{...sizeStyle()}} />
+        <div style={{ ...sizeStyle() }} />
         <span class={spanClass()}>{loaddingText.value}</span>
       </div>
-    )
+    );
   }
-})
+});
 
 NLoader.install = function (app:App) {
   app.component(NLoader.name, NLoader);
-  return app
+  return app;
 };
 
 export default NLoader;

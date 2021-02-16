@@ -1,6 +1,5 @@
-import { defineComponent,App,HTMLAttributes,SetupContext } from 'vue';
+import { defineComponent, App, HTMLAttributes, SetupContext } from 'vue';
 import './index.scss';
-
 
 export interface CardProps extends HTMLAttributes {
   title?: string;
@@ -10,8 +9,8 @@ export interface CardProps extends HTMLAttributes {
 
 const NCard = defineComponent({
   name: 'NCard',
-  setup(_:CardProps, {attrs}:SetupContext) {
-    const {title, src, description} = attrs as CardProps;
+  setup (_:CardProps, { attrs }:SetupContext) {
+    const { title, src, description } = attrs as CardProps;
 
     return () => (
       <div class="card">
@@ -24,9 +23,9 @@ const NCard = defineComponent({
         { description }
       </p>
     </div>
-    )
+    );
   }
-})
+});
 
 NCard.install = function (app: App) {
   app.component(NCard.name, NCard);

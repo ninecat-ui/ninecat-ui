@@ -1,4 +1,4 @@
-import { defineComponent,App } from 'vue';
+import { defineComponent, App } from 'vue';
 import './index.scss';
 import classNames from '../../src/utils/className';
 
@@ -13,27 +13,27 @@ interface stepProps {
 
 const NStep = defineComponent({
   name: 'NStep',
-  setup(_:stepProps, {slots,attrs}) {
-    const {active,vertical,index,isLatest,title,description } = attrs as stepProps;
+  setup (_:stepProps, { slots, attrs }) {
+    const { active, vertical, index, isLatest, title, description } = attrs as stepProps;
 
     const nStepClass = () => {
-      const classList = ['n-step', active ? 'active' : '', vertical  ? '' : 'n-step-center'];
-      return classNames(classList)
-    }
+      const classList = ['n-step', active ? 'active' : '', vertical ? '' : 'n-step-center'];
+      return classNames(classList);
+    };
 
     const iconClass = () => {
-      const classList =['icon', active ? 'active' : '']
-      return classNames(classList)
-    }
+      const classList = ['icon', active ? 'active' : ''];
+      return classNames(classList);
+    };
 
-    console.log(isLatest)
-    console.log(vertical)
+    console.log(isLatest);
+    console.log(vertical);
 
     return () => (
       <div class={nStepClass()}>
         <div>
           <div class={iconClass()}>{index + 1}</div>
-          { !isLatest && vertical  && <div class="vertical-line" /> }
+          { !isLatest && vertical && <div class="vertical-line" /> }
         </div>
         <div class="content">
           <div class="title">{title}</div>
@@ -42,11 +42,11 @@ const NStep = defineComponent({
         { !isLatest && !vertical && <div class="line" /> }
         {slots.default && slots.default()}
       </div>
-    )
+    );
   }
-})
+});
 
-NStep.install = function(app: App) {
+NStep.install = function (app: App) {
   app.component(NStep.name, NStep);
   return app;
 };

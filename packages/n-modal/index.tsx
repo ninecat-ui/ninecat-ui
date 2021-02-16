@@ -1,58 +1,57 @@
-import { defineComponent, App, SetupContext, Transition, PropType } from 'vue'
-import './index.scss'
+import { defineComponent, App, SetupContext, Transition, PropType } from 'vue';
+import './index.scss';
 import classNames from '../../src/utils/className';
-import NButton from '../n-button'
+import NButton from '../n-button';
 
 const ModalProps = {
   show: {
-      type: Boolean as PropType<false>,
-      default: false
-    },
-    size: {
-      type: String as PropType<''>,
-      default: 'md'
-    },
-    title: {
-      type: String as PropType<''>,
-      default: 'md'
-    },
-    confirm: {
-      type: Function as PropType<() => void>,
-      default: () => {}
-    },
-    cancel: {
-      type: Function as PropType<() => void>,
-      default: () => {}
-    }
-}
-
+    type: Boolean as PropType<false>,
+    default: false
+  },
+  size: {
+    type: String as PropType<''>,
+    default: 'md'
+  },
+  title: {
+    type: String as PropType<''>,
+    default: 'md'
+  },
+  confirm: {
+    type: Function as PropType<() => void>,
+    default: () => {}
+  },
+  cancel: {
+    type: Function as PropType<() => void>,
+    default: () => {}
+  }
+};
 
 const NModal = defineComponent({
   name: 'NModal',
   props: ModalProps,
-  setup(props, { slots, emit }: SetupContext) {
-
+  setup (props, { slots, emit }: SetupContext) {
     const modalClass = () => {
-      return classNames(['n-modal', `${props.size}`])
-    }
+      return classNames(['n-modal', `${props.size}`]);
+    };
 
     const closeModal = () => {
-      emit('close', false)
-    }
+      emit('close', false);
+    };
 
     const nconfirm = () => {
-      props.confirm()
-      closeModal()
-     }
+      props.confirm();
+      closeModal();
+    };
 
     const ncancel = () => {
-      props.cancel()
-      closeModal()
-     }
+      props.cancel();
+      closeModal();
+    };
 
     return () => (
       <Transition name="nmodal">
-        {props.show ? <div class="n-modal-wrapper">
+        {props.show
+          ? <div class="n-modal-wrapper">
           <div class="n-modal-backdrop" role="button" tabindex={-1} onClick={closeModal} />
           <div class={modalClass()}>
             <div class="n-modal-content">
@@ -71,11 +70,12 @@ const NModal = defineComponent({
               </div>
             </div>
           </div>
-        </div > : null}
+        </div >
+          : null}
       </Transition>
-    )
+    );
   }
-})
+});
 
 NModal.install = function (app: App) {
   app.component(NModal.name, NModal);

@@ -11,7 +11,7 @@ const app = createApp(App);
 app
   .use(ninecat)
   .directive('highlight', function (el) {
-    let blocks = el.querySelectorAll('pre code');
+    const blocks = el.querySelectorAll('pre code');
     blocks.forEach((block) => {
       hljs.highlightBlock(block);
     });

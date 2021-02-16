@@ -1,4 +1,4 @@
-import { defineComponent, App, SetupContext, toRef } from 'vue'
+import { defineComponent, App, SetupContext, toRef } from 'vue';
 import './index.scss';
 
 const uploadProps = {
@@ -18,7 +18,7 @@ const uploadProps = {
       return [];
     }
   }
-}
+};
 
 interface File {
   url?: string,
@@ -28,14 +28,9 @@ interface File {
 const NUpload = defineComponent({
   name: 'NUpload',
   props: uploadProps,
-  data: function () {
-    return {
-      nfileList: this.fileList
-    };
-  },
-  setup(props, { slots }: SetupContext) {
-    const fileList = toRef(props, 'fileList')
-    let nfileList = fileList.value
+  setup (props, { slots }: SetupContext) {
+    const fileList = toRef(props, 'fileList');
+    const nfileList = fileList.value;
     const handleChange = (value) => {
       nfileList.push(
         {
@@ -44,11 +39,11 @@ const NUpload = defineComponent({
           type: value.target.files[0].type
         }
       );
-    }
+    };
 
     const deleteFile = (index) => {
       nfileList.splice(index, 1);
-    }
+    };
 
     return () => (
       <div class="nupload">
@@ -61,7 +56,7 @@ const NUpload = defineComponent({
             onChange={handleChange} />
         </div>
         <div class="nupload-list">
-          {nfileList.map((file: File,index) => {
+          {nfileList.map((file: File, index) => {
             return (
               <div class="nupload-list-item">
                 <img src="../../../assets/img/upload/attachment.svg" />
@@ -77,13 +72,18 @@ const NUpload = defineComponent({
                   <img src="../../../assets/img/upload/close.svg" />
                   </span>
               </div>
-            )
+            );
           })}
         </div>
       </div>
-    )
+    );
+  },
+  data: function () {
+    return {
+      nfileList: this.fileList
+    };
   }
-})
+});
 
 NUpload.install = function (app: App) {
   app.component(NUpload.name, NUpload);

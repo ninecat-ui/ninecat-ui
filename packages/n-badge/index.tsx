@@ -1,28 +1,23 @@
-import { defineComponent,App,HTMLAttributes,SetupContext,PropType, toRef } from 'vue';
+import { defineComponent, App, SetupContext, PropType, toRef } from 'vue';
 import classNames from '../../src/utils/className';
 import './index.scss';
-
-
-export interface BadgeProps extends HTMLAttributes {
-  content?: string | number
-}
 
 const BadgeProps = {
   content: {
     type: String as PropType<''>,
-    default: 'md'
-  },
-}
+    default: ''
+  }
+};
 
 const NBadge = defineComponent({
   name: 'NBadge',
   props: BadgeProps,
-  setup(props,{ slots }: SetupContext) {
-    const content = toRef(props,'content') 
+  setup (props, { slots }: SetupContext) {
+    const content = toRef(props, 'content');
     const classString = classNames([
       'n-badge-common',
       content.value === '' ? 'n-badge-default' : 'n-badge-content'
-    ])
+    ]);
 
     return () => (
       <div class="n-badge">
@@ -31,14 +26,13 @@ const NBadge = defineComponent({
           { content.value }
         </span>
       </div>
-    )
+    );
   }
-})
+});
 
-NBadge.install = function(app: App) {
+NBadge.install = function (app: App) {
   app.component(NBadge.name, NBadge);
   return app;
 };
-
 
 export default NBadge;

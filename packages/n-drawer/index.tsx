@@ -1,6 +1,6 @@
-import { defineComponent, App,PropType, SetupContext, Transition, toRef } from 'vue'
-import './index.scss'
-import NButton from '../n-button'
+import { defineComponent, App, PropType, SetupContext, Transition } from 'vue';
+import './index.scss';
+import NButton from '../n-button';
 
 const DrawerProps = {
   show: {
@@ -19,29 +19,30 @@ const DrawerProps = {
     type: Function as PropType<() => void>,
     default: () => {}
   }
-}
+};
 
 const NDrawer = defineComponent({
   name: 'NDrawer',
-  props:DrawerProps,
-  setup(props, { slots, emit }: SetupContext) {
+  props: DrawerProps,
+  setup (props, { slots, emit }: SetupContext) {
     const closeDrawer = () => {
-      emit('close', false)
-    }
+      emit('close', false);
+    };
 
     const thisConfirm = () => {
-      props.confirm()
-      closeDrawer()
-    }
+      props.confirm();
+      closeDrawer();
+    };
 
     const thisCancel = () => {
-      props.cancel()
-      closeDrawer()
-    }
+      props.cancel();
+      closeDrawer();
+    };
 
     return () => (
       <Transition name="ndrawer">
-        {props.show ? <div class="n-drawer-wrapper">
+        {props.show
+          ? <div class="n-drawer-wrapper">
           <div class="n-drawer-backdrop" role="button" tabindex={-1} onClick={closeDrawer}>
           </div>
           <div class="n-drawer">
@@ -69,15 +70,16 @@ const NDrawer = defineComponent({
           </NButton>
             </div>
           </div>
-        </div> : null}
-        
+        </div>
+          : null}
+
       </Transition>
-    )
+    );
   }
-})
+});
 
 NDrawer.install = function (app: App) {
-  app.component(NDrawer.name, NDrawer)
-}
+  app.component(NDrawer.name, NDrawer);
+};
 
-export default NDrawer
+export default NDrawer;

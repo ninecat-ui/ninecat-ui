@@ -134,7 +134,7 @@ export default {
     _preorder (nodes, callback) {
       if (!nodes.length) return null;
       const { children } = this.defaultProps;
-      let stack = [...nodes];
+      const stack = [...nodes];
       while (stack.length) {
         const curr = stack.shift();
         if (callback(curr)) return curr;
@@ -150,7 +150,7 @@ export default {
     _levelOrder (nodes, callback) {
       if (!nodes.length) return null;
       const { children } = this.defaultProps;
-      let queue = [...nodes];
+      const queue = [...nodes];
       while (queue.length) {
         let len = queue.length;
         while (len--) {
@@ -225,7 +225,7 @@ export default {
           item.$keys = keys;
           item.$sort = computSortNum(keys);
           if (item[children].length) item[children] = this._getLdqTree(item[children]);
-          let childrenSort = item[children].reduce((max, item) => max > item.$sort ? max : item.$sort, 0);
+          const childrenSort = item[children].reduce((max, item) => max > item.$sort ? max : item.$sort, 0);
           item.$sort += childrenSort;
           // 是否隐藏未命中节点
           item.visible = !!item.$sort;
@@ -287,7 +287,7 @@ export default {
       const nodes = [];
       // 向下处理节点的选中状态, 并记录nodes
       this._preorder(this.deepData, item => {
-        let index = keys.indexOf(item[this.nodeKey]);
+        const index = keys.indexOf(item[this.nodeKey]);
         if (index === -1) return false;
         this._downwardUpdateChecked(item, checked);
         nodes.push(item);
@@ -297,7 +297,7 @@ export default {
       // 对公共祖先节点进行合并和去重操作
       let ancestorNodes = [];
       nodes.forEach(item => {
-        let nodePath = this._getRootPath(item);
+        const nodePath = this._getRootPath(item);
         nodePath.pop();
         ancestorNodes = [...new Set([...ancestorNodes, ...nodePath])];
       });

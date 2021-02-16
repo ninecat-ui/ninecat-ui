@@ -129,7 +129,7 @@ export default {
         document.getElementById(this.idStr).remove();
       }
 
-      let style = document.createElement('style');
+      const style = document.createElement('style');
       style.id = this.idStr;
       style.type = 'text/css';
       style.innerHTML = `

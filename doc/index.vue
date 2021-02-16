@@ -16,7 +16,7 @@
 import nHeader from './components/nHeader';
 import nNav from './components/nNav';
 import nContainer from './components/nContainer';
-import config from './doc.config'
+import config from './doc.config';
 import './style/index.scss';
 export default {
   name: 'App',

@@ -1,33 +1,32 @@
 import './../assets/font/iconfont.scss';
 import { App } from 'vue';
-import { default as nTag } from '../packages/n-tag';
-import { default as nAlert} from '../packages/n-alert';
-import { default as nAvatar } from '../packages/n-avatar/index';
-import { default as nButton } from '../packages/n-button/index';
-import { default as nButtonGroup } from '../packages/n-button-group';
-import { default as nBadge } from '../packages/n-badge';
-import { default as nSteps } from '../packages/n-steps';
-import { default as nStep } from '../packages/n-step';
-import { default as nCard } from '../packages/n-card';
-import { default as nLoader } from '../packages/n-loader';
-import { default as nIcon } from '../packages/n-icon';
-import { default as nCol } from '../packages/n-col';
-import { default as nRow } from '../packages/n-row';
-import { default as nList } from '../packages/n-list';
-import { default as nRate} from '../packages/n-rate';
-import { default as nCheckbox } from '../packages/n-checkbox';
-import { default as nSidenav } from '../packages/n-sidenav';
-import { default as nMessage } from '../packages/n-message';
-import { default as nDrawer }  from '../packages/n-drawer';
-import { default as nPagination } from '../packages/n-pagination';
-import { default as nProgress } from '../packages/n-progress';
-import { default as nToggle } from '../packages/n-toggle';
-import { default as nTable }from '../packages/n-table';
-import { default as nUpload } from '../packages/n-upload';
-import { default as nTooltip}  from '../packages/n-tooltip';
-import { default as nInput} from '../packages/nInput';
-import { default as nModal}  from '../packages/n-modal';
-
+import nIcon from '../packages/n-icon';
+import nTag from '../packages/n-tag';
+import nAlert from '../packages/n-alert';
+import nAvatar from '../packages/n-avatar/index';
+import nButton from '../packages/n-button/index';
+import nButtonGroup from '../packages/n-button-group';
+import nBadge from '../packages/n-badge';
+import nSteps from '../packages/n-steps';
+import nStep from '../packages/n-step';
+import nCard from '../packages/n-card';
+import nLoader from '../packages/n-loader';
+import nCol from '../packages/n-col';
+import nRow from '../packages/n-row';
+import nList from '../packages/n-list';
+import nRate from '../packages/n-rate';
+import nCheckbox from '../packages/n-checkbox';
+import nSidenav from '../packages/n-sidenav';
+import nMessage from '../packages/n-message';
+import nDrawer from '../packages/n-drawer';
+import nPagination from '../packages/n-pagination';
+import nProgress from '../packages/n-progress';
+import nToggle from '../packages/n-toggle';
+import nTable from '../packages/n-table';
+import nUpload from '../packages/n-upload';
+import nTooltip from '../packages/n-tooltip';
+import nInput from '../packages/nInput';
+import nModal from '../packages/n-modal';
 
 import nSidenavItem from '../packages/n-sidenav-item';
 import nSubSidenav from '../packages/n-sub-sidenav';
@@ -37,11 +36,11 @@ import nSubSidenav from '../packages/n-sub-sidenav';
 // import locale from './locale/index';
 
 const components = [
+  nIcon,
   nAlert,
   nButton,
   nBadge,
   nLoader,
-  nIcon,
   nButtonGroup,
   nInput,
   nCol,
@@ -73,17 +72,17 @@ const install = function (app: App) {
   components.forEach(component => {
     app.use(component as unknown as { install: () => any });
   });
-  app.config.globalProperties.$nMessage = nMessage
+  app.config.globalProperties.$nMessage = nMessage;
   return app;
 };
 
 export {
+  nIcon,
   nTag,
   nAlert,
   nButton,
   nBadge,
   nLoader,
-  nIcon,
   nButtonGroup,
   nInput,
   nCol,
@@ -105,10 +104,10 @@ export {
   nSidenav,
   nSidenavItem,
   nSubSidenav,
-  nSteps,
+  nSteps
   // nStep,
   // nCheckbox
-}
+};
 
 export default {
   install

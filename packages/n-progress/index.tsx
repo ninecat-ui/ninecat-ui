@@ -50,44 +50,39 @@ const PropgressProps = {
     type: Number,
     default: 10
   }
-}
+};
 
 const NProgress = defineComponent({
   name: 'NProgress',
   props: PropgressProps,
-  data() {
-    return {};
-  },
-  mounted() { },
-  setup(props) {
-
+  setup (props) {
     const renderLine = () => {
       return <div
         class="n-progress-line"
       >
         <div
           class="n-progress-line-outer"
-          style={{height: `${props.width}px`}}
+          style={{ height: `${props.width}px` }}
         >
           <div
             class="n-progress-line-inner"
           >
             <div
               class="n-progress-line-bg"
-              style={{background:props.color,width:`${props.percent}%`}}
+              style={{ background: props.color, width: `${props.percent}%` }}
             />
           </div>
         </div>
         <div class="n-progress-info">
           {props.percent + '%'}
         </div>
-      </div>
-    }
+      </div>;
+    };
 
     const renderCircle = () => {
       return <div
         class="n-progress-circle"
-        style={{width: `${props.width}px`}}
+        style={{ width: `${props.width}px` }}
       >
         <svg
           style="transform: rotate(-90deg)"
@@ -116,22 +111,26 @@ const NProgress = defineComponent({
             fill="none"
           />
         </svg>
-        <span>{props.percent + `%`}</span>
-      </div >
-    }
+        <span>{props.percent + '%'}</span>
+      </div >;
+    };
 
     return () => (
       <div class="n-progress">
         {props.type === 'line' ? renderLine() : renderCircle()}
       </div >
-    )
-  }
+    );
+  },
+  data () {
+    return {};
+  },
+  mounted () { }
 
-})
+});
 
 NProgress.install = function (app: App) {
   app.component(NProgress.name, NProgress);
-  return app
+  return app;
 };
 
 export default NProgress;

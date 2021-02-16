@@ -26,7 +26,7 @@ export default {
       const { data, root } = this;
       const { children } = root.defaultProps;
       let oneNodeIsIndeterminate = false;
-      let len = data[children].length;
+      const len = data[children].length;
       // 获取所有选中节点的数量
       const checkedNum = data[children].reduce((num, item) => {
         if (item.indeterminate) oneNodeIsIndeterminate = true;
@@ -63,8 +63,9 @@ export default {
   render () {
     const { data, root } = this;
     const { name, children, disabled } = root.defaultProps;
-    let hideMisses = root.filterNode(deepCopy(data)) && (!root.hideMisses || data.visible);
-    return hideMisses ? <ul class="tree-ul">
+    const hideMisses = root.filterNode(deepCopy(data)) && (!root.hideMisses || data.visible);
+    return hideMisses
+      ? <ul class="tree-ul">
       <li class="tree-li">
         <svg t="1585220115926" class="tree-icon point" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2222" width="10" height="10" style={{
           transform: `rotate(${data.expand ? '0' : '-90'}deg)`,
@@ -87,11 +88,15 @@ export default {
           root.$emit('node-click', e, deepCopy(data));
         }}>
           {
-            root.$scopedSlots.default ? root.$scopedSlots.default(data) : <p class="tree-text">
+            root.$scopedSlots.default
+              ? root.$scopedSlots.default(data)
+              : <p class="tree-text">
               {
-                data.$keys.length ? data[name].split('').map((curr, i) => {
-                  return <span class={ data.$keys.includes(i) ? 'red' : 'gary' }>{curr}</span>;
-                }) : <span class="gary">{data[name]}</span>
+                data.$keys.length
+                  ? data[name].split('').map((curr, i) => {
+                    return <span class={ data.$keys.includes(i) ? 'red' : 'gary' }>{curr}</span>;
+                  })
+                  : <span class="gary">{data[name]}</span>
               }
             </p>
           }
@@ -108,7 +113,8 @@ export default {
           }
         </div>
       }
-    </ul> : null;
+    </ul>
+      : null;
   }
 };
 </script>

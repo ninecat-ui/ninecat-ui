@@ -1,4 +1,4 @@
-import { defineComponent, App, SetupContext } from 'vue'
+import { defineComponent, App, SetupContext } from 'vue';
 import './index.scss';
 
 const ToggleProps = {
@@ -10,16 +10,15 @@ const ToggleProps = {
     type: Boolean,
     default: false
   }
-}
+};
 
 const NToggle = defineComponent({
   name: 'NToggle',
   props: ToggleProps,
-  setup(props, { emit }: SetupContext) {
-
+  setup (props, { emit }: SetupContext) {
     const handleChange = () => {
       emit('updateModel', props.checked);
-    }
+    };
 
     return () => (
       <div class="n-toggle">
@@ -37,9 +36,9 @@ const NToggle = defineComponent({
           />
         </label>
       </div>
-    )
+    );
   }
-})
+});
 
 NToggle.install = function (app: App) {
   app.component(NToggle.name, NToggle);

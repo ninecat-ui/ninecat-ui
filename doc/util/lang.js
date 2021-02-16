@@ -7,7 +7,7 @@ export const langTransformMap = {
 
 export function transformLang (originalLang) {
   let langTransform = langTransformMap[originalLang];
-  if (langTransform === void 0) langTransform = originalLang;
+  if (langTransform === undefined) langTransform = originalLang;
   lang = langTransform;
   return langTransform;
 }

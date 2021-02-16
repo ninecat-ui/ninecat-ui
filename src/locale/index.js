@@ -1,8 +1,8 @@
 import enLang from './lang/en-US';
 import zhLang from './lang/zh-CN';
 import deepmerge from 'deepmerge';
-import { createApp } from 'vue'
-const app = createApp()
+import { createApp } from 'vue';
+const app = createApp();
 
 const navigatorLanguage = navigator.language || navigator.userLanguage;
 

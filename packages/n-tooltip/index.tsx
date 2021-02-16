@@ -1,6 +1,6 @@
-import { defineComponent, App, SetupContext, nextTick, toRefs,reactive } from 'vue'
+import { defineComponent, App, SetupContext, nextTick, toRefs, reactive } from 'vue';
 import './index.scss';
-import EventListener from '../../src/utils/eventlistener'
+import EventListener from '../../src/utils/eventlistener';
 import classNames from '../../src/utils/className';
 
 const TooltipProps = {
@@ -18,38 +18,36 @@ const TooltipProps = {
   }
 };
 
-
 const NTooltip = defineComponent({
   name: 'NTooltip',
   props: TooltipProps,
-  setup(props,{slots}:SetupContext) {
+  setup (props, { slots }:SetupContext) {
     // const triggerRef = ref(null)
     const state = reactive({
       show: false,
-      triggerEl:{},
-      triggerElPosition:{
-        offsetLeft:0,
+      triggerEl: {},
+      triggerElPosition: {
+        offsetLeft: 0,
         offsetWidth: 0,
-        offsetHeight:0,
+        offsetHeight: 0,
         offsetTop: 0
       },
-      popoverEl:{},
-      position:{top:0,left:0}
-    })
+      popoverEl: {},
+      position: { top: 0, left: 0 }
+    });
 
-    const {trigger,placement,content} = toRefs(props)
+    const { trigger, placement, content } = toRefs(props);
 
     const toolTipClass = () => {
-      return classNames(['tooltip-container',`${placement.value}`,state.show ? 'visible' : 'not-visible'])
-    }
+      return classNames(['tooltip-container', `${placement.value}`, state.show ? 'visible' : 'not-visible']);
+    };
 
     const arrowClass = () => {
-      return classNames(['arrow',placement.value])
-    }
-
+      return classNames(['arrow', placement.value]);
+    };
 
     const popoverRef = (el) => {
-      if (!el){return false}
+      if (!el) { return false; }
       nextTick(() => {
         switch (placement.value) {
           case 'top' :
@@ -81,50 +79,48 @@ const NTooltip = defineComponent({
         }
         el.style.top = state.position.top + 'px';
         el.style.left = state.position.left + 'px';
-      })
-    }
-
-
+      });
+    };
 
     const triggerRef = (el) => {
-      if (!el){return false}
+      if (!el) { return false; }
       nextTick(() => {
         state.triggerEl = el;
         state.triggerElPosition = {
-          offsetLeft:el.offsetLeft,
+          offsetLeft: el.offsetLeft,
           offsetWidth: el.offsetWidth,
-          offsetHeight:el.offsetHeight,
-          offsetTop: el.offsetTop,
+          offsetHeight: el.offsetHeight,
+          offsetTop: el.offsetTop
+        };
+        if (trigger.value === 'hover') {
+          EventListener.listen(el, 'mouseenter', () => {
+            state.show = true;
+          });
+          EventListener.listen(el, 'mouseleave', () => {
+            state.show = false;
+          });
+        } else if (trigger.value === 'focus') {
+          EventListener.listen(el, 'focus', () => {
+            state.show = true;
+          });
+          EventListener.listen(el, 'blur', () => {
+            state.show = false;
+          });
+        } else {
+          el.addEventListener('click', () => {
+            state.show = !state.show;
+          }, { once: true });
         }
-          if (trigger.value === 'hover') {
-            EventListener.listen(el, 'mouseenter', () => {
-              state.show = true;
-            });
-            EventListener.listen(el, 'mouseleave', () => {
-              state.show = false;
-            });
-          } else if (trigger.value=== 'focus') {
-            EventListener.listen(el, 'focus', () => {
-              state.show = true;
-            });
-            EventListener.listen(el, 'blur', () => {
-              state.show = false;
-            });
-          } else {
-            el.addEventListener('click', () => {
-              state.show = !state.show
-            },{once: true})
-          }
-      })
-    }
+      });
+    };
 
     const renderTopOrLeft = () => {
-      return (placement.value.includes('top') || placement.value.includes('left')) ? <div class="content">{content.value}</div> : null
-    }
+      return (placement.value.includes('top') || placement.value.includes('left')) ? <div class="content">{content.value}</div> : null;
+    };
 
     const renderBootomOrRight = () => {
-      return (placement.value.includes('bottom') || placement.value.includes('right')) ? <div class="content">{content.value}</div> : null
-    }
+      return (placement.value.includes('bottom') || placement.value.includes('right')) ? <div class="content">{content.value}</div> : null;
+    };
 
     return () => (
       <div class="n-tooltip">
@@ -139,11 +135,9 @@ const NTooltip = defineComponent({
           {slots.default && slots.default()}
     </span>
       </div>
-    )
+    );
   }
-})
-
-
+});
 
 NTooltip.install = function (app: App) {
   app.component(NTooltip.name, NTooltip);
