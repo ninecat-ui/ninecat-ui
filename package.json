@@ -34,6 +34,13 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "vue": "^3.0.2",
+    "vue-i18n": "^9.0.0-beta.8"
+  },
+  "devDependencies": {
+    "vue-router": "^4.0.0-rc.3",
+    "vue-style-loader": "^4.1.2",
+    "webpack-merge": "^5.4.0",
     "docsearch.js": "^2.6.3",
     "eslint-plugin-node": "^11.1.0",
     "file-loader": "^6.2.0",
@@ -46,13 +53,6 @@
     "markdown-it-container": "^3.0.0",
     "transliteration": "^2.1.8",
     "url-loader": "^4.1.1",
-    "vue": "^3.0.2",
-    "vue-i18n": "^9.0.0-beta.8",
-    "vue-router": "^4.0.0-rc.3",
-    "vue-style-loader": "^4.1.2",
-    "webpack-merge": "^5.4.0"
-  },
-  "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.10.5",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
