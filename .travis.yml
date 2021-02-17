@@ -28,7 +28,7 @@ branches:
 stages:
   # - test
   - name: build doc
-    if: branch = dev-vue@next
+    if: branch = master
   - deploy
 
 jobs:
