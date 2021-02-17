@@ -1,6 +1,6 @@
 {
   "name": "ninecat-ui",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "description": "A Vue.js 3.0 Web UI Toolkit.",
   "author": "ninecat-ui",
   "private": false,
@@ -16,7 +16,7 @@
     "test:unit": "jest --config test/jest.config.js",
     "test": "npm run lint && npm run test:unit",
     "test:debug": "node --inspect node_modules/.bin/jest --runInBand --config test/jest.config.js",
-    "docs:build": "webpack --config build/webpack.config.doc.js",
+    "docs:build": "webpack --config build/webpack.config.dev.js",
     "createComponent": "node script/create-component.js",
     "prod-all": "npm run prod && npm run prod-components"
   },

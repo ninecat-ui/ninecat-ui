@@ -26,17 +26,17 @@ branches:
     - /.*/
 
 stages:
-  - test
+  # - test
   - name: build doc
-    if: branch = master
+    if: branch = dev-vue@next
   - deploy
 
 jobs:
   include:
-    - stage: test
-      script:
-        - npm test
-        - codecov
+    # - stage: test
+    #   script:
+    #     - npm test
+    #     - codecov
 
     - stage: build doc
       if: branch = master
