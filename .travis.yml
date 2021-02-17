@@ -42,7 +42,7 @@ jobs:
       if: branch = master
       script:
         - npm run docs:build
-        - cd docs
+        - cd dist
         - git init
         - git add -A
         - git commit -m "docs:update docs"
