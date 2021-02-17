@@ -37,20 +37,14 @@ yarn add ninecat-ui
 ## 示例
 
 ```
-import Vue from 'vue'
+import { createApp } from 'vue'
+import App from './App.vue'
+import ninecat from 'ninecat-ui'
 
-// 全局引入
-import Ninecat from 'ninecat-ui'
-// 引入样式文件
-import 'ninecat-ui/package/main.css'
-Vue.use(Ninecat)
-
-// 或部分引入
-import {
-  Button
-  // ...
-} from 'ninecat-ui'
-Vue.component(Button.name, Button)
+const app = createApp(App);
+app
+  .use(ninecat)
+  .mount('#app')
 ```
 
 ## 开发指南
