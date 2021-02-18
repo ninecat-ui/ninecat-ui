@@ -13,7 +13,7 @@ export interface ReteProps extends HTMLAttributes {
 
 const NRate = defineComponent({
   name: 'NRate',
-  setup (_:ReteProps, { slots, attrs }: SetupContext) {
+  setup (_:ReteProps, { attrs }: SetupContext) {
     const props = attrs as ReteProps;
     const { value, max } = { ...initDefaultProps, ...props };
 
@@ -22,8 +22,8 @@ const NRate = defineComponent({
       for (let i = 0; i < max; i++) {
         arr.push(i);
       }
-      return arr.map((o, index) => {
-        if ((index + 1) > value) {
+      return arr.map((o) => {
+        if ((o + 1) > value) {
           return (
             <i class="iconfont icon-collection"/>
           );

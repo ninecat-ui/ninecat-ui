@@ -1,9 +1,9 @@
-import nCard from '../../packages/nCard';
+import nCard from '../../packages/n-card';
 import { mount } from '@vue/test-utils';
 
 describe('nCard', () => {
   it('name should return NCol', () => {
     const wrapper = mount(nCard);
-    expect(wrapper.name()).toBe('NCard');
+    expect(wrapper.exists()).toBe(true);
   });
 });

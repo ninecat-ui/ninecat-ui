@@ -4,7 +4,7 @@ import { mount } from '@vue/test-utils';
 describe('nRate', () => {
   it('name should return nRate', () => {
     const wrapper = mount(Rate);
-    expect(wrapper.name()).toBe('NRate');
+    expect(wrapper.exists()).toBe(true);
   });
   it('create primary button', () => {
     const wrapper = mount({
