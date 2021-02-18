@@ -33,10 +33,10 @@ stages:
 
 jobs:
   include:
-    # - stage: test
-    #   script:
-    #     - npm test
-    #     - codecov
+    - stage: test
+      script:
+        - npm test
+        - codecov
 
     - stage: build doc
       if: branch = master
@@ -63,8 +63,8 @@ jobs:
           tags: true
           all_branches: true
 
-# after_success:
-#   - bash <(curl -s https://codecov.io/bash)  
+after_success:
+  - bash <(curl -s https://codecov.io/bash)  
 
       
       

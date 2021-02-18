@@ -3,7 +3,7 @@ import classNames from '../../src/utils/className';
 import './index.scss';
 
 const initDefaultProps = {
-  default: 'default',
+  type: 'default',
   icon: '',
   loading: false,
   size: ''
