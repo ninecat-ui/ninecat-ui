@@ -11,7 +11,7 @@ Ninecat-ui
   </h1>
 
 
-`Ninecat-ui` 是一款轻量级的Vue UI Web组件库。
+`Ninecat-ui` 是一款轻量级的Vue3.0 UI Web组件库。
 
 ## 支持环境
 支持主流的现代浏览器。
