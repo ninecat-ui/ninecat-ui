@@ -1,3 +1,4 @@
 *.tsx linguist-language=TypeScript
+*.ts linguist-language=TypeScript
 *.scss linguist-language=VUE
 *.html linguist-language=VUE
