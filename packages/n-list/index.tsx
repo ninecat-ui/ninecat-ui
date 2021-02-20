@@ -46,16 +46,11 @@ const NList = defineComponent({
       return classNames(classList);
     };
 
-    const renderLi = () => {
-      const res = data.value.map(dataItem => {
-        return <li class={listClass()}>{dataItem}</li>;
-      });
-      return (<>{res}</>);
-    };
-
     return () => (
       <ul class={ulClass()}>
-        {renderLi()}
+        {data.value.map(dataItem => {
+        return <li class={listClass()}>{dataItem}</li>;
+      })}
       </ul>
     );
   }

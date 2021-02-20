@@ -28,7 +28,7 @@ const PaginationProps = {
 const NPagination = defineComponent({
   name: 'NPagination',
   props: PaginationProps,
-  setup (props) {
+  setup(props) {
     const { total, current, pageSize, size } = toRefs(props);
 
     const getPageKeyMap = (total, pageSize) => {
@@ -45,20 +45,15 @@ const NPagination = defineComponent({
 
     const nPageKeyMap = getPageKeyMap(total.value, pageSize.value);
 
-    const rednerPageLi = () => {
-      const res = nPageKeyMap.map(dataItem => {
-        const aClass = dataItem.value === current.value ? 'active' : '';
-        return <li class={size.value}> <a class={aClass}>{dataItem.value}</a> </li>;
-      });
-      return (<>{res}</>);
-    };
-
     return () => (
       <div>
         <ul>
           <li><a>&laquo;</a></li>
           <li><a>&lsaquo;</a></li>
-            {rednerPageLi()}
+          {nPageKeyMap.map(dataItem => {
+            const aClass = dataItem.value === current.value ? 'active' : '';
+            return <li class={size.value}> <a class={aClass}>{dataItem.value}</a> </li>;
+          })}
           <li><a>&rsaquo;</a></li>
           <li><a>&raquo;</a></li>
         </ul >
