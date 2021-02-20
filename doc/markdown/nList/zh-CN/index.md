@@ -99,7 +99,7 @@
 :::demo
 ```html
 <template>
-  <n-list :data="list" bordered="true" />
+  <n-list :data="list" :bordered="true" />
 </template>
 <script>
   export default {
@@ -121,7 +121,7 @@
 :::demo
 ```html
 <template>
-  <n-list :data="list" bordered="true" hover="true"/>
+  <n-list :data="list" :bordered="true" :hover="true"/>
 </template>
 <script>
   export default {

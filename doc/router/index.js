@@ -2,6 +2,9 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 import { nextTick } from 'vue';
 import hljs from 'highlight.js';
 import docConfig from '../doc.config';
+import { getLang } from '../util/lang';
+
+const localLang = getLang();
 
 export const commonRoutes = [
   {
@@ -10,7 +13,13 @@ export const commonRoutes = [
     meta: {
       name: 'HomePage'
     },
-    component: () => import('../markdown/nAbout/zh-CN/index.md')
+    component: () => {
+      if (localLang === 'en-US') {
+        return import('../markdown/nAbout/en-US/index.md');
+      } else {
+        return import('../markdown/nAbout/zh-CN/index.md');
+      }
+    }
   }
 ];
 
