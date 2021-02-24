@@ -9,7 +9,8 @@ module.exports = {
     mocha: true
   },
   globals: {
-    "expect": true
+    "expect": true,
+    "jest": false,
   },
   extends: [
     'plugin:vue/recommended',

@@ -2,7 +2,7 @@ import { config } from '@vue/test-utils';
 
 config.global.stubs = {
   transition: false,
-  'transition-group': false,
+  'transition-group': false
 };
 /* eslint-disable global-require */
 if (typeof window !== 'undefined') {
@@ -17,19 +17,19 @@ if (typeof window !== 'undefined') {
       value: jest.fn(query => ({
         matches: query.includes('max-width'),
         addListener: jest.fn(),
-        removeListener: jest.fn(),
-      })),
+        removeListener: jest.fn()
+      }))
     });
   }
 }
 
 // The built-in requestAnimationFrame and cancelAnimationFrame not working with jest.runFakeTimes()
 // https://github.com/facebook/jest/issues/5147
-global.requestAnimationFrame = function(cb) {
+global.requestAnimationFrame = function (cb) {
   return setTimeout(cb, 0);
 };
 
-global.cancelAnimationFrame = function(cb) {
+global.cancelAnimationFrame = function (cb) {
   return clearTimeout(cb, 0);
 };
 

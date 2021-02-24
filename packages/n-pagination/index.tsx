@@ -28,7 +28,7 @@ const PaginationProps = {
 const NPagination = defineComponent({
   name: 'NPagination',
   props: PaginationProps,
-  setup(props) {
+  setup (props) {
     const { total, current, pageSize, size } = toRefs(props);
 
     const getPageKeyMap = (total, pageSize) => {

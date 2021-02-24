@@ -49,8 +49,8 @@ const NList = defineComponent({
     return () => (
       <ul class={ulClass()}>
         {data.value.map(dataItem => {
-        return <li class={listClass()}>{dataItem}</li>;
-      })}
+          return <li class={listClass()}>{dataItem}</li>;
+        })}
       </ul>
     );
   }
