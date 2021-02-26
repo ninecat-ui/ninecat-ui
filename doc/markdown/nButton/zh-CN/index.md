@@ -51,6 +51,26 @@ export default {
 ```
 :::
 
+### 加载中状态
+
+:::demo 添加 loading 属性即可让按钮处于加载状态，最后两个按钮演示点击后进入加载状态。
+```html
+<template>
+  <n-button :loading="true">loading</n-button>
+</template>
+```
+:::
+
+### 禁用状态
+
+:::demo 添加 disabled 属性即可让按钮处于不可用状态，同时按钮样式也会改变。
+```html
+<template>
+  <n-button :disabled="true">disable</n-button>
+</template>
+```
+:::
+
 
 ### 按钮组合
 

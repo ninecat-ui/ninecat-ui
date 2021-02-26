@@ -1,4 +1,6 @@
 import { defineComponent, App, HTMLAttributes, SetupContext } from 'vue';
+import NLoader from '../n-loader';
+import NIcon from '../n-icon';
 import classNames from '../../src/utils/className';
 import './index.scss';
 
@@ -33,22 +35,17 @@ const NButton = defineComponent({
       if (loading || icon) {
         return (
           <span class="nbutton-icon">
-            {loading && <n-icon class="loading" name="icon-wind-loading"/>}
-            {icon && !loading && <n-icon name={icon} />}
+            {loading && <NLoader size="xs" show={true}/>}
+            {icon && !loading && <NIcon name={icon} />}
           </span>
         );
       }
     };
-    const renderSolt = () => (
-        <span class="nbutton-content">
-          {slots.default && slots.default()}
-        </span>
-    );
 
     return () => (
         <button class={classString} disabled={disabled}>
           {renderIcon()}
-          {renderSolt()}
+          {slots.default && slots.default()}
         </button>
     );
   }

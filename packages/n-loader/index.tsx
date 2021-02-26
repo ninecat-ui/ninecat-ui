@@ -4,12 +4,12 @@ import './index.scss';
 
 const LoaderProps = {
   show: {
-    type: Boolean as PropType<false>,
+    type: Boolean as PropType<true>,
     default: false
   },
   loaddingText: {
     type: String as PropType<string>,
-    default: 'Loading...'
+    default: ''
   },
   size: {
     type: String as PropType<string>,
@@ -58,10 +58,10 @@ const NLoader = defineComponent({
     };
 
     return () => (
-      show && <div class="loadding">
+      show && <span class="loadding">
         <div style={{ ...sizeStyle() }} />
         <span class={spanClass()}>{loaddingText.value}</span>
-      </div>
+      </span>
     );
   }
 });

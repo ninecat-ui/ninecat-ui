@@ -3,16 +3,17 @@ button{
 }
 
 .nbutton{
+  overflow:hidden; 
   min-width: 80px;
   height: 36px;
-  padding: 0.5em 1em;
+  padding: 0 15px;
   background-color: #F7F7FA;
   border-radius: 6px;
   border: 0;
-  vertical-align: middle;
+  text-align: center;
   font-family: PingFangSC-Regular;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 36px;
   cursor:pointer;
   .nbutton-icon{
     display: inline-block;
