@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NAlter renders correctly 1`] = `
+<div class="base-alert">
+  <div class="alert-content"><i class="iconfont icon-undefined" name="icon-undefined"></i><span class="message-text"><!----></span><i class="iconfont icon-times icon-undefined" id="alertCloseIcon" name="icon-times"></i></div>
+</div>
+`;

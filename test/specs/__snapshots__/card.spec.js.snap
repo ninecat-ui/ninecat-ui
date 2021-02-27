@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`nCard should return nCard 1`] = `
+<div class="card"><img class="card-img"><span class="card-title"><!----></span>
+  <p class="card-message">
+    <!---->
+  </p>
+</div>
+`;

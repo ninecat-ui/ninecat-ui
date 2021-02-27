@@ -1,23 +1,23 @@
-import nBadge from '../../packages/n-badge';
+import NBadge from '../../packages/n-badge';
 import { mount } from '@vue/test-utils';
 
-describe('nBadge', () => {
+describe('NBadge', () => {
   it('renders correctly', () => {
     const wrapper = mount({
       render () {
-        return <nBadge>Follow</nBadge>;
+        return <NBadge>Follow</NBadge>;
       }
     });
     expect(wrapper.html()).toMatchSnapshot();
   });
   it('render default style when not define type', () => {
-    const wrapper = mount(nBadge);
+    const wrapper = mount(NBadge);
     expect(wrapper.classes()).toContain('n-badge');
   });
   it('render chinese characters correctly', () => {
     const wrapper = mount({
       render () {
-        return <nBadge>测试</nBadge>;
+        return <NBadge>测试</NBadge>;
       }
     });
     expect(wrapper.text()).toBe('测试');
@@ -25,7 +25,7 @@ describe('nBadge', () => {
   it('render correctly content', () => {
     const wrapper = mount({
       render () {
-        return <nBadge content={99} />;
+        return <NBadge content="99" />;
       }
     });
     expect(wrapper.text()).toBe('99');

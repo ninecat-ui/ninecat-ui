@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`nTooltip should return NTooltip 1`] = `
+<div class="n-tooltip">
+  <div class="tooltip-container top not-visible" role="tooltip">
+    <div class="content"></div>
+    <div class="arrow top"></div>
+    <!---->
+  </div><span><!----></span>
+</div>
+`;

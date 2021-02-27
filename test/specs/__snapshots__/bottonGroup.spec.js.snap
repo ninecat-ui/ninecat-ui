@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`nButtonGroup renders correctly 1`] = `<div class="n-button-group">TEST</div>`;

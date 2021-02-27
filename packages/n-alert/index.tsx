@@ -1,4 +1,4 @@
-import { defineComponent, App, PropType, SetupContext, toRefs } from 'vue';
+import { defineComponent, App, PropType, SetupContext } from 'vue';
 import classNames from '../../src/utils/className';
 import './index.scss';
 import NIcon from '../n-icon';
@@ -20,21 +20,21 @@ const NAlert = defineComponent({
   name: 'NAlert',
   props: AlterProps,
   setup (props, { emit }: SetupContext) {
-    const { show, type, message } = toRefs(props);
+    // const { show, type, message } = toRefs(props);
 
     const alertClass = () => {
-      return classNames(['base-alert', type.value]);
+      return classNames(['base-alert', props.type]);
     };
-    const iconClass = classNames([`icon-${type.value}`]);
+    const iconClass = classNames([`icon-${props.type}`]);
     const closeAlert = () => {
       emit('update:show', false);
     };
     return () => (
-      show.value
+      props.show
         ? <div class={alertClass()}>
         <div class="alert-content">
-          <NIcon name={`icon-${type.value}`}/>
-          <span class="message-text">{ message.value }</span>
+          <NIcon name={`icon-${props.type}`}/>
+          <span class="message-text">{props.message }</span>
           <NIcon
             id="alertCloseIcon"
             name="icon-times"
