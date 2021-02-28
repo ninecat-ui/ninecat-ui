@@ -9,7 +9,7 @@
       class="demo-box"
     >
       <div
-        v-if="$slots.default && metaShow"
+        v-if="$slots.default"
         class="description"
       >
         <slot />
