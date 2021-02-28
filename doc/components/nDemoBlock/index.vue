@@ -27,9 +27,7 @@
         class="demo-block-control"
         @click="showMeta"
       >
-        <n-icon
-          :name="iconName"
-        />
+        <i :class="[iconName]" />
         <span v-show="hovering">{{ hoveringText }}</span>
         <!-- Todo -->
         <!-- <span
@@ -61,9 +59,9 @@ export default {
   computed: {
     iconName () {
       if (this.metaShow) {
-        return 'icon-sort-up';
+        return 'iconfont icon-sort-up';
       } else {
-        return 'icon-sort-down';
+        return 'iconfont icon-sort-down';
       }
     },
     hoveringText () {

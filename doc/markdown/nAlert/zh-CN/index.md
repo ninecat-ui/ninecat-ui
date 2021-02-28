@@ -8,6 +8,7 @@
 当某个页面需要向用户显示警告的信息时。
  
 ## 代码演示
+### 基本用法
 :::demo
 ```html
 <template>
@@ -26,11 +27,13 @@
       v-model:show="show3"
       message="Message"
       type="warning"
+      closable
     />
     <n-alert
       v-model:show="show4"
       message="Message"
       type="error"
+      :showIcon="true"
     />
   </div>
 </template>
@@ -51,10 +54,42 @@ export default {
 ```
 :::
 
+### 自定义关闭
+:::demo
+```html
+<template>
+  <div >
+    <n-alert
+      closable
+      v-model:show="show"
+      message="Message"
+      type="info"
+      close-text="Close now"
+    />
+  </div>
+</template>
+
+<script>
+export default {
+  data: function () {
+    return {
+      show: true,
+    }
+  }
+}
+</script>
+
+```
+:::
+
 ## API
 
 | 参数 | 说明 | 类型 | 默认值 |
 | :--- | :--- | :--- | :--- |
 | show | 是否展示 | Boolean | false |
+| closable | 是否可关闭 | Boolean | false |
 | message | 提示内容 | String |  |
 | type    | 提示类型，可选值`info`,`success`,`warning`,`error` | String | info |
+| closeText | 自定义关闭文案 | String |  |
+| showIcon | 是否展示辅助性图标 | Boolean | flase |
+

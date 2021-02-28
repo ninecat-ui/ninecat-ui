@@ -26,4 +26,29 @@ describe('NAlter', () => {
     });
     expect(wrapper.text()).toBe('test');
   });
+  it('render closeicon when the closable', () => {
+    const wrapper = mount({
+      render () {
+        return <NAlter show={true} message={'test'} closable/>;
+      }
+    });
+    expect(wrapper.find('.icon-times').exists()).toBe(true);
+  });
+  it('render closeText when the closeText is close', () => {
+    const wrapper = mount({
+      render () {
+        return <NAlter show={true} message={'test'} closable closeText="close"/>;
+      }
+    });
+    expect(wrapper.find('.close-text').exists()).toBe(true);
+  });
+  it('when click close icon, close this alter', async () => {
+    const wrapper = mount({
+      render () {
+        return <NAlter show={true} message={'test'} closable/>;
+      }
+    });
+    await wrapper.find('.icon-times').trigger('click');
+    expect(wrapper.find('.base-alter').exists()).toBe(false);
+  });
 });

@@ -21,6 +21,12 @@
       margin-left: 10px;
       margin-right: 10px;
     }
+    .close-text{
+      color: rgba(0,0,0,.45);
+      transition: color .3s;
+      font-size: 12px;
+      cursor: pointer;
+    }
     .icon-info {
       color: #2196f3;
       cursor: pointer;
