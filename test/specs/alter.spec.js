@@ -42,6 +42,14 @@ describe('NAlter', () => {
     });
     expect(wrapper.find('.close-text').exists()).toBe(true);
   });
+  it('render description when has description', () => {
+    const wrapper = mount({
+      render () {
+        return <NAlter show={true} description="description" message={'test'} closable closeText="close"/>;
+      }
+    });
+    expect(wrapper.find('.description').exists()).toBe(true);
+  });
   it('when click close icon, close this alter', async () => {
     const wrapper = mount({
       render () {

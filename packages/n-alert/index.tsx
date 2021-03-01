@@ -13,7 +13,8 @@ const AlterProps = {
     default: false
   },
   type: {
-    type: String as PropType<''>
+    type: String as PropType<''>,
+    default: 'info'
   },
   message: {
     type: String as PropType<''>
@@ -23,6 +24,9 @@ const AlterProps = {
   },
   showIcon: {
     type: Boolean as PropType<false>
+  },
+  description: {
+    type: String as PropType<''>
   }
 };
 
@@ -34,7 +38,12 @@ const NAlert = defineComponent({
     const alertClass = () => {
       return classNames(['base-alert', props.type]);
     };
-    const iconClass = classNames([`icon-${props.type}`]);
+    const messageClass = () => {
+      return classNames(['message-text', props.description ? 'title' : '']);
+    };
+    const iconClass = () => {
+      return classNames([`icon-${props.type}`, props.description ? 'title-icon' : '']);
+    };
     const closeAlert = () => {
       emit('update:show', false);
     };
@@ -44,7 +53,7 @@ const NAlert = defineComponent({
         : <NIcon
         id="alertCloseIcon"
         name="icon-times"
-        class={iconClass}
+        class={iconClass()}
         onClick={closeAlert}
       />);
     };
@@ -52,9 +61,16 @@ const NAlert = defineComponent({
       props.show
         ? <div class={alertClass()}>
           <div class="alert-content">
-            {props.showIcon && <NIcon name={`icon-${props.type}`} /> }
-            <span class="message-text">{props.message}</span>
-            {props.closable && renderCloseContent()}
+            <div class="icon">
+              {props.showIcon && <NIcon class={iconClass()} name={`icon-${props.type}`} /> }
+            </div>
+            <div class="content">
+              <span class={messageClass()}>{props.message}</span>
+              <p class="description">{props.description}</p>
+            </div>
+            <div class="close">
+              {props.closable && renderCloseContent()}
+            </div>
           </div>
         </div>
         : null

@@ -54,7 +54,7 @@ export default {
 ```
 :::
 
-### Custome define close
+### Customize define close
 :::demo
 ```html
 <template>
@@ -82,6 +82,41 @@ export default {
 ```
 :::
 
+### Contains supporting text introduction
+:::demo
+```html
+<template>
+  <div >
+    <n-alert
+      v-model:show="show"
+      message="Success Text"
+      type="success"
+      description="Success Description Success Description Success Description"
+    />
+    <n-alert
+      closable
+      v-model:show="show"
+      message="Warning Text"
+      type="warning"
+      :showIcon="true"
+      description="Warning Description Warning Description Warning Description"
+    />
+  </div>
+</template>
+
+<script>
+export default {
+  data: function () {
+    return {
+      show: true,
+    }
+  }
+}
+</script>
+
+```
+:::
+
 ### API
 
 | Property | Description | Type | Default |
@@ -89,6 +124,7 @@ export default {
 | show | Whether to show | Boolean | false |
 | closable | Whether to close | Boolean | false |
 | message | Content of Alert | String |  |
+|description |	Auxiliary text introduction for warnings |	String| |
 | type    | Type of Alert styles, options:`info`,`success`,`warning`,`error` | String | info |
 | closeText | Custome define close text | String |  |
 | showIcon | Whether show icon | Boolean | flase |

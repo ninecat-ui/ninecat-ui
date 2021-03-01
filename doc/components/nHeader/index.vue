@@ -106,7 +106,7 @@ export default {
       indexName: 'ninecat-ui',
       inputSelector: '.ndoc-search',
       debug: true, // Set debug to true if you want to inspect the dropdown
-      "start_urls": ["https://ninecat-ui.github.io"],
+      start_urls: ['https://ninecat-ui.github.io']
     });
   },
   methods: {

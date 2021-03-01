@@ -1,10 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NAlter renders correctly 1`] = `
-<div class="base-alert">
+<div class="base-alert info">
   <div class="alert-content">
-    <!----><span class="message-text"><!----></span>
-    <!---->
+    <div class="icon">
+      <!---->
+    </div>
+    <div class="content"><span class="message-text"><!----></span>
+      <p class="description">
+        <!---->
+      </p>
+    </div>
+    <div class="close">
+      <!---->
+    </div>
   </div>
 </div>
 `;

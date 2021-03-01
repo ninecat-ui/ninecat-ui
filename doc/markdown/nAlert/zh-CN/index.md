@@ -82,6 +82,41 @@ export default {
 ```
 :::
 
+### 含有辅助性文字介绍
+:::demo 含有辅助性文字介绍的警告提示。
+```html
+<template>
+  <div >
+    <n-alert
+      v-model:show="show"
+      message="Success Text"
+      type="success"
+      description="Success Description Success Description Success Description"
+    />
+    <n-alert
+      closable
+      v-model:show="show"
+      message="Warning Text"
+      type="warning"
+      :showIcon="true"
+      description="Warning Description Warning Description Warning Description"
+    />
+  </div>
+</template>
+
+<script>
+export default {
+  data: function () {
+    return {
+      show: true,
+    }
+  }
+}
+</script>
+
+```
+:::
+
 ## API
 
 | 参数 | 说明 | 类型 | 默认值 |
@@ -89,6 +124,7 @@ export default {
 | show | 是否展示 | Boolean | false |
 | closable | 是否可关闭 | Boolean | false |
 | message | 提示内容 | String |  |
+|description |	警告提示的辅助性文字介绍 |	String| |
 | type    | 提示类型，可选值`info`,`success`,`warning`,`error` | String | info |
 | closeText | 自定义关闭文案 | String |  |
 | showIcon | 是否展示辅助性图标 | Boolean | flase |
