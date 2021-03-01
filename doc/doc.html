@@ -7,72 +7,13 @@
     <meta name="keywords" content="Ninecat-ui,ninecat-ui,ninecat,vue ui,ninecatui,Ninecat"/>
     <meta name="description" content="Ninecat-ui,A Vue.js 3.0 Web UI Toolkit."/>
     <link rel="bookmark" href="static/favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css" integrity="sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=" crossorigin="anonymous">
     <title>ninecat-ui</title>
   </head>
   <body>
     <div id="app"></div>
-    <script type="text/html" id="hit-template">
-      <div class="hit">
-        <p class="hit-name">
-          {{#helpers.highlight}}{ "attribute": "firstname" }{{/helpers.highlight}}
-          {{#helpers.highlight}}{ "attribute": "lastname" }{{/helpers.highlight}}
-        </p>
-      </div>
-    </script>
     <script src="https://cdn.bootcss.com/vue-router/3.1.3/vue-router.min.js"></script>
     <script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
     <script src="https://cdn.bootcss.com/highlight.js/9.18.1/highlight.min.js"></script>
-    <script type="text/html" id="hit-template">
-      <div class="hit">
-        <p class="hit-name">
-          {{#helpers.highlight}}{ "attribute": "firstname" }{{/helpers.highlight}}
-          {{#helpers.highlight}}{ "attribute": "lastname" }{{/helpers.highlight}}
-        </p>
-      </div>
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.8.3/dist/instantsearch.production.min.js" integrity="sha256-LAGhRRdtVoD6RLo2qDQsU2mp+XVSciKRC8XPOBWmofM=" crossorigin="anonymous"></script>
-    <script>
-      function initDocsearch() {
-        const searchClient = algoliasearch(
-          "ninecat-ui",
-          "e3b8bf7a6a9475a23bf57ac66efc6960" // search only API key, not admin API key
-        );
-  
-        const search = instantsearch({
-          indexName: "contacts",
-          searchClient,
-          routing: true,
-        });
-  
-        search.addWidgets([
-          instantsearch.widgets.configure({
-            hitsPerPage: 10,
-          }),
-        ]);
-  
-        search.addWidgets([
-          instantsearch.widgets.searchBox({
-            container: "#search-box",
-            placeholder: "Search for contacts",
-          }),
-        ]);
-  
-        search.addWidgets([
-          instantsearch.widgets.hits({
-            container: "#hits",
-            templates: {
-              item: document.getElementById("hit-template").innerHTML,
-              empty: `We didn't find any results for the search <em>"{{query}}"</em>`,
-            },
-          }),
-        ]);
-  
-        search.start();
-      }
-      initDocsearch ()
-    </script>
   </body>
   <style>
     body{
