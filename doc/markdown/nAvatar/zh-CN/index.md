@@ -40,6 +40,20 @@
 ```
 :::
 
+### 带徽标的头像 
+通常用于消息提示。
+:::demo
+```html
+<template>
+  <div>
+    <n-badge content="99+">
+      <n-avatar><n-icon name="icon-user-fill" /></n-avatar>
+    </n-badge>
+  </div>  
+</template>
+```
+:::
+
 ## API
 
 | 参数 | 说明 | 类型 | 默认值 |

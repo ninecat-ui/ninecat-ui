@@ -40,6 +40,20 @@ Supports three types: image, icon, and character
 ```
 :::
 
+### Avatar with logo
+Usually used for message prompts.
+:::demo
+```html
+<template>
+  <div>
+    <n-badge content="99+">
+      <n-avatar><n-icon name="icon-user-fill" /></n-avatar>
+    </n-badge>
+  </div>  
+</template>
+```
+:::
+
 | Property | Description | Type | Default |
 | :--- | :--- | :--- | :--- |
 | size | size of the avatar | String | md |

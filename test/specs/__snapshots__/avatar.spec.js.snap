@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NAvatar renders correctly 1`] = `
+<div class="navatar navatar-md navatar-square" style="background: rgb(204, 204, 204);">
+  <div>Follow</div>
+</div>
+`;

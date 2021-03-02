@@ -11,10 +11,6 @@ const AvatarProps = {
     type: String as PropType<''>,
     default: 'square'
   },
-  icon: {
-    type: String as PropType<''>,
-    default: ''
-  },
   src: {
     type: String as PropType<''>,
     default: ''
@@ -33,9 +29,6 @@ const NAvatar = defineComponent({
       const classList = ['navatar'];
       if (props.size && typeof props.size === 'string') {
         classList.push(`navatar-${props.size}`);
-      }
-      if (props.icon) {
-        classList.push('navatar-icon');
       }
       if (props.shape) {
         classList.push(`navatar-${props.shape}`);
