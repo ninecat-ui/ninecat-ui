@@ -10,9 +10,10 @@
 
 ### 基本使用
 
+
 :::demo
 
-``` html
+```html
 <template>
     <div class="example-input">
         <n-input placeholder="请输入" />
@@ -38,7 +39,7 @@
 
 :::demo
 
-``` html
+```html
 <template>
     <div class="example-input">
         <n-input placeholder="请输入" size="lg" />
@@ -61,7 +62,7 @@
 
 :::demo
 
-``` html
+```html
 <template>
     <div>
         <n-input :disabled="true" placeholder="请输入" />
@@ -75,7 +76,7 @@
 
 :::demo
 
-``` html
+```html
 <template>
     <n-input @change="handChange" placeholder="请输入" />
 </template>
