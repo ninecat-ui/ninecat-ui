@@ -27,9 +27,9 @@ const NButton = defineComponent({
     const { size, disabled, loading, icon, type } = buttonProps;
     const classString = classNames([
       'nbutton',
-      `${type}`,
+      type,
       disabled ? 'nbutton-disabled' : '',
-      `${size}`
+      size
     ]);
     const renderIcon = () => {
       if (loading || icon) {
