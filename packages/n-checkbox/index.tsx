@@ -1,34 +1,39 @@
-import { defineComponent, App, HTMLAttributes, SetupContext } from 'vue';
+import { defineComponent, App,PropType,HTMLAttributes, SetupContext } from 'vue';
 import './index.scss';
 import { guid } from '../../src/utils/util';
 
-const initDefaultProps = {
-  checked: false,
-  defaultChecked: false
+const CheckboxProps = {
+  checked: {
+    type: Boolean as PropType<false>,
+    default: false
+  },
+  defaultChecked: {
+    type: Boolean as PropType<false>,
+    default: false
+  },
+  disabled: {
+    type: Boolean as PropType<false>,
+    default: false
+  }
 };
-export interface CheckboxProps extends HTMLAttributes {
-  checked?: boolean;
-  defaultChecked?: boolean;
-}
 
 const nCheckbox = defineComponent({
   name: 'NCheckbox',
-  setup (_:CheckboxProps, { slots, attrs }: SetupContext) {
-    const props = attrs as CheckboxProps;
+  props: CheckboxProps,
+  setup (props, { slots }: SetupContext) {
 
-    const { checked, defaultChecked } = { ...initDefaultProps, ...props };
 
     const id = guid();
     const checkeval = () => {
-      if (checked) {
-        return checked;
+      if (props.checked) {
+        return props.checked;
       }
-      return defaultChecked;
+      return false;
     };
     return () => (
       <div class="n-checkbox">
-        <input id={id} type="checkbox" checked={checkeval()}/>
-        <label for={id} />
+        <input id={id} class={[props.disabled ? 'n-checkbox-disble': '']} disabled={props.disabled} type="checkbox" checked={checkeval()}/>
+        <label for={id} class={[props.disabled ? 'n-checkbox-disble': '']}/>
         <div class="slot-text">
           {slots.default && slots.default()}
         </div>

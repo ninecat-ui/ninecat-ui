@@ -4,9 +4,11 @@
   margin: 0;
   padding: 0;
   height: 20px;
+  line-height: unset;
   .slot-text{
-    margin: 0 10px;
+    margin: 0 10px 0 25px;
     display: inline-block;
+    line-height: unset;
     font-family: PingFangSC-Regular;
     color: #575757;
   }
@@ -20,8 +22,12 @@
     height: 16px;
     border-radius: 3px;
     border: 1px solid #34c3ff;
-    position: relative;
+    position: absolute;
     cursor: pointer;
+  }
+  .n-checkbox-disble{
+    cursor: not-allowed;
+    border: 1px solid rgba(118, 118, 118, 0.3);
   }
   label::before {
       line-height: 20px;
@@ -41,8 +47,16 @@
   input:checked+label {
       background: #34c3ff;
   }
+  input:checked+label.n-checkbox-disble{
+    background: rgba(245, 245, 245,1);
+  }
   input:checked+label::before{
       opacity: 1;
       transform: all 0.5s;
+  }
+  input:checked+label.n-checkbox-disble::before{
+    border: 2px solid rgba(185, 185, 185,1);
+    border-top: none;
+      border-right: none;
   }
 }
