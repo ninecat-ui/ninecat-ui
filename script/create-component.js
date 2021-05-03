@@ -12,11 +12,11 @@ function main () {
 };
 
 function createComponentDir () {
-  let componentrRoot = '../packages/';
-  let targetDirPathName = 'n' + componentName;
-  let targetDirPath = path.join(__dirname, componentrRoot, targetDirPathName);
-  let subRoot = `../packages/${targetDirPathName}`;
-  let subDirPath = path.join(__dirname, subRoot, 'src');
+  const componentrRoot = '../packages/';
+  const targetDirPathName = 'n' + componentName;
+  const targetDirPath = path.join(__dirname, componentrRoot, targetDirPathName);
+  const subRoot = `../packages/${targetDirPathName}`;
+  const subDirPath = path.join(__dirname, subRoot, 'src');
   createFileDir(targetDirPath);
   createFileDir(subDirPath);
   createVueFile(subRoot);
@@ -24,45 +24,45 @@ function createComponentDir () {
 }
 
 function createDocDir () {
-  let docRoot = '../doc/markdown';
-  let docTargetDirPathName = 'n' + componentName;
-  let docTargetDirPath = path.join(__dirname, docRoot, docTargetDirPathName);
+  const docRoot = '../doc/markdown';
+  const docTargetDirPathName = 'n' + componentName;
+  const docTargetDirPath = path.join(__dirname, docRoot, docTargetDirPathName);
   createFileDir(docTargetDirPath);
-  let enSubDirPath = path.join(__dirname, `../doc/markdown/${docTargetDirPathName}`, 'en-US');
+  const enSubDirPath = path.join(__dirname, `../doc/markdown/${docTargetDirPathName}`, 'en-US');
   createFileDir(enSubDirPath);
-  let zhSubDirPath = path.join(__dirname, `../doc/markdown/${docTargetDirPathName}`, 'zh-CN');
+  const zhSubDirPath = path.join(__dirname, `../doc/markdown/${docTargetDirPathName}`, 'zh-CN');
   createFileDir(zhSubDirPath);
   createEnDocFile(docTargetDirPathName);
   createZhDocFile(docTargetDirPathName);
 }
 
 function createVueFile (subRoot) {
-  let vueTemplate = fs.readFileSync(path.join(__dirname, './component-template/template.vue'), 'utf8');
-  let className = 'n-' + componentName.toLowerCase();
+  const vueTemplate = fs.readFileSync(path.join(__dirname, './component-template/template.vue'), 'utf8');
+  const className = 'n-' + componentName.toLowerCase();
   let vueContent = vueTemplate.replace(/n-ComponentName/g, className);
   vueContent = vueContent.replace(/ComponentName/g, componentName);
-  let vueTargetFilePath = path.join(__dirname, subRoot, 'src', 'index.vue');
+  const vueTargetFilePath = path.join(__dirname, subRoot, 'src', 'index.vue');
   createFile(vueTargetFilePath, vueContent);
 }
 
 function createJsFile (subRoot) {
-  let jsTemplate = fs.readFileSync(path.join(__dirname, './component-template/template.js'), 'utf8');
-  let jsContent = jsTemplate.replace(/nComponentName/g, 'n' + componentName);
-  let jsTargetFilePath = path.join(__dirname, subRoot, 'index.js');
+  const jsTemplate = fs.readFileSync(path.join(__dirname, './component-template/template.js'), 'utf8');
+  const jsContent = jsTemplate.replace(/nComponentName/g, 'n' + componentName);
+  const jsTargetFilePath = path.join(__dirname, subRoot, 'index.js');
   createFile(jsTargetFilePath, jsContent);
 }
 
 function createEnDocFile (docTargetDirPathName) {
-  let enDocTemplate = fs.readFileSync(path.join(__dirname, './component-template/en-doc-template.md'), 'utf8');
-  let enDocContent = enDocTemplate.replace(/componentName/g, componentName.toLowerCase());
-  let enDocFilePath = path.join(__dirname, `../doc/markdown/${docTargetDirPathName}/en-US`, 'index.md');
+  const enDocTemplate = fs.readFileSync(path.join(__dirname, './component-template/en-doc-template.md'), 'utf8');
+  const enDocContent = enDocTemplate.replace(/componentName/g, componentName.toLowerCase());
+  const enDocFilePath = path.join(__dirname, `../doc/markdown/${docTargetDirPathName}/en-US`, 'index.md');
   createFile(enDocFilePath, enDocContent);
 }
 
 function createZhDocFile (docTargetDirPathName) {
-  let zhDocTemplate = fs.readFileSync(path.join(__dirname, './component-template/en-doc-template.md'), 'utf8');
-  let zhDocContent = zhDocTemplate.replace(/componentName/g, componentName.toLowerCase());
-  let zhDocFilePath = path.join(__dirname, `../doc/markdown/${docTargetDirPathName}/zh-CN`, 'index.md');
+  const zhDocTemplate = fs.readFileSync(path.join(__dirname, './component-template/en-doc-template.md'), 'utf8');
+  const zhDocContent = zhDocTemplate.replace(/componentName/g, componentName.toLowerCase());
+  const zhDocFilePath = path.join(__dirname, `../doc/markdown/${docTargetDirPathName}/zh-CN`, 'index.md');
   createFile(zhDocFilePath, zhDocContent);
 }
 

@@ -25,7 +25,7 @@ import nToggle from '../packages/n-toggle';
 import nTable from '../packages/n-table';
 import nUpload from '../packages/n-upload';
 import nTooltip from '../packages/n-tooltip';
-import nInput from '../packages/nInput';
+import nInput from '../packages/n-input';
 import nModal from '../packages/n-modal';
 
 import nSidenavItem from '../packages/n-sidenav-item';
