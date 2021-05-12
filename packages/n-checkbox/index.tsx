@@ -1,4 +1,4 @@
-import { defineComponent, App,PropType,HTMLAttributes, SetupContext } from 'vue';
+import { defineComponent, App, PropType, SetupContext } from 'vue';
 import './index.scss';
 import { guid } from '../../src/utils/util';
 
@@ -21,8 +21,6 @@ const nCheckbox = defineComponent({
   name: 'NCheckbox',
   props: CheckboxProps,
   setup (props, { slots }: SetupContext) {
-
-
     const id = guid();
     const checkeval = () => {
       if (props.checked) {
@@ -32,8 +30,8 @@ const nCheckbox = defineComponent({
     };
     return () => (
       <div class="n-checkbox">
-        <input id={id} class={[props.disabled ? 'n-checkbox-disble': '']} disabled={props.disabled} type="checkbox" checked={checkeval()}/>
-        <label for={id} class={[props.disabled ? 'n-checkbox-disble': '']}/>
+        <input id={id} class={[props.disabled ? 'n-checkbox-disble' : '']} disabled={props.disabled} type="checkbox" checked={checkeval()}/>
+        <label for={id} class={[props.disabled ? 'n-checkbox-disble' : '']}/>
         <div class="slot-text">
           {slots.default && slots.default()}
         </div>

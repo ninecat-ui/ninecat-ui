@@ -44,8 +44,10 @@ const NButton = defineComponent({
 
     return () => (
         <button class={classString} disabled={disabled}>
-          {renderIcon()}
-          {slots.default && slots.default()}
+          <div class="nbutton-content">
+            {renderIcon()}
+            <span class="nbutton-slot">{slots.default && slots.default()}</span>
+          </div>
         </button>
     );
   }

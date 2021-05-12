@@ -15,9 +15,13 @@ button{
   font-size: 14px;
   line-height: 36px;
   cursor:pointer;
+  .nbutton-content{
+    display: flex;
+    justify-content: center;
+  }
   .nbutton-icon{
     display: inline-block;
-    margin-right: 0.2em;
+    margin-right: 8px;
   }
 }
 
@@ -99,4 +103,8 @@ button{
   height: 24px;
   font-size: 12px;
   padding: 2px 8px;
+}
+
+.nbutton-slot{
+  text-align: center;
 }
