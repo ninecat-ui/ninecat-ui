@@ -15,14 +15,14 @@ module.exports = merge(baseConfig, {
     chunkFilename: '[id].js',
     libraryTarget: 'umd'
   },
-  externals: {
-    vue: {
-      root: 'Vue',
-      commonjs: 'vue',
-      commonjs2: 'vue',
-      amd: 'vue'
-    }
-  },
+  // externals: {
+  //   vue: {
+  //     root: 'Vue',
+  //     commonjs: 'vue',
+  //     commonjs2: 'vue',
+  //     amd: 'vue'
+  //   }
+  // },
   optimization: {
     minimize: false
   },
