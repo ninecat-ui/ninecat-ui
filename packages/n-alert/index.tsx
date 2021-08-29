@@ -47,6 +47,7 @@ const NAlert = defineComponent({
     const closeAlert = () => {
       emit('update:show', false);
     };
+
     const renderCloseContent = () => {
       return (props.closeText
         ? <span class="close-text" onClick={closeAlert}>{props.closeText}</span>
@@ -54,7 +55,7 @@ const NAlert = defineComponent({
         id="alertCloseIcon"
         name="icon-times"
         class={iconClass()}
-        onClick={closeAlert}
+        click={closeAlert}
       />);
     };
     return () => (

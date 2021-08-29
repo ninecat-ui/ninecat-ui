@@ -1,16 +1,27 @@
-import { defineComponent, App, HTMLAttributes, SetupContext } from 'vue';
+import { defineComponent, App, PropType } from 'vue';
 
-export interface IconProps extends HTMLAttributes {
-  name?: string;
-}
+const IconProps = {
+  id: {
+    type: String as PropType<string>,
+    default: ''
+  },
+  name: {
+    type: String as PropType<string>,
+    default: ''
+  },
+  click: {
+    type: Function as PropType<() => void>,
+    default: () => {}
+  }
+};
 
 const NIcon = defineComponent({
   name: 'NIcon',
-  setup (_:IconProps, { attrs }: SetupContext) {
-    const props = attrs as IconProps;
-    const { name } = props;
+  props: IconProps,
+  setup (props) {
+    const { name,click } = props;
     return () => (
-        <i class={'iconfont ' + name}/>
+        <i class={'iconfont ' + name} onClick={click}/>
     );
   }
 });

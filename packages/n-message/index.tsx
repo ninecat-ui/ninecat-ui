@@ -59,7 +59,7 @@ const Message = defineComponent({
                     id="messageCloseIcon"
                     name="icon-times"
                     class={secondIconClassList}
-                    onClick={closeMessage} />}
+                    click={() => closeMessage()} />}
               </div>
             </div>
           </div>
