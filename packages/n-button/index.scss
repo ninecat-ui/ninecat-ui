@@ -1,110 +1,179 @@
-button{
-  outline:none;
+@import '../theme/color.scss';
+button {
+    outline: none;
 }
 
-.nbutton{
-  overflow:hidden; 
-  min-width: 80px;
-  height: 36px;
-  padding: 0 15px;
-  background-color: #F7F7FA;
-  border-radius: 6px;
-  border: 0;
-  text-align: center;
-  font-family: PingFangSC-Regular;
-  font-size: 14px;
-  line-height: 36px;
-  cursor:pointer;
-  .nbutton-content{
-    display: flex;
-    justify-content: center;
-  }
-  .nbutton-icon{
+$xs:2px 8px;
+$sm:5px 10px;
+$md:8px 12px;
+$lg:10px 16px;
+.nbutton {
+    overflow: hidden;
+    border-radius: 6px;
+    border: 0;
+    text-align: center;
+    font-family: PingFangSC-Regular;
     display: inline-block;
-    margin-right: 8px;
-  }
+    position: relative;
+    outline: none;
+    font-weight: 400;
+    -webkit-appearance: none;
+    user-select: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all .1s linear;
+    box-sizing: border-box;
+    cursor: pointer;
+    .nbutton-icon {
+        display: inline-block;
+        margin-right: 8px;
+    }
+    .nbutton-icon-only {
+        display: block;
+        font-size: 12px;
+        margin: 0;
+        height: 16px;
+        width: 16px;
+    }
 }
 
-.default{
-  color: #575757;
-  &:focus,&:hover{
-    background: #E5E5EA;
-  };
-  &:active{
-    color: #272C36;
-    background: #D9D9D9;
-  }
+.nbutton-hasicon {
+    padding: 10px !important;
 }
 
-.primary{
-  background: #34C3FF;
-  color: #ffffff;
-  &:focus,&:hover{
-    background: #2EABDF;
-  };
-  &:active{
-    background: #2792BF;;
-  }
-  &:disabled{
-    background: #C2EDFF;
-  }
+@mixin nbutton-colors($color, $type) {
+    background: $color;
+    color: $color;
+    @if $type=='default' {
+        background: transparent;
+        border: 1px solid $color;
+        &:focus,
+        &:hover {
+            background: mix($white, $color, 90%);
+            border: 1px solid mix($white, $color, 20%);
+            color: $color;
+        }
+    }
+    @if $type=='primary' {
+        border: none;
+        color: $white;
+        &:focus,
+        &:hover {
+            background: mix($white, $color, 30%)
+        }
+        ;
+        &:active {
+            background: mix($black, $color, 5%)
+        }
+        &:disabled {
+            background: mix($white, $color, 40%)
+        }
+    }
 }
 
-.link{
-  color: #34C3FF;
-  background: none;
-  border: none;
+.nbutton-type-default {
+    @include nbutton-colors($primaryColor, 'default');
 }
 
-.ghost{
-  color: #34C3FF;
-  background: #ffffff;
-  border: 1px solid #34C3FF;
+.nbutton-type-primary {
+    @include nbutton-colors($primaryColor, 'primary');
+    border: none;
+    color: $white !important;
 }
 
-.delicate{
-  color: #8E8E93;
-  background: none;
-  border: none;
+.nbutton-type-link {
+    color: $primaryColor;
+    background: none;
+    border: none;
+}
+
+.nbutton-type-ghost {
+    color: $primaryColor;
+    background: #ffffff;
+    border: 1px solid $primaryColor;
+}
+
+.nbutton-type-delicate {
+    color: #8E8E93;
+    background: none;
+    border: none;
+}
+
+.nbutton-type-default.nbutton-status-success {
+    @include nbutton-colors($successColor, 'default');
+}
+
+.nbutton-type-default.nbutton-status-info {
+    @include nbutton-colors($infoColor, 'default');
+}
+
+.nbutton-type-default.nbutton-status-warning {
+    @include nbutton-colors($warningColor, 'default');
+}
+
+.nbutton-type-default.nbutton-status-danger {
+    @include nbutton-colors($dangerColor, 'default');
+}
+
+.nbutton-type-primary.nbutton-status-success {
+    @include nbutton-colors($successColor, 'primary');
+}
+
+.nbutton-type-primary.nbutton-status-info {
+    @include nbutton-colors($infoColor, 'primary');
+}
+
+.nbutton-type-primary.nbutton-status-warning {
+    @include nbutton-colors($warningColor, 'primary');
+}
+
+.nbutton-type-primary.nbutton-status-danger {
+    @include nbutton-colors($dangerColor, 'primary');
 }
 
 .nbutton-disabled {
-  background-color: #F7F7FA;
-  cursor: not-allowed;
-  &:focus,&:hover{
     background-color: #F7F7FA;
-    outline: none;
-  }
+    cursor: not-allowed;
+    &:focus,
+    &:hover {
+        background-color: #F7F7FA;
+        outline: none;
+    }
 }
 
-.lg{
-  width: 96px;
-  height: 24px;
-  font-size: 16px;
-  padding: 10px 16px;
+.nbutton-shape-square {
+    border-radius: 6px;
 }
 
-.md{
-  width: 80px;
-  height: 36px;
-  font-size: 14px;
-  padding: 8px 12px;
+.nbutton-shape-circle {
+    border-radius: 50%;
+    padding: 0;
 }
 
-.sm{
-  width: 76px;
-  height: 30px;
-  font-size: 14px;
-  padding: 5px 10px;
+.nbutton-shape-round {
+    border-radius: 18px;
 }
 
-.xs{
-  width: 64px;
-  height: 24px;
-  font-size: 12px;
-  padding: 2px 8px;
+.nbutton-size-lg {
+    padding: $lg;
+    font-size: 16px;
 }
 
-.nbutton-slot{
-  text-align: center;
+.nbutton-size-md {
+    padding: $md;
+    font-size: 14px;
+}
+
+.nbutton-size-sm {
+    padding: $sm;
+    font-size: 14px;
+}
+
+.nbutton-size-xs {
+    padding: $xs;
+    font-size: 12px;
+}
+
+.nbutton-slot {
+    text-align: center;
 }

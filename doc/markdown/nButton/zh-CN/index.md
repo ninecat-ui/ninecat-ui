@@ -6,6 +6,34 @@
 
 ## 代码演示
 
+### 基础用法
+:::demo 使用 `type`、`status`、`shape`等来定义按钮的样式。
+```html
+<template>
+  <div>
+    <n-button type="default">Default</n-button>
+    <n-button type="primary">Primary</n-button>
+    <n-button type="link">Link</n-button>
+    <n-button type="ghost">Ghost</n-button>
+    <n-button type="delicate">Delicate</n-button>
+  </div>
+  <div>
+    <n-button type="primary" status="success">success</n-button>
+    <n-button type="primary" status="info">info</n-button>
+    <n-button type="primary" status="warning">warning</n-button>
+    <n-button type="primary" status="danger">danger</n-button>
+  </div>
+  <div>
+    <n-button type="primary" shape="square">square</n-button>
+    <n-button type="primary" shape="square" icon="icon-search"></n-button>
+    <n-button type="primary" shape="round">round</n-button>
+    <n-button type="primary" shape="circle" icon="icon-home"></n-button>
+  </div>
+</template>
+```
+:::
+
+
 ### 按钮类型
 :::demo 按钮有五种类型：默认按钮、主按钮、链接按钮、幽灵按钮、微妙按钮。
 ```html
@@ -39,6 +67,60 @@ export default {
 
 ```
 :::
+
+### 按钮状态
+:::demo 按钮有四种按钮状态：`success`、`info`、`warning`、`danger`。
+```html
+<template>
+  <div>
+    <n-button type="default" status="success">success</n-button>
+    <n-button type="default" status="info">info</n-button>
+    <n-button type="default" status="warning">warning</n-button>
+    <n-button type="default" status="danger">danger</n-button>
+  </div>
+  <div>
+    <n-button type="primary" status="success">success</n-button>
+    <n-button type="primary" status="info">info</n-button>
+    <n-button type="primary" status="warning">warning</n-button>
+    <n-button type="primary" status="danger">danger</n-button>
+  </div>
+</template>
+```
+
+:::
+
+### 按钮形状
+:::demo 按钮有三种形状属性：`square`、`round`、`circle`
+```html
+<template>
+    <n-button type="primary" shape="square">square</n-button>
+    <n-button type="primary" shape="square" icon="icon-search"></n-button>
+    <n-button type="primary" shape="round">round</n-button>
+    <n-button type="primary" shape="circle" icon="icon-home"></n-button>
+</template>
+```
+:::
+
+### 按钮尺寸
+:::demo 按钮有四种尺寸：`xs`、`ms`、`md`、`lg`,默认为`md`。
+```html
+<template>
+  <n-button size="xs">
+    xs
+  </n-button>
+  <n-button size="sm">
+    sm
+  </n-button>
+  <n-button size="md">
+    md
+  </n-button>
+  <n-button size="lg">
+    lg
+  </n-button>
+</template>
+```
+:::
+
 
 ### 图标按钮
 
