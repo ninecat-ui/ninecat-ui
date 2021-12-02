@@ -90,6 +90,12 @@ export default {
     <n-button type="link" status="warning">warning</n-button>
     <n-button type="link" status="danger">danger</n-button>
   </div>
+  <div>
+    <n-button type="ghost" status="success">success</n-button>
+    <n-button type="ghost" status="info">info</n-button>
+    <n-button type="ghost" status="warning">warning</n-button>
+    <n-button type="ghost" status="danger">danger</n-button>
+  </div>
 </template>
 ```
 

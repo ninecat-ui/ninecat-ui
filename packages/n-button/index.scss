@@ -1,179 +1,241 @@
-@import '../theme/color.scss';
+@import "../theme/color.scss";
 button {
-    outline: none;
+  outline: none;
 }
 
-$xs:2px 8px;
-$sm:5px 10px;
-$md:8px 12px;
-$lg:10px 16px;
+$xs: 2px 8px;
+$sm: 5px 10px;
+$md: 8px 12px;
+$lg: 10px 16px;
+$xsloading: 1px 4px;
+$smloading: 2px 5px;
+$mdloading: 3px 6px;
+$lgloading: 4px 8px;
 .nbutton {
-    overflow: hidden;
-    border-radius: 6px;
-    border: 0;
-    text-align: center;
-    font-family: PingFangSC-Regular;
-    display: inline-block;
-    position: relative;
-    outline: none;
-    font-weight: 400;
-    -webkit-appearance: none;
-    user-select: none;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: all .1s linear;
-    box-sizing: border-box;
-    cursor: pointer;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 0;
+  text-align: center;
+  font-family: PingFangSC-Regular;
+  display: inline-block;
+  position: relative;
+  outline: none;
+  font-weight: 400;
+  -webkit-appearance: none;
+  user-select: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.1s linear;
+  box-sizing: border-box;
+  cursor: pointer;
+  .nbutton-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
     .nbutton-icon {
-        display: inline-block;
-        margin-right: 8px;
+      display: inline-block;
+      margin-right: 8px;
+      line-height: 1;
     }
     .nbutton-icon-only {
-        display: block;
-        font-size: 12px;
-        margin: 0;
-        height: 16px;
-        width: 16px;
+      display: block;
+      font-size: 12px;
+      margin: 0;
+      height: 16px;
+      width: 16px;
     }
+  }
 }
 
 .nbutton-hasicon {
-    padding: 10px !important;
+  padding: 10px !important;
 }
 
 @mixin nbutton-colors($color, $type) {
-    background: $color;
-    color: $color;
-    @if $type=='default' {
-        background: transparent;
-        border: 1px solid $color;
-        &:focus,
-        &:hover {
-            background: mix($white, $color, 90%);
-            border: 1px solid mix($white, $color, 20%);
-            color: $color;
-        }
+  background: $color;
+  color: $color;
+  @if $type== "default" {
+    background: transparent;
+    border: 1px solid $color;
+    &:focus,
+    &:hover {
+      background: mix($white, $color, 90%);
+      border: 1px solid mix($white, $color, 20%);
+      color: $color;
     }
-    @if $type=='primary' {
-        border: none;
-        color: $white;
-        &:focus,
-        &:hover {
-            background: mix($white, $color, 30%)
-        }
-        ;
-        &:active {
-            background: mix($black, $color, 5%)
-        }
-        &:disabled {
-            background: mix($white, $color, 40%)
-        }
+  }
+  @if $type== "primary" {
+    border: none;
+    color: $white;
+    &:focus,
+    &:hover {
+      background: mix($white, $color, 30%);
     }
+    &:active {
+      background: mix($black, $color, 5%);
+    }
+    &:disabled {
+      background: mix($white, $color, 40%);
+    }
+  }
+  @if $type== "link" {
+    background: none;
+    border: none;
+  }
+  @if $type== "ghost" {
+    background: #ffffff;
+    border: 1px solid $color;
+  }
 }
 
 .nbutton-type-default {
-    @include nbutton-colors($primaryColor, 'default');
+  @include nbutton-colors($primaryColor, "default");
 }
 
 .nbutton-type-primary {
-    @include nbutton-colors($primaryColor, 'primary');
-    border: none;
-    color: $white !important;
+  @include nbutton-colors($primaryColor, "primary");
+  border: none;
+  color: $white !important;
 }
 
 .nbutton-type-link {
-    color: $primaryColor;
-    background: none;
-    border: none;
+  @include nbutton-colors($primaryColor, "link");
 }
 
 .nbutton-type-ghost {
-    color: $primaryColor;
-    background: #ffffff;
-    border: 1px solid $primaryColor;
+  @include nbutton-colors($primaryColor, "ghost");
 }
 
 .nbutton-type-delicate {
-    color: #8E8E93;
-    background: none;
-    border: none;
+  color: #8e8e93;
+  background: none;
+  border: none;
 }
 
 .nbutton-type-default.nbutton-status-success {
-    @include nbutton-colors($successColor, 'default');
+  @include nbutton-colors($successColor, "default");
 }
 
 .nbutton-type-default.nbutton-status-info {
-    @include nbutton-colors($infoColor, 'default');
+  @include nbutton-colors($infoColor, "default");
 }
 
 .nbutton-type-default.nbutton-status-warning {
-    @include nbutton-colors($warningColor, 'default');
+  @include nbutton-colors($warningColor, "default");
 }
 
 .nbutton-type-default.nbutton-status-danger {
-    @include nbutton-colors($dangerColor, 'default');
+  @include nbutton-colors($dangerColor, "default");
 }
 
 .nbutton-type-primary.nbutton-status-success {
-    @include nbutton-colors($successColor, 'primary');
+  @include nbutton-colors($successColor, "primary");
 }
 
 .nbutton-type-primary.nbutton-status-info {
-    @include nbutton-colors($infoColor, 'primary');
+  @include nbutton-colors($infoColor, "primary");
 }
 
 .nbutton-type-primary.nbutton-status-warning {
-    @include nbutton-colors($warningColor, 'primary');
+  @include nbutton-colors($warningColor, "primary");
 }
 
 .nbutton-type-primary.nbutton-status-danger {
-    @include nbutton-colors($dangerColor, 'primary');
+  @include nbutton-colors($dangerColor, "primary");
+}
+
+.nbutton-type-link.nbutton-status-success {
+  @include nbutton-colors($successColor, "link");
+}
+
+.nbutton-type-link.nbutton-status-info {
+  @include nbutton-colors($infoColor, "link");
+}
+
+.nbutton-type-link.nbutton-status-warning {
+  @include nbutton-colors($warningColor, "link");
+}
+
+.nbutton-type-link.nbutton-status-danger {
+  @include nbutton-colors($dangerColor, "link");
+}
+
+.nbutton-type-ghost.nbutton-status-success {
+  @include nbutton-colors($successColor, "ghost");
+}
+
+.nbutton-type-ghost.nbutton-status-info {
+  @include nbutton-colors($infoColor, "ghost");
+}
+
+.nbutton-type-ghost.nbutton-status-warning {
+  @include nbutton-colors($warningColor, "ghost");
+}
+
+.nbutton-type-ghost.nbutton-status-danger {
+  @include nbutton-colors($dangerColor, "ghost");
 }
 
 .nbutton-disabled {
-    background-color: #F7F7FA;
-    cursor: not-allowed;
-    &:focus,
-    &:hover {
-        background-color: #F7F7FA;
-        outline: none;
-    }
+  background-color: #f7f7fa;
+  cursor: not-allowed;
+  &:focus,
+  &:hover {
+    background-color: #f7f7fa;
+    outline: none;
+  }
 }
 
 .nbutton-shape-square {
-    border-radius: 6px;
+  border-radius: 6px;
 }
 
 .nbutton-shape-circle {
-    border-radius: 50%;
-    padding: 0;
+  border-radius: 50%;
+  padding: 0;
 }
 
 .nbutton-shape-round {
-    border-radius: 18px;
+  border-radius: 18px;
 }
 
 .nbutton-size-lg {
-    padding: $lg;
-    font-size: 16px;
+  padding: $lg;
+  font-size: 16px;
+}
+.nbutton-size-lg.nbutton-loading {
+    padding: $lgloading;
+    font-size: 16px; 
 }
 
 .nbutton-size-md {
-    padding: $md;
-    font-size: 14px;
+  padding: $md;
+  font-size: 14px;
 }
+.nbutton-size-md.nbutton-loading {
+    padding: $mdloading;
+    font-size: 14px;
+  }
 
 .nbutton-size-sm {
-    padding: $sm;
-    font-size: 14px;
+  padding: $sm;
+  font-size: 14px;
 }
+.nbutton-size-sm.nbutton-loading {
+    padding: $smloading;
+    font-size: 14px;
+  }
 
 .nbutton-size-xs {
-    padding: $xs;
-    font-size: 12px;
+  padding: $xs;
+  font-size: 12px;
 }
+.nbutton-size-xs.nbutton-loading {
+    padding: $xsloading;
+    font-size: 14px;
+  }
 
 .nbutton-slot {
-    text-align: center;
+  text-align: center;
 }

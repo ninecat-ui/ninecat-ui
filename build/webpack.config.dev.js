@@ -195,6 +195,7 @@ module.exports = (env = {}) => ({
     port: PORT,
     open: true,
     overlay: { warnings: false, errors: true },
-    quiet: true
+    quiet: true,
+    disableHostCheck: true
   },
 })
