@@ -1,39 +1,43 @@
-.loadding{
-  position: relative;
-  display: inline-block;
-  z-index: 999;
-  text-align: center;
-  padding: 5px 0;
-  div{
+.loadding {
+    position: relative;
     display: inline-block;
-    border-radius: 50%;
-    border: 3px solid rgba(247,247,250,0.80);
-    border-top-color:  #A6A6A6;
-    animation: spinner2 1000ms linear infinite;
-  }
-  @keyframes spinner2 {to {transform: rotate(360deg);}}
-  .loadding-text{
-    display: block;
-    font-family: PingFangSC-Regular;
-    color: #575757;
-    line-height: 20px;
-  }
-  .xs-text{
-    left: 26px;
-    top: 2px;
-    font-size: 12px;
-  }
-  .sm-text{
-    left: 30px;
-    top: 2px;
-    font-size: 14px;
-  }
-  .md-text{
-    margin-top:12px;
-    font-size: 14px;
-  }
-  .lg-text{
-    margin-top:12px;
-    font-size: 16px;
-  }
+    z-index: 999;
+    text-align: center;
+    padding: 5px 0;
+    div {
+        display: inline-block;
+        border-radius: 50%;
+        border: 3px solid rgba(247, 247, 250, 0.80);
+        // border-top-color:  #A6A6A6;
+        animation: spinner2 1000ms linear infinite;
+    }
+    @keyframes spinner2 {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    .loadding-text {
+        display: block;
+        font-family: PingFangSC-Regular;
+        color: #575757;
+        line-height: 20px;
+    }
+    .xs-text {
+        left: 26px;
+        top: 2px;
+        font-size: 12px;
+    }
+    .sm-text {
+        left: 30px;
+        top: 2px;
+        font-size: 14px;
+    }
+    .md-text {
+        margin-top: 12px;
+        font-size: 14px;
+    }
+    .lg-text {
+        margin-top: 12px;
+        font-size: 16px;
+    }
 }

@@ -14,6 +14,10 @@ const LoaderProps = {
   size: {
     type: String as PropType<string>,
     default: 'md'
+  },
+  color: {
+    type: String as PropType<string>,
+    default: '#A6A6A6'
   }
 };
 
@@ -21,7 +25,7 @@ const NLoader = defineComponent({
   name: 'NLoader',
   props: LoaderProps,
   setup (props) {
-    const { show, loaddingText, size } = toRefs(props);
+    const { show, loaddingText, size,color } = toRefs(props);
 
     const sizeStyle = () => {
       switch (size.value) {
@@ -57,9 +61,14 @@ const NLoader = defineComponent({
       return classNames(['loadding-text', `${size.value}-text`]);
     };
 
+    const loaddingStyle:any = {
+      ...sizeStyle(),
+      borderTopColor:color.value,
+    }
+
     return () => (
       show && <span class="loadding">
-        <div style={{ ...sizeStyle() }} />
+        <div style={{ ...loaddingStyle }} />
         <span class={spanClass()}>{loaddingText.value}</span>
       </span>
     );

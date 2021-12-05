@@ -7,3 +7,11 @@ $white:#ffffff;
 $black:#000000;
 $textBaseColor: #5f6266;
 $borderBaseColor:#dcdfe6;
+:export {
+    primaryColor: $primaryColor;
+    successColor: $successColor;
+    warningColor: $warningColor;
+    dangerColor: $dangerColor;
+    white: $white;
+    black: $black;
+}
