@@ -7,7 +7,7 @@ const WebpackBar = require('webpackbar');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 const HOST = 'localhost'
-const PORT = 8081
+const PORT = 8083
 const babelConfig = {
   cacheDirectory: true,
   presets: [
@@ -129,18 +129,48 @@ module.exports = (env = {}) => ({
         ]
       },
       {
-        test: /\.scss$/,
+        test: /\.scss$/i,
+        exclude: /\.variables\.scss$/i,
         use: [
-          { loader: 'style-loader' },
           {
-            loader: 'css-loader',
-            options: { sourceMap: true },
+            loader: "style-loader",
           },
           {
-            loader: 'sass-loader',
+            loader: "css-loader",
+            options: {
+              importLoaders: 1,
+              modules: {
+                mode: "icss",
+              },
+            },
+          },
+          {
+            loader: "sass-loader",
           },
         ],
-      }
+      },
+      // --------
+      // SCSS MODULES
+      {
+        test: /\.variables\.scss$/i,
+        use: [
+          {
+            loader: "style-loader",
+          },
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 1,
+              modules: {
+                mode: "local",
+              },
+            },
+          },
+          {
+            loader: "sass-loader",
+          },
+        ],
+      },
     ]
   },
   resolve: {
