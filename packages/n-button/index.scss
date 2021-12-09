@@ -38,6 +38,12 @@ $lgloading: 4px 8px;
       margin-right: 8px;
       line-height: 1;
     }
+    .nbutton-loading-only {
+      display: block;
+      margin: 0;
+      height: 32px;
+      width: 32px;
+    }
     .nbutton-icon-only {
       display: block;
       font-size: 12px;
@@ -87,6 +93,10 @@ $lgloading: 4px 8px;
     background: #ffffff;
     border: 1px solid $color;
   }
+  @if $type== "delicate" {
+    background: none;
+    border: none;
+  }
 }
 
 .nbutton-type-default {
@@ -108,9 +118,7 @@ $lgloading: 4px 8px;
 }
 
 .nbutton-type-delicate {
-  color: #8e8e93;
-  background: none;
-  border: none;
+  @include nbutton-colors($delicateColor, "delicate");
 }
 
 .nbutton-type-default.nbutton-status-success {

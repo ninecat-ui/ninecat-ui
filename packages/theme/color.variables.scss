@@ -7,11 +7,19 @@ $white:#ffffff;
 $black:#000000;
 $textBaseColor: #5f6266;
 $borderBaseColor:#dcdfe6;
+$delicateColor: #8e8e93;
+
 :export {
+    default: $primaryColor;
+    primary: $white;
+    link: $primaryColor;
+    ghost: $primaryColor;
+    delicate: $delicateColor;
     primaryColor: $primaryColor;
     successColor: $successColor;
     warningColor: $warningColor;
     dangerColor: $dangerColor;
+    delicateColor: $delicateColor;
     white: $white;
     black: $black;
 }

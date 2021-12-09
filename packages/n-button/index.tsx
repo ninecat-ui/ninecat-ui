@@ -50,13 +50,13 @@ const NButton = defineComponent({
       `nbutton-size-${props.size}`,
       props.loading ? 'nbutton-loading' : '',
       props.icon ? 'nbutton-hasicon' : '',
-      props.disabled ? 'nbutton-disabled' : '',      
+      (props.disabled || props.loading) ? 'nbutton-disabled' : '',      
     ]);
     const renderIcon = () => {
       if (props.loading || props.icon) {
         return (
-          <span class={slots.default && slots.default() ?  'nbutton-icon' : 'nbutton-icon-only'}>
-            {props.loading && <NLoader size="xs" show={true}/>}
+          <span class={slots.default && slots.default() ?  'nbutton-icon' : (props.loading ? 'nbutton-loading-only' : 'nbutton-icon-only')}>
+            {props.loading && <NLoader size="xs" show={true} color={colorVar[props.type]}/>}
             {props.icon && !props.loading && <NIcon class="nbutton-icon" name={props.icon} />}
           </span>
         );
@@ -64,7 +64,7 @@ const NButton = defineComponent({
     };
 
     return () => (
-        <button class={classString} disabled={props.disabled}>
+        <button class={classString} disabled={props.disabled || props.loading}>
           <div class="nbutton-inner">
             {renderIcon()}
             <span class="nbutton-slot">{slots.default && slots.default()}</span>
