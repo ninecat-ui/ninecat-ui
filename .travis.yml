@@ -3,8 +3,8 @@ language: node_js
 
 env:
   global:
-    - GitHub_REF: github.com/ninecat-ui/ninecat-ui.github.io.git
-    - Npm_Email: ninecatui@outlook.com
+    - GitHub_REF=github.com/ninecat-ui/ninecat-ui.github.io.git
+    - Npm_Email=ninecatui@outlook.com
 
 # Install dependence
 install:

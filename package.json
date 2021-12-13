@@ -67,7 +67,7 @@
     "babel-plugin-inline-import-data-uri": "^1.0.1",
     "babel-plugin-istanbul": "^6.0.0",
     "cross-env": "^7.0.3",
-    "css-loader": "^5.0.1",
+    "css-loader": "^6.5.1",
     "docsearch.js": "^2.6.3",
     "eslint": "^7.20.0",
     "eslint-config-standard": "^16.0.2",

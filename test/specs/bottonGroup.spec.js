@@ -28,6 +28,6 @@ describe('nButtonGroup', () => {
         </nButtonGroup>);
       }
     });
-    expect(wrapper.find('.primary').exists()).toBe(true);
+    expect(wrapper.find('.nbutton-type-primary').exists()).toBe(true);
   });
 });
