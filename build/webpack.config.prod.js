@@ -1,51 +1,10 @@
 const path = require('path')
-const utils = require('./utils')
 const webpack = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const VueLoaderPlugin = require('vue-loader/dist/plugin').default;
-const WebpackBar = require('webpackbar');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const babelConfig = {
-  cacheDirectory: true,
-  presets: [
-    [
-      '@babel/preset-env',
-      {
-        targets: {
-          browsers: [
-            'last 2 versions',
-            'Firefox ESR',
-            '> 1%',
-            'ie >= 9',
-            'iOS >= 8',
-            'Android >= 4',
-          ],
-        },
-      },
-    ],
-    '@babel/preset-typescript',
-  ],
-  plugins: [
-    [
-      'babel-plugin-import',
-      {
-        libraryName: 'ninecat',
-        libraryDirectory: '', // default: lib
-        style: true,
-      },
-    ],
-    ['@vue/babel-plugin-jsx', { mergeProps: false }],
-    '@babel/plugin-proposal-optional-chaining',
-    '@babel/plugin-transform-object-assign',
-    '@babel/plugin-proposal-object-rest-spread',
-    '@babel/plugin-proposal-export-default-from',
-    '@babel/plugin-proposal-class-properties',
-  ],
-};
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
 
-module.exports = (env = {}) => ({
-  mode: 'development',
-  devtool: 'cheap-module-source-map',
+module.exports = {
   entry: {
     'ninecat-ui': './src/index.ts'
   },
@@ -56,123 +15,65 @@ module.exports = (env = {}) => ({
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
-    optimization: {
-    minimize: false
-  },
   optimization: {
-    minimize: false
+    minimize: true,
+    minimizer: [
+      `...`,
+      new CssMinimizerPlugin(),
+    ],
   },
   module: {
     rules: [
       {
-        test: /\.vue$/,
-        use: 'vue-loader'
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"], // 此处就不需要使用style-loader了
       },
       {
-        test: /\.md$/,
+        test: /\.scss$/i,
+        exclude: /\.variables\.scss$/i,
         use: [
+          MiniCssExtractPlugin.loader,
           {
-            loader: 'vue-loader',
+            loader: "css-loader",
             options: {
-              compilerOptions: {
-                preserveWhitespace: false
-              }
-            }
-          },
-          {
-            loader: path.resolve(__dirname, './md-loader/index.js')
-          }
-        ]
-      },
-      {
-        test: /\.tsx?$/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: babelConfig,
-          },
-          {
-            loader: 'ts-loader',
-            options: {
-              transpileOnly: true,
+              importLoaders: 1,
+              modules: {
+                mode: "icss",
+              },
             },
           },
-        ],
-        exclude: /node_modules/,
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            limit: 10000,
-            name: utils.assetsPath('img/[name].[hash:7].[ext]')
-          }
-        }
-      },
-      {
-        test: /\.(woff2?|eot|ttf|otf)$/,
-        loader: 'file-loader',
-        options: {
-            limit: 10000,
-            name: '[name].[hash:7].[ext]'
-        }
-     },
-      {
-        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            limit: 10000,
-            name: utils.assetsPath('media/[name].[hash:7].[ext]')
-          }
-        }
-      },
-      {
-        test: /\.css$/,
-        use: [
-          { loader: 'style-loader' },
           {
-            loader: 'css-loader',
-            options: { sourceMap: true },
-          }
-        ],
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          { loader: 'style-loader' },
-          {
-            loader: 'css-loader',
-            options: { sourceMap: true },
-          },
-          {
-            loader: 'sass-loader',
+            loader: "sass-loader",
           },
         ],
-      }
+      },
+      {
+        test: /\.variables\.scss$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 1,
+              modules: {
+                mode: "local",
+              },
+            },
+          },
+          {
+            loader: "sass-loader",
+          },
+        ],
+      },
     ]
-  },
-  resolve: {
-    extensions: ['.ts','.js', '.vue', '.json', '.tsx'],
-    alias: {
-      'vue': '@vue/runtime-dom'
-    }
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'main.css'
+      filename: 'css/[name].[hash:8].css'
     }),
-    new HtmlWebpackPlugin({
-      template: './index.html',
-      filename: 'index.html',
-      favicon:'./doc/favicon.ico',
-      inject: true,
-    }),
-    new VueLoaderPlugin(),
-    new WebpackBar(),
-    new webpack.ProvidePlugin({
-      process: 'process/browser',
+    new CompressionPlugin({
+      test: /\.(css|js)$/, // 正则进行压缩匹配
+      minRatio: 0.8, // 压缩比例，满足的才会进行压缩。压缩后/压缩前，默认0.8。
     }),
   ],
-})
+}

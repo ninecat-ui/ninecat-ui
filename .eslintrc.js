@@ -9,8 +9,8 @@ module.exports = {
     mocha: true
   },
   globals: {
-    "expect": true,
-    "jest": false,
+    expect: true,
+    jest: false
   },
   extends: [
     'plugin:vue/recommended',
@@ -22,10 +22,13 @@ module.exports = {
     'prettier'
   ],
   rules: {
+    quotes: [0, "single"],
+    'vue/script-setup-uses-vars': 'off',
     'generator-star-spacing': 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'semi': ["error", "always"],
+    semi: ["error", "always"],
     "import/no-named-as-default": 0,
-    "vue/comment-directive": 0
+    "vue/comment-directive": 0,
+    "eol-last": [0, 'unix']
   }
-}
+};

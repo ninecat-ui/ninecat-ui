@@ -1,18 +1,23 @@
 module.exports = {
-  env: {
-    test: {
-      presets: [['@babel/preset-env', { targets: { node: true } }]],
-      plugins: [
-        ['@vue/babel-plugin-jsx', { mergeProps: false }],
-        '@babel/plugin-proposal-optional-chaining',
-        '@babel/plugin-transform-object-assign',
-        '@babel/plugin-proposal-object-rest-spread',
-        '@babel/plugin-proposal-export-default-from',
-        '@babel/plugin-proposal-export-namespace-from',
-        '@babel/plugin-proposal-class-properties',
-        '@babel/plugin-syntax-dynamic-import',
-        '@babel/plugin-transform-runtime',
-      ],
-    },
-  },
+  // cacheDirectory: true,
+  presets: [
+    '@babel/preset-env',
+    '@babel/preset-typescript'
+  ],
+  plugins: [
+    [
+      'babel-plugin-import',
+      {
+        libraryName: 'ninecat',
+        libraryDirectory: '', // default: lib
+        style: true
+      }
+    ],
+    ['@vue/babel-plugin-jsx', { mergeProps: false }],
+    '@babel/plugin-proposal-optional-chaining',
+    '@babel/plugin-transform-object-assign',
+    '@babel/plugin-proposal-object-rest-spread',
+    '@babel/plugin-proposal-export-default-from',
+    '@babel/plugin-proposal-class-properties'
+  ]
 };
