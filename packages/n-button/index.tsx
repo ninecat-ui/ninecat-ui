@@ -3,40 +3,38 @@ import NLoader from '../n-loader';
 import NIcon from '../n-icon';
 import classNames from '../../src/utils/className';
 import './index.scss';
-import colorVar from '../theme/color.variables.scss'
-console.log(colorVar)
-
+import colorVar from '../theme/color.variables.scss';
 
 const ButtonProps = {
   type: {
     type: String as PropType<string>,
     default: 'default'
   },
-  status:{
+  status: {
     type: String as PropType<string>,
     default: 'default'
   },
-  size:{
+  size: {
     type: String as PropType<string>,
     default: 'md'
   },
-  shape:{
+  shape: {
     type: String as PropType<string>,
     default: 'square'
   },
-  icon:{
+  icon: {
     type: String as PropType<string>,
     default: ''
   },
-  disabled:{
+  disabled: {
     type: Boolean as PropType<boolean>,
     default: false
   },
-  loading:{
+  loading: {
     type: Boolean as PropType<boolean>,
     default: false
-  },
-}
+  }
+};
 
 const NButton = defineComponent({
   name: 'NButton',
@@ -50,12 +48,12 @@ const NButton = defineComponent({
       `nbutton-size-${props.size}`,
       props.loading ? 'nbutton-loading' : '',
       props.icon ? 'nbutton-hasicon' : '',
-      (props.disabled || props.loading) ? 'nbutton-disabled' : '',      
+      (props.disabled || props.loading) ? 'nbutton-disabled' : ''
     ]);
     const renderIcon = () => {
       if (props.loading || props.icon) {
         return (
-          <span class={slots.default && slots.default() ?  'nbutton-icon' : (props.loading ? 'nbutton-loading-only' : 'nbutton-icon-only')}>
+          <span class={slots.default && slots.default() ? 'nbutton-icon' : (props.loading ? 'nbutton-loading-only' : 'nbutton-icon-only')}>
             {props.loading && <NLoader size="xs" show={true} color={colorVar[props.type]}/>}
             {props.icon && !props.loading && <NIcon class="nbutton-icon" name={props.icon} />}
           </span>
