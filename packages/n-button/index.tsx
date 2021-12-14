@@ -48,7 +48,7 @@ const NButton = defineComponent({
       `nbutton-size-${props.size}`,
       props.loading ? 'nbutton-loading' : '',
       props.icon ? 'nbutton-hasicon' : '',
-      (props.disabled || props.loading) ? 'nbutton-disabled' : ''
+      props.disabled ? 'nbutton-disabled' : ''
     ]);
     const renderIcon = () => {
       if (props.loading || props.icon) {

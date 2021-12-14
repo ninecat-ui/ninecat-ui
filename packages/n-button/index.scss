@@ -223,6 +223,7 @@ $lgloading: 4px 8px;
 }
 .nbutton-size-md.nbutton-loading {
     padding: $mdloading;
+    pointer-events: none;
     font-size: 14px;
   }
 
@@ -232,6 +233,7 @@ $lgloading: 4px 8px;
 }
 .nbutton-size-sm.nbutton-loading {
     padding: $smloading;
+    pointer-events: none;
     font-size: 14px;
   }
 
@@ -241,6 +243,7 @@ $lgloading: 4px 8px;
 }
 .nbutton-size-xs.nbutton-loading {
     padding: $xsloading;
+    pointer-events: none;
     font-size: 14px;
   }
 
