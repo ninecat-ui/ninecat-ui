@@ -156,6 +156,12 @@ module.exports = () => ({
       favicon:'./doc/favicon.ico',
       inject: true,
     }),
+    new HtmlWebpackPlugin({
+      template: './doc/google2a9db2bf84193f15.html',
+      filename: 'google2a9db2bf84193f15.html',
+      favicon:'./doc/favicon.ico',
+      inject: true,
+    }),
     new VueLoaderPlugin(),
     new WebpackBar(),
     new webpack.ProvidePlugin({
