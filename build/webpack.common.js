@@ -13,7 +13,7 @@ const smp = new SpeedMeasurePlugin();
 const prodConfig = require(path.resolve(__dirname, './webpack.config.prod.js'))
 const devConfig = require(path.resolve(__dirname, './webpack.config.dev.js'))
 
-// 
+// commonConfig
 const commonConfig = {
     optimization: {
         usedExports: true, // 标记出没有使用过的代码
