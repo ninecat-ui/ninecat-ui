@@ -1,116 +1,187 @@
 const path = require('path')
+const utils = require('./utils')
 const webpack = require('webpack')
-const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
-// const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/dist/plugin').default;
+const WebpackBar = require('webpackbar');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 const HOST = 'localhost'
 const PORT = 8083
 
-module.exports = {
-  devtool: 'cheap-module-source-map',
-  entry: './doc/main.ts',
-  output: {
-    path: path.resolve(__dirname, '../dist'),
-    publicPath: '/dist/',
-    filename: "main.js",
-  },
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [
-          { loader: 'style-loader' },
-          {
-            loader: 'css-loader',
-            options: { sourceMap: true },
-          }
-        ],
-      },
-      {
-        test: /\.scss$/i,
-        exclude: /\.variables\.scss$/i,
-        use: [
-          {
-            loader: "style-loader",
-          },
-          {
-            loader: "css-loader",
-            options: {
-              importLoaders: 1,
-              modules: {
-                mode: "icss",
-              },
+module.exports = (env = {}) => ({
+    mode: 'development',
+    devtool: 'cheap-module-source-map',
+    entry: path.resolve(__dirname, '../doc/main.ts'),
+    output: {
+        path: path.resolve(__dirname, '../dist'),
+        publicPath: '/dist/',
+        filename: "main.js",
+    },
+    module: {
+        rules: [{
+                test: /\.vue$/,
+                use: 'vue-loader'
             },
-          },
-          {
-            loader: "sass-loader",
-          },
-        ],
-      },
-      // --------
-      // SCSS MODULES
-      {
-        test: /\.variables\.scss$/i,
-        use: [
-          {
-            loader: "style-loader",
-          },
-          {
-            loader: "css-loader",
-            options: {
-              importLoaders: 1,
-              modules: {
-                mode: "local",
-              },
+            {
+                test: /\.md$/,
+                use: [{
+                        loader: 'vue-loader',
+                        options: {
+                            compilerOptions: {
+                                preserveWhitespace: false
+                            }
+                        }
+                    },
+                    {
+                        loader: path.resolve(__dirname, './md-loader/index.js')
+                    }
+                ]
             },
-          },
-          {
-            loader: "sass-loader",
-          },
-        ],
-      },
-    ]
-  },
-  resolve: {
-    extensions: ['.ts','.js', '.vue', '.json', '.tsx'],
-    alias: {
-      'vue': '@vue/runtime-dom'
-    }
-  },
-  plugins: [
-    new FriendlyErrorsWebpackPlugin({
-      compilationSuccessInfo: {
-        messages: [
-          `
+            {
+                test: /\.tsx?$/,
+                use: [
+                    'babel-loader',
+                    {
+                        loader: 'ts-loader',
+                        options: {
+                            transpileOnly: true,
+                        },
+                    },
+                ],
+                exclude: /node_modules/,
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+                use: {
+                    loader: 'url-loader',
+                    options: {
+                        limit: 10000,
+                        name: utils.assetsPath('img/[name].[hash:7].[ext]')
+                    }
+                }
+            },
+            {
+                test: /\.(woff2?|eot|ttf|otf)$/,
+                loader: 'file-loader',
+                options: {
+                    limit: 10000,
+                    name: '[name].[hash:7].[ext]'
+                }
+            },
+            {
+                test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+                use: {
+                    loader: 'url-loader',
+                    options: {
+                        limit: 10000,
+                        name: utils.assetsPath('media/[name].[hash:7].[ext]')
+                    }
+                }
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader'
+                ]
+            },
+            {
+                test: /\.scss$/i,
+                exclude: /\.variables\.scss$/i,
+                use: [{
+                        loader: "style-loader",
+                    },
+                    {
+                        loader: "css-loader",
+                        options: {
+                            importLoaders: 1,
+                            modules: {
+                                mode: "icss",
+                            },
+                        },
+                    },
+                    {
+                        loader: "sass-loader",
+                    },
+                ],
+            },
+            // --------
+            // SCSS MODULES
+            {
+                test: /\.variables\.scss$/i,
+                use: [{
+                        loader: "style-loader",
+                    },
+                    {
+                        loader: "css-loader",
+                        options: {
+                            importLoaders: 1,
+                            modules: {
+                                mode: "local",
+                            },
+                        },
+                    },
+                    {
+                        loader: "sass-loader",
+                    },
+                ],
+            },
+        ]
+    },
+    resolve: {
+        extensions: ['.ts', '.js', '.vue', '.json', '.tsx'],
+        alias: {
+            'vue': '@vue/runtime-dom'
+        }
+    },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: '[name].css',
+        }),
+        new HtmlWebpackPlugin({
+            template: './index.html',
+            filename: 'index.html',
+            favicon: './doc/favicon.ico',
+            inject: true,
+        }),
+        new VueLoaderPlugin(),
+        new WebpackBar(),
+        new webpack.ProvidePlugin({
+            process: 'process/browser',
+        }),
+        new FriendlyErrorsWebpackPlugin({
+            compilationSuccessInfo: {
+                messages: [
+                    `
           You application is running here http://${HOST}:${PORT}
           Build：npm run prod
           Publish npm:npm publish
           `
-        ],
-        notes: ['Some additionnal notes to be displayed unpon successful compilation']
-      },
-      onErrors: function (severity, errors) {
-        // You can listen to errors transformed and prioritized by the plugin
-        // severity can be 'error' or 'warning'
-      },
-      // should the console be cleared between each compilation?
-      // default is true
-      clearConsole: true,
-      // add formatters and transformers (see below)
-      additionalFormatters: [],
-      additionalTransformers: []
-    }),
-    new VueLoaderPlugin(),
-  ],
-  devServer: {
-    clientLogLevel: 'warning',
-    hot: true,
-    compress: true,
-    host: HOST,
-    port: PORT,
-    open: true,
-    overlay: { warnings: false, errors: true },
-    quiet: true,
-    disableHostCheck: true
-  },
-}
+                ],
+                notes: ['Some additionnal notes to be displayed unpon successful compilation']
+            },
+            onErrors: function(severity, errors) {
+                // You can listen to errors transformed and prioritized by the plugin
+                // severity can be 'error' or 'warning'
+            },
+            // should the console be cleared between each compilation?
+            // default is true
+            clearConsole: true,
+            // add formatters and transformers (see below)
+            additionalFormatters: [],
+            additionalTransformers: []
+        }),
+    ],
+    devServer: {
+        clientLogLevel: 'warning',
+        hot: true,
+        compress: true,
+        host: HOST,
+        port: PORT,
+        open: true,
+        overlay: { warnings: false, errors: true },
+        quiet: true,
+        disableHostCheck: true
+    },
+})
