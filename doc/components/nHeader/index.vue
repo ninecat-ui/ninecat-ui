@@ -164,7 +164,6 @@ export default {
       border: none;
       color: #fff;
       font-size: 14px;
-      // left: 140px;
       background-color: transparent;
       &:focus {
         outline: none;
