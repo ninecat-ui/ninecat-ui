@@ -2,15 +2,23 @@
   display: inline-flex;
   vertical-align: middle;
   /deep/ .nbutton{
-    border-radius: 0px;
+    border-radius: 0px !important;
+    
+  }
+  button{
     &:first-child{
-      border-top-left-radius: 6px;
-      border-bottom-left-radius: 6px;
+      border-top-right-radius: 0px !important;
+      border-bottom-right-radius: 0px !important;
+      border-right: 1px hsla(0,0%,100%,.5) solid;
+    }
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0px !important;
+      border-right: 1px solid hsla(0,0%,100%,.5);
     }
     &:last-child{
-      border-top-right-radius: 6px;
-      border-bottom-right-radius: 6px;
+      border-top-left-radius: 0px !important;
+      border-bottom-left-radius: 0px !important;
     }
   }
-
+  
 }

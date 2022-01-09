@@ -183,6 +183,11 @@ export default {
     <n-button>Default 1</n-button>
     <n-button>Default 2</n-button>
   </n-button-group>
+  <n-button-group>
+    <n-button type="primary">Primary 1</n-button>
+    <n-button type="primary">Primary 2</n-button>
+    <n-button type="primary">Primary 3</n-button>
+  </n-button-group>
 </template>
 ```
 :::
@@ -193,6 +198,9 @@ export default {
 | 参数 | 说明 | 类型 | 默认值 |
 | :--- | :--- | :--- | :--- |
 | type | 按钮类型，可选择值`default`,`primary`,`link`,`ghost`,`delicate` | String | default |
+| status | 按钮状态，可选择值`success`,`info`,`warning`,`danger` | String |  |
+| shape | 按钮形状，可选择值`square`,`round`,`circle` | String | square |
+| size | 按钮尺寸，可选择值`xs`,`ms`,`md`,`lg` | String | md |
 | icon | 图标按钮，可选择和图标的值一样 | String |  |
 | loading    | 是否为加载状态 | Boolean     | false |
 | disabled    | 禁用状态 | Boolean     | false |
