@@ -16,6 +16,9 @@
   <n-badge>
     <n-button>新消息</n-button>
   </n-badge>
+  <n-badge color="green">
+    <n-button>新消息</n-button>
+  </n-badge>
 </template>
 ```
 :::
@@ -44,4 +47,5 @@
 
 | 参数 | 说明 | 类型 | 默认值 |
 | :--- | :--- | :--- | :--- |
-| content | 内容 | String,Number |  |
+| content | 内容 | String |  |
+| color |  | String |  |

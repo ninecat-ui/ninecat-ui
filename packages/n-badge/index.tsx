@@ -3,6 +3,10 @@ import classNames from '../../src/utils/className';
 import './index.scss';
 
 const BadgeProps = {
+  color:{
+    type: String as PropType<''>,
+    default: '#f44336'
+  },
   content: {
     type: String as PropType<''>,
     default: ''
@@ -20,9 +24,9 @@ const NBadge = defineComponent({
     ]);
 
     return () => (
-      <div class="n-badge">
+    <div class="n-badge">
         {slots.default && slots.default()}
-        <span class={classString}>
+        <span class={classString} style={{backgroundColor:props.color}}>
           { content.value }
         </span>
       </div>
