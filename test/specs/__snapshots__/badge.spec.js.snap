@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`NBadge renders correctly 1`] = `<div class="n-badge">Follow<span class="n-badge-common n-badge-default"></span></div>`;

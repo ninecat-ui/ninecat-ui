@@ -1,22 +1,16 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "strictNullChecks": false,
-    "strict": true,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "jsx": "preserve",
-    "noUnusedParameters": true,
-    "noUnusedLocals": true,
-    "noImplicitAny": false,
+    "target": "esnext",
+    "useDefineForClassFields": true,
     "module": "esnext",
-    "target": "es2015",
-    "lib": ["dom", "es2017"],
-    "skipLibCheck": true,
-    "allowJs": true,
-    "outDir": "true",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"]
   },
-  "exclude": ["node_modules", "lib", "es","assets"],
-  "include": ["./"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
