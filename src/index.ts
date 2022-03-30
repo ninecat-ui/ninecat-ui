@@ -1,9 +1,10 @@
 import { App } from 'vue';
+import './assets/font/iconfont.scss';
 
-import nTag from '../packages/n-tag';
+import NTag from '../packages/n-tag';
 
 const components = [
-    nTag
+  NTag
 ]
 
 const install = function (app: App) {
@@ -14,7 +15,7 @@ const install = function (app: App) {
   };
 
 export {
-    nTag
+  NTag
 }
 
 export default {

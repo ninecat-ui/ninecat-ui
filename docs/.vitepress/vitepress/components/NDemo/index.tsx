@@ -1,6 +1,7 @@
 import { defineComponent, PropType } from 'vue';
 import Example from './example.vue';
 import Code from './code.vue'
+import { decode } from 'punycode';
 
 const NDemoProps = {
   path: {
@@ -19,6 +20,7 @@ const NDemo = defineComponent({
   name: 'NDemo',
   props: NDemoProps,
   setup(props) {
+    // console.log(props.source)
     const getFormatPathDemos = () => {
       const demos = {}
       Object.keys(props.demos).forEach((key) => {
@@ -27,6 +29,9 @@ const NDemo = defineComponent({
       })
       return demos
     }
+
+    const a = decodeURIComponent(props.source)
+    console.log(a)
 
     const formatPathDemos = getFormatPathDemos()
     return () => <div>

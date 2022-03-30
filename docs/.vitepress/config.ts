@@ -34,7 +34,9 @@ module.exports = {
       sidebar
     },
     markdown: {
-      config: (md) => mdPlugin(md),
+      config: (md) => {
+        mdPlugin(md)
+      },
     },
     vue: {
       template: {
