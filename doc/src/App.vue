@@ -1,21 +1,38 @@
-<script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <div class="app">
+    <n-header
+      :config="config.headerConfig"
+    />
+    <n-nav
+      :config="config.navConfig"
+    />
+    <n-container>
+      <router-view />
+    </n-container>
+  </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+<script>
+import nHeader from './components/nHeader/index.vue';
+import nNav from './components/nNav/index.vue';
+import nContainer from './components/nContainer/index.vue';
+import config from './doc.config';
+import './style/index.scss';
+export default {
+  name: 'App',
+  components: { nHeader, nNav, nContainer },
+  data: function () {
+    return {
+      config: config
+    };
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+.app {
+  background-color: #ffffff;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: PingFang SC,Helvetica Neue,Arial,sans-serif;
 }
 </style>

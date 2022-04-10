@@ -1,0 +1,41 @@
+.tabel-content{
+  background: #FFFFFF;
+  border-radius: 6px;
+  margin: 0;
+  padding-top:20px;
+  width:100%;
+}
+.base-table{
+  width:100%;
+  border-spacing: 0px;
+  thead{
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #8E8E93;
+    text-align: right;
+    line-height: 20px;
+    th{
+      height: 20px;
+      padding: 10px 0;
+      background: #ffffff;
+    }
+  }
+  tbody{
+    tr{
+      font-family: PingFangSC-Regular;
+      font-size: 14px;
+      color: #575757;
+      height: 46px;
+      td{
+        padding: 13px 0;
+      }
+    }
+    :hover{
+      cursor:pointer;
+      background: #F2FAFF;
+    }
+  }
+}
+.border{
+  border-bottom: 1px solid #F2F2F5
+}

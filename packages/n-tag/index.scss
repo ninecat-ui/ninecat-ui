@@ -1,0 +1,38 @@
+.n-tag{
+  text-align:center;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #575757;
+  line-height: 20px;
+  display: inline-block;
+  div{
+    min-width: 64px;
+    height: 24px;
+    line-height: 24px;
+    padding: 2px 8px;
+  }
+  a {
+    text-decoration: none;
+  }
+  i {
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+  }
+  .iconfont{
+    font-size: 12px;
+  }
+  .normal{
+    background: #F7F7FA;
+    border-radius: 6px;
+    border-radius: 6px;
+  }
+  .linkable{
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #1675E0;
+    background: #F7F7FA;
+    border-radius: 6px;
+    border-radius: 6px;
+  }
+}

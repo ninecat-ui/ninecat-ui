@@ -1,0 +1,9 @@
+.nbutton{
+  margin: 5px;
+}
+.n-button-group{
+  margin: 5px;
+  .nbutton{
+    margin: 0;
+  }
+}
