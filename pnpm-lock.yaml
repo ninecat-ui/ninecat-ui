@@ -2,7 +2,6 @@ lockfileVersion: 5.3
 
 specifiers:
   '@vitejs/plugin-vue': ^2.3.0
-  highlight.js: ^11.5.0
   typescript: ^4.5.4
   vite: ^2.9.0
   vue: ^3.2.25
@@ -13,7 +12,6 @@ dependencies:
 
 devDependencies:
   '@vitejs/plugin-vue': 2.3.1_vite@2.9.1+vue@3.2.31
-  highlight.js: 11.5.0
   typescript: 4.6.3
   vite: 2.9.1
   vue-tsc: 0.29.8_typescript@4.6.3
@@ -544,11 +542,6 @@ packages:
     engines: {node: '>= 0.4.0'}
     dependencies:
       function-bind: 1.1.1
-    dev: true
-
-  /highlight.js/11.5.0:
-    resolution: {integrity: sha512-SM6WDj5/C+VfIY8pZ6yW6Xa0Fm1tniYVYWYW1Q/DcMnISZFrC3aQAZZZFAAZtybKNrGId3p/DNbFTtcTXXgYBw==}
-    engines: {node: '>=12.0.0'}
     dev: true
 
   /htmlparser2/7.2.0:
