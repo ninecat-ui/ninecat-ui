@@ -67,4 +67,5 @@ export const guid = () => {
   return `${s4() + s4()}-${s4()}-${s4()}-${s4()}-${s4() + s4() + s4()}`;
 };
 
+
 // export { isOn, cacheStringFunction, camelize, hyphenate, capitalize };

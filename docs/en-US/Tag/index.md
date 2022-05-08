@@ -6,13 +6,28 @@ Tag for categorizing or markup.
 
 It can be used to tag by dimension or property.
 
-When categorizing.
 
 ## Basic Use
+
+Use the `type` attribute to define Tag's type. In addition, the color attribute can be used to set the background color of the Tag.
 
 :::demo 
 tag/basic
 :::
+
+## Theme
+
+## Rounded
+
+## Closeable
+
+## Add & Remove Dynamically
+
+## Checkable
+
+
+
+
 
 ## API
 

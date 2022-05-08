@@ -1,10 +1,12 @@
+@import "../theme/color.variables.scss";
 .n-tag{
   text-align:center;
   font-family: PingFangSC-Regular;
   font-size: 12px;
-  color: #575757;
+  color: $textBaseColor;
   line-height: 20px;
   display: inline-block;
+  margin: 0 8px 0 0;
   div{
     min-width: 64px;
     height: 24px;
@@ -13,6 +15,7 @@
   }
   a {
     text-decoration: none;
+    color:$primaryColor;
   }
   i {
     width: 12px;
@@ -22,17 +25,43 @@
   .iconfont{
     font-size: 12px;
   }
+  .tag{
+    border-radius: 4px;
+  }
   .normal{
-    background: #F7F7FA;
-    border-radius: 6px;
-    border-radius: 6px;
+    color: $infoColor;
+    background: rgba($infoColor,0.15) ;
+    height: 100%;
+  }
+  .primary {
+    color: $primaryColor;
+    background: rgba($primaryColor,0.15) ;
+    height: 100%;
+  }
+  .success {
+    color: $successColor;
+    background: rgba($successColor,0.15) ;
+    height: 100%;
+  }
+  .warning{
+    color: $warningColor;
+    background: rgba($warningColor,0.15) ;
+    height: 100%;
+  }
+  .danger{
+    color: $dangerColor;
+    background: rgba($dangerColor,0.15) ;
+    height: 100%;
   }
   .linkable{
     font-family: PingFangSC-Regular;
     font-size: 12px;
-    color: #1675E0;
-    background: #F7F7FA;
+    color: $primaryColor;
+    background: rgba($textBaseColor,0.15) ;
     border-radius: 6px;
     border-radius: 6px;
+  }
+  .close{
+    cursor:pointer
   }
 }
