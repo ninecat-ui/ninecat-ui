@@ -1,0 +1,20 @@
+<template>
+    <n-alert
+      message="Message"
+      type="info"
+    />
+    <n-alert
+      message="Message"
+      type="success"
+    />
+    <n-alert
+      message="Message"
+      type="warning"
+      closable
+    />
+    <n-alert
+      message="Message"
+      type="error"
+      :showIcon="true"
+    />
+</template>

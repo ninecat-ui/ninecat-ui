@@ -1,0 +1,31 @@
+.n-header {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #3c3c431f;
+  padding: 12px 24px;
+  height: 60px;
+  background-color: #fff;
+  a {
+    text-decoration: none;
+  }
+  .title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .text {
+      margin-left: 10px;
+    }
+  }
+  .logo {
+    height: 50px;
+  }
+}

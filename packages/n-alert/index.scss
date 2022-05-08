@@ -1,0 +1,89 @@
+.base-alert {
+  position: relative;
+  box-sizing: border-box;
+  margin: 10px 0;
+  padding: 10px 20px;
+  min-width: 172px;
+  min-height: 60px;
+  box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.06), 0 4px 8px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .alert-content {
+    width: 100%;
+    // position: absolute;
+    display: flex;
+    .icon{
+      .iconfont {
+        font-size: 12px;
+      }
+    }
+    .content{
+      flex: 0 0 70%;
+      .message-text {
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #575757;
+        line-height: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .title{
+        display: block;
+        margin-bottom: 4px;
+        color: rgba(0,0,0,.85);
+        font-size: 16px;
+      }
+      .description{
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+    .close{
+      position: absolute;
+      right: 10px;
+      top: 5px;
+      .icon-times{
+        font-size: 10px;
+      }
+      .close-text{
+        color: rgba(0,0,0,.45);
+        transition: color .3s;
+        font-size: 12px;
+        cursor: pointer;
+      }
+    }
+    .icon-info {
+      color: #2196f3;
+      cursor: pointer;
+    }
+    .icon-success {
+      color: #4caf50;
+      cursor: pointer;
+    }
+    .icon-warning {
+      color: #ffb321;
+      cursor: pointer;
+    }
+    .icon-error {
+      color: #f44336;
+      cursor: pointer;
+    }
+    .title-icon{
+      font-size: 20px !important;
+    }
+  }
+}
+.info {
+  background: #e9f5fe;
+}
+.success {
+  background: #edfae1;
+}
+.warning {
+  background: #fff9e6;
+}
+.error {
+  background: #fde9ef;
+}

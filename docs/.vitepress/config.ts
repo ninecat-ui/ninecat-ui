@@ -1,5 +1,6 @@
 import { sidebar } from './config/sidebars'
 import { mdPlugin } from './plugins'
+import type { UserConfig } from 'vitepress'
 
 const buildTransformers = () => {
   const transformer = () => {
@@ -27,10 +28,12 @@ const buildTransformers = () => {
   return transformers
 }
 
-module.exports = {
+export const config: UserConfig = {
     title: 'ninecat-ui',
     description:'A Vue.js 3.0 Web UI Toolkit.',
+    lastUpdated: true,
     themeConfig:{
+      docsDir: 'docs',
       sidebar
     },
     markdown: {
@@ -47,3 +50,5 @@ module.exports = {
       },
     },
   }
+
+  export default config

@@ -23,7 +23,6 @@ defineProps({
 .example-showcase {
   padding: 1.5rem;
   margin: 0.5px;
-  background-color: var(--bg-color);
   &.transparent-enabled {
     background-image: linear-gradient(
         45deg,
@@ -39,7 +38,6 @@ defineProps({
 
   @at-root .dark .example-showcase {
     background-image: unset;
-    background-color: var(--bg-color-soft);
   }
 }
 </style>

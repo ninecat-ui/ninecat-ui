@@ -1,0 +1,25 @@
+.n-link-content{
+  position: fixed;
+  top: 60px;
+  right: 0px;
+  padding: 12px 24px;
+  background-color: #fff;
+  overflow-y: auto;
+  height: 100%;
+  width: 250px;
+  box-sizing: border-box;
+  li {
+    list-style:none;
+  }
+  a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #455a64;
+    &.active {
+      color: #1989fa;
+    }
+    &:hover {
+      color: #1989fa;
+    }
+  }
+}

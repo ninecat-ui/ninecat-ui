@@ -2,10 +2,10 @@ import path from 'path'
 import fs from 'fs'
 import MarkdownIt from 'markdown-it'
 import mdContainer from 'markdown-it-container'
-import { highlight } from '../utils/highlight'
+import { highlight } from '../../utils/highlight'
 import type Token from 'markdown-it/lib/token'
 import type Renderer from 'markdown-it/lib/renderer'
-import {docRoot} from '../../../src/utils/paths'
+import {docRoot} from '../../utils/path'
 
 const localMd = MarkdownIt()
 const scriptSetupRE = /<\s*script[^>]*\bsetup\b[^>]*/

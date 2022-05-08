@@ -1,7 +1,7 @@
 import { defineComponent, App } from 'vue';
 import './index.scss';
 
-function getStyle (color?:string) {
+function getStyle (color:string) {
   return {
     background: color,
     color: color ? '#ffffff' : ''
@@ -14,7 +14,7 @@ const TagProps = {
     default: 'normal'
   },
   color: {
-    type: [String],
+    type: String,
     defalut: 'blue'
   },
   closable: {

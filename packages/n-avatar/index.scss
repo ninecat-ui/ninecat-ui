@@ -1,0 +1,41 @@
+.navatar{
+  color: #ffffff;
+  display: inline-block;
+  text-align: center;
+}
+.navatar-lg{
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 30px;
+}
+.navatar-md{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+}
+.navatar-sm{
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 15px;
+}
+.navatar-xs{
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 10px;
+}
+.navatar-circle{
+  border-radius: 50%;
+}
+.navatar-square{
+  border-radius:2px;
+}
+.navatar-img{
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}

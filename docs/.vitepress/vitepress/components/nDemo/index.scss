@@ -1,0 +1,28 @@
+.n-demo-code{
+  border: 1px solid #3c3c431f;
+  border-radius: 4px;
+  .tool-btn-area{
+    border-top: 1px solid #3c3c431f;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 2.5rem;
+    img{
+      margin: 0 10px;
+      height: 20px;
+      width: 20px;
+      cursor: pointer;
+    }
+  }
+  .slide-fade-enter-active {
+    transition: all .4s;
+}
+.slide-fade-leave-active {
+  transition: all .4s;
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translate3d(0, 3rem, 0);
+  opacity: 0;
+}
+}

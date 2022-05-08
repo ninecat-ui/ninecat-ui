@@ -1,0 +1,43 @@
+.n-nav {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  bottom: 0;
+  border-right: 1px solid rgba(60, 60, 67, 0.1215686275);
+  padding: 12px 24px;
+  background-color: #fff;
+  overflow-y: auto;
+  height: 100%;
+  width: 250px;
+  box-sizing: border-box;
+  .menu{
+
+  }
+  .sub-menu{
+
+  }
+  .sub-menu-item{
+    display: inline-block;
+    text-decoration: none;
+    color: #455a64;
+    margin: 0;
+    font-size: 16px;
+    padding: 10px 10px 10px 30px;
+    line-height: 24px;
+    transition: all .3s;
+    text-decoration: none;
+  }
+
+  a{
+    &.active {
+      color: #1989fa;
+    }
+    &:hover {
+      color: #1989fa;
+    }
+  }
+  
+  .deep0{
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,44 @@
+.n-list{
+  background: #ffffff;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid  #E5E5EA;
+  border-bottom: 1px solid  #E5E5EA;
+  width: 100%;
+  li{
+    list-style-type: none;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #575757;
+    border-bottom: 1px solid  #E5E5EA;
+    width: 100%;
+    text-align: left;
+    margin-left:5px;
+  }
+  li:last-child{
+    border-bottom: none;
+  }
+  .lism{
+    padding: 8px 0;
+  }
+  .limd{
+    padding: 13px 0;
+    line-height: 20px;
+  }
+  .lilg{
+    padding: 20px 0;
+  }
+  .libordered{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  li.hover:hover{
+    background: #F2FAFF;
+    cursor: pointer;
+  }
+}
+ul.bordered{
+  border-radius: 6px;
+  border-left: 1px solid  #E5E5EA;
+  border-right: 1px solid  #E5E5EA;
+}

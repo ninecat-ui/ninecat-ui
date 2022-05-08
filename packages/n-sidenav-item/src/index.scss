@@ -1,0 +1,106 @@
+%n-reuse-item {
+  display: flex;
+  align-items: center;
+  background: #F7F7FA;
+  font-family: PingFangSC-Regular;
+  
+  cursor: pointer;
+}
+%n-reuse-change{
+  &:hover,
+  &:focus,&:active {
+    background: #E5E5EA;
+
+    .n-item-header {
+      .n-item-head {
+        background: #1675E0;
+      }
+
+    }
+    .n-right{
+      .n-item-font {
+      color: #1675E0;
+    }
+    }
+}
+}
+
+
+.n-sidenav-item {
+  height: 50px;
+  font-size: 16px;
+  @extend %n-reuse-item;
+  @extend %n-reuse-change;
+  .n-item-header {
+    display: flex;
+    align-items: center;
+    width: 56px;
+    height: 50px;
+
+    .n-item-head {
+      position: relative;
+      width: 16px;
+      height: 16px;
+      background: #8E8E93;
+      border-radius: 50%;
+      left: 20px;
+    }
+  }
+ .n-right{
+   width: 194px;
+   .n-item-font {
+    position: relative;
+    color: #8E8E93;
+  }
+ }
+}
+
+.n-item-child {
+  height: 42px;
+  font-size: 14px;
+  @extend %n-reuse-item;
+    .n-item-font {
+    position: relative;
+    left: 56px;
+    color: #8E8E93;
+  }
+}
+
+.n-item-child-child {
+  height: 42px;
+  font-size: 14px;
+  @extend %n-reuse-item;
+  .n-item-font {
+    position: relative;
+    left: 65px;
+    color: #8E8E93;
+  }
+}
+
+.disabled {
+  .n-sidenav-item,
+  .n-item-child,
+  .n-item-child-child {
+
+    &hover,
+    &focus {
+      background: #F7F7FA;
+
+      .n-item-head {
+        background: #C5C6C7;
+      }
+
+      .n-item-font {
+        color: #C5C6C7;
+      }
+    }
+  }
+
+  .n-item-head {
+    background: #C5C6C7;
+  }
+
+  .n-item-font {
+    color: #C5C6C7;
+  }
+}
