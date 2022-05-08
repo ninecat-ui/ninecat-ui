@@ -1,0 +1,14 @@
+<template>
+  <n-loader
+    size="xs"
+  />
+  <n-loader
+    size="sm"
+  />
+  <n-loader
+    size="md"
+  />
+  <n-loader
+    size="lg"
+  />
+</template>

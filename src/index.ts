@@ -3,10 +3,12 @@ import './assets/font/iconfont.scss';
 
 import NTag from '../packages/n-tag';
 import NAlert from '../packages/n-alert';
+import NLoader from '../packages/n-loader'
 
 const components = [
   NTag,
-  NAlert
+  NAlert,
+  NLoader
 ]
 
 const install = function (app: App) {

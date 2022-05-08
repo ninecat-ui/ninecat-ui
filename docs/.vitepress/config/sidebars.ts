@@ -8,6 +8,7 @@ const layoutString = localLang === 'en-US' ? 'Layout' : '布局';
 const baseComponentsString = localLang === 'en-US' ? 'Base Components' : '基础组件';
 const dataString = localLang === 'en-US' ? 'Data' : '数据';
 const dataEntryString = localLang === 'en-US' ? 'Data Entry' : '数据录入';
+const feedbackString = localLang === 'en-US' ? 'Feedback' : '反馈'
 
 export const sidebar = {
    '/': [
@@ -21,9 +22,17 @@ export const sidebar = {
          ]
       },
       {
-         text:baseComponentsString,
+         text:dataString,
+         children:[
+            { text: 'Tag', link: '/en-US/Tag/' },
+         ]
+      },
+      {
+         text:feedbackString,
          children:[
             { text: 'Alert', link: '/en-US/Alert/' },
+            { text: 'Loader', link: '/en-US/Loader/' },
          ]
-      },]
+      },
+   ]
 }
