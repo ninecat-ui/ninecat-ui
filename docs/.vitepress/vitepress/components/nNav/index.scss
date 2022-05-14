@@ -4,7 +4,7 @@
   left: 0;
   bottom: 0;
   border-right: 1px solid rgba(60, 60, 67, 0.1215686275);
-  padding: 12px 24px;
+  padding: 12px 12px 12px 30px;
   background-color: #fff;
   overflow-y: auto;
   height: 100%;
@@ -39,5 +39,7 @@
   
   .deep0{
     font-size: 18px;
+    font-weight: 500;
+    color: #303133;
   }
 }

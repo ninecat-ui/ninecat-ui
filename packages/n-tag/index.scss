@@ -1,4 +1,7 @@
 @import "../theme/color.variables.scss";
+$defalut: 24px;
+$large:32px;
+$small:20px;
 .n-tag{
   text-align:center;
   font-family: PingFangSC-Regular;
@@ -9,8 +12,6 @@
   margin: 0 8px 0 0;
   div{
     min-width: 64px;
-    height: 24px;
-    line-height: 24px;
     padding: 2px 8px;
   }
   a {
@@ -28,30 +29,90 @@
   .tag{
     border-radius: 4px;
   }
+  .defalut-size{
+    height: $defalut;
+    line-height: $defalut;
+  }
+  .large-size{
+    height: $large;
+    line-height: $large;
+  }
+  .samll-size{
+    height: $small;
+    line-height: $small;
+  }
   .normal{
     color: $infoColor;
     background: rgba($infoColor,0.15) ;
     height: 100%;
+  }
+  .normal.dark-theme{
+    color: $white;
+    background:$infoColor;
+  }
+  .normal.plain-theme{
+    color: $infoColor;
+    background:$white;
+    border:1px solid  $infoColor;
   }
   .primary {
     color: $primaryColor;
     background: rgba($primaryColor,0.15) ;
     height: 100%;
   }
+  .primary.dark-theme{
+    color: $white;
+    background: $primaryColor;
+  }
+  .primary.plain-theme{
+    color: $primaryColor;
+    background:$white;
+    border:1px solid  $primaryColor;
+  }
   .success {
     color: $successColor;
     background: rgba($successColor,0.15) ;
     height: 100%;
+  }
+  .success.dark-theme{
+    color: $white;
+    background: $successColor;
+  }
+  .success.plain-theme{
+    color: $successColor;
+    background:$white;
+    border:1px solid  $successColor;
   }
   .warning{
     color: $warningColor;
     background: rgba($warningColor,0.15) ;
     height: 100%;
   }
+  .warning.dark-theme{
+    color: $white;
+    background: $warningColor;
+  }
+  .warning.plain-theme{
+    color: $warningColor;
+    background:$white;
+    border:1px solid  $warningColor;
+  }
   .danger{
     color: $dangerColor;
     background: rgba($dangerColor,0.15) ;
     height: 100%;
+  }
+  .danger.dark-theme{
+    color: $white;
+    background: $dangerColor;
+  }
+  .danger.plain-theme{
+    color: $dangerColor;
+    background:$white;
+    border:1px solid  $dangerColor;
+  }
+  .round{
+    border-radius: 20px;
   }
   .linkable{
     font-family: PingFangSC-Regular;
@@ -62,6 +123,11 @@
     border-radius: 6px;
   }
   .close{
-    cursor:pointer
+    cursor:pointer;
+    font-size:10px;
+    // todo: add hover effect on close
+    // &:hover{
+    //   background-color: seagreen;
+    // }
   }
 }

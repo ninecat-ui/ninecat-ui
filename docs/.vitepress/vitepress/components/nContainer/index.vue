@@ -8,8 +8,8 @@
 .n-container{
   margin-left: 250px;
   padding-top: 60px;
-  padding-left: 100px;
-  padding-right: 250px;
+  padding-left: 55px;
+  padding-right: 260px;
   padding-bottom: 100px;
   // height: 100vh;
   box-sizing: border-box;

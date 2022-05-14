@@ -30,7 +30,7 @@ const NLinkContent = defineComponent({
     })
 
     return () => page.value.headers && page.value.headers.length > 0 && <div class="n-link-content">
-      <h3 class="toc-content__heading">Contents</h3>
+      <h4>Contents</h4>
       <ul>
         {
           page.value.headers.map((o) => {
