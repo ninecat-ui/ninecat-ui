@@ -66,8 +66,32 @@ tag/checkable
 
 ## API
 
-| Property | Description | Type | Default |
-| :--- | :--- | :--- | :--- |
-| type | type | String | `normal` |
-| color | color | String | `blue` |
-| closable | can close |  |  |
+#### Tag
+
+| Property | Description | Type |Accepted Values |Default|
+| :--- | :--- | :--- | :--- | :--- |
+| type | component type | String | `normal` `success` `info` `warning` `danger`|normal|
+| size | tag size | String | `large` `default` `small` |default
+| theme | component theme | String | `dark` `light` `plain` |light
+| round | whether Tag is rounded | Boolean |  |false
+| closable | whether Tag can be removed | Boolean |  |false|
+
+#### Tag Events 
+| Events Name | Description | Arguments |
+| :--- | :--- | :--- |
+| close | Callback executed when tag is closed | `(e) => void` |
+
+
+#### CheckTag
+| Property | Description | Type |Accepted Values |Default|
+| :--- | :--- | :--- | :--- | :--- |
+| size | tag size | String | `large` `default` `small` |default
+| round | whether Tag is rounded | Boolean |  |false
+| checked | whether Tag is checked | Boolean |  |false
+
+#### CheckTag Events 
+| Events Name | Description | Arguments |
+| :--- | :--- | :--- |
+| change | Callback executed when Tag is checked/unchecked | `(checked) => void` |
+
+
