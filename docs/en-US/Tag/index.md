@@ -47,8 +47,18 @@ tag/closeable
 :::
 
 ## Add & Remove Dynamically
+Generating a set of Tags by array, you can add and remove dynamically.
+
+:::demo 
+tag/dynamically
+:::
 
 ## Checkable
+Sometimes because of the business needs, we might need checkbox like tag.
+
+:::demo 
+tag/checkable
+:::
 
 
 

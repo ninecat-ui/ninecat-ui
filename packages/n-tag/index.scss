@@ -130,4 +130,22 @@ $small:20px;
     //   background-color: seagreen;
     // }
   }
+  .checkable {
+    color: $infoColor;
+    background: rgba($infoColor,0.15) ;
+    height: 100%;
+    font-weight: 900;
+    font-size: 14px;
+    cursor:pointer;
+    &:hover{
+      background: rgba($infoColor,0.35) ;
+    }
+  }
+  .checked{
+    color: $primaryColor;
+    background: rgba($primaryColor,0.35) ;
+    &:hover{
+      background: rgba($primaryColor,0.40) ;
+    }
+  }
 }

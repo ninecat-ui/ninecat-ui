@@ -2,13 +2,21 @@ import { App } from 'vue';
 import './assets/font/iconfont.scss';
 
 import NTag from '../packages/n-tag';
+import NCheckTag from '../packages/n-tag/CheckTag';
 import NAlert from '../packages/n-alert';
-import NLoader from '../packages/n-loader'
+import NLoader from '../packages/n-loader';
+import NInput from '../packages/n-input';
+import NBoutton from '../packages/n-button';
+import NTooltip from '../packages/n-tooltip'
 
 const components = [
   NTag,
+  NCheckTag,
   NAlert,
-  NLoader
+  NLoader,
+  NInput,
+  NBoutton,
+  NTooltip
 ]
 
 const install = function (app: App) {
@@ -20,7 +28,11 @@ const install = function (app: App) {
 
 export {
   NTag,
-  NAlert
+  NCheckTag,
+  NAlert,
+  NLoader,
+  NInput,
+  NBoutton
 }
 
 export default {

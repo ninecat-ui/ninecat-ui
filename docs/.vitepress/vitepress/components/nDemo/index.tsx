@@ -5,6 +5,7 @@ import CodeSvg from "../../img/code.svg";
 import GithubSvg from "../../img/github.svg";
 import CopySvg from "../../img/copy.svg";
 import "./index.scss";
+import NTooltip from "../../../../../packages/n-tooltip";
 
 const NDemoProps = {
   path: {
@@ -45,9 +46,12 @@ const NDemo = defineComponent({
       <div class="n-demo-code">
         <Example file={props.path} demo={formatPathDemos[props.path]} />
         <div class="tool-btn-area">
+          
           <img src={CopySvg} />
           <img src={GithubSvg} />
-          <img onClick={showCodeHandle} src={CodeSvg} />
+          <NTooltip placement="bottom" content="View Source">
+            <img onClick={showCodeHandle} src={CodeSvg} />
+          </NTooltip>
         </div>
         {/* <Transition name="slide-fade"> */}
         {
