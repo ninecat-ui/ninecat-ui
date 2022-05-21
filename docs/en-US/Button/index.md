@@ -7,7 +7,7 @@ A button means an operation (or a series of operations). Clicking a button will 
 
 ## Basic use
 
-Use 'type', 'status',' shape ', etc., to define the style of the button.
+Use `type`, `status`,`shape`, etc., to define the style of the button.
 
 :::demo 
 button/basic
@@ -70,12 +70,12 @@ button/combinations
 
 ### API
 
-| Property | Description | Type | Default |
-| :--- | :--- | :--- | :--- |
-| type | can be set to `default`,`primary`,`link`,`ghost`,`delicate` | String | default |
-| status | can be set to `success`,`info`,`warning`,`danger` | String |  |
-| shape | can be set to `square`,`round`,`circle` | String | square |
-| size | can be set to `xs`,`ms`,`md`,`lg` | String | md |
-| icon | Icon button, selectable just like the value of the icon | String |  |
-| loading    | set the loading status of button | Boolean     | false |
-| disabled    | disabled state of button | Boolean     |  |
+| Property | Description | Type | Accepted Values | Default |
+| :--- | :--- | :--- | :--- | :--- |
+| type | button type  |String  |  `default`,`primary`,`link`,`ghost`,`delicate` | default |
+| status | button status | String | `success`,`info`,`warning`,`danger` | - |
+| shape | button shape |String| `square`,`round`,`circle` | square |
+| size | button size | String |  `xs`,`ms`,`md`,`lg` | md |
+| icon | Icon button, selectable just like the value of the icon | String | - | - |
+| loading    | set the loading status of button | Boolean     | false | - |
+| disabled    | disabled state of button | Boolean     | - | - |
