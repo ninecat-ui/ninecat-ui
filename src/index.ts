@@ -7,7 +7,9 @@ import NAlert from '../packages/n-alert';
 import NLoader from '../packages/n-loader';
 import NInput from '../packages/n-input';
 import NBoutton from '../packages/n-button';
+import NButtonGroup from '../packages/n-button-group';
 import NTooltip from '../packages/n-tooltip'
+import NIcon from '../packages/n-icon'
 
 const components = [
   NTag,
@@ -16,7 +18,9 @@ const components = [
   NLoader,
   NInput,
   NBoutton,
-  NTooltip
+  NButtonGroup,
+  NTooltip,
+  NIcon
 ]
 
 const install = function (app: App) {
@@ -32,7 +36,9 @@ export {
   NAlert,
   NLoader,
   NInput,
-  NBoutton
+  NBoutton,
+  NButtonGroup,
+  NIcon
 }
 
 export default {

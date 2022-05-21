@@ -1,7 +1,7 @@
 .n-button-group{
   display: inline-flex;
   vertical-align: middle;
-  /deep/ .nbutton{
+  ::v-deep .nbutton{
     border-radius: 0px !important;
     
   }

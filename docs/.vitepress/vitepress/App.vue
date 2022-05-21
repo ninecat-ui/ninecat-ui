@@ -15,6 +15,8 @@ import NLinkContent from './components/nLinkContent'
 </template>
 
 <style>
-
+.header-anchor{
+  color:#1989fa !important;
+}
 
 </style>

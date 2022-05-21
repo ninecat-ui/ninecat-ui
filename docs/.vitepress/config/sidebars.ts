@@ -22,6 +22,12 @@ export const sidebar = {
          ]
       },
       {
+         text:baseComponentsString,
+         children:[
+            { text: 'Button', link: '/en-US/Button/' },
+         ]
+      },
+      {
          text:dataString,
          children:[
             { text: 'Tag', link: '/en-US/Tag/' },

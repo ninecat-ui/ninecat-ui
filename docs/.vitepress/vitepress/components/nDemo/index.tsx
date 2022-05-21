@@ -5,6 +5,7 @@ import CodeSvg from "../../img/code.svg";
 import GithubSvg from "../../img/github.svg";
 import CopySvg from "../../img/copy.svg";
 import "./index.scss";
+import "./demo.scss"
 import NTooltip from "../../../../../packages/n-tooltip";
 
 const NDemoProps = {
