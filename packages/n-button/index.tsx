@@ -3,7 +3,7 @@ import NLoader from '../n-loader';
 import NIcon from '../n-icon';
 import classNames from '../../src/utils/className';
 import './index.scss';
-import colorVar from '../theme/color.variables.scss';
+import colorVar from '../theme/color.variables.module.scss';
 
 const ButtonProps = {
   type: {
