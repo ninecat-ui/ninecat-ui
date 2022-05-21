@@ -30,6 +30,7 @@ export const sidebar = {
       {
          text:dataString,
          children:[
+            { text: 'Badge', link: '/en-US/Badge/' },
             { text: 'Tag', link: '/en-US/Tag/' },
          ]
       },

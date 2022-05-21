@@ -10,6 +10,7 @@ import NBoutton from '../packages/n-button';
 import NButtonGroup from '../packages/n-button-group';
 import NTooltip from '../packages/n-tooltip'
 import NIcon from '../packages/n-icon'
+import NBadge from '../packages/n-badge'
 
 const components = [
   NTag,
@@ -20,7 +21,8 @@ const components = [
   NBoutton,
   NButtonGroup,
   NTooltip,
-  NIcon
+  NIcon,
+  NBadge
 ]
 
 const install = function (app: App) {
@@ -38,7 +40,8 @@ export {
   NInput,
   NBoutton,
   NButtonGroup,
-  NIcon
+  NIcon,
+  NBadge
 }
 
 export default {

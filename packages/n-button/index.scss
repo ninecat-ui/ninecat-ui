@@ -4,9 +4,9 @@ button {
 }
 
 $xs: 2px 8px;
-$sm: 5px 10px;
-$md: 8px 12px;
-$lg: 10px 16px;
+$sm: 4px 10px;
+$md: 6px 12px;
+$lg: 8px 16px;
 $xsloading: 1px 4px;
 $smloading: 2px 5px;
 $mdloading: 3px 6px;
@@ -20,7 +20,7 @@ $lgloading: 4px 8px;
   display: inline-block;
   position: relative;
   outline: none;
-  font-weight: 400;
+  font-weight: 600;
   -webkit-appearance: none;
   user-select: none;
   cursor: pointer;
@@ -64,11 +64,26 @@ $lgloading: 4px 8px;
   @if $type== "default" {
     background: transparent;
     border: 1px solid $color;
-    &:focus,
-    &:hover {
-      background: mix($white, $color, 90%);
-      border: 1px solid mix($white, $color, 20%);
-      color: $color;
+    @if $color == #909399 {
+      &:focus,
+      &:hover {
+        background: mix($white, $primaryColor, 80%);
+        border: 1px solid mix($white, $primaryColor, 50%);
+        color: $primaryColor;
+      }
+      &:active{
+        border: 1px solid $primaryColor;
+      }
+    } @else {
+      &:focus,
+      &:hover {
+        background: mix($white, $color, 90%);
+        border: 1px solid mix($white, $color, 50%);
+        color: $color;
+      }
+      &:active{
+        border: 1px solid $color;
+      }
     }
   }
   @if $type== "primary" {
@@ -100,7 +115,7 @@ $lgloading: 4px 8px;
 }
 
 .nbutton-type-default {
-  @include nbutton-colors($primaryColor, "default");
+  @include nbutton-colors(#909399, "default");
 }
 
 .nbutton-type-primary {
@@ -213,8 +228,8 @@ $lgloading: 4px 8px;
   font-size: 16px;
 }
 .nbutton-size-lg.nbutton-loading {
-    padding: $lgloading;
-    font-size: 16px; 
+  padding: $lgloading;
+  font-size: 16px;
 }
 
 .nbutton-size-md {
@@ -222,30 +237,30 @@ $lgloading: 4px 8px;
   font-size: 14px;
 }
 .nbutton-size-md.nbutton-loading {
-    padding: $mdloading;
-    pointer-events: none;
-    font-size: 14px;
-  }
+  padding: $mdloading;
+  pointer-events: none;
+  font-size: 14px;
+}
 
 .nbutton-size-sm {
   padding: $sm;
   font-size: 14px;
 }
 .nbutton-size-sm.nbutton-loading {
-    padding: $smloading;
-    pointer-events: none;
-    font-size: 14px;
-  }
+  padding: $smloading;
+  pointer-events: none;
+  font-size: 14px;
+}
 
 .nbutton-size-xs {
   padding: $xs;
   font-size: 12px;
 }
 .nbutton-size-xs.nbutton-loading {
-    padding: $xsloading;
-    pointer-events: none;
-    font-size: 14px;
-  }
+  padding: $xsloading;
+  pointer-events: none;
+  font-size: 14px;
+}
 
 .nbutton-slot {
   text-align: center;
