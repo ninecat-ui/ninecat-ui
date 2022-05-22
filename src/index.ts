@@ -10,6 +10,7 @@ import NBoutton from '../packages/n-button';
 import NButtonGroup from '../packages/n-button-group';
 import NTooltip from '../packages/n-tooltip'
 import NIcon from '../packages/n-icon'
+import NAvatar from '../packages/n-avatar'
 import NBadge from '../packages/n-badge'
 
 const components = [
@@ -22,6 +23,7 @@ const components = [
   NButtonGroup,
   NTooltip,
   NIcon,
+  NAvatar,
   NBadge
 ]
 
@@ -41,6 +43,7 @@ export {
   NBoutton,
   NButtonGroup,
   NIcon,
+  NAvatar,
   NBadge
 }
 

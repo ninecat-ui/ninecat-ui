@@ -1,6 +1,9 @@
 .navatar{
   color: #ffffff;
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
   text-align: center;
 }
 .navatar-lg{
@@ -33,9 +36,17 @@
 .navatar-square{
   border-radius:2px;
 }
-.navatar-img{
+.navatar-img-square{
   width: 100%;
   height: 100%;
   display: inline-block;
   vertical-align: middle;
+  border-radius:2px;
+}
+.navatar-img-circle{
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
 }

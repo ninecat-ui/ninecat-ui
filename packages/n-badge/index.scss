@@ -1,15 +1,19 @@
+@import "../theme/color.variables.module.scss";
 .n-badge {
   position: relative;
   display: inline-block;
   .n-badge-common{
     position: absolute;
     top: 0;
-    right: 0;
-    z-index: 1;
-    -webkit-transform: translate(50%,-50%);
+    right: 0px;
     transform: translate(50%,-50%);
+    transform-origin: 100% 0%;
+    z-index: auto;
   }
   .n-badge-default{
+    position: absolute;
+    top: 0px;
+    right: 0px;
     width: 8px;
     height: 8px;
     border-radius: 4px;
@@ -21,6 +25,18 @@
     line-height: 16px;
     padding: 0 5px;
     color: #fff;
+  }
+  .primary{
+    background:$primaryColor;
+  }
+  .success{
+    background:$successColor;
+  }
+  .warning{
+    background:$warningColor;
+  }
+  .danger {
+    background: $dangerColor;
   }
 }
 

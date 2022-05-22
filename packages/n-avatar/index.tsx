@@ -54,13 +54,13 @@ const NAvatar = defineComponent({
       }
     };
     const renderSolt = () => (
-      <div>
+      <>
         {slots.default && slots.default()}
-      </div>
+      </>
     );
 
     const renderImg = () => (
-      <img class="navatar-img" src={props.src} alt={props.alt}/>
+      <img class={`navatar-img-${props.shape}`} src={props.src} alt={props.alt}/>
     );
 
     const rederContent = () => {
