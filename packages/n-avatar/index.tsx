@@ -18,13 +18,14 @@ const AvatarProps = {
   alt: {
     type: String as PropType<''>,
     default: ''
-  }
+  },
 };
 
 const NAvatar = defineComponent({
   name: 'NAvatar',
   props: AvatarProps,
-  setup (props, { slots }: SetupContext) {
+  setup (props, { slots,attrs }: SetupContext) {
+    console.log(attrs)
     const avatarClass = () => {
       const classList = ['navatar'];
       if (props.size && typeof props.size === 'string') {
@@ -48,8 +49,8 @@ const NAvatar = defineComponent({
       if (props.src) {
         return {};
       } else {
-        return {
-          background: '#CCCCCC'
+         return attrs.style ? Object.assign({background: '#CCCCCC'},attrs.style) : {
+          background: '#CCCCCC',
         };
       }
     };

@@ -1,5 +1,6 @@
 <template>
-  <div class="demo-type">
+  <div>
+    <div class="demo-type">
     <div><n-avatar>MD</n-avatar></div>
     <div>
       <n-avatar
@@ -19,8 +20,18 @@
       />
     </div>
     <div>
-      <n-avatar shape="circle"><n-icon name="icon-home" /></n-avatar>
+      <n-avatar><n-icon name="icon-home" /></n-avatar>
     </div>
+  </div>
+  <div class="demo-type">
+    <div><n-avatar shape="circle" style="color: #f56a00; background-color: #fde3cf">M</n-avatar></div>
+    <div>
+      <n-avatar style="color:#e950a9">Lu</n-avatar>
+    </div>
+    <div>
+      <n-avatar style="background-color: #87d068"><n-icon name="icon-home" /></n-avatar>
+    </div>
+  </div>
   </div>
 </template>
 

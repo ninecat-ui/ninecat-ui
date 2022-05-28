@@ -11,7 +11,7 @@ avatar/basic
 
 ## Type
 
-Supports three types: image, icon, and character.
+Supports three types: image, icon, and character.You can have custom colors and background colors.
 
 :::demo 
 avatar/type
