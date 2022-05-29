@@ -32,6 +32,7 @@ export const sidebar = {
          children:[
             { text: 'Avatar', link: '/en-US/Avatar/' },
             { text: 'Badge', link: '/en-US/Badge/' },
+            { text: 'Card', link: '/en-US/Card/' },
             { text: 'Tag', link: '/en-US/Tag/' },
          ]
       },

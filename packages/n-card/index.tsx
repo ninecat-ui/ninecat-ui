@@ -1,30 +1,52 @@
-import { defineComponent, App, HTMLAttributes, SetupContext } from 'vue';
-import './index.scss';
+import { defineComponent, App, PropType, SetupContext } from "vue";
+import classNames from "../../src/utils/className";
+import "./index.scss";
 
-export interface CardProps extends HTMLAttributes {
-  title?: string;
-  src?: string;
-  description?: string;
-}
+const CardProps = {
+  title: {
+    type: String as PropType<string>,
+  },
+  size: {
+    type: String as PropType<string>,
+    default: "default",
+  },
+  bordered: {
+    type: Boolean,
+    default: true,
+  },
+  shadow: {
+    type: String as PropType<string>,
+    default: "never",
+  },
+};
 
 const NCard = defineComponent({
-  name: 'NCard',
-  setup (_:CardProps, { attrs }:SetupContext) {
-    const { title, src, description } = attrs as CardProps;
-
+  name: "NCard",
+  props: CardProps,
+  setup(props, { attrs, slots }: SetupContext) {
+    console.log(slots);
+    const classString = classNames([
+      "n-card",
+      props.bordered ? "n-card-bordered" : "",
+      `n-card-size-${props.size}`,
+      `n-card-shadow-${props.shadow}`,
+    ]);
     return () => (
-      <div class="card">
-      <img
-        class="card-img"
-        src={src}
-      />
-      <span class="card-title">{ title }</span>
-      <p class="card-message">
-        { description }
-      </p>
-    </div>
+      <div class={classString}>
+        {slots.header ? (
+          <div class="n-card-head">
+             {slots.header()}
+          </div>
+        ) : (
+          <div class="n-card-head">
+            <div class="n-card-head-title">{props.title}</div>
+            <div class="n-card-extra">{slots.extra && slots.extra()}</div>
+          </div>
+        )}
+        <div class="n-card-body">{slots.default && slots.default()}</div>
+      </div>
     );
-  }
+  },
 });
 
 NCard.install = function (app: App) {

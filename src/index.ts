@@ -12,6 +12,7 @@ import NTooltip from '../packages/n-tooltip'
 import NIcon from '../packages/n-icon'
 import NAvatar from '../packages/n-avatar'
 import NBadge from '../packages/n-badge'
+import NCard from '../packages/n-card'
 
 const components = [
   NTag,
@@ -24,7 +25,8 @@ const components = [
   NTooltip,
   NIcon,
   NAvatar,
-  NBadge
+  NBadge,
+  NCard
 ]
 
 const install = function (app: App) {
@@ -44,7 +46,8 @@ export {
   NButtonGroup,
   NIcon,
   NAvatar,
-  NBadge
+  NBadge,
+  NCard
 }
 
 export default {

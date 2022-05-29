@@ -1,35 +1,62 @@
-.card {
-  margin: 0.4rem;
-    background: #fff;
-    overflow: hidden;
-    border-radius: 0.3rem;
-    padding: 0.4rem;
-    box-shadow: 0 0 0.2rem #ccc;
-    border-bottom: 0.1rem solid #ccc;
-    height: 300px;
-    width: 260px;
+.n-card {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #000000d9;
+  font-size: 14px;
+  font-variant: tabular-nums;
+  list-style: none;
+  font-feature-settings: "tnum";
+  position: relative;
+  background: #fff;
+  border-radius: 2px;
+  .n-card-head {
+    min-height: 48px;
+    margin-bottom: -1px;
+    padding: 0 24px;
+    color: #000000d9;
+    font-weight: 500;
+    font-size: 16px;
+    background: transparent;
+    border-bottom: 1px solid #f0f0f0;
+    border-radius: 2px 2px 0 0;
+    .n-card-head-title {
+      display: inline-block;
+      flex: 1;
+      padding: 16px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .n-card-extra{
+      float: right;
+      margin-left: auto;
+      padding: 16px 0;
+      color: #000000d9;
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+  .n-card-body {
+    padding: 24px;
+  }
+}
+.n-card-bordered {
+  border: 1px solid #f0f0f0;
+}
+.n-card-size-small > .n-card-head {
+  min-height: 36px;
+  padding: 0 12px;
+  font-size: 14px;
+  .n-card-head-title {
     display: inline-block;
-    .cardmesage {
-      font-weight: bolder;
-      font-size: 20px;
-    }
-    .card-img{
-      position: relative;
-      width: 260px;
-      height: 170px;
-    }
-    .card-title{
-      margin: 5px;
-      padding: 5px;
-      font-size: 25px;
-    }
-    p{
-      font-size: 12px !important;
-      margin:0 !important;
-      overflow: hidden;
-      display: block;
-      width: 100%;
-      overflow: hidden;
-      padding: 10px;
-    }
+    flex: 1;
+    padding: 8px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+.n-card-size-small > .n-card-body {
+  padding: 12px;
 }
