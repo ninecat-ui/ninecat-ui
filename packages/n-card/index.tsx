@@ -18,13 +18,13 @@ const CardProps = {
     type: String as PropType<string>,
     default: "never",
   },
+  bodyStyle: Object
 };
 
 const NCard = defineComponent({
   name: "NCard",
   props: CardProps,
   setup(props, { attrs, slots }: SetupContext) {
-    console.log(slots);
     const classString = classNames([
       "n-card",
       props.bordered ? "n-card-bordered" : "",
@@ -38,12 +38,12 @@ const NCard = defineComponent({
              {slots.header()}
           </div>
         ) : (
-          <div class="n-card-head">
+           props.title ? <div class="n-card-head">
             <div class="n-card-head-title">{props.title}</div>
             <div class="n-card-extra">{slots.extra && slots.extra()}</div>
-          </div>
+          </div> : ''
         )}
-        <div class="n-card-body">{slots.default && slots.default()}</div>
+        <div class="n-card-body" style={{...props.bodyStyle}}>{slots.default && slots.default()}</div>
       </div>
     );
   },

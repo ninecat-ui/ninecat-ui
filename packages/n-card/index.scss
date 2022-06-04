@@ -44,6 +44,12 @@
 .n-card-bordered {
   border: 1px solid #f0f0f0;
 }
+.n-card-shadow-always{
+  box-shadow:rgba(0, 0, 0, 0.12) 0px 0px 12px 0px
+}
+.n-card-shadow-hover:hover{
+  box-shadow:rgba(0, 0, 0, 0.12) 0px 0px 12px 0px
+}
 .n-card-size-small > .n-card-head {
   min-height: 36px;
   padding: 0 12px;

@@ -13,6 +13,8 @@ import NIcon from '../packages/n-icon'
 import NAvatar from '../packages/n-avatar'
 import NBadge from '../packages/n-badge'
 import NCard from '../packages/n-card'
+import NRow from '../packages/n-row'
+import NCol from '../packages/n-col'
 
 const components = [
   NTag,
@@ -26,7 +28,9 @@ const components = [
   NIcon,
   NAvatar,
   NBadge,
-  NCard
+  NCard,
+  NRow,
+  NCol
 ]
 
 const install = function (app: App) {

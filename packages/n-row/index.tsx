@@ -1,35 +1,44 @@
 
 import { defineComponent, HTMLAttributes, SetupContext } from 'vue';
+import useProvideRow from '../context/row';
 
-const initDefaultProps = {
-  gutter: '',
-  justify: 'center',
-  align: 'center'
-};
 
-export interface RowProps extends HTMLAttributes {
-  gutter?: number | string;
-  justify?: string;
-  align?: string;
+const RowProps = {
+  gutter:{
+    type:Number,
+    default:0
+  },
+  justify:{
+    type:String,
+    default:'center'
+  },
+  align:{
+    type:String,
+    default:'center'
+  }
 }
+
 
 const nRow = defineComponent({
   name: 'NRow',
-  setup (_: RowProps, { slots, attrs }: SetupContext) {
-    const props = attrs as RowProps;
-    const { gutter, align, justify } = { ...initDefaultProps, ...props };
+  props:RowProps,
+  setup (props, { slots, attrs }: SetupContext) {
+
+    useProvideRow({
+      gutter:props.gutter
+    })
 
     const gutterStyle = () => {
-      const temp = gutter ? { marginLeft: -gutter + 'px', marginRight: -gutter + 'px' } : '';
+      const temp = props.gutter ? { marginLeft: -props.gutter + 'px', marginRight: -props.gutter + 'px' } : '';
       const alignItems =
-        align === 'top'
+      props.align === 'top'
           ? 'flex-start'
-          : align === 'middle'
+          : props.align === 'middle'
             ? 'center'
-            : align === 'bottom' ? 'flex-end' : '';
+            : props.align === 'bottom' ? 'flex-end' : '';
       return {
         display: 'flex',
-        'justify-content': justify,
+        'justify-content': props.justify,
         'align-items': alignItems,
         ...temp
       };

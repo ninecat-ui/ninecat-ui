@@ -1,24 +1,31 @@
 import { defineComponent, App, HTMLAttributes, SetupContext } from 'vue';
 import classNames from '../../src/utils/className';
 import './index.scss';
+import { useInjectRow } from '../context/row';
 
-export interface ColProps extends HTMLAttributes {
-  span?: string | number;
-  offset?: string | number;
+
+const ColProps = {
+  span: {
+    type:[String,Number]
+  },
+  offset: {
+    type:[String,Number]
+  }
 }
 
 const nCol = defineComponent({
   name: 'NCol',
-  setup (_:ColProps, { slots, attrs }: SetupContext) {
-    const props = attrs as ColProps;
-    const { span, offset } = props;
+  props:ColProps,
+  setup (props, { slots, attrs }: SetupContext) {
+    const { gutter } = useInjectRow();
+    console.log(gutter)
     const classString = classNames([
       'n-col',
-      span ? `n-col-${span}` : '',
-      offset ? `offset-${offset}` : ''
+      props.span ? `n-col-${props.span}` : '',
+      props.offset ? `offset-${props.offset}` : ''
     ]);
     return () => (
-      <div class={classString}>
+      <div class={classString} style={gutter ? {paddingLeft:`${gutter}px`,paddingRight:`${gutter}px`} : {}}>
          {slots.default && slots.default()}
       </div>
     );
