@@ -67,5 +67,10 @@ export const guid = () => {
   return `${s4() + s4()}-${s4()}-${s4()}-${s4()}-${s4() + s4() + s4()}`;
 };
 
+export const ensureArray = (arr: any): any[] => {
+  if (!arr && arr !== 0) return []
+  return Array.isArray(arr) ? arr : [arr]
+}
+
 
 // export { isOn, cacheStringFunction, camelize, hyphenate, capitalize };

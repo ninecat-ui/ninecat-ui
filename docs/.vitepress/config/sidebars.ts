@@ -34,6 +34,7 @@ export const sidebar = {
             { text: 'Badge', link: '/en-US/Badge/' },
             { text: 'Card', link: '/en-US/Card/' },
             { text: 'Tag', link: '/en-US/Tag/' },
+            { text: 'Collapse', link: '/en-US/Collapse/' },
          ]
       },
       {

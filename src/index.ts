@@ -15,6 +15,8 @@ import NBadge from '../packages/n-badge'
 import NCard from '../packages/n-card'
 import NRow from '../packages/n-row'
 import NCol from '../packages/n-col'
+import NCollapse from '../packages/n-collapse'
+import NCollapseItem from '../packages/n-collapse-item'
 
 const components = [
   NTag,
@@ -30,7 +32,9 @@ const components = [
   NBadge,
   NCard,
   NRow,
-  NCol
+  NCol,
+  NCollapse,
+  NCollapseItem
 ]
 
 const install = function (app: App) {
